@@ -178,10 +178,11 @@
         */
         function getEntryByNumberOrContext($number)
         {
-        	if (is_int($number))
-        	{
+           if (is_numeric($number))
+           {
                 $evalResult = $this->xclass->evaluate("/weblog/entry");
                 $evalContext = $evalResult[$number];
+
             } else if (is_string($number))
             {
             	//Laden des Kontext

@@ -12,9 +12,12 @@
         <description>Ein Blog für alle Fälle. Neuigkeiten, Skuriles und Informatives aus dem täglichen Geschehen </description>
         <generator>Miplex2</generator>
         <managingEditor>blog@grundprinzip.de</managingEditor>
-        <categories>TagesZeitung, Skills, Abseits, Hell\'s Kittchen</categories>
+        <categories>TagesZeitung, Skills, Abseits, Hell's Kittchen</categories>
         <countDisplay>10</countDisplay>
         <countSticky>3</countSticky>
         <durationSticky>10</durationSticky>
+        <entryTpl>entry.tpl</entryTpl>
+        <commentTpl>comment.tpl</commentTpl>
+        <mainTpl>main.tpl</mainTpl>
     </params>
 </config>

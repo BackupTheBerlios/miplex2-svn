@@ -6,10 +6,82 @@ class blog extends Extension {
     var $baseUri = "";
     var $blogClass = null;
     
+    
+    /**
+    * Call from the Frontend
+    */
+    
     function main()
     {
+        global $HTTP_SERVER_VARS;
+        
+        
+	//Fetch function paramters
+        $args = func_get_args();
+        
+        //switch displaymode :: implemented later
+        include("ext/blog/blog.core.class.php");
+        $this->blogClass = new weblog("ext/blog/data/data.xml", $this->xpath);
+        
+        //Weblog Klasse übergeben
+        $this->smarty->assign("weblog", $this->blogClass);
+        //Submit configuration and categories
+        $this->categories = explode("," ,$this->extConfig['params']['categories']);
+        foreach ($this->categories as $k => $v) {
+        	$this->categories[$k] = stripslashes(trim($v));
+        }
+        $this->smarty->assign("categories", $this->categories);
+        $this->smarty->assign("config", $this->extConfig['params']);
+        
+        //Submit $url
+        $url = $this->po->config->docroot.$this->po->config->baseName."/".$this->po->path;
+        $this->smarty->assign("url", $url);
+        
+        //Fetch disired contet
+        $queryString = $this->po->params;
+        if ($queryString != "")
+        {
+            $queryString = explode("/", $queryString);
+        }
+       
+        //fetch what to do
+        $displayGroup = $queryString[0];
+        //fetch variable
+        $displayVariable = $queryString[1];
+        
+        switch ($displayGroup) {
+        	case 'single':
+        		
+        	    $content[] = $this->blogClass->getEntryByNumberOrContext($displayVariable-1);
+        	    $this->smarty->assign("data", $content);
+        	    $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
+        	    
+        	break;
+        
+        	case 'cat':
+        	
+        	    $content = $this->blogClass->getEntryByCategory($displayVariable);
+        	    $this->smarty->assign("data",$content);
+                    $this->smarty->assign("content","blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
+        	    break;	
+        		
+        	default:
+        	
+        	    $content = $this->blogClass->getLastXEntries($this->extConfig['params']['countDisplay']);
+        	    $this->smarty->assign("data", $content);
+                    $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
+        	
+       		break;
+        }
+        
+        return $this->smarty->fetch("blog/tpl/frontend/main/".$this->extConfig['params']['mainTpl']);
     }
     
+    /**
+    * Diese Methode ist der Aufruf des Backends und managt alle Funktionen
+    * die durch das Backend bereitgestellt werden.
+    *
+    */
     function getBackend()
     {
         
@@ -80,6 +152,16 @@ class blog extends Extension {
             
             	case 'settings':
             	
+            	     //fetch available entry templates
+            	     $entryTpls = $this->fetchTemplates("entry"); 
+            	     $commentTpls = $this->fetchTemplates("comment");
+            	     $mainTpls = $this->fetchTemplates("main");
+            	     
+            	     $this->smarty->assign("eTpls", $entryTpls);
+            	     $this->smarty->assign("cTpls", $commentTpls);
+            	     $this->smarty->assign("mTpls", $mainTpls);
+            	     
+            	     //Assign Params to template
             	     $this->smarty->assign("params", $this->extConfig['params']);
             	     $this->smarty->assign("content", "blog/tpl/settings.tpl");
             	
@@ -155,9 +237,29 @@ class blog extends Extension {
     function saveConfigSettings()
     {
         $params = $_POST['blog']['params'];
-        print_r($this->extConfig);
         $this->extConfig['params'] = $params;
         $this->saveConfiguration($this->extConfig);
+        
+        //default action is to display welcome page
+	    $this->smarty->assign("content", "blog/tpl/default.tpl");   
+    }
+    
+    
+    function fetchTemplates($group)
+    {
+        $return = array();
+        
+        $tplDir = opendir("ext/blog/tpl/frontend/".$group);
+        while (false !== ($file = readdir ($tplDir))) 
+        {
+            //fetch all TPLs
+            if ($file != "." && $file != "..")
+            {
+                $return[] = $file;
+            }
+        }
+        
+        return $return;
     }
     
 }
