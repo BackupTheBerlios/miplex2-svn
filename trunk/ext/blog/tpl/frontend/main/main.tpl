@@ -1,17 +1,17 @@
-<!-- Hauptteil -->
+    <!-- Hauptteil -->
 <table width="100%" class="blogTable">
 
     <tr>
 
-    {* Anzeige Teil für die Daten *}
+    {* Anzeige Teil fï¿½r die Daten *}
     <td width="75%">{include file=$content}</td>
     
-    {* Anzeige Teil für das Menu *}
+    {* Anzeige Teil fï¿½r das Menu *}
     <td>
     
         <div class='blogTitle'><a href='{$url}.html'>{$config.blogTitle}</a></div>
         
-        <p>Heiße Eisen</p>
+        <p>Heiï¿½e Eisen</p>
             {foreach item=entry from=$weblog->getMostActiveEntries()}
                 <div class='blogActiveEntry'><a href="{$url}//single/{$entry.number}.html">{$entry.attributes.title}({$entry.numberOfComments})</a></div>
             {/foreach}

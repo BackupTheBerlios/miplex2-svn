@@ -23,10 +23,47 @@ class blog extends Extension {
         include("ext/blog/blog.core.class.php");
         $this->blogClass = new weblog("ext/blog/data/data.xml", $this->xpath);
         
-        //Weblog Klasse übergeben
+        //Weblog Klasse ï¿½bergeben
         $this->smarty->assign("weblog", $this->blogClass);
         //Submit configuration and categories
-        $this->categories = explode("," ,$this->extConfig['params']['categories']);
+        $this->categories = explode("," ,$this->extConrequire_once("lib/Miplex2/Session.class.php");
+    
+    $session = new Session("config/config.ser", "backend");
+    
+    $session->loadUserDatabase();
+
+    
+    if (!is_string($_GET['module']))
+    {
+        $_GET['module'] = "start";
+    }
+    
+    switch ($_GET['module'])
+    {
+     
+        case 'page':
+        
+            require_once($session->config->miplexDir."admin/admin.page.php");
+            break;
+        
+        
+        case 'ext':
+            require_once($session->config->miplexDir."admin/admin.extensions.php");
+            break; 
+            
+        
+        case 'settings':
+            require_once($session->config->miplexDir."admin/admin.settings.php");
+            break;
+        
+        case 'start':
+            break;
+        
+        
+    }
+    
+    
+    $session->smarty->display("admin.tpl");fig['params']['categories']);
         foreach ($this->categories as $k => $v) {
         	$this->categories[$k] = stripslashes(trim($v));
         }
@@ -77,7 +114,7 @@ class blog extends Extension {
        		break;
         }
         
-        return $this->smarty->fetch("blog/tpl/frontend/main/".$this->extConfig['params']['mainTpl']);
+        //return $this->smarty->fetch("blog/tpl/frontend/main/".$this->extConfig['params']['mainTpl']);
     }
     
     /**

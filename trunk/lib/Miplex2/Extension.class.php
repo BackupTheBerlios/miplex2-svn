@@ -2,7 +2,7 @@
 
 /**
 * Diese Klasse dient als abstrakte Oberklasse dazu, eine 
-* art Interface für die Entwicklung bereitzustellen. Innerhalb
+* art Interface fï¿½r die Entwicklung bereitzustellen. Innerhalb
 * der jeweiligen Erweiterung wird mit dieser Klasse gearbeitet.
 *
 */
@@ -25,30 +25,22 @@ class Extension
         $this->config =& $config;
         $this->extConfig = $extConfig;
         
-//        require_once($this->config->smartyDir."Smarty.class.php");
         require_once("lib/smarty/libs/Smarty.class.php");
         $this->smarty = new Smarty();
         
-//        $this->smarty->template_dir = array($this->config->tplDir, "ext/");
         $this->smarty->template_dir = array("tpl/", "ext/");
-//        $this->smarty->compile_dir = $this->config->tplDir."template_c";
         $this->smarty->compile_dir = "tpl/template_c";
-//        $this->smarty->cache_dir = $this->config->tplDir."cache";
         $this->smarty->cache_dir = "tpl/cache";
-//        $this->smarty->config_dir = $this->config->tplDir."config";
         $this->smarty->config_dir = "tpl/config";
-        //$this->smarty->debugging = true;
-//        $this->smarty->plugins_dir = array($this->config->smartyDir."/plugins", $this->config->miplexDir."smartyPlugins");
-        $this->smarty->plugins_dir = array("lib/smarty/plugins", "lib/Miplex2/smartyPlugins");
+        $this->smarty->plugins_dir = array("lib/smarty/libs/plugins", "lib/Miplex2/smartyPlugins");
         
-//        require_once($this->config->xpathDir."XPath.class.php");
         require_once("lib/XPath/XPath.class.php");
         $this->xpath = new XPath();
         
     }
     
     /**
-    * Platzhalter für die Hauptmethode, die vom Frontend aufgerugen wird
+    * Platzhalter fï¿½r die Hauptmethode, die vom Frontend aufgerugen wird
     * @return String
     *
     *
@@ -59,7 +51,7 @@ class Extension
     }
     
     /**
-    * Platzhalter für die Methode, die im Backend aufgerufen wird
+    * Platzhalter fï¿½r die Methode, die im Backend aufgerufen wird
     * um die Erweiterung im Backend zu konfigurieren.
     *
     */
@@ -71,8 +63,8 @@ class Extension
     
     
     /**
-    * Liefert die Url zurück, die gerade aktuell ist. Dies ist nur für
-    * das Backend interessant, falls sich die Konfiguration über mehrere
+    * Liefert die Url zurï¿½ck, die gerade aktuell ist. Dies ist nur fï¿½r
+    * das Backend interessant, falls sich die Konfiguration ï¿½ber mehrere
     * Ebenen erstreckt.
     *
     */
@@ -87,7 +79,7 @@ class Extension
     
     /**
     * Diese Funktion, soll es dem Programmierer erleichtern die Konfigurationsdatei der
-    * Erweiterung zu speichern. Übergeben wird dabei ein Array der Konfiguration.
+    * Erweiterung zu speichern. ï¿½bergeben wird dabei ein Array der Konfiguration.
     * Dies wird dann als XML Datei abgespeichert und auf FP geschrieben.
     * @param Array $config Die Konfiguration der Erweiterung
     *
@@ -95,9 +87,7 @@ class Extension
     function saveConfiguration($config)
     {
         
-//        $configFile = $this->config->extDir.$this->extConfig['basename']."/config.xml";
         $configFile = "ext/".$this->extConfig['basename']."/config.xml";
-//        require_once($this->config->miplexDir."BeautifyXML.class.php");
         require_once("lib/Miplex2/BeautifyXML.class.php");
         $beauty = new BeautifyXML();
         
@@ -111,7 +101,7 @@ class Extension
     
     /**
     * Diese Methode bereitet das Konfigurationsarray auf das Schreiben als
-    * XML String vor, indem es das Array ausliest und als XML String zurückgibt.
+    * XML String vor, indem es das Array ausliest und als XML String zurï¿½ckgibt.
     * @param Array $config Die Konfiguraion der Erweiterung
     * @return String XML String der Erweiterung
     */

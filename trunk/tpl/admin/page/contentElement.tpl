@@ -13,11 +13,11 @@
         <div class="ceHead">
         <strong>{$ce.attributes.name}</strong>
         </div>
-        
+
         <div class="ceHead">
-            {$i18n->get('ce.start')}: {$ce.attributes.visibleFrom}<br>
-            {$i18n->get('ce.stop')}:  {$ce.attributes.visibleTill}<br>
-            {$i18n->get('ce.position')}:  {$ce.attributes.position}<br>
+            {$i18n->get('ce.start')}: {$ce.attributes.visibleFrom}<br />
+            {$i18n->get('ce.stop')}:  {$ce.attributes.visibleTill}<br />
+            {$i18n->get('ce.position')}:  <strong>{$ce.attributes.position}</strong><br />
         </div>
         {*first part of content*}
         <div class="ceBody">{$ce.data|strip_tags}</div>
@@ -35,16 +35,16 @@
                 <div class="ceHead">
                 <strong>{$ce.attributes.name}</strong>
                 </div>
-                
+
                 <div class="ceHead">
-                    {$i18n->get('ce.start')}: {$ce.attributes.visibleFrom}<br>
-                    {$i18n->get('ce.stop')}:  {$ce.attributes.visibleTill}<br>
-                    {$i18n->get('ce.position')}:  {$ce.attributes.position}<br>
+                    {$i18n->get('ce.start')}: {$ce.attributes.visibleFrom}<br />
+                    {$i18n->get('ce.stop')}:  {$ce.attributes.visibleTill}<br />
+                    {$i18n->get('ce.position')}:  <strong>{$ce.attributes.position}</strong><br />
                 </div>
                 {*first part of content*}
                 <div class="ceBody">{$ce.data|strip_tags}</div>
             </div>
         {/if}
     {/if}
-    
+
 {/foreach}

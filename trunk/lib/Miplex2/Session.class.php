@@ -48,7 +48,7 @@ class Session
     */
     function loadUserDatabase()
     {
-        require_once($session->config->miplexDir."M2UserManager.class.php");
+        require_once("lib/Miplex2/M2UserManager.class.php");
         if ($this->userDatabase==null)
         {
             //load new db
@@ -114,7 +114,7 @@ class Session
             $this->smarty->cache_dir = "tpl/cache";
             $this->smarty->config_dir = "tpl/config";
             //$this->smarty->debugging = true;
-            $this->smarty->plugins_dir = array($this->config->smartyDir."/plugins", $this->config->miplexDir."smartyPlugins");
+            $this->smarty->plugins_dir = array("lib/smarty/libs/plugins", "lib/Miplex2/smartyPlugins");
         }
     }
     

@@ -1,1 +1,1 @@
-Please Select Extension
+Bitte wählen Sie die gewünschte Extension auf der linken Seite aus.
