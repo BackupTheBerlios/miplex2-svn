@@ -21,11 +21,11 @@ class mailform extends Extension
              // this is a valid email domain!
                 $sender = $mail['add'];
 
-             // Eventuell den Namen für das From-Statement davorkleben
+             // Eventuell den Namen fï¿½r das From-Statement davorkleben
                 if (sizeof($mail['name']) > 0)
                     $fullsender = '"'.$mail['name'].'" <'.$sender.'>';
 
-             // eMail-Adresse des Empfängers
+             // eMail-Adresse des Empfï¿½ngers
                 $mailto = $this->extConfig['params']['to'];
 
              // Betreffzeile zusammenbauen
@@ -39,8 +39,8 @@ class mailform extends Extension
              // Message eintragen
                 $msg = $mail['text']."\n\n";
 
-             // Infos über den Nutzer sammeln
-                $msg.= "Zusätzliche Informationen:\n\n";
+             // Infos ï¿½ber den Nutzer sammeln
+                $msg.= "ZusÃ¤tzliche Informationen:\n\n";
 
                 $referer = $mail['referer'];
                 if (sizeof($referer) > 0)
@@ -53,7 +53,7 @@ class mailform extends Extension
                 $ip = $_SERVER['REMOTE_ADDR'];
                 $host = gethostbyaddr($ip);
                 if (sizeof($host) > 0)
-                    $msg.= "Der Kunde kommt über diesen Rechner ins Internet: ".$host."\n";
+                    $msg.= "Der Kunde kommt ï¿½ber diesen Rechner ins Internet: ".$host."\n";
 
 
                 mail($mailto, $subject, $msg, $header);
@@ -63,7 +63,7 @@ class mailform extends Extension
             else 
                 $this->smarty->assign("referer", $mail['referer']);
                 $this->smarty->assign("name", $mail['name']);
-                $this->smarty->assign("add", "UNGÜLTIGE E-MAIL");
+                $this->smarty->assign("add", "UNGï¿½LTIGE E-MAIL");
                 $this->smarty->assign("subject", $mail['subject']);
                 $this->smarty->assign("text", $mail['text']);                
 
@@ -89,11 +89,11 @@ class mailform extends Extension
             
         } else 
         {
-            $this->extConfig['subject'] = $_POST['data']['subject'];
-            $this->extConfig['from'] = $_POST['data']['from'];
-            $this->extConfig['to'] = $_POST['data']['to'];
+            $this->extConfig['params']['subject'] = $_POST['data']['subject'];
+            $this->extConfig['params']['from'] = $_POST['data']['from'];
+            $this->extConfig['params']['to'] = $_POST['data']['to'];
             
-            $this->saveConfiguration($this->config);
+            $this->saveConfiguration($this->extConfig);
             
             return $this->smarty->fetch("mailform/saved.tpl");
         }

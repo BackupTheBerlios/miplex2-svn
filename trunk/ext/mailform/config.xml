@@ -1,13 +1,17 @@
 <config>
-    <extName>Mailform</extName>
-    <author>Martin Grund</author>
-    <mail>grundprinzip@gmail.com</mail>
-    <version>0.9.1</version>
+    <extName>Mailform
+    </extName>
+    <author>Gregor Schmidt
+    </author>
+    <mail>m2@schmidtwisser.de
+    </mail>
+    <version>0.5
+    </version>
     <dependsOn>
     </dependsOn>
     <params>
-        <to>Service@wbg-dahmeland.de</to>
         <subject>Serviceanfrage über Website</subject>
-        <from>Website@wbg-dahmeland.de</from>
+        <from>Website@grundprinzip.de</from>
+        <to>Service@grundprinzip.de</to>
     </params>
 </config>

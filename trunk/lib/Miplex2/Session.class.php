@@ -21,6 +21,7 @@ class Session
     var $header = "";
     
     //user management
+    /* @var $userDatabase M2UserManager */
     var $userDatabase = null;
     
     /**

@@ -10,7 +10,7 @@
 <div class='blogBody'>{$assoc.body}</div>
 {/if}
 
-<div class='blogFooter'>{$assoc.attributes.author} - {$assoc.attributes.date} ({$assoc.numberOfComments} Kommentare)</div>
+<div class='blogFooter'>{$assoc.attributes.author} - {$assoc.attributes.date} ({$assoc.numberOfComments|string_format:"%d"} Kommentare)</div>
 
 {* Anzeigen der Kommentare*}
 {if $comments eq 1}
@@ -19,9 +19,12 @@
     {foreach item=kommentar from=$assoc.comments}
     
         <div class="blogComment">{$kommentar.content}</div>
-        <div class='blogCommentFooter'>{$kommentar.attributes.author} -  {$kommentar.attributes.date}</div>
+        <div class='blogCommentFooter'><a href='{$kommentar.attributes.www}'>{$kommentar.attributes.author}</a> -  {$kommentar.attributes.date}</div>
     
     {/foreach}
+    {if $added eq 1}
+    <b>Ihr Kommentar wurde eingetragen.</b>
+    {/if}
     <p />
     {if $formular eq 1}
     <div class='blogAddComment'>
@@ -29,10 +32,11 @@
         <p />
         <form action='{$url}/add.html' method="POST">
         <table>
-        <tr><td>Name:</td><td><input type="text" name="author" /></td></tr>
-        <tr><td>Mail:</td><td><input type="text" name="mail" /></td></tr>
-        <tr><td>WWW:</td><td><input type="text" name="www" /></td></tr>
-        <tr><td>Notify:</td><td><input type="checkbox" name="notify" /></td></tr>
+        <tr><td>Name:</td><td><input type="text" name="author" value="{$author.author}" /></td></tr>
+        <tr><td>Mail:</td><td><input type="text" name="mail" value="{$author.mail}"/></td></tr>
+        <tr><td>WWW:</td><td><input type="text" name="www" value="{$author.www}"/></td></tr>
+        <tr><td>Notify:</td><td><input type="checkbox" name="notify" {if $author.notify == "on"}checked="on"{/if}/></td></tr>
+        <tr><td>Keks:</td><td><input type="checkbox" name="keks" /></td></tr>
         <tr><td colspan="2"><textarea name='content' cols="40" rows="10" ></textarea></td></tr>
         </table>
         <input type="hidden" name="context" value="{$assoc.context}" />

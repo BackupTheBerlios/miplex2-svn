@@ -5,7 +5,11 @@ class blog extends Extension {
     var $categories = array();
     var $baseUri = "";
     var $blogClass = null;
+    var $dynParams;
+    var $urlbase;
     
+    /*@var $smarty Smarty*/
+    var $smarty;
     
     /**
     * Call from the Frontend
@@ -14,7 +18,7 @@ class blog extends Extension {
     function main()
     {
         global $HTTP_SERVER_VARS;
-        
+        global $session;
         
 		//Fetch function paramters
         $args = func_get_args();
@@ -26,44 +30,7 @@ class blog extends Extension {
         //Weblog Klasse �bergeben
         $this->smarty->assign("weblog", $this->blogClass);
         //Submit configuration and categories
-        $this->categories = explode("," ,$this->extConrequire_once("lib/Miplex2/Session.class.php");
-    
-    $session = new Session("config/config.ser", "backend");
-    
-    $session->loadUserDatabase();
-
-    
-    if (!is_string($_GET['module']))
-    {
-        $_GET['module'] = "start";
-    }
-    
-    switch ($_GET['module'])
-    {
-     
-        case 'page':
-        
-            require_once($session->config->miplexDir."admin/admin.page.php");
-            break;
-        
-        
-        case 'ext':
-            require_once($session->config->miplexDir."admin/admin.extensions.php");
-            break; 
-            
-        
-        case 'settings':
-            require_once($session->config->miplexDir."admin/admin.settings.php");
-            break;
-        
-        case 'start':
-            break;
-        
-        
-    }
-    
-    
-    $session->smarty->display("admin.tpl");fig['params']['categories']);
+        $this->categories = explode("," ,$this->extConfig['params']['categories']);
         foreach ($this->categories as $k => $v) {
         	$this->categories[$k] = stripslashes(trim($v));
         }
@@ -71,26 +38,39 @@ class blog extends Extension {
         $this->smarty->assign("config", $this->extConfig['params']);
         
         //Submit $url
-        $url = $this->po->config->docroot.$this->po->config->baseName."/".$this->po->path;
-        $this->smarty->assign("url", $url);
         
-        //Fetch disired contet
-        $queryString = $this->po->params;
-        if ($queryString != "")
-        {
-            $queryString = explode("/", $queryString);
-        }
-       
+        $this->dynParams = explode("/", $session->currentPage->params);
+        $this->urlbase = $session->currentPage->config->docroot.$session->currentPage->config->baseName."/".$session->currentPage->path;
+        
+        $this->smarty->assign("url", $this->urlbase);
+        
         //fetch what to do 
-        $displayGroup = $queryString[0];
+        $displayGroup = $this->dynParams[0];
         //fetch variable
-        $displayVariable = $queryString[1];
+        $displayVariable = $this->dynParams[1];
+        
+        //Kommentare und Formular anzeigen
+        $this->smarty->assign("comments","1");
+        $this->smarty->assign("formular", "1");
+        
         
         switch ($displayGroup) {
         	case 'single':
         		
 				//fetch contennt by passed number
         	    $content[] = $this->blogClass->getEntryByNumberOrContext($displayVariable-1);
+        	    
+        	    //holen des Cookies falls vohanden
+        	    if ($_COOKIE['m2blogkeks'])
+        	    {
+        	        $author['author'] = $_COOKIE['m2blogkeks']['author'];
+        	        $author['mail'] = $_COOKIE['m2blogkeks']['mail'];
+        	        $author['www'] = $_COOKIE['m2blogkeks']['www'];
+        	        $author['notify'] = $_COOKIE['m2blogkeks']['notify'];
+        	        
+        	        $this->smarty->assign("author", $author);
+        	    }
+        	    
         	    $this->smarty->assign("data", $content);
         	    $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
         	    
@@ -99,14 +79,50 @@ class blog extends Extension {
         	case 'cat':
         	
 				//fetch content by category passed by link
+				$this->smarty->assign("comments", "0");
         	    $content = $this->blogClass->getEntryByCategory($displayVariable);
         	    $this->smarty->assign("data",$content);
-                    $this->smarty->assign("content","blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
+                $this->smarty->assign("content","blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
         	    break;	
         		
+        	case 'add':
+        	    //Hinzufügen eines Kommentars
+        	    $content[] = $this->blogClass->getEntryByNumberOrContext($_POST['context']);
+        	    
+        	    $comment['author'] = $_POST['author'];
+        	    $comment['www'] = $_POST['www'];
+        	    $comment['mail'] = $_POST['mail'];
+        	    $comment['content'] = $_POST['content'];
+        	    $comment['notify'] = $_POST['notify'];
+        	    $comment['date'] = date("d.m.Y");
+        	    
+        	    $done = $this->blogClass->addComment($content[0]['context'], $comment);
+        	    $ncnt[] = $this->blogClass->getEntryByNumberOrContext($_POST['context']);
+        	    
+        	    if ($done)
+        	    {
+        	        
+        	        //Behandeln des Cookies
+        	        if ($_POST['keks']=="on" && ! $_COOKIE['m2blogkeks'])
+        	        {
+        	            setcookie("m2blogkeks[author]", $comment['author'], time()+60*60*24*30, "/");
+        	            setcookie("m2blogkeks[mail]", $comment['mail'], time()+60*60*24*30, "/");
+        	            setcookie("m2blogkeks[www]", $comment['www'], time()+60*60*24*30, "/" );
+        	            setcookie("m2blogkeks[notify]", $comment['notify'], time()+60*60*24*30, "/" );
+        	        }
+        	        
+        	        $this->smarty->assign("data", $ncnt);
+            	    $this->smarty->assign("formular", "1");
+            	    $this->smarty->assign("added", "1");
+        	    }
+        	    $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
+        	
+    	    break;
+        	    
         	default:
         	
 				//fetch last x entries, the number of entries is defined in the configuration xml file
+				$this->smarty->assign("comments", "0");
         	    $content = $this->blogClass->getLastXEntries($this->extConfig['params']['countDisplay']);
         	    $this->smarty->assign("data", $content);
                     $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
@@ -114,7 +130,7 @@ class blog extends Extension {
        		break;
         }
         
-        //return $this->smarty->fetch("blog/tpl/frontend/main/".$this->extConfig['params']['mainTpl']);
+        return $this->smarty->fetch("blog/tpl/frontend/main/".$this->extConfig['params']['mainTpl']);
     }
     
     /**
@@ -206,7 +222,43 @@ class blog extends Extension {
             	     $this->smarty->assign("content", "blog/tpl/settings.tpl");
             	
             	     break; 
-            	         
+            	        
+            	case 'rss':
+            	     require_once("ext/blog/rsscreator.class.php");
+            	     $rss = RSSCreator::getInstance('2');
+            	     
+            	     $channel['title'] = $this->extConfig['params']['blogTitle'];
+                     $channel['link'] = $this->extConfig['params']['blogURL'];
+                     $channel['description'] = $this->extConfig['params']['description'];
+                     $channel['language'] = "de";
+                     $channel['date'] = date("d.m.Y H:i:s");
+                     $channel['creator'] = $this->extConfig['params']['managingEditor'];
+                    
+                     $rss->addChannel($channel);
+                     
+                     $entries = $this->blogClass->getLastXEntries(10);
+                     foreach ($entries as $entry) {
+    
+                         $item = array();
+                         $item['category'] = $entry['attributes']['category'];
+                         $item['author'] = $entry['attributes']['author'];
+                         $item['title'] = $entry['attributes']['title'];
+                        
+                         $item['date'] = $entry['attributes']['date'];
+                         $item['content'] = $entry['teaser'];
+                         $item['link'] = $this->extConfig['params']['blogURL']."single/".$entry['number'];
+                    	
+                         $rss->addItem($item);
+                     }
+            	     
+                     $xml = $rss->outputXML();
+
+                     $h = fopen("index.xml", "w");
+                     fwrite($h, $xml);
+                     fclose($h);
+                     $this->smarty->assign("content", "blog/tpl/rss.tpl");  
+            	     break;     
+            	      
             	default:
             	    //default action is to display welcome page
             	    $this->smarty->assign("content", "blog/tpl/default.tpl");   

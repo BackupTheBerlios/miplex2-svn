@@ -360,6 +360,23 @@ class M2UserManager
     {
     }
     
+    /**
+    * Funktion überprüft, ob der Benutzer rein darf oder nicht.
+    * @return boolean Login allowed
+    */
+    function login($user, $pw)
+    {
+        $usera = $this->getUser("username", $user);
+        
+        if (!empty($user))
+        {
+            if ($pw == $usera['password'])
+                return true;
+            else 
+                return false;
+        }
+        return true;
+    }
     
     ########################User Functions############################
     

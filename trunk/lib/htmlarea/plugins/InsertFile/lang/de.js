@@ -13,7 +13,7 @@
 //       that states what encoding is necessary.)
 
 InsertFile.I18N = {
-	"InsertFileTooltip"				: "Insert link to file"
+	"InsertFileTooltip"				: "Verknüpfung auf Datei einfügen"
 };
 /*
 

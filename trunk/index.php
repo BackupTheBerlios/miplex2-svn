@@ -128,7 +128,9 @@
         
         $session = new Session("config/config.ser");
 
-        if (strlen($HTTP_SERVER_VARS['REQUEST_URI']) > 0 && sizeof($_POST) == 0 && sizeof($_GET) == 0)
+        
+        //Wie soll Caching benutzt werden
+        if (strlen($HTTP_SERVER_VARS['REQUEST_URI']) > 0 && sizeof($_POST) == 0 && sizeof($_GET) == 0 && false)
         {
             $session->smarty->caching = true;
             
@@ -164,7 +166,7 @@
             $session->smarty->assign("header", $session->header);
             $session->smarty->assign("config", $session->config);
             $session->smarty->assign("site", $session->site);
-            //$session->smarty->display($session->config->theme);
+            $session->smarty->display($session->config->theme);
         }
    
     gz_output(9, 1, 1); //Compression Level, ShowSpeed, ShowCompression

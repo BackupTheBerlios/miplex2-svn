@@ -9,7 +9,7 @@ function getAll()
     require_once("../../../../lib/Miplex2/MiplexConfig.class.php");
     $oConfig = unserialize($config);
     
-    ini_set("include_path", ini_get("include_path").";".$oConfig->fileSystemRoot."lib\\Miplex2\\;".$oConfig->fileSystemRoot."lib\\XPath\\");
+    ini_set("include_path", ini_get("include_path").":".$oConfig->fileSystemRoot."lib/Miplex2/:".$oConfig->fileSystemRoot."lib/XPath/");
     require("MiplexDatabase.class.php");
     
     $oConfig->contentDir = "../../../../".$oConfig->contentDir;
@@ -82,7 +82,7 @@ function getCe()
     {
         $matchedPO = -1;
         foreach ($pageObjects as $key => $po) {
-        	
+            
             if ($po->attributes['alias']== $alias)
                 $matchedPO = $key;
         }
@@ -98,7 +98,7 @@ function getCe()
     require_once("../../../../lib/Miplex2/MiplexConfig.class.php");
     $oConfig = unserialize($config);
 
-    ini_set("include_path", ini_get("include_path").";".$oConfig->fileSystemRoot."lib\\Miplex2\\;".$oConfig->fileSystemRoot."lib\\XPath\\");
+    ini_set("include_path", ini_get("include_path").":".$oConfig->fileSystemRoot."lib/Miplex2/:".$oConfig->fileSystemRoot."lib/XPath/");
     //require("MiplexDatabase.class.php");
 
     $oConfig->contentDir = "../../../../".$oConfig->contentDir;
@@ -130,8 +130,8 @@ function getCe()
       $o="<ul>";
       foreach($ces as $ley =>$ce)
       {
-      	$name = !empty($ce['attributes']['name'])?$ce['attributes']['name']:"(none)";
-      	$o.="<li><a href='?path=".$oConfig->docroot.$oConfig->baseName."/".$page->path."&key=".$ce['attributes']['alias']."'>".$name."</a></li>";
+        $name = !empty($ce['attributes']['name'])?$ce['attributes']['name']:"(none)";
+        $o.="<li><a href='?path=".$oConfig->docroot.$oConfig->baseName."/".$page->path."&key=".$ce['attributes']['alias']."'>".$name."</a></li>";
       }
       $o.="</ul>";
   

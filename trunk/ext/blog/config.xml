@@ -9,13 +9,15 @@
         <author>Martin</author>
         <notifyMail>blog@grundprinzip.de</notifyMail>
         <blogTitle>!golbeW</blogTitle>
-        <description>Ein Blog für alle Fälle. Neuigkeiten, Skuriles und Informatives aus dem täglichen Geschehen </description>
+        <blogURL>http://localhost.localdomain/miplex2/index.php/blog/</blogURL>
+        <description>Ein Blog fï¿½r alle Fï¿½lle. Neuigkeiten, Skuriles und Informatives aus dem tï¿½glichen Geschehen </description>
         <generator>Miplex2</generator>
-        <managingEditor>blog@grundprinzip.de</managingEditor>
-        <categories>TagesZeitung, Skills, Abseits, Hell's Kittchen</categories>
+        <managingEditor>blog@grundprinzip.de (Martin Grund)</managingEditor>
+        <categories>TagesZeitung, Skills, Abseits, Hell\'s Kittchen</categories>
         <countDisplay>10</countDisplay>
         <countSticky>3</countSticky>
         <durationSticky>10</durationSticky>
+        <useTeaser>0</useTeaser>
         <entryTpl>entry.tpl</entryTpl>
         <commentTpl>comment.tpl</commentTpl>
         <mainTpl>main.tpl</mainTpl>

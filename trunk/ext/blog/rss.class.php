@@ -24,17 +24,39 @@
         
         
         /**
+        * FUnktion zum Vorbereiten der XML Datei
+        */
+        function prepareXML()
+        {
+            $bnode = "<?xml version=\"1.0\" encoding=\"iso-8859-1\" ?>";
+            $bnode.= "<rss version=\"2.0\">\n<channel>";
+            
+            $bnode.="<title>".$this->config['params']['blogTitle']."</title>";
+            $bnode.="<link>".$this->config['params']['blogURL']."</link>";
+            $bnode.="<description>".$this->config['params']['description']."</descripion>";
+            $bnode.="<language>de</language>";
+            $bnode.="<generator>Miplex2Blog</generator>";
+            
+            
+            $enode ="</channel></rss>";
+            
+            return $bnode.$enode;
+        }
+        
+        /**
         * Funktion zum generieren von einem RSS 2.0 feed
         */
         function generateRSS($ype="html")
         {
-            //Einfügen des Basiswertes
-            include_once("xml/XPath.class.php");
-            include_once("ext/blog2/class/blog.class.php");
+            //Einfï¿½gen des Basiswertes
+            include_once("lib/XPath/XPath.class.php");
+            include_once("ext/blog/blog.class.php");
             
-            $xml = new XPath("ext/blog2/content/rss.xml");
+            $xml = new XPath();
+            $xml->importFromString($this->prepareXML());
             
-            //Konfiguration einfügen
+            
+            //Konfiguration einfï¿½gen
             foreach ($this->config['rss'] as $key => $value) {
                 
                 if (!empty($value))
@@ -45,7 +67,7 @@
             	
             }
             
-            //So nun die letzten 10 Einträge aus dem Blog einfügen
+            //So nun die letzten 10 Eintrï¿½ge aus dem Blog einfï¿½gen
             $blog = new weblog($this->blog);
             $entryArray = $blog->getLastXEntries(10);
             

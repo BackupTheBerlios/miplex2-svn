@@ -1,5 +1,5 @@
 <h2>Einstellungen</h2>
-Hie werden alle Einstellungen für das Blog gemacht
+Hie werden alle Einstellungen fï¿½r das Blog gemacht
 <form action="{$url}" method="POST">
     <table>
 
@@ -14,6 +14,10 @@ Hie werden alle Einstellungen für das Blog gemacht
         <tr>
             <td>Blog Titel:</td>
             <td><input type="text" name="blog[params][blogTitle]"  value="{$params.blogTitle}"/></td>
+        </tr>   
+        <tr>
+            <td>Blog URL:</td>
+            <td><input type="text" name="blog[params][blogURL]"  value="{$params.blogURL}"/></td>
         </tr>   
         
         <tr>
@@ -39,11 +43,11 @@ Hie werden alle Einstellungen für das Blog gemacht
             <td><input type="text" name="blog[params][categories]"  value="{$params.categories}"/></td>
         </tr>   
         <tr>
-            <td>Anzahl der Einträge auf der Startseite:</td>
+            <td>Anzahl der Eintrï¿½ge auf der Startseite:</td>
             <td><input type="text" name="blog[params][countDisplay]"  value="{$params.countDisplay}"/></td>
         </tr>   
         <tr>
-            <td>Anzahl der Kommentare für Sticky-Eintrag:</td>
+            <td>Anzahl der Kommentare fï¿½r Sticky-Eintrag:</td>
             <td><input type="text" name="blog[params][countSticky]"  value="{$params.countSticky}"/></td>
         </tr>   
         <tr>
@@ -51,7 +55,11 @@ Hie werden alle Einstellungen für das Blog gemacht
             <td><input type="text" name="blog[params][durationSticky]"  value="{$params.durationSticky}"/></td>
         </tr>   
         <tr>
-            <td>Template für die Einträge</td>
+            <td>Teaser benutzen:</td>
+            <td><input type="text" name="blog[params][useTeaser]"  value="{$params.useTeaser}"/></td>
+        </tr>
+        <tr>
+            <td>Template fï¿½r die EintrÃ¤ge</td>
             <td>
                 <select name="blog[params][entryTpl]">
                     {html_options values=$eTpls output=$eTpls selected=$params.entryTpl}
@@ -59,7 +67,7 @@ Hie werden alle Einstellungen für das Blog gemacht
             </td>
         </tr>
         <tr>
-            <td>Template für die Kommentare</td>
+            <td>Template fï¿½r die Kommentare</td>
             <td>
             <select name="blog[params][commentTpl]">
                     {html_options values=$cTpls output=$cTpls selected=$params.commentTpl}
@@ -67,7 +75,7 @@ Hie werden alle Einstellungen für das Blog gemacht
             </td>
         </tr>
         <tr>
-            <td>Template für die Hauptansicht</td>
+            <td>Template fï¿½r die Hauptansicht</td>
             <td>
             <select name="blog[params][mainTpl]">
                     {html_options values=$mTpls output=$mTpls selected=$params.mainTpl}

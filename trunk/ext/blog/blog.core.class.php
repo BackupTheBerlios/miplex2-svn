@@ -21,26 +21,26 @@
   ------------------
   
   String stripCdata(string $string) 
-  Nimmt einen String auf und entfernt daraus das umschließende CDATA Tag
+  Nimmt einen String auf und entfernt daraus das umschlieï¿½ende CDATA Tag
   
-  bool checkDate() - Überprüft einen String, ob es ein korrektes Datum ist
+  bool checkDate() - ï¿½berprï¿½ft einen String, ob es ein korrektes Datum ist
   
-  Öffentliche Funktionen
+  ï¿½ffentliche Funktionen
   ----------------------
   
   array getEntryBydate() - Liefert alle Entries zu einem Datum
 
-  array getEtnryByNumberOrContext() - Liefert alle Einträge passend zu genau einer Nummer oder Kontext
+  array getEtnryByNumberOrContext() - Liefert alle Eintrï¿½ge passend zu genau einer Nummer oder Kontext
 
-  array getEntry() - Liefert alle Einträg z.B. ab einem Startwert und eine bestimmte Anzahl
+  array getEntry() - Liefert alle Eintrï¿½g z.B. ab einem Startwert und eine bestimmte Anzahl
 
   array getCategories() - Liefert alle verwendeten Kategorien
 
   array getEntryByCategory() - Lifert einen Eintrag passend zu einer Kategorie
 
-  bool addEntry() - Einen Eintrag zinzufügen
+  bool addEntry() - Einen Eintrag zinzufï¿½gen
 
-  bool addComment() - Ein Kommentar hinzufügen
+  bool addComment() - Ein Kommentar hinzufï¿½gen
 
 
 */
@@ -64,7 +64,7 @@
         }
         
         /**
-        * Funktion prüft Datum auf korrekte Eingabe
+        * Funktion prï¿½ft Datum auf korrekte Eingabe
         * @param date $date Eingabedatum (Format: mm-dd-yyyy)
         * @return bool
         */
@@ -74,11 +74,11 @@
 
             //print_r($dateArray);
 
-            //Algemeine Überprüfung
+            //Algemeine ï¿½berprï¿½fung
             if (count($dateArray)!=3)
                 return FALSE;
 
-            //Überprüfen des Monats
+            //ï¿½berprï¿½fen des Monats
             if (!is_int($dateArray[0]) || $dateArray[0] < 1 || $dateArray[0] > 12)
                 //return FALSE;
 
@@ -141,14 +141,14 @@
         }
        
         /**
-        * Alle Einträge von bis
+        * Alle Eintrï¿½ge von bis
         * @param date $von Startdatum
-        * @param date $bis="" Enddatum standardmäßig leer
-        * @return array $dateEntries Die passenden Einträge zur Abfrage
+        * @param date $bis="" Enddatum standardmï¿½ï¿½ig leer
+        * @return array $dateEntries Die passenden Eintrï¿½ge zur Abfrage
         */
         function getEntryByDate($von, $bis="", $onlyStart=true ,$count=-1)
         {
-            //Überprüfen der Daten
+            //ï¿½berprï¿½fen der Daten
             if ($onlyStart == TRUE)
             {
                 if ($this->checkDate($von))
@@ -172,8 +172,8 @@
         }
         
         /**
-        * Gibt eintrag mit bestimmter Nummer Zurück
-        * Sinnvoll wäre eine alternative Übergabe des passenden Kontextes
+        * Gibt eintrag mit bestimmter Nummer Zurï¿½ck
+        * Sinnvoll wï¿½re eine alternative ï¿½bergabe des passenden Kontextes
         * @param int $number Die Nummer des Eintrages innerhalb des XML Files /weblog[1]/entry[1..n]
         */
         function getEntryByNumberOrContext($number)
@@ -215,7 +215,7 @@
                 $resBody = $this->xclass->evaluate($evalContext."/header[1]/body[1]");
                 $returnArray['body'] = stripslashes($this->stripCdata($this->xclass->getData($resBody[0])));
 
-                //Nun alle Kommentare hintenanhängen
+                //Nun alle Kommentare hintenanhï¿½ngen
                 $resComments = $this->xclass->evaluate($evalContext."/comments[1]/commententry");
                 $numberOfComments = count($resComments)>0?count($resComments):0;
                 
@@ -243,12 +243,12 @@
         }
         
         /**
-        * Gibt anzahl von Einträgen zurück
-        * @param int count = -1 --> alle Einträge
-        * @param int count = int --> Anzahl der Einträge
+        * Gibt anzahl von Eintrï¿½gen zurï¿½ck
+        * @param int count = -1 --> alle Eintrï¿½ge
+        * @param int count = int --> Anzahl der Eintrï¿½ge
         * @param int start --> Startwert
         *
-        * Wenn count von start länger als Array, wird bis ende gemacht
+        * Wenn count von start lï¿½nger als Array, wird bis ende gemacht
         */
         function getEntry( $start=0 , $count=-1)
         {
@@ -259,7 +259,7 @@
             {
                 //Wenn alle angezeigt werden sollen, dann anzahl bestimmen
             	  $count = $count < 0 ? count($evalResult):$count;
-            	  //Wenn count größer als Anzahl, dann auf das richtige begrenzen
+            	  //Wenn count grï¿½ï¿½er als Anzahl, dann auf das richtige begrenzen
             	  $count = $count > count($evalResult)?count($evalResult):$count;
             	  //Start kleiner 0
             	  $start = $start < 0 ? 0:$start;
@@ -267,7 +267,7 @@
                 for ($i = $start; $i < $count ; $i++)
                 {
 
-                    //Alle Ausgeben, die benötigt ==> Achtung Problem mit 0 und 1 Start des Arrays
+                    //Alle Ausgeben, die benï¿½tigt ==> Achtung Problem mit 0 und 1 Start des Arrays
                     $returnArray[]=$this->getEntryByNumberOrContext($i);
                 }
 
@@ -281,14 +281,14 @@
 
         /**
       	* Funktion zum Speichern eines Kommentars
-      	* TODO Überpüfen der Position der Kommentare
+      	* TODO ï¿½berpï¿½fen der Position der Kommentare
       	* @param int $numberOfEntry Die Nummer des Eintrages oder der Kontext
       	* @param array $commentArray Das Array mit allen wichtigen Werten des Kommentars
       	*    - author, date, mail, content
       	*/
       	function addComment($numberOfEntry, $commentArray)
       	{
-
+      	    
       		if ((is_array($commentArray)))
       		{
       			if (is_int($numberOfEntry))
@@ -320,6 +320,7 @@
       			    //kein Kommentar bis jetzt
       				//$evalComments = $this->xclass->evaluate($context);
       				$contextNew = preg_replace("/\/commententry/","", $context);
+      				print_r($contextNew);
       				//$res = $this->xclass->appendData($evalComments[0], $newXmlString );
                     $res = $this->xclass->appendData($contextNew, $newXmlString );
                     if ($res == false)
@@ -331,7 +332,7 @@
 
       			} else
       			{
-                    //Neuen Kommentar ganz hinten anfügen
+                    //Neuen Kommentar ganz hinten anfï¿½gen
                     
       			    $this->xclass->insertChild($evalComments[count($evalComments)-1],$newXmlString, false);
       			}
@@ -361,7 +362,7 @@
         }
 
   	    /**
-  	    * Funktion zum hinzufügen von Einträgen in das Blog
+  	    * Funktion zum hinzufï¿½gen von Eintrï¿½gen in das Blog
   	    * @param array entryArray array mit allen Informationen
   	    * - attributes -> author, mail, date, category...
   	    * - teaser, body
@@ -398,8 +399,8 @@
   	    }
   	    
   	    /**
-  	    * Dies Funktion gibt zu den Einrägen alle verwendeten Kategorien zurück
-  	    * Funktionalität ist fraglich, da ja nict alle Kategorien benutzt werden müssen
+  	    * Dies Funktion gibt zu den Einrï¿½gen alle verwendeten Kategorien zurï¿½ck
+  	    * Funktionalitï¿½t ist fraglich, da ja nict alle Kategorien benutzt werden mï¿½ssen
   	    */
   	    function getCategories()
   	    {
@@ -411,9 +412,9 @@
   	    
   	    
   	    /**
-        * Diese Funktion gibt zum übergenen Namen der kategorie die passenden Einträge im Weblog zurük
+        * Diese Funktion gibt zum ï¿½bergenen Namen der kategorie die passenden Eintrï¿½ge im Weblog zurï¿½k
         * @param string $catName Der Name der gesuchten Kategorie
-        * @return array catEntries Die gefundenn Einträge im Weblog
+        * @return array catEntries Die gefundenn Eintrï¿½ge im Weblog
         */
         function getEntryByCategory($catName)
         {
@@ -441,7 +442,7 @@
         }
         
         /**
-        * Gibt die Anzahl der Einträge zurück
+        * Gibt die Anzahl der Eintrï¿½ge zurï¿½ck
         * @return int Anzahl
         */
         function countEntries()
@@ -451,7 +452,7 @@
         }
         
         /**
-        * Gibt die letzten x Einträge des Weblogs aus
+        * Gibt die letzten x Eintrï¿½ge des Weblogs aus
         * @param int $count Anzahl
         * @return array 
         */
@@ -467,15 +468,15 @@
         
         
         /**
-        * Funktione die die aktivsten Einträge anzeigt
+        * Funktione die die aktivsten Eintrï¿½ge anzeigt
         * @param int $atLease Mindestanzahl der Kommentare
-        * @param int $maxDisplay Zeige maximal X Einträge
+        * @param int $maxDisplay Zeige maximal X Eintrï¿½ge
         */
         function getMostActiveEntries($atLeast = 3, $maxDisplay = 5)
         {
             $Entries = $this->xclass->evaluate("/weblog/entry/comments[count(*)>=$atLeast]");
             
-            //Alle Einträge mit mehr als x Kommentaren erfasst
+            //Alle Eintrï¿½ge mit mehr als x Kommentaren erfasst
             foreach ($Entries as $entry)
             {
                 $parts = explode("/", $entry);
@@ -489,7 +490,7 @@
         }
         
         /**
-        * Funktion verschickt nach einem Kommentar wenn gewünscht eine Mail
+        * Funktion verschickt nach einem Kommentar wenn gewï¿½nscht eine Mail
         *
         */
         function getMailFromBlogEntry($context)

@@ -5,8 +5,9 @@
         <td>
             <ul>
                 <li><a href='{$url}&part=new'>Neuer Eintrag</a></li>
-                <li><a href='{$url}&part=list'>Einträge anzeigen</a></li>
+                <li><a href='{$url}&part=list'>Eintrï¿½ge anzeigen</a></li>
                 <li><a href='{$url}&part=settings'>Einstellungen</a></li>
+                <li><a href='{$url}&part=rss'>RSS generieren</a></li>
             </ul>
         </td>
         <td>

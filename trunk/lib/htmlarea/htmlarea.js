@@ -188,6 +188,7 @@ HTMLArea.Config = function () {
 	//    - Enabled in text mode: if false the button gets disabled for text-only mode; otherwise enabled all the time.
 	this.btnList = {
 		bold: [ "Bold", "ed_format_bold.gif", false, function(e) {e.execCommand("bold");} ],
+		quote: ["Quote", "ed_format_bold.gif", false, function(e) {e.execCommand("blockquote");}],
 		italic: [ "Italic", "ed_format_italic.gif", false, function(e) {e.execCommand("italic");} ],
 		underline: [ "Underline", "ed_format_underline.gif", false, function(e) {e.execCommand("underline");} ],
 		strikethrough: [ "Strikethrough", "ed_format_strike.gif", false, function(e) {e.execCommand("strikethrough");} ],
@@ -1628,6 +1629,15 @@ HTMLArea.prototype.execCommand = function(cmdID, UI, param) {
 			else
 				el.style.direction = dir;
 		}
+		break;
+		case "blockquote":
+		   var sel = editor._getSelection();
+	       var range = editor._createRange(sel);
+	       
+	       var insertText = "<blockquote>" + range + "</blockquote>";
+    
+           editor.insertHTML(insertText);
+        	
 		break;
 	    default: this._doc.execCommand(cmdID, UI, param);
 	}

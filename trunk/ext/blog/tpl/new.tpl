@@ -11,7 +11,9 @@
         </td>
     </tr>
     <tr><td>Titel:</td><td><input type="text" name="blog[attributes][title]" /></td></tr>
+    {if $config.useTeaser eq 1}
     <tr><td>Teaser:</td><td><textarea id="hta2" name="blog[teaser]" cols="40" rows="10"></textarea></td></tr>
+    {/if}
     <tr><td>Text:</td><td><textarea id="htmlarea" name="blog[body]" cols="40" rows="20"></textarea></td></tr>
 </table>
 <input type="hidden" name="blog[attributes][author]" value="{$config.params.author}" />
