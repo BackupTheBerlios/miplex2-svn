@@ -9,6 +9,8 @@ body
 table
 {
 	border-collapse:collapse;
+	font-family: Verdana;
+	font-size: 11px;
 }
 
 p

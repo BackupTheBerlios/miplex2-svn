@@ -3,5 +3,7 @@
     <div class="blogTeaser">{$blog.teaser}</div>
     <div class="blogBody">{$blog.body}</div>
     <div class='blogFooter'>- veröffentlicht am {$blog.attributes.date} in {$blog.attributes.category}-</div>
-    <div class="blogFooter"><a href="{$url}&part=edit&nr={$blog.number}">Bearbeiten</a> Löschen Ausblenden</div>
+    <div class="blogFooter"><a href="{$url}&part=edit&nr={$blog.number}">Bearbeiten</a> 
+                            <a href="{$url}&part=delete&nr={$blog.number}">Löschen</a> 
+                            Ausblenden</div>
 {/if}

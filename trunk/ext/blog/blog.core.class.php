@@ -510,6 +510,68 @@
             return $recipients;
         }
 
+        /**
+        * Updates blog Entry
+        */
+        function updateBlogEntry($context, $data)
+        {
+            $attributes = $data['attributes'];
+
+            $xmlEntry ="\n\n    <entry />\n";
+            $xmlHeader="\n    <header>\n        <teaser>\n            <![CDATA[".$data['teaser']."]]>\n        </teaser>\n        <body>\n            <![CDATA[".$data['body']."]]>\n        </body>\n    </header>\n    <comments />\n";
+            
+            $this->xclass->replaceData($context, $xmlHeader);
+            $this->xclass->setAttributes($context, $attributes);
+            
+            $file =  $this->xclass->exportAsXML();
+            if ($fid = fopen($this->xmlfile,"w"))
+            {
+                if (!fwrite($fid, $file ))
+                {
+                    $this->error = NO_WRITE_FILE;
+                    return false;
+                }
+            }
+            
+            //unlink("index.xml");
+            return true;
+            
+        }
+        
+        
+        /**
+        * Deletes Entry
+        */
+        function deleteBlogEntry($number)
+        {
+            if (is_int($number))
+        	{
+                $evalResult = $this->xclass->evaluate("/weblog/entry");
+                $evalContext = $evalResult[$number];
+            } else if (is_string($number))
+            {
+            	//Laden des Kontext
+            	$evalContext = $number;
+            } else
+            {
+            	$this->error = NO_VALID_PARAM;
+            	return FALSE;
+            }
+            
+            $this->xclass->removeChild($evalContext);
+            $file =  $this->xclass->exportAsXML();
+            if ($fid = fopen($this->xmlfile,"w"))
+            {
+                if (!fwrite($fid, $file ))
+                {
+                    $this->error = NO_WRITE_FILE;
+                    return false;
+                }
+            }
+            
+            //unlink("index.xml");
+            return true;
+        }
 
     }
 

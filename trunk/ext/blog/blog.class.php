@@ -66,7 +66,21 @@ class blog extends Extension {
             	     $this->openBlogEntry($_GET['nr']);
             	
             	     break;
+            	     
+            	case 'delete':
+            	
+            	     $result = $this->blogClass->deleteBlogEntry($_GET['nr']-1);
+            	     $this->smarty->assign("result", $result);
+                     $this->smarty->assign("content", "blog/tpl/newConfirmed.tpl");
+            	
+            	     break;
             
+            	case 'settings':
+            	
+            	     
+            	
+            	     break; 
+            	         
             	default:
             	    //default action is to display welcome page
             	    $this->smarty->assign("content", "blog/tpl/default.tpl");   
@@ -87,6 +101,15 @@ class blog extends Extension {
         
         $result = $this->blogClass->addEntry($blogData);
         
+        $this->smarty->assign("result", $result);
+        $this->smarty->assign("content", "blog/tpl/newConfirmed.tpl");
+    }
+    
+    function editEntryBlog()
+    {
+        $blogData = $_POST['blog'];
+        
+        $result = $this->blogClass->updateBlogEntry($_POST['context'], $blogData);
         $this->smarty->assign("result", $result);
         $this->smarty->assign("content", "blog/tpl/newConfirmed.tpl");
     }
@@ -118,9 +141,15 @@ class blog extends Extension {
         if (is_numeric($number))
         {
             $entry = $this->blogClass->getEntryByNumberOrContext($number-1);
+            $this->smarty->assign("cats", $this->categories);
             $this->smarty->assign("blog", $entry);
-            $this->smarty->assign("content", "blog/tpl/blogEntryBackend.tpl");
+            $this->smarty->assign("content", "blog/tpl/editBlogEntry.tpl");
         }
+    }
+    
+    function openSettings()
+    {
+        
     }
     
 }

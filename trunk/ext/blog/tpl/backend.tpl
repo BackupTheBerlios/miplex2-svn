@@ -5,7 +5,7 @@
             <ul>
                 <li><a href='{$url}&part=new'>Neuer Eintrag</a></li>
                 <li><a href='{$url}&part=list'>Einträge anzeigen</a></li>
-                <li>Einstellungen</li>
+                <li><a href='{$url}&part=settings'>Einstellungen</a></li>
             </ul>
         </td>
         <td>

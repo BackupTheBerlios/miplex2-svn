@@ -1,7 +1,20 @@
 <?xml version="1.0"?>
 <weblog>
-    <entry author="Martin" date="06-21-2004" mail="mail@mail.com" category="WWW" title="Die lebende Orange">
-        <header>
+    <entry author="Martin" date="06-21-2004" mail="mail@mail.com" category="TagesZeitung" title="Die lebende Orange">
+    <header>
+        <teaser>
+            <![CDATA[Eigentlich sollte man ja denken Orangen seinen von einem anderen Stern, doch dass dies nicht stimmt wurde
+                     gerade erst jüngst bewiesen.]]>
+        </teaser>
+        <body>
+            <![CDATA[Die Organge von Plantagenmeiset Konstantin Klein ist ein Wurderwerk der interntionalen Blogtechnik. Einsame Spitze
+                    nennt man im heutigen Fachdialekt die wundersame Schreibse von dem ungewhnlichen Menschen. Vereinsamung nennen es
+                    andere, doch Rechtmachen kann man es eigentlich keine, denn die Problematik ist eine ganz andere. Ich muss hier krampfhaft Text
+                    schreiben, um das Blog zu testen und keiner hilft mir dabei.]]>
+        </body>
+    </header>
+    <comments/>
+<header>
             <teaser><![CDATA[Eigentlich sollte man ja denken Orangen seinen von einem anderen Stern, doch dass dies nicht stimmt wurde
                      gerade erst jngst bewiesen.]]></teaser>
             <body><![CDATA[Die Organge von Plantagenmeiset Konstantin Klein ist ein Wurderwerk der interntionalen Blogtechnik. Einsame Spitze
@@ -29,8 +42,17 @@
             <![CDATA[]]>
         </commententry></comments>
     </entry>
-    <entry author="mg" date="06-21-2004" mail="mail@mail.com" category="TagesZeitung" title="Titel">
-        <header>
+    <entry author="mg" date="06-21-2004" mail="mail@mail.com" category="TagesZeitung" title="Titel (neue)">
+    <header>
+        <teaser>
+            <![CDATA[Dies ist ein teaser.Man soll es nicht glauben]]>
+        </teaser>
+        <body>
+            <![CDATA[Dies ist ein body]]>
+        </body>
+    </header>
+    <comments/>
+<header>
             <teaser><![CDATA[Dies ist ein teaser]]></teaser>
             <body><![CDATA[Dies ist ein body]]></body>
         </header>
@@ -64,103 +86,8 @@
             <![CDATA[weewer]]>
         </commententry></comments>
 </entry>
-<entry category="Skills" title="Chown fr Anfnger" author="Martin" date="13-07-2004">
-    <header>
-        <teaser>
-            <![CDATA[asdasdasd]]>
-        </teaser>
-        <body>
-            <![CDATA[asdasdas]]>
-        </body>
-    </header>
-    <comments>
 
-        <commententry author="Ich" date="13-07-04" mail="m" www="">
-            <![CDATA[Meine Meinung dazu]]>
-        </commententry>
-
-        <commententry author="mm" date="13-07-04" mail="" www="">
-            <![CDATA[Noch ne Meinung]]>
-        </commententry><commententry author="Ich " date="13-07-04" mail="" www="">
-            <![CDATA[Noch ein Versuch]]>
-        </commententry><commententry author="Ich " date="13-07-04" mail="" www="">
-            <![CDATA[Noch ein Versuch]]>
-        </commententry><commententry author="dffd" date="13-07-04" mail="dfdf" www="dfdf">
-            <![CDATA[dfdf]]>
-        </commententry><commententry author="dffd" date="13-07-04" mail="dfdf" www="dfdf" notify="on">
-            <![CDATA[dfdf]]>
-        </commententry><commententry author="dffd" date="13-07-04" mail="dfdf" www="dfdf" notify="on">
-            <![CDATA[dfdf]]>
-        </commententry><commententry author="fffg" date="13-07-04" mail="fgfgfg" www="fgfgfg" notify="on">
-            <![CDATA[fgfg
-]]>
-        </commententry><commententry author="fffg" date="13-07-04" mail="grund@grundprinzip.de" www="fgfgfg" notify="on">
-            <![CDATA[fgfg
-]]>
-        </commententry><commententry author="fffg" date="13-07-04" mail="fgfgfg" www="fgfgfg" notify="on">
-            <![CDATA[fgfg
-]]>
-        </commententry><commententry author="fffg" date="13-07-04" mail="fgfgfg" www="fgfgfg" notify="on">
-            <![CDATA[fgfg
-]]>
-        </commententry><commententry author="fffg" date="13-07-04" mail="fgfgfg" www="fgfgfg" notify="on">
-            <![CDATA[fgfg
-]]>
-        </commententry></comments>
-</entry>
-<entry category="0" title="aasdasd" author="Martin" date="13-07-2004">
-    <header>
-        <teaser>
-            <![CDATA[asdasd]]>
-        </teaser>
-        <body>
-            <![CDATA[asdasd]]>
-        </body>
-    </header>
-    <comments>
-
-        <commententry author="fgfg" date="13-07-04" mail="fgfgfg" www="" notify="on">
-            <![CDATA[]]>
-        </commententry>
-
-</comments>
-</entry><entry category="2" title="fddffd" author="Martin" date="13-07-2004">
-    <header>
-        <teaser>
-            <![CDATA[dfdfdf]]>
-        </teaser>
-        <body>
-            <![CDATA[dfdffd]]>
-        </body>
-    </header>
-    <comments>
-
-        <commententry author="fddf" date="13-07-04" mail="dfdf" www="dfdf" notify="on">
-            <![CDATA[]]>
-        </commententry>
-
-</comments>
-</entry><entry category="TagesZeitung" title="dfdf" author="Martin" date="13-07-2004">
-    <header>
-        <teaser>
-            <![CDATA[dfdf]]>
-        </teaser>
-        <body>
-            <![CDATA[dfdf]]>
-        </body>
-    </header>
-    <comments/>
-</entry><entry category="Skills" title="df" author="Martin" date="11-11-2004">
-    <header>
-        <teaser>
-            <![CDATA[df]]>
-        </teaser>
-        <body>
-            <![CDATA[df]]>
-        </body>
-    </header>
-    <comments/>
-</entry><entry category="Skills" title="BLogExt ported" author="Martin" date="11-11-2004">
+<entry category="Skills" title="BLogExt ported" author="Martin" date="11-11-2004">
     <header>
         <teaser>
             <![CDATA[Wie angekündigt wurde nun die Blog Extension nach Miplex2 portiert.]]>
@@ -189,5 +116,15 @@
             <![CDATA[asdas]]>
         </body>
     </header>
-    <comments />
+    <comments/>
+</entry><entry category="Hell\'s Kittchen" title="Kochen macht Freude" author="Martin" date="11-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[Kochen]]>
+        </teaser>
+        <body>
+            <![CDATA[macht Fruende]]>
+        </body>
+    </header>
+    <comments/>
 </entry></weblog>
