@@ -23,6 +23,7 @@ $menu .= "</ul>";
 if (!empty($_GET['id']))
 {
     $obj = &$extManager->loadExtension($_GET['id']);
+    $obj->baseSmarty = &$session->smarty;
     $session->smarty->assign("content", $obj->getBackend());
     
 } else 

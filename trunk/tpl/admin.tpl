@@ -29,17 +29,19 @@
                 ["fontname", "space", "fontsize", "space", "formatblock", "space", "insertimage", "miplexlink", "insertfile", "inserttable"]
                 ];
 		
-                config.pageStyle = "@import url(tpl/default.css);";
+                config.pageStyle = "@import url(tpl/admin/admin.css);";
 
-                var editor = new HTMLArea("htmlarea", config);
-
-		        /*editor.config.pageStyle = "@import url(\"/miplex2/tpl/default.css\");";*/
+                var editor = new HTMLArea("htmlarea");
+                editor.config = config;
                 editor.registerPlugin(ContextMenu);
                 editor.registerPlugin(TableOperations);
                 editor.registerPlugin(ImageManager);
                 editor.registerPlugin(InsertFile);
                 editor.registerPlugin(MiplexLink);
+                
                 editor.generate();
+                //HTMLArea.replaceAll(config);
+                
             };
             
     </script>

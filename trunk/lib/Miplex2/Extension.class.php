@@ -12,6 +12,7 @@ class Extension
     var $extConfig;
     var $smarty;
     var $xpath;
+    var $baseSmarty;
     
     /**
     * Der Konstrultor dient dazu, die Konfiguration der Erweiterung in dem
@@ -119,7 +120,7 @@ class Extension
         
         //insert params
         foreach ($config['params'] as $key => $val) {
-        	$node.="<$key>$val</$key>";
+        	$node.="<$key>".$val."</$key>";
         }
         
         

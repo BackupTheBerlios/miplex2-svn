@@ -12,6 +12,10 @@ class blog extends Extension {
     
     function getBackend()
     {
+        
+        //Enable HTML Area
+        $this->baseSmarty->assign("hta", 1);
+        
         //Entering the backend function
         //This retrieves the url now we can simply add our own parametes
         $this->baseUri = "?module=ext&id=blog";
@@ -23,7 +27,7 @@ class blog extends Extension {
         $config = $this->extConfig;
         $this->categories = explode("," ,$config['params']['categories']);
         foreach ($this->categories as $k => $v) {
-        	$this->categories[$k] = trim($v);
+        	$this->categories[$k] = stripslashes(trim($v));
         }
         
         //Initialize blog class and send copy to the blog class
@@ -57,7 +61,6 @@ class blog extends Extension {
             	    
             	case 'list':
             	       //List all Entries or by cat
-            	       
             	       $this->listBlogEntries($_POST['cname']);
             	    break;
             	    
@@ -77,7 +80,8 @@ class blog extends Extension {
             
             	case 'settings':
             	
-            	     
+            	     $this->smarty->assign("params", $this->extConfig['params']);
+            	     $this->smarty->assign("content", "blog/tpl/settings.tpl");
             	
             	     break; 
             	         
@@ -89,6 +93,7 @@ class blog extends Extension {
         }
         //This is the last part of this function do nothing beyond...
         return $this->smarty->fetch("blog/tpl/backend.tpl");
+        
     }
     
     /**
@@ -125,8 +130,8 @@ class blog extends Extension {
             $entries = $this->blogClass->getEntry();
         else {
             
-            $this->smarty->assign("gname", $catName);
-            $entries = $this->blogClass->getEntryByCategory($catName);
+            $this->smarty->assign("gname", stripslashes($catName));
+            $entries = $this->blogClass->getEntryByCategory(stripslashes($catName));
         }
         
         //Data
@@ -147,9 +152,12 @@ class blog extends Extension {
         }
     }
     
-    function openSettings()
+    function saveConfigSettings()
     {
-        
+        $params = $_POST['blog']['params'];
+        print_r($this->extConfig);
+        $this->extConfig['params'] = $params;
+        $this->saveConfiguration($this->extConfig);
     }
     
 }

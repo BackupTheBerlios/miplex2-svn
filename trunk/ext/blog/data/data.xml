@@ -107,8 +107,47 @@
         </body>
     </header>
     <comments/>
-</entry><entry category="Skills" title="Skills" author="Martin" date="11-11-2004">
+</entry><entry category="Skills" title="Skills bei HTA" author="Martin" date="11-11-2004" mail="">
     <header>
+        <teaser>
+            <![CDATA[                        Manchmal ist es unglaublich, was man alles machen kann, wenn man in einer Vorleung zeit hat.
+        
+        
+        ]]>
+        </teaser>
+        <body>
+            <![CDATA[
+            Deshalb hasse ich es wenn HTA nur eine Textarea darstellen kan.<br />
+]]>
+        </body>
+    </header>
+    <comments />
+<header>
+        <teaser>
+            <![CDATA[            Manchmal ist es unglaublich, was man alles machen kann, wenn man in einer Vorleung zeit hat.
+        
+        ]]>
+        </teaser>
+        <body>
+            <![CDATA[Deshalb hasse ich es wenn HTA nur eine Textarea darstellen kan.
+        
+        ]]>
+        </body>
+    </header>
+    <comments/>
+<header>
+        <teaser>
+            <![CDATA[Manchmal ist es unglaublich, was man alles machen kann, wenn man in einer Vorleung zeit hat.
+        ]]>
+        </teaser>
+        <body>
+            <![CDATA[
+            asdas
+        ]]>
+        </body>
+    </header>
+    <comments/>
+<header>
         <teaser>
             <![CDATA[sasd]]>
         </teaser>
@@ -117,7 +156,7 @@
         </body>
     </header>
     <comments/>
-</entry><entry category="Hell\'s Kittchen" title="Kochen macht Freude" author="Martin" date="11-11-2004">
+</entry><entry category="Hell's Kittchen" title="Kochen macht Freude" author="Martin" date="11-11-2004">
     <header>
         <teaser>
             <![CDATA[Kochen]]>
