@@ -25,6 +25,7 @@ class SectionForm
     {
         $output.=$this->getSectionName();
         $output.=$this->getSectionAlias();
+        $output.=$this->getSectionDesc();
         $output.=$this->getVisibleFrom();
         $output.=$this->getVisibleTill();
         $output.=$this->getShortcut();
@@ -49,6 +50,13 @@ class SectionForm
         $i18n = $this->i18n;
         $name = $page->attributes['name'];
         return "<p>".$i18n->get("section.alias").": <input type='text' name='attributes[alias]' value='".$this->page->attributes['alias']."' /></p>\n";
+    }
+
+    function getSectionDesc()
+    {
+        $i18n = $this->i18n;
+        $name = $page->attributes['desc'];
+        return "<p>".$i18n->get("section.desc").": <input type='text' name='attributes[desc]' value='".$this->page->attributes['desc']."' /></p>\n";
     }
     
     function getVisibleFrom()

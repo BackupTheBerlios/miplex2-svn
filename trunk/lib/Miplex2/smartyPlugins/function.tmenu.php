@@ -1,18 +1,19 @@
 <?php
 
-class TMENU 
+class TMENU
 {
     var $collapse = 1;
     var $start = 1;
+    var $stop = -1;
     var $depth = -1;
     var $wrapAll = "<ul>|</ul>";
     var $wrapItem = "<li>|</li>";
-    
+
     var $site = null;
     var $currentPage = null;
     var $desiredPath = null;
     var $config = null;
-    
+
     
     function makeLink(&$po)
     {
@@ -46,11 +47,14 @@ class TMENU
     {
         $item = explode("|", $this->wrapItem);
         $wraps = explode("|", $this->wrapAll);
-        
-        //Is $depth correct and $start too
-        if (($this->depth == -1 || $depth <= $this->depth) && $this->start <= $depth )
+
+        if ($this->stop == -1 ||($depth-abs($this->stop))<=0)
         {
-            
+
+        //Is $depth correct and $start too
+        if (($this->depth == -1 || $depth <= $this->depth) && $this->start <= $depth)
+        {
+
             if ($po->hasChildPage == 1)
             {
                 //We have to check if collapse=1 if the subpages of this page
@@ -65,15 +69,16 @@ class TMENU
                    {
                        //Increase depth
                         $d2 = $depth + 1;
-                        $output = $item[0].$this->makeLink($po)."\n".$wraps[0]."\n";
+                        $output = $item[0].$this->makeLink($po)."\n";
+                        $output.= ($d2-abs($this->stop))<=0 ? $wraps[0]."\n" :"";
                         //Get Subsections
                         foreach ($po->subs as $po2) {
-                        	
+
                             $output.="\t".$this->getEntries($po2,$d2);
-                            
+
                         }
-                        
-                        $output.=$wraps[1]."\n".$item[1];
+                        $output.= ($d2-abs($this->stop))<=0 ? $wraps[1]."\n" :"";
+                        $output.= "\n".$item[1];
                         //Return formated output
                         return $output;
                        
@@ -100,7 +105,7 @@ class TMENU
                     $output.=$wraps[1].$item[1];
                     return $output;
                 }
-                
+
             } else {
              
                 if (in_array($po->attributes['inMenu'], array("on", "true")) && $po->attributes['draft'] != 'on' )
@@ -148,6 +153,8 @@ class TMENU
             }
         }
         
+        }
+        
     }
     
     /**
@@ -189,13 +196,14 @@ function smarty_function_tmenu($params, &$smarty)
     //Registrieren der Basisparameter
     $tmenu = new TMENU();
     
+
+
     foreach ($params as $key => $item) {
         $tmenu->$key = $item;
     }
-    
-    
+
     return $tmenu->getMenu();
-    
+
 }
 
 ?>

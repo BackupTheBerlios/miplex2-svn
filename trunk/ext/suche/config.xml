@@ -6,6 +6,6 @@
     <dependsOn>
     </dependsOn>
     <params>
-        <searchedCes>normal</searchedCes>
+        <searchedCes>links,normal,rechts</searchedCes>
     </params>
 </config>
