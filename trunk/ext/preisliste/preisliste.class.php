@@ -27,6 +27,11 @@ class preisliste extends Extension
 		$pdf->SetAuthor($this->author);
 		$pdf->SetSubject($this->subject);
 		$pdf->SetCreator('FPDF Version 1.52');
+
+    	global $REQUEST_URI;            
+        $url = explode("/", $REQUEST_URI);
+        array_pop($url);
+        $pdf->SetUrl($this->config->server.implode("/", $url).".html");
 		
 		
 		// Definieren des Platzhalters für die Seitenanzahl
@@ -67,14 +72,22 @@ class preisliste extends Extension
 			}
 		}
 
-		global $REQUEST_URI;
+
+    // Kontaktinformationen anfügen
+		$pdf->addPage();
+        $pdf->PutSubtitle("Kontaktinformationen");
+
+        $pagecount = $pdf->setSourceFile("ext/preisliste/kontakt.pdf");
+		$tplidx = $pdf->ImportPage(1);
+		$pdf->useTemplate($tplidx);
+		
 		
 		$filename = explode("/", $REQUEST_URI);
 		$filename = explode(".", $filename[sizeof($filename)-1]);
 		array_pop($filename);
 		$filename = implode(".", $filename).".pdf";
-		// Und das ganze als 'bootshaus.pdf' an den Browser senden
-		$pdf->CleanOutput($filename,'I');
+		// Und das ganze als 'bootshaus.pdf' an den Browser senden zum Speichern
+		$pdf->CleanOutput($filename, 'D');
 		
     }
     
@@ -88,7 +101,7 @@ class preisliste extends Extension
 //    	print_r($this->elemente);
     	
   		$this->smarty->assign("elemente", $this->elemente);  	
-        return $this->smarty->fetch('../ext/preisliste/allg.tpl');
+        return $this->smarty->fetch('../ext/preisliste/tpl/allg.tpl');
     }
 
     function _datenLesen()
@@ -177,7 +190,7 @@ class preisliste extends Extension
         if (strlen ($params['name']) > 1) 
             $this->name = $params['name'];
         else
-            return $this->smarty->fetch('../ext/preiliste/noname.tpl');
+            return $this->smarty->fetch('preiliste/tpl/noname.tpl');
             
         // Preisliste einlesen
         $this->_datenLesen();
@@ -192,9 +205,26 @@ class preisliste extends Extension
 
     function getBackend()
     {
-        return "Keine Einstellungen möglich.";
+    	if (strlen($_POST['content']) > 0)
+    	{
+    		if (!$file = fopen("ext/preisliste/preise.xml", "w"))
+    		{
+    			$this->smarty->assign("msg", "Kann Datei nicht öffnen.");
+    		}
+    		elseif (!fwrite($file, stripslashes($_POST['content'])) )
+    		{
+    			$this->smarty->assign("msg", "Kann Datei nicht schreiben.");
+    		}
+    		else 
+    		{
+    			$this->smarty->assign("msg", "Änderungen gespeichert.");
+    			fclose($file);
+    			global $clear_cache; $clear_cache = true;
+    		}
+    	}
+    	
+    	$this->smarty->assign("content", file_get_contents("ext/preisliste/preise.xml"));
+        return $this->smarty->fetch('preisliste/admin/main.tpl');
     }
-    
 }
-
 ?>

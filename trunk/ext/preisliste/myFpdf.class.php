@@ -1,13 +1,18 @@
 <?php
 
-define('FPDF_FONTPATH','ext/preisliste/font/');
-require_once("ext/preisliste/fpdf.php");
+define('FPDF_FONTPATH','lib/fpdf/font/');
+require_once("lib/fpdi/fpdi.php");
 
 
-class myFpdf extends FPDF
+class myFpdf extends FPDI
 {
 	var $subtitle = array("");
+	var $url;
 	
+	function SetUrl($url)
+	{
+		$this->url = $url;
+	}
 	
 	
 	// Kopfzeilen-Funktion überschreiben	 
@@ -23,11 +28,15 @@ class myFpdf extends FPDF
 		$this->SetTextColor(127, 127, 127);
 		
 		// Einen Titel ausgeben
-		$this->Cell(190,10,$this->subject, 0, 0,'R');
+		$this->Cell(190,5,$this->subject, 0, 0,'R');
+		$this->Ln();
+		$this->SetFont('Courier', '',10);
+		$this->Cell(190,5,$this->url, 0, 0,'R');
 		
 		$this->SetTextColor(0);
 		$this->SetFont('Times', '',14);
-		$this->Ln(16);
+		$this->Ln(12);
+
 		// Den Author ausgeben
 		$this->SetX(30);
 		$this->Cell(170, 7, $this->author, 'B', 1, 'R');

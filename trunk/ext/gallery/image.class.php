@@ -127,16 +127,18 @@ class Image
         return $this->folder."/".$this->imgfile;
     }
     
-    function getThumbTag($urlbase, $width, $height)
+    function getThumbTag($urlbase, $width, $height, $link=true)
     {
         $this->width = $width;
         $this->height = $height;
     
         $size = getimagesize($this->getThumbFileName());
     
-        $out = "<a href=\"".$urlbase."/einzel/".$this->number.".html\">";
+        if ($link)
+        	$out = "<a href=\"".$urlbase."/einzel/".$this->number.".html\">";
         $out.= "<img src=\"/".$this->getThumbFileName()."\" ".$size[3]." alt=\"".$this->alt."\" title=\"".$this->title."\" />";
-        $out.= "</a>";
+        if ($link)
+        	$out.= "</a>";
         return $out;
     }
     

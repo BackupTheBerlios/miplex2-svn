@@ -1,14 +1,19 @@
 <?php
 
-define('FPDF_FONTPATH','ext/preisliste/font/');
-require_once("ext/preisliste/fpdf.php");
+define('FPDF_FONTPATH','lib/fpdf/font/');
+require_once("lib/fpdi/fpdi.php");
 
 
-class myFpdf extends FPDF
+class myFpdf extends FPDI
 {
 	var $subtitle = array("");
+	var $url;
 	
-	
+
+	function SetUrl($url)
+	{
+		$this->url = $url;
+	}
 	
 	// Kopfzeilen-Funktion überschreiben	 
 	function Header() {
@@ -23,11 +28,14 @@ class myFpdf extends FPDF
 		$this->SetTextColor(127, 127, 127);
 		
 		// Einen Titel ausgeben
-		$this->Cell(190,10,$this->subject, 0, 0,'R');
+		$this->Cell(190,5,$this->subject.": ".$this->title, 0, 0,'R');
+		$this->Ln();
+		$this->SetFont('Courier', '',10);
+		$this->Cell(190,5,$this->url, 0, 0,'R');
 		
 		$this->SetTextColor(0);
 		$this->SetFont('Times', '',14);
-		$this->Ln(16);
+		$this->Ln(12);
 		// Den Author ausgeben
 		$this->SetX(30);
 		$this->Cell(170, 7, $this->author, 'B', 1, 'R');
@@ -142,6 +150,62 @@ class myFpdf extends FPDF
 		$this->Ln();	    
 	}
 	
+	// Einfacher Absatz
+	function Paragraph($text)
+	{
+	    //Colors, line width and bold font
+	    $this->SetFillColor(0,0,0);
+	    $this->SetTextColor(0x00);
+	    $this->SetFont('Times', '', 12);
+	    
+		$this->MultiCell(0, 5, $text, 0, 1, 'L');
+
+		// hinterher Luft
+		$this->Ln();	    
+		
+	}
+	
+	function Adresse($text)
+	{
+		// Colors and Font
+    	$this->SetFont('Courier', 'B', 12);
+	    $this->SetFillColor(0xEE); // EED9B2
+	    $this->SetDrawColor(0x33);
+    	
+	    $zeilen = explode('<br />', nl2br($text));
+	    
+	    // Bestimme längste Zeile
+	    foreach ($zeilen as $zeile) {
+	    	$length = max($this->GetStringWidth(trim($zeile)), $length);
+	    }
+	    $length += 10;
+	    
+	    $this->Cell((200 - $length) / 2);
+    	$this->Cell($length, 6, '', 'LTR', 1, "C", 1);
+
+    	foreach ($zeilen as $zeile) {
+	    	if (strlen($zeile) > 0)
+	    	{
+		    	$this->Cell((200 - $length) / 2);
+		    	$this->Cell($length, 6, trim($zeile), 'LR', 1, "C", 1);
+	    	}
+	    }
+	    
+	    $this->Cell((200 - $length) / 2);
+    	$this->Cell($length, 0, '', 'LBR', 1, "C", 1);
+	}
+	
+	function Bild($bild)
+	{
+		// Bild anzeigen
+		$dimensions = getimagesize($bild['src']);
+		
+		$this->Image($bild['src'], ((210 - $dimensions[0]/4) / 2), $this->GetY(), $dimensions[0] / 4, $dimensions[1]/ 4);
+		$this->Ln($dimensions[1]/ 4);
+		$this->Cell(0, 8, trim($bild['title']), 0, 1, 'C');
+	}
+	
+	
 	//Colored table
 	function FancyTable($data)
 	{
@@ -178,10 +242,10 @@ class myFpdf extends FPDF
 	}
 	
 	
-	function CleanOutput($name, $zwei)
+	function CleanOutput($name, $modus)
 	{
 		ob_clean();
-		$this->Output($name, $zwei);
+		$this->Output($name, $modus);
 		exit();
 	}
 }

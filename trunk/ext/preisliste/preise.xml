@@ -5,6 +5,11 @@
           subject="Gebühren und Preise für den Campingplatz D69 am Lankensee - Stand: 12/2004">
 
         <majorgroup name="Stellplätze für Saisoncamper">
+            <special>
+                <title>Neue Dauercamper auf unserem Zeltplatz können sich doppelt freuen</title>
+                <text>Wir möchten Sie gerne von unserem Campingplatz überzeugen und gewähren deshalb allen Neukunden im ersten Jahr 20 Prozent Rabatt auf alle Gebühren.</text>
+            </special>
+            <anotation name="">(Dieses Angebot gilt für alle, die seit 3 Jahren keinen Nutzungsvertag für einen Stellplatz haben. Der Rabatt gilt nicht für die Betriebskosten.)</anotation>
             <group name="Stellplätze">
                 <position>
                     <desc>Stellplatz für 1 Wohnwagen oder Zelt auf Stellfläche bis 80 m²</desc>
@@ -49,10 +54,6 @@
                     <price>45,00</price>
                 </position>
             </group>
-            <special>
-                <title>Jetzt alles nur doppelt so billig !!!</title>
-                <text>Hier und heute, lasst mich sagen, wir der Olli klein geschlagen.</text>
-            </special>
         </majorgroup>
 
         <majorgroup name="Betriebskosten und Nutzungsumlagen für Saisoncamper">
@@ -169,31 +170,11 @@
           author="WBG 'Unteres Dahmeland' mbH" 
           title="Gebühren und Angebote für das Bootshaus - Saison 2005"
           subject="Gebühren und Angebote für das Bootshaus - Stand: 12/2004">
-        <majorgroup name="Hallo, hier kenne ich die Preise noch nicht">
-            <group name="Dauercamper">
-                <position>
-                    <desc>Stellplatz</desc>
-                    <price>10 €</price>
-                </position>
-                <position>
-                    <desc>Liegeplatz</desc>
-                    <price>20 €</price>
-                </position>
-                <position>
-                    <desc>Sitzplatz</desc>
-                    <price>15 €</price>
-                </position>
-            </group>
-            <group name="Kurztrips">
-                <position>
-                    <desc>Baden</desc>
-                    <price>5 €</price>
-                </position>
-                <position>
-                    <desc>Schwimmen</desc>
-                    <price>50 €</price>
-                </position>
-            </group>
+        <majorgroup name="Keine Liste verfügbar">
+            <special>
+                <title>Diese Preise folgen in Kürze</title>
+                <text>Leider stehen der Redaktion die aktuellen Preise noch nicht zur Verfügung. Bitte schauen Sie in der nächsten Zeit noch einmal nach oder fordern eine Liste per E-Mail an. Bitte entschuldigen Sie die Umstände.</text>
+            </special>
        </majorgroup>
     </list>
 </prices>
