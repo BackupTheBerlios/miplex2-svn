@@ -1,6 +1,6 @@
 <h2>Einstellungen</h2>
 Hie werden alle Einstellungen für das Blog gemacht
-<form action="" method="POST">
+<form action="{$url}" method="POST">
     <table>
 
         <tr>
@@ -50,6 +50,30 @@ Hie werden alle Einstellungen für das Blog gemacht
             <td>Wie lang soll der Eintrag sticky bleiben:</td>
             <td><input type="text" name="blog[params][durationSticky]"  value="{$params.durationSticky}"/></td>
         </tr>   
+        <tr>
+            <td>Template für die Einträge</td>
+            <td>
+                <select name="blog[params][entryTpl]">
+                    {html_options values=$eTpls output=$eTpls selected=$params.entryTpl}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Template für die Kommentare</td>
+            <td>
+            <select name="blog[params][commentTpl]">
+                    {html_options values=$cTpls output=$cTpls selected=$params.commentTpl}
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Template für die Hauptansicht</td>
+            <td>
+            <select name="blog[params][mainTpl]">
+                    {html_options values=$mTpls output=$mTpls selected=$params.mainTpl}
+                </select>
+            </td>
+        </tr>
         <tr>
             <td><input type="submit" name="save" value="Speichern" /></td>
             <td><input type="reset" name="reset" value="Abbrechen"/></td>
