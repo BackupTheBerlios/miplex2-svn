@@ -199,7 +199,10 @@
         		$returnArray = array();
         		$returnArray['attributes'] = $this->xclass->getAttributes($evalContext);
         		$returnArray['context'] = $evalContext;
-        		$returnArray['number'] = $evalContext{strlen($evalContext)-2};
+        		//Number of entry
+ 			    preg_match("/.*\[(.*)\]/i",$evalContext, $match);
+			    $returnArray['number'] = $match[1];
+
 
                 //Teaser auswerten
                 $resTeaser = $this->xclass->evaluate($evalContext."/header[1]/teaser[1]");
@@ -413,8 +416,7 @@
         */
         function getEntryByCategory($catName)
         {
-        	$xQuery = "/weblog/entry[@category='$catName']";
-        	
+        	$xQuery = "/weblog/entry[@category=\"$catName\"]";
         	
         	//Auswerten des Ausdrucks
         	$catEval = $this->xclass->evaluate($xQuery);

@@ -17,11 +17,14 @@ class blog extends Extension {
         $this->baseUri = "?module=ext&id=blog";
         $url = $this->getCurrentURL();
         //assign it to smarty
-        $this->smarty->assign("url", $url);
+        $this->smarty->assign("url", $this->baseUri);
         
         //Fetch the extension configuration
         $config = $this->extConfig;
         $this->categories = explode("," ,$config['params']['categories']);
+        foreach ($this->categories as $k => $v) {
+        	$this->categories[$k] = trim($v);
+        }
         
         //Initialize blog class and send copy to the blog class
         include("ext/blog/blog.core.class.php");
@@ -51,6 +54,18 @@ class blog extends Extension {
             	    //Assing template
             	    $this->smarty->assign("content", "blog/tpl/new.tpl");
             	    break;
+            	    
+            	case 'list':
+            	       //List all Entries or by cat
+            	       
+            	       $this->listBlogEntries($_POST['cname']);
+            	    break;
+            	    
+            	case 'edit':
+            	
+            	     $this->openBlogEntry($_GET['nr']);
+            	
+            	     break;
             
             	default:
             	    //default action is to display welcome page
@@ -74,6 +89,38 @@ class blog extends Extension {
         
         $this->smarty->assign("result", $result);
         $this->smarty->assign("content", "blog/tpl/newConfirmed.tpl");
+    }
+    
+    /**
+    * List all Blogentries and display them in the backend
+    *
+    */
+    function listBlogEntries($catName = "all")
+    {
+        if ($catName == "")
+        
+            $entries = $this->blogClass->getEntry();
+        else {
+            
+            $this->smarty->assign("gname", $catName);
+            $entries = $this->blogClass->getEntryByCategory($catName);
+        }
+        
+        //Data
+        $this->smarty->assign("list", $entries);
+        $this->smarty->assign("cats", $this->categories);
+        //Template
+        $this->smarty->assign("content", "blog/tpl/blogListEntries.tpl");
+    }
+    
+    function openBlogEntry($number)
+    {
+        if (is_numeric($number))
+        {
+            $entry = $this->blogClass->getEntryByNumberOrContext($number-1);
+            $this->smarty->assign("blog", $entry);
+            $this->smarty->assign("content", "blog/tpl/blogEntryBackend.tpl");
+        }
     }
     
 }

@@ -208,3 +208,52 @@ h2
 {
 	font-size:11px;
 }
+
+/***************Blog Extensions Klassen***************/
+.blogTitle {
+font-weight: bold;
+font-size: 18px;
+height: 30px;
+link-decoration:none;
+}
+
+.blogTeaser {
+font-style: italic;
+margin-right:20px;
+}
+
+.blogBody {
+margin-right: 20px;
+}
+
+.blogFooter {
+height: 30px;
+font-size: 11px;
+font-style: italic;
+}
+
+.blogCommentHeader {
+font-weight: bold;
+font-style: italic;
+font-size: 14px;
+height: 20px;
+}
+
+.blogComment {
+}
+
+.blogCommentFooter{
+font-style: italic;
+font-size: 12px;
+}
+
+.blogTable tr td {
+vertical-align: top;
+}
+
+.blogMainTitle {
+font-weight:bold;
+font-size:16px;
+height:30px;
+}
+

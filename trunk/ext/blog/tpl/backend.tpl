@@ -1,11 +1,10 @@
 <h1>Weblog</h1>
 <table width="100%">
-    <tr>
+    <tr valign="top">
         <td>
             <ul>
                 <li><a href='{$url}&part=new'>Neuer Eintrag</a></li>
-                <li>Eintrag bearbeiten</li>
-                <li>Eintrag löschen</li>
+                <li><a href='{$url}&part=list'>Einträge anzeigen</a></li>
                 <li>Einstellungen</li>
             </ul>
         </td>
