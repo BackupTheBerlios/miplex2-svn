@@ -6,17 +6,27 @@
     <right type="boolean">edit</right>
     </rights>
 <groups>
-    <group name="User"/>
+    
     <group name="Admins">
         <right name="read"/>
         <right name="create"/>
-    </group>
+    </group><group name="User">
+<right name="edit"/>
+</group>
+    
 </groups>
-<user>
-    <username>grund</username>
-    <password>test</password>
-    <email>test</email>
-    <group>Admins</group>
+
+
+
+<user><username>Gregor</username>
+<password>gregor</password>
+<email>gregor@miplex.de</email>
+<group>User</group>
+</user><user><username>Grund</username>
+<password>test</password>
+<email>test</email>
+<group>Admins</group>
 </user>
+
 
 </userManager>

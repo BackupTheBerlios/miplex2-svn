@@ -4,7 +4,7 @@
     <table>
         <tr>
             <td>{$user->get("username")}:</td>
-            <td><input type="text" name="user[attributes][name]" value="{$user_item.username}" /></td>
+            <td><input type="text" name="user[attributes][username]" value="{$user_item.username}" /></td>
         </tr>
         <tr>
             <td>{$user->get("password")}:</td>
@@ -16,7 +16,7 @@
         </tr>
         <tr>
             <td>{$user->get("group")}</td>
-            <td><select name="group">{html_options values=$groups output=$groups selected=$user_item.group}</select></td>
+            <td><select name="user[group]">{html_options values=$groups output=$groups selected=$user_item.group}</select></td>
         </tr>
     </table>
     <input type='submit' name='save' value='{$user->get('save')}' />

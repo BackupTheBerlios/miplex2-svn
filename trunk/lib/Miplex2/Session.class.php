@@ -52,8 +52,9 @@ class Session
         if ($this->userDatabase==null)
         {
             //load new db
-            $this->userDatabase = new M2UserManager("config/user.xml", $this->mdb->xPathHandle);
-            $this->userDatabase->loadDatabase();
+            $handle = new XPath();
+            $this->userDatabase = new M2UserManager("config/user.xml", $handle);
+            //$this->userDatabase->loadDatabase();
             return true; 
         }
         //was already loaded
@@ -106,7 +107,7 @@ class Session
     }
     
     /**
-    * Liefert die aktuelle Seite zurück als PageObjekt
+    * Liefert die aktuelle Seite zurï¿½ck als PageObjekt
     * @return PageObject Die Seite
     */
     function getActPage($requestUri = null)
@@ -157,9 +158,9 @@ class Session
     
     
     /**
-    * Funktion übergibt array aus dem Pfad, Zurückgegeben wird die gewünschte Seite
+    * Funktion ï¿½bergibt array aus dem Pfad, Zurï¿½ckgegeben wird die gewï¿½nschte Seite
     * @param Array $tmpUri Der Pfad als Array
-    * @return PageObject Die gewünschte Seite
+    * @return PageObject Die gewï¿½nschte Seite
     */
     function getRequestedPage($tmpUri, $matches = null)
     {

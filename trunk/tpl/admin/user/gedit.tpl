@@ -23,5 +23,5 @@
     </table>
     <input type='submit' name='save' value='{$user->get('save')}' />
     <input type='submit' name='cancel' value='{$user->get('cancel')}' />
-    <input type='hidden' name='type' value='addGroup' />
+    <input type='hidden' name='type' value='editGroup' />
 </form>

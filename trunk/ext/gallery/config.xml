@@ -1,0 +1,18 @@
+<config>
+
+    <extName>Gallery</extName>
+    <author>Gregor Schmidt</author>
+    <mail>Schmidtwisser@Gmail.com</mail>
+    <version>0.1</version>
+
+    <dependsOn></dependsOn>
+    
+    <params>
+        <folder>gallery</folder>
+        <thumbfolder>gallery/thumbs</thumbfolder>
+        <thumbwidth>150</thumbwidth>
+        <thumbheight>150</thumbheight>
+        <thumbcount>9</thumbcount>
+    </params>
+    
+</config>

@@ -326,6 +326,7 @@ class M2UserManager
             //check if user is in group
             if ($singleUser['group']==$groupName)
             {
+                
                 $groupMembers[] = $singleUser;
             }
             
@@ -545,7 +546,7 @@ class M2UserManager
     function deleteGroup($group)
     {
         
-        if (!in_array($group, $this->groups)) {
+        if (!$this->groupExist($group)) {
             
             $this->reportError(3);
             return false;
@@ -554,13 +555,15 @@ class M2UserManager
             
             //fetch all groups
             $evalGroups = $this->xpath->evaluate("/userManager[1]/groups[1]/group");
+            
             if (!empty($evalGroups))
             {
                 //walk through
                 foreach ($evalGroups as $gr) {
                 	
                     //check name and delete if correct
-                    $name = $this->xpath->getData($gr);
+                    $name = $this->xpath->getAttributes($gr, "name");
+                    
                     if ($name == $group) {
                         
                         if (!$this->xpath->removeChild($gr))
@@ -578,15 +581,34 @@ class M2UserManager
         }
     }
     
+    function groupExist($groupName)
+    {
+        $exist = false;
+        foreach ($this->groups as $g) {
+        	
+            if ($groupName == $g['name'])
+                $exist = true;
+        }
+        
+        return $exist;
+    }
+    
     /**
     * This method is able to change the groupname of a specific group
     * all users affected by this should be updated.
     * @param    String   $groupold   The old Groupname
     * @param    String   $groupnew   The new Name of the Group
     */
-    function saveGroup($groupold, $groupnew)
+    function saveGroup($group)
     {
         //fetch all users affected by this change
+        //$groupMember = $this->fetchGroupMembers($group['name']);
+        
+        $this->deleteGroup($group['name']);
+        $this->addGroup($group);
+        
+        
+        
     }
     
     ###################Right Functions#########################

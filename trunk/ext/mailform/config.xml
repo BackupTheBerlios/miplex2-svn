@@ -6,8 +6,8 @@
     <dependsOn>
     </dependsOn>
     <params>
-        <to>info@grundprinzip.de</to>
-        <subject>Mail von Webseite</subject>
-        <from>mail@grundprinzip.de</from>
+        <to>Service@wbg-dahmeland.de</to>
+        <subject>Serviceanfrage über Website</subject>
+        <from>Website@wbg-dahmeland.de</from>
     </params>
 </config>

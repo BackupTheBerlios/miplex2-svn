@@ -33,11 +33,17 @@
                 
                 $done = $session->userDatabase->saveUser("username", $_POST['key'], $user);
                 
-            
                 break;
-            case "addGroup":
+            
+             case "addGroup":
+            
                 $group = $_POST['group'];
                 $done = $session->userDatabase->addGroup($group);
+                break;
+             
+             case "editGroup":
+                $group = $_POST['group'];
+                $done = $session->userDatabase->saveGroup($group);
                 break;
         }
     }
