@@ -2,31 +2,21 @@
 <userManager>
     <rights>
     <right type="boolean">read</right>
-<right type="boolean">create</right>
-</rights>
+    <right type="boolean">create</right>
+    <right type="boolean">edit</right>
+    </rights>
 <groups>
-<group>Admin</group>
+    <group name="User"/>
+    <group name="Admins">
+        <right name="read"/>
+        <right name="create"/>
+    </group>
 </groups>
 <user>
-<name>Martin</name>
-<mail>grund@me.de</mail>
-<rights>
-    <Admin>
-        <create>1</create>
-    </Admin>
-</rights>
+    <username>grund</username>
+    <password>test</password>
+    <email>test</email>
+    <group>Admins</group>
 </user>
-<user>
-<name>gregor</name>
-<mail>grund@me.de</mail>
-<rights>
-    <Admin>
-        <create>1</create>
-    </Admin>
-</rights>
-</user>
-<user><username>miplex2</username>
-<password>miplex2</password>
-<rights/>
-</user>
+
 </userManager>

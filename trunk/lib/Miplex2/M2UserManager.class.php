@@ -64,7 +64,7 @@ class M2UserManager
     * Der Konstruktor dient dazu die Klasse zu initialisieren und
     * die vorhandenen benutzer zu laden, falls keine Datenbank angelegt
     * ist, wird automatisch eine neue erstellt. Der einfachheit halber wird
-    * eine referenz auf ein XPath Objekt übergeben.
+    * eine referenz auf ein XPath Objekt ï¿½bergeben.
     *
     * @param    String  $xmlFile    Der Pfad zur XML Datenbank der Benuzer
     * @param    XPath   $xpath      Eine Referenz auf das XPath Objekt
@@ -104,7 +104,7 @@ class M2UserManager
     
     /**
     * Diese Funktion wird benutzt um eine neue Benutzerdatenbank anzulegen
-    * dabei wird die vorbestimmte XML Struktur übernommen
+    * dabei wird die vorbestimmte XML Struktur ï¿½bernommen
     *
     */
     function createNewDatabase()
@@ -131,7 +131,7 @@ class M2UserManager
     
     /**
     * Diese funktion speichert den aktuellen Zustand der Datenbank in dem
-    * in $this->xmlFileName übergebenen Pfad ab. Falls gewünscht wird
+    * in $this->xmlFileName ï¿½bergebenen Pfad ab. Falls gewï¿½nscht wird
     * der Quelltext der XML Datei neu formatiert.
     */
     function saveDatabase()
@@ -159,7 +159,7 @@ class M2UserManager
     }
     
     /**
-    * Diese Funktion lädt die in der XML Datei vorhandene Struktur in das interne
+    * Diese Funktion lï¿½dt die in der XML Datei vorhandene Struktur in das interne
     * XPath Objekt.
     * @todo remove empty databse
     */
@@ -184,7 +184,7 @@ class M2UserManager
     }
     
     /**
-    * Diese Funktion extrahiert aus der XML Struktur die möglichen Rechte
+    * Diese Funktion extrahiert aus der XML Struktur die mï¿½glichen Rechte
     * Die Vorgehensweise orientiert sich an der oben definierten Struktur
     */
     function fetchRights()
@@ -207,17 +207,40 @@ class M2UserManager
                 
             return true;
         }
-     
+    }
+    
+    
+    function getGroupRights($groupName)
+    {
+        $group = $this->getGroup("name", $groupName);
+        $r = array();
         
+        foreach ($group['rights'] as $sr) {
+            
+            $r[] = $sr['name'];
+        	
+        }
+        
+        return $r;
+    }
+    
+    function getGroups()
+    {
+        $r = array();
+        foreach ($this->groups as $sg) {
+        	$r[] = $sg['name'];
+        }
+        return $r;
     }
     
     /**
-    * Diese Funktion extrahiert aus der XML Struktur die möglichen Gruppen
+    * Diese Funktion extrahiert aus der XML Struktur die mï¿½glichen Gruppen
     * Die Vorgehensweise orientiert sich an der oben definierten Struktur
     */
     function fetchGroups()
     {
         //evalutate basic structure
+        $this->groups = array();
         $groups = $this->xpath->evaluate("/userManager[1]/groups[1]/group");
         if ($groups == false)    
         {
@@ -227,9 +250,22 @@ class M2UserManager
             
             //Evaluate each right
             foreach ($groups as $group) {
+                $tmpGroup = array();
+                //fetch groupattributes
+                $groupAttr = $this->xpath->getAttributes($group);
+                $tmpGroup['name'] = $groupAttr["name"];
                 
-                $sg = $this->xpath->evaluate($group);
-                $this->groups[]=$this->xpath->getData($sg[0]);                
+                //fetch righs for this group
+                $groupRights = $this->xpath->evaluate($group."/right");
+                if ($groupRights != false)
+                {  
+                    foreach ($groupRights as $gr) {
+                    	$rightAttributes = $this->xpath->getAttributes($gr);
+                    	$tmpGroup['rights'][] = $rightAttributes;
+                    }
+                }
+                
+                $this->groups[]=$tmpGroup;
             	
             }
             
@@ -244,6 +280,7 @@ class M2UserManager
     */
     function fetchAllUsers()
     {
+        $this->user = array();
         $evalUsers = $this->xpath->evaluate("/userManager[1]/user");
         if (!empty($evalUsers))
         {
@@ -255,35 +292,9 @@ class M2UserManager
                 
                 foreach ($attributes as $attribute) {
                 
-                    if ($this->xpath->nodeName($attribute)!= "rights") {
-                        
-                        $tmp[$this->xpath->nodeName($attribute)] = $this->xpath->getData($attribute);
-                        
-                    } else {
-                        
-                        //Now fetch all groups defined for this user
-                        $evalGroups = $this->xpath->evaluate($attribute."/*");
-                        if (!empty($evalGroups)) {
-                            
-                            //walk through groups
-                            foreach ($evalGroups as $group) {
-                            	
-                                $tmp['groups'][$this->xpath->nodeName($group)] = array();
-                                //now fetch all rights for this group
-                                $evalRights = $this->xpath->evaluate($group."/*");
-                                if (!empty($evalRights)) {
-                                 
-                                    //walk throu rights
-                                    foreach ($evalRights as $right) {
-                                           
-                                      	$tmp['groups'][$this->xpath->nodeName($group)][$this->xpath->nodeName($right)] = $this->xpath->getData($right);
-                                    } //EOF walk trough rights
-                                }
-                                
-                            } //EOF walk throug group memberships
-                            
-                        }                        
-                    }	
+                    $tmp[$this->xpath->nodeName($attribute)] = $this->xpath->getData($attribute);
+                    
+                    
                 } //EOF walk thorugh attributes
                 
                 //Add tmp user to global array
@@ -312,7 +323,8 @@ class M2UserManager
         //Walk throug all users
         foreach ($this->user as $singleUser) {
         	
-            if (key_exists($groupName, $singleUser['groups']))
+            //check if user is in group
+            if ($singleUser['group']==$groupName)
             {
                 $groupMembers[] = $singleUser;
             }
@@ -321,6 +333,20 @@ class M2UserManager
         
         return $groupMembers;
         
+    }
+    
+    /**
+    * Returns the desired group identified by the key submtited to this function
+    * @param    String      $identifiedBy   The key
+    * @param    String      $value          The value
+    */
+    function getGroup($identifiedBy,$value)
+    {
+        foreach ($this->groups as $sg) {
+        	if ($sg[$identifiedBy] == $value)
+        	   return $sg;
+        }
+        return false;
     }
     
     ########################Check Functions##########################
@@ -337,12 +363,12 @@ class M2UserManager
     ########################User Functions############################
     
     /**
-    * Diese Funktion fügt der Datenbank einen Benutzer hinzu. 
-    * Übergeben werden alls ein Array alle relevanten Informationen
-    * Rechte und Gruppenzugeörigkeit werden separat übergeben
+    * Diese Funktion fï¿½gt der Datenbank einen Benutzer hinzu. 
+    * ï¿½bergeben werden alls ein Array alle relevanten Informationen
+    * Rechte und Gruppenzugeï¿½rigkeit werden separat ï¿½bergeben
     *
     */
-    function addUser($userAttributes, $groups)
+    function addUser($userAttributes, $group)
     {
         $node = "<user>";
         
@@ -362,30 +388,7 @@ class M2UserManager
             
         }
         
-        $node.="<rights>";
-        //Für jede Gruppe werden die Rechte angelegt
-        if (!empty($groups)) {
-            
-            foreach ($groups as $groupname => $group ) {
-            	
-                //@todo check if submitted group exists
-                $node.="<".$groupname.">";
-                
-                //Now insert needed rights
-                if (!empty($group))
-                {
-                    foreach ($group as $right => $val) {
-                    	$node.="<".$right.">".$val."</".$right.">\n";
-                    }
-                }
-                
-                $node.="</".$groupname.">\n";
-                
-            }
-        
-        } 
-        
-        $node.="</rights>\n";
+        $node.="<group>$group</group>\n";
         //finish node
         $node.="</user>\n";
         
@@ -419,7 +422,7 @@ class M2UserManager
         if ($this->deleteUser($identifiedBy, $name)==true)
         {
             //Add new user with all rights
-            if ($this->addUser($vars['attributes'], $vars['groups'])==true)
+            if ($this->addUser($vars['attributes'], $vars['group'])==true)
             {
                 return true;
                 
@@ -496,13 +499,32 @@ class M2UserManager
     
     ###################Group Functions#########################
     /**
-    * This method is meant to add a new group to the
+    * This method is meant to add a new group to the DB
+    * array:
+    * group -
+    *       - name
+    *       - rights
+    *            name : value
+    *
     * group repository
-    * @param    String   $group  The Groupname
+    * @param    Array   $group  GroupAttributes
     */
     function addGroup($group)
     {
-        $node = "<group>".$group."</group>";
+        $node="<group name='".$group['name']."'>\n";
+        
+        //add rights
+        foreach ($group['rights'] as $right) {
+            
+            if (key_exists($right, $this->rights))
+            {
+                $node.="<right name='$right'/>\n";
+            }
+        	
+        }
+        
+        $node.="</group>\n";
+        
         if (!$this->xpath->appendChild("/userManager[1]/groups[1]", $node))
         {
             $this->reportError(9);
@@ -661,26 +683,11 @@ class M2UserManager
     * is used by a user.
     *
     * @param    String  $right  The right to check
+    * @todo Implement checkFunction
     */
     function checkIfRightIsUsed($right)
     {
         $exists = false;
-        //Walk throuh users
-        foreach ($this->user as $user) {
-            
-            //Walk throuh groups
-            foreach ($user['groups'] as $singleGroup) {
-                
-                if (array_key_exists($right, $singleGroup))
-                {
-                    $exists = true;
-                }
-            	
-            }
-            
-        	
-        }
-        
         return $exists;
     }
     

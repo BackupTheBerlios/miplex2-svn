@@ -11,13 +11,13 @@
     
     $uManager = new M2UserManager("config/user.xml", $xPath, $bf);
     
-    $user['name'] = "gregor";
-    $user['mail'] = "grund@me.de";
+//    $user['name'] = "gregor";
+//    $user['mail'] = "grund@me.de";
+//    
+//    $rights['Admin']['create'] = 1;
+//    
     
-    $rights['Admin']['create'] = 1;
-    
-    
-    $uManager->addUser($user, $rights);
+   // $uManager->addUser($user, $rights);
     
     //$uManager->addGroup("Admin");
     
@@ -39,6 +39,6 @@
     
     
     
-    print_r($uManager->user);
+    print_r($uManager->rights);
     
     ?>
