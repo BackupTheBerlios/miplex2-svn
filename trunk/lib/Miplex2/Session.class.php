@@ -76,6 +76,18 @@ class Session
     }
     
     /**
+    * Laden der Headerinformationen für die HTML-Asugabe
+    */
+    function setHeader()
+    {
+        $page = $this->getActPage();
+        $this->header = '<title>'.$this->config->title.$page->getTitle().'</title>'."\n";
+        $this->header.= '   <meta name="generator" content="Miplex2" />'."\n";
+        $this->header.= '   <meta name="keywords" Content="'.$this->config->keywords.'" />'."\n";
+        $this->header.= '   <meta name="description" content="'.$this->config->description.'" />'."\n";
+    }
+    
+    /**
     * Laden der Konfiguration
     * @param string $configFile Pfad zur Konfigurationsdatei
     */
@@ -97,41 +109,38 @@ class Session
             require_once($this->config->smartyDir."Smarty.class.php");
             $this->smarty = new Smarty();
             
-            $this->smarty->template_dir = $this->config->tplDir;
-            $this->smarty->compile_dir = $this->config->tplDir."template_c";
-            $this->smarty->cache_dir = $this->config->tplDir."cache";
-            $this->smarty->config_dir = $this->config->tplDir."config";
+            $this->smarty->template_dir = "tpl/";
+            $this->smarty->compile_dir = "tpl/template_c";
+            $this->smarty->cache_dir = "tpl/cache";
+            $this->smarty->config_dir = "tpl/config";
             //$this->smarty->debugging = true;
             $this->smarty->plugins_dir = array($this->config->smartyDir."/plugins", $this->config->miplexDir."smartyPlugins");
         }
     }
     
     /**
-    * Liefert die aktuelle Seite zur�ck als PageObjekt
+    * Liefert die aktuelle Seite zurück als PageObjekt
     * @return PageObject Die Seite
     */
     function getActPage($requestUri = null)
     {
         global  $HTTP_SERVER_VARS;
         $docroot = $this->config->docroot;
-        
-        if ($requestUri == null)        
+
+        if ($requestUri == null)
             $requestUri = $HTTP_SERVER_VARS['REQUEST_URI'];
-            
+
         //remove .html
         $requestUri = preg_replace("/\.html/i", "", $requestUri);
         
-        //get params of site and remove params for internal use
-        //question is how to separate the params from the rest
-        //we use double slashes to separate --> this schould be well indexed by 
-        //the search engines
-        preg_match("/\/\/(.*)$/i", $requestUri, $matches);
-        array_shift($matches);
-        $requestUri = preg_replace("/\/\/(.*)$/i", "", $requestUri);
+        // remove $_GET-Parameters
+        $requestUri = preg_replace("/\?.*/i", "", $requestUri);
         
         //prepare arrays
         $tmpRoot = explode("/", $docroot);
         $cntRoot = count($tmpRoot);
+
+        
         
         //remove as much elements as m2 is placed in document root
         $tmpUri = explode("/", $requestUri);
@@ -139,71 +148,92 @@ class Session
         {
             array_shift($tmpUri);
         }
-        
+
         if (!empty($tmpUri))
         {
             //get requested Page
-            $tmpSite = $this->getRequestedPage($tmpUri, $matches);
+            $tmpSite = $this->getRequestedPage($tmpUri);
             $this->currentPage = $tmpSite;
-            
+
             return $tmpSite;
-        } else 
+        } else
         {
             //We should get the first page in site
-            
+
             return $this->site[0];
         }
-        
+
     }
-    
-    
+
+
     /**
-    * Funktion �bergibt array aus dem Pfad, Zur�ckgegeben wird die gew�nschte Seite
+    * Funktion übergibt array aus dem Pfad, Zurückgegeben wird die gewünschte Seite
     * @param Array $tmpUri Der Pfad als Array
-    * @return PageObject Die gew�nschte Seite
+    * @return PageObject Die gewünschte Seite
     */
-    function getRequestedPage($tmpUri, $matches = null)
+    function getRequestedPage($tmpUri)
     {
         //Das Array ist der Pfad zu dem richtigen Page Object
-        
+
         $site = $this->site;
+        $oldsite = $site;
+        $id = 0;
+        $oldid = $id;
         $tmpUri = array_reverse($tmpUri);
         $error = false;
-        
-        while (!empty($tmpUri) && $error != true)
+
+        while (!empty($tmpUri) && !$error)
         {
-            //Get requested ID 
+            // Get requested ID
             $alias =  array_pop($tmpUri);
+            $oldid = $id;
             $id = $this->getArrayId($site, $alias);
-            $error = $id == -1 ? true : false;
-            
-            //If we are going to next level select 
-            if (count($tmpUri)>0 && $error != true)
+            $error = ($id == -1);
+
+            if (!is_array($site[$id]->subs))
+                break;
+
+            if (!empty($tmpUri) && !$error && is_array($site[$id]->subs))
             {
+                $oldsite = $site;
                 $site = $site[$id]->subs;
-                
             }
-            
         }
-        //add params if submitted
-        $site[$id]->params = $matches[0];
-        $retPage = $site[$id];
-        $this->act = $retPage;
+
+        $this->act = $site[$id];
         
-        //Handle Shortcut if $this->type = Frontend
+        // Handle Shortcuts and Params if ($this->type == "frontend")
         if ($this->type == "frontend")
         {
-            if (!empty($retPage->attributes['shortcut']))
+            // Hier sind wir, wenn schon der Seiteneinstieg nicht gefunden werden konnte
+            // oder wenn eine Seite, die Unterseiten hat, Parameter bekommen hat
+            if (empty($this->act))
+            {
+                $this->act = $oldsite[$oldid];
+                array_push($tmpUri, $alias);
+            }
+
+            // add params if submitted
+            if (is_array($tmpUri))
+            {
+                // Entfernt leere Parameter
+                $uri = array();
+                foreach($tmpUri as $str)
+                    if ((strlen($str) > 0)) 
+                        array_push($uri, $str);
+
+                $this->act->params = implode("/", array_reverse($uri));
+            }
+
+            if (!empty($this->act->attributes['shortcut']))
             {
                 //Go to shortcut
-                header("Location: ".$this->config->docroot.$this->config->baseName."/".$retPage->attributes['shortcut'].".html");
+                header("Location: ".$this->config->docroot.$this->config->baseName."/".$this->act->attributes['shortcut'].(strlen($this->act->params)>0 ? "/".$this->act->params: ".html"));
             }
         }
-        
-        if ($error == true)
-            return false;
-        else 
-            return $retPage;
+
+
+        return $this->act;
     }
     
     function getArrayId($pageObjects, $alias)

@@ -10,7 +10,7 @@
 <div class='blogBody'>{$assoc.body}</div>
 {/if}
 
-<div class='blogFooter'>{$assoc.attributes.author} - {$assoc.attributes.date} ({$assoc.numberOfComments|string_format:"%d"} Kommentare)</div>
+<div class='blogFooter'>{$assoc.attributes.author} - {$assoc.attributes.date} ({$assoc.numberOfComments} Kommentare)</div>
 
 {* Anzeigen der Kommentare*}
 {if $comments eq 1}

@@ -20,7 +20,8 @@ class ExtensionManager
     function ExtensionManager(&$config)
     {
         $this->config =& $config;
-        require_once($this->config->xpathDir."XPath.class.php");
+//        require_once($this->config->xpathDir."XPath.class.php");
+        require_once("lib/XPath/XPath.class.php");
         $this->xpath = new XPath();
     }
     
@@ -35,15 +36,18 @@ class ExtensionManager
     {
         
         //Walk throug extDir and fetch all Extensions
-        $extDir = opendir($this->config->extDir);
-        
+//        $extDir = opendir($this->config->extDir);
+        $extDir = opendir("ext/");
+                
         while (false !== ($file = readdir ($extDir))) 
         {
-            $extConfigFile = $this->config->extDir.$file."/config.xml";
+//            $extConfigFile = $this->config->extDir.$file."/config.xml";
+            $extConfigFile = "ext/".$file."/config.xml";
             if ($file != "." && $file != ".." && is_file($extConfigFile) && is_readable($extConfigFile))
             {
                 //now we've got an extension with a config file
                 //lets try to parse it
+            // XPath-Objekt zurücksetzen, sonst schlägt wiederholtes Laden fehl
                 $this->xpath->reset();
                 $this->xpath->importFromFile($extConfigFile);
                 $ext['author'] = $this->getValue("author");
@@ -57,9 +61,7 @@ class ExtensionManager
                 $this->extensions[$ext['basename']] = $ext;
             }
         }
-        
         return $this->extensions;
-
     }
     
     /**
@@ -70,11 +72,13 @@ class ExtensionManager
     */
     function getExtensionConfig($file)
     {
-        $extConfigFile = $this->config->extDir.$file."/config.xml";
+//        $extConfigFile = $this->config->extDir.$file."/config.xml";
+        $extConfigFile = "ext/".$file."/config.xml";
         if ($file != "." && $file != ".." && is_file($extConfigFile) && is_readable($extConfigFile))
         {
             //now we've got an extension with a config file
             //lets try to parse it
+            $this->xpath->reset();
             $this->xpath->importFromFile($extConfigFile);
             $ext['author'] = $this->getValue("author");
             $ext['mail'] = $this->getValue("mail");
@@ -116,7 +120,7 @@ class ExtensionManager
         $eval = $this->xpath->evaluate("/config/params/*");
         
         foreach ($eval as $item) {
-        	$params[$this->xpath->nodeName($item)] = $this->xpath->getData($item);
+            $params[$this->xpath->nodeName($item)] = $this->xpath->getData($item);
         }
         
         return $params;        
@@ -125,7 +129,7 @@ class ExtensionManager
     /**
     * Anhand des Basenamens der Erweituerng wird nun diese
     * geladen. Dabei wird ein neues Objekt der Erweiterung
-    * erzeugt und die nötigen Parameter übergebenn.
+    * erzeugt und die nötigen Parameter übergeben.
     * @see Extension
     * @param String $basename Der eindeutige Bezeichner der Erweiterung
     */
@@ -138,17 +142,16 @@ class ExtensionManager
         
         if (!empty($ext))
         {
-            require_once($this->config->miplexDir."Extension.class.php");
-            require_once($this->config->extDir.$basename."/".$basename.".class.php");
+//            require_once($this->config->miplexDir."Extension.class.php");
+//            require_once($this->config->extDir.$basename."/".$basename.".class.php");
+            require_once("lib/Miplex2/Extension.class.php");
+            require_once("ext/".$basename."/".$basename.".class.php");
             $obj = new $basename($this->config, $ext);
             
             return $obj;
-        } else 
-            return false;
-            
-    }
-    
+        } 
+        else 
+            return false;       
+    }   
 }
-
-
 ?>

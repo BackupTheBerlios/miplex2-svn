@@ -12,10 +12,9 @@ class Extension
     var $extConfig;
     var $smarty;
     var $xpath;
-    var $baseSmarty;
     
     /**
-    * Der Konstrultor dient dazu, die Konfiguration der Erweiterung in dem
+    * Der Konstruktor dient dazu, die Konfiguration der Erweiterung in dem
     * Objekt zu speichern und ein neues Smarty Objekt zu erzeugen, und die
     * Konfiguration des Miplex2 zu speichern
     * @param MiplexConfig $config Die Referenz auf die Konfiguration von Miplex2
@@ -26,17 +25,24 @@ class Extension
         $this->config =& $config;
         $this->extConfig = $extConfig;
         
-        require_once($this->config->smartyDir."Smarty.class.php");
+//        require_once($this->config->smartyDir."Smarty.class.php");
+        require_once("lib/smarty/libs/Smarty.class.php");
         $this->smarty = new Smarty();
         
-        $this->smarty->template_dir = array($this->config->tplDir, "ext/");
-        $this->smarty->compile_dir = $this->config->tplDir."template_c";
-        $this->smarty->cache_dir = $this->config->tplDir."cache";
-        $this->smarty->config_dir = $this->config->tplDir."config";
+//        $this->smarty->template_dir = array($this->config->tplDir, "ext/");
+        $this->smarty->template_dir = array("tpl/", "ext/");
+//        $this->smarty->compile_dir = $this->config->tplDir."template_c";
+        $this->smarty->compile_dir = "tpl/template_c";
+//        $this->smarty->cache_dir = $this->config->tplDir."cache";
+        $this->smarty->cache_dir = "tpl/cache";
+//        $this->smarty->config_dir = $this->config->tplDir."config";
+        $this->smarty->config_dir = "tpl/config";
         //$this->smarty->debugging = true;
-        $this->smarty->plugins_dir = array($this->config->smartyDir."/plugins", $this->config->miplexDir."smartyPlugins");
+//        $this->smarty->plugins_dir = array($this->config->smartyDir."/plugins", $this->config->miplexDir."smartyPlugins");
+        $this->smarty->plugins_dir = array("lib/smarty/plugins", "lib/Miplex2/smartyPlugins");
         
-        require_once($this->config->xpathDir."XPath.class.php");
+//        require_once($this->config->xpathDir."XPath.class.php");
+        require_once("lib/XPath/XPath.class.php");
         $this->xpath = new XPath();
         
     }
@@ -55,7 +61,6 @@ class Extension
     /**
     * Platzhalter für die Methode, die im Backend aufgerufen wird
     * um die Erweiterung im Backend zu konfigurieren.
-    *
     *
     */
     function getBackend()
@@ -81,7 +86,7 @@ class Extension
     
     
     /**
-    * Diese FUnktion, soll es dem Programmierer erleichtern die Konfigurationsdatei der
+    * Diese Funktion, soll es dem Programmierer erleichtern die Konfigurationsdatei der
     * Erweiterung zu speichern. Übergeben wird dabei ein Array der Konfiguration.
     * Dies wird dann als XML Datei abgespeichert und auf FP geschrieben.
     * @param Array $config Die Konfiguration der Erweiterung
@@ -90,8 +95,10 @@ class Extension
     function saveConfiguration($config)
     {
         
-        $configFile = $this->config->extDir.$this->extConfig['basename']."/config.xml";
-        require_once($this->config->miplexDir."BeautifyXML.class.php");
+//        $configFile = $this->config->extDir.$this->extConfig['basename']."/config.xml";
+        $configFile = "ext/".$this->extConfig['basename']."/config.xml";
+//        require_once($this->config->miplexDir."BeautifyXML.class.php");
+        require_once("lib/Miplex2/BeautifyXML.class.php");
         $beauty = new BeautifyXML();
         
         $node = $beauty->formatXML($this->_prepareNode($config));
@@ -120,16 +127,13 @@ class Extension
         
         //insert params
         foreach ($config['params'] as $key => $val) {
-        	$node.="<$key>".$val."</$key>";
+            $node.="<$key>$val</$key>";
         }
-        
-        
+
         $node.="</params>
                 </config>";
         
         return $node;
     }
 }
-
-
 ?>
