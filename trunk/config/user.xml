@@ -25,4 +25,8 @@
     </Admin>
 </rights>
 </user>
+<user><username>miplex2</username>
+<password>miplex2</password>
+<rights/>
+</user>
 </userManager>

@@ -1,4 +1,5 @@
 {assign var=user value=$i18n->getSection("settings.user")}
+{assign var=baseUrl value="?module=settings&part=user"}
 <h1>Benutzerverwaltung</h1>
 
 
@@ -8,7 +9,7 @@
         <td>
             <ul>
             
-                <li><a href='?part='>{$user->get("list")}</a></li>
+                <li><a href='{$baseUrl}&action=list='>{$user->get("list")}</a></li>
                 <li><a href='?module=settings&part=user&action=add'>{$user->get("add")}</a></li>
                 <li>{$user->get("edit")}</li>
                 <li>{$user->get("delete")}</li>

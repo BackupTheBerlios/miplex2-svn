@@ -59,6 +59,11 @@ settings.user.list=Benutzer anzeigen
 settings.user.add=Benutzer anlegen
 settings.user.edit=Benutzer bearbeiten
 settings.user.delete=Benutzer löschen
+settings.user.username=Benutzername
+settings.user.password=Passwort
+settings.user.group=Benutzergruppe
+settings.user.save=Speichern
+settings.user.cancel=Abbrechen
 
 settings=Miplex2 Einstellungen
 

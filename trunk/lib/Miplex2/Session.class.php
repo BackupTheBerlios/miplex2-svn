@@ -2,12 +2,13 @@
 
 class Session
 {
-    
+    //Site stuff 
     var $site;
     var $config;
     var $currentPage;
     var $mdb = null;
     
+    //System stuff
     var $i18n;
     var $user = "nobody";
     var $smarty = false;
@@ -19,6 +20,8 @@ class Session
     
     var $header = "";
     
+    //user management
+    var $userDatabase = null;
     
     /**
     * Konstruktor der Klasse, initialisieren der Seite und der Konfiguration
@@ -37,7 +40,26 @@ class Session
         require_once($session->config->miplexDir."M2Translator.class.php");
         $this->i18n = new M2Translator("de");
     }
-    
+   
+    /**
+    * This function is called by the backend to load the UserDatabase
+    * and inject it in the session. 
+    *
+    */
+    function loadUserDatabase()
+    {
+        require_once($session->config->miplexDir."M2UserManager.class.php");
+        if ($this->userDatabase==null)
+        {
+            //load new db
+            $this->userDatabase = new M2UserManager("config/user.xml", $this->mdb->xPathHandle);
+            $this->userDatabase->loadDatabase();
+            return true; 
+        }
+        //was already loaded
+        return true;
+    }
+   
     /**
     * Laden der Seitenstruktur
     *

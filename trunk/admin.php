@@ -6,6 +6,8 @@
     require_once("lib/Miplex2/Session.class.php");
     
     $session = new Session("config/config.ser", "backend");
+    $session->loadUserDatabase();
+
     
     if (!is_string($_GET['module']))
     {

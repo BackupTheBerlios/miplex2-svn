@@ -37,7 +37,7 @@ class M2UserManager
     var $xpath = null;
     var $xmlFileName = "";
     var $user = array();
-    var $beautify = 1;
+    var $beautify = 0;
     var $oBeautify = null;
     var $error = array(
                     "Creation of a new Database failed!", //0
@@ -165,7 +165,7 @@ class M2UserManager
     */
     function loadDatabase()
     {
-        
+        $this->xpath->reset(); 
         if ($this->xpath->importFromFile($this->xmlFileName)) {
             
             $ret = $this->fetchRights();
@@ -351,7 +351,7 @@ class M2UserManager
             
             foreach ($userAttributes as $attribute => $value) {
                 
-                $node.="<".$attribute.">".$value."</".$attribute.">";
+                $node.="<".$attribute.">".$value."</".$attribute.">\n";
             	
             }
             
@@ -375,19 +375,19 @@ class M2UserManager
                 if (!empty($group))
                 {
                     foreach ($group as $right => $val) {
-                    	$node.="<".$right.">".$val."</".$right.">";
+                    	$node.="<".$right.">".$val."</".$right.">\n";
                     }
                 }
                 
-                $node.="</".$groupname.">";
+                $node.="</".$groupname.">\n";
                 
             }
         
         } 
         
-        $node.="</rights>";
+        $node.="</rights>\n";
         //finish node
-        $node.="</user>";
+        $node.="</user>\n";
         
         //So we have added all we need and now we will submit it to our class
         if (!$this->xpath->appendChild("/userManager[1]", $node))

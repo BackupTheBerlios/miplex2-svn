@@ -16,7 +16,7 @@ class blog extends Extension {
         global $HTTP_SERVER_VARS;
         
         
-	//Fetch function paramters
+		//Fetch function paramters
         $args = func_get_args();
         
         //switch displaymode :: implemented later
@@ -44,7 +44,7 @@ class blog extends Extension {
             $queryString = explode("/", $queryString);
         }
        
-        //fetch what to do
+        //fetch what to do 
         $displayGroup = $queryString[0];
         //fetch variable
         $displayVariable = $queryString[1];
@@ -52,6 +52,7 @@ class blog extends Extension {
         switch ($displayGroup) {
         	case 'single':
         		
+				//fetch contennt by passed number
         	    $content[] = $this->blogClass->getEntryByNumberOrContext($displayVariable-1);
         	    $this->smarty->assign("data", $content);
         	    $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
@@ -60,6 +61,7 @@ class blog extends Extension {
         
         	case 'cat':
         	
+				//fetch content by category passed by link
         	    $content = $this->blogClass->getEntryByCategory($displayVariable);
         	    $this->smarty->assign("data",$content);
                     $this->smarty->assign("content","blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
@@ -67,6 +69,7 @@ class blog extends Extension {
         		
         	default:
         	
+				//fetch last x entries, the number of entries is defined in the configuration xml file
         	    $content = $this->blogClass->getLastXEntries($this->extConfig['params']['countDisplay']);
         	    $this->smarty->assign("data", $content);
                     $this->smarty->assign("content", "blog/tpl/frontend/entry/".$this->extConfig['params']['entryTpl']);
