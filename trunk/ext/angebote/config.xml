@@ -1,0 +1,13 @@
+<config>
+    <extName>Aktuelle Angebote</extName>
+    
+    <author>Gregor Schmidt</author>
+    <mail>Schmidtwisser@GMail.com</mail>
+    <version>0.0.1</version>
+    
+    <dependsOn>
+    </dependsOn>
+    
+    <params>
+    </params>
+</config>
