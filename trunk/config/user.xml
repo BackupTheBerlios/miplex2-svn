@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<userManager>
+    <rights>
+    <right type="boolean">read</right>
+<right type="boolean">create</right>
+</rights>
+<groups>
+<group>Admin</group>
+</groups>
+<user>
+<name>Martin</name>
+<mail>grund@me.de</mail>
+<rights>
+    <Admin>
+        <create>1</create>
+    </Admin>
+</rights>
+</user>
+<user>
+<name>gregor</name>
+<mail>grund@me.de</mail>
+<rights>
+    <Admin>
+        <create>1</create>
+    </Admin>
+</rights>
+</user>
+</userManager>

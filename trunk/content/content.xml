@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<site>
+    <section>
+        <attributes>
+            <name>Start</name>
+            <alias>start</alias>
+            <visibleFrom>1.1.2003</visibleFrom>
+            <visibleTill>1.1.2005</visibleTill>
+            <shortcut/>
+            <inMenu>on</inMenu>
+            <allowExtension>on</allowExtension>
+            <allowScript>on</allowScript>
+        </attributes>
+        <content>
+            <attributes>
+                <name>Miplex ist ein CMS für alle Bedürfnisse</name>
+                <alias/>
+                <visibleFrom>1.1.2003</visibleFrom>
+                <visibleTill>1.1.2006</visibleTill>
+                <position>normal</position>
+                <ceType/>
+                <lastChanged>13.10.04.</lastChanged>
+            </attributes>
+            <data>
+                <![CDATA[
+                <p>Die <a href="/miplex2/index.php/miplex2/install.html#notes">Tage</a> in
+                denen selbst für einfache Webseiten, die dynamisch verwaltet werden sollen,
+                ständig eine Datenbank im Hintergrund laufen musste, und die Systeme
+            benutzen, die doch kein normaler Kunde bedienen kann, sind vorbei.</p>
+            <p>Miplex ist der neue Standard für kleines und einfaches Management Ihrer
+                Seiteninhalte.</p> <p>Und damit Sie auch jeder findet, sind die URLs sicher
+                für jede Suchmaschine und werden nicht etwa abgeschnitten und keiner findet
+                Sie mehr.</p> <p>Des weiteren gibt es für versierte Nutzer die Mglichkeit
+                einfach Erweiterungen in php zu schreiben und einzubinden.</p> <p>Aufgrund
+                der langsamen XML Anbingung, wurde nun eine neue XML Klasse eingesetzt, PHP
+                XPath. Damit hat die XML Abfragesprache XPath auch in Miplex Einzug
+                gehalten.<br /> </p> <p> Dafür dient nun auch Miplex2.</p> <p> <br /> </p>
+                <table> <tbody> <tr> <td> <br /> </td> </tr> </tbody> </table>]]>
+            </data>
+        </content>
+    </section>
+    <section>
+        <attributes>
+            <name>Miplex2</name>
+            <alias>miplex2</alias>
+            <visibleFrom>1.1.2003</visibleFrom>
+            <visibleTill>1.1.2005</visibleTill>
+            <shortcut>miplex2/features</shortcut>
+            <inMenu>on</inMenu>
+            <allowExtension>on</allowExtension>
+            <allowScript>on</allowScript>
+        </attributes>
+        <section>
+            <attributes>
+                <name>Features</name>
+                <alias>features</alias>
+                <visibleFrom/>
+                <visibleTill/>
+                <shortcut/>
+                <inMenu>on</inMenu>
+                <allowExtension>on</allowExtension>
+                <allowScript>on</allowScript>
+            </attributes>
+            <content>
+                <attributes>
+                    <name>Features</name>
+                    <visibleFrom/>
+                    <visibleTill>1.10.2004</visibleTill>
+                    <lastChanged>22.09.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[
+                    <ul> <li>Templates</li>
+                    <li>Erweiterungen für Frontend und
+                    Backend</li>
+                    <li>Neue Struktur der XML Datei</li>
+                    <li>getrenntes Backend <br
+                        />
+                    </li>
+                    <li>Neue Attribute für einzelene Seiten möglich</li>
+                    <li>Mehrere
+                        Inhaltselemente pro Seite möglich<br />
+                        </li> </ul>]]>
+                    </data>
+                </content>
+                <content>
+                    <attributes>
+                        <name>Text</name>
+                        <visibleFrom/>
+                        <visibleTill/>
+                        <position>normal</position>
+                        <lastChanged>23.09.04.</lastChanged>
+                    </attributes>
+                    <data>
+                        <![CDATA[Dies ist Text.
+                        ]]>
+                    </data>
+                </content>
+                <content>
+                    <attributes>
+                        <name>Draft</name>
+                        <visibleFrom/>
+                        <visibleTill/>
+                        <lastChanged>23.09.04.</lastChanged>
+                    </attributes>
+                    <data>
+                        <![CDATA[
+                        Draft Text]]>
+                    </data>
+                </content>
+            </section>
+            <section>
+                <attributes>
+                    <name>Installation</name>
+                    <alias>install</alias>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <shortcut/>
+                    <inMenu>on</inMenu>
+                    <allowScript>on</allowScript>
+                </attributes>
+                <content>
+                    <attributes>
+                        <name>Install Notes</name>
+                        <alias>notes</alias>
+                        <visibleFrom/>
+                        <visibleTill/>
+                        <position>normal</position>
+                        <ceType/>
+                        <lastChanged>13.10.04.</lastChanged>
+                    </attributes>
+                    <data>
+                        <![CDATA[
+                        Damit alles gut geht brauch Ihr: PHP, Apache. <a
+                    href="index.php/miplex2">Und </a>natürlich Miplex2]]>
+                </data>
+            </content>
+            <content>
+                <attributes>
+                    <name>Further...</name>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>04.10.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[
+                    So wenn das geschehen ist, einfach auf Los drücken und die Post geht
+                    ab.<br />sd<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />]]>
+                </data>
+            </content>
+            <content>
+                <attributes>
+                    <name>PHP</name>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>04.10.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[Und damit alles gut wird, hier der Tex....
+                    ]]>
+                </data>
+            </content>
+        </section>
+    </section>
+    <section>
+        <attributes>
+            <name>Tracker</name>
+            <alias>trakcs</alias>
+            <visibleFrom/>
+            <visibleTill/>
+            <shortcut/>
+            <inMenu>on</inMenu>
+        </attributes>
+        <section>
+            <attributes>
+                <name>FT</name>
+                <alias>ft</alias>
+                <visibleFrom/>
+                <visibleTill/>
+                <shortcut/>
+                <inMenu>on</inMenu>
+            </attributes>
+            <content>
+                <attributes>
+                    <name>Features</name>
+                    <alias/>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>13.10.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[
+                    <table rules="none" frame="void" border="1" align="texttop"
+                    style="border-style: none; width: 100%; background-image: none; float:
+                    none; text-align: left; vertical-align: top;"> <tbody> <tr> <td
+                    style="border-style: none; width: 50px; background-image: none;
+                    text-align: left; vertical-align: top;"> <span style="font-weight:
+                    bold;">ID</span> <br /> </td> <td> <span style="font-weight:
+                    bold;">Beschreibung</span> <br /> </td> <td style="border-style: none;
+                    width: 50px; background-image: none; text-align: left; vertical-align:
+                    top;"> <span style="font-weight: bold;">Ok</span> <br /> </td> </tr> <tr>
+                    <td>1<br /> </td> <td>Benutzerverwaltung<br /> </td> <td> <br /> </td>
+                    </tr> <tr> <td style="vertical-align: top;">2<br /> </td> <td
+                    style="vertical-align: top;">Extensionmenü im Contentelement --&gt;
+                    Speicherung als spezielles Attribut im CE --&gt;diese werden dann in das
+                PO übernommen<br /> </td> <td style="vertical-align: top;"> <br /> <br />
+                </td> </tr> <tr> <td style="vertical-align: top;">3<br /> </td> <td
+            style="vertical-align: top;">Installationstool<br /> </td> <td
+            style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+        style="vertical-align: top;">4<br /> </td> <td style="vertical-align:
+    top;">CE: Save und Save-and-Exit Button<br /> </td> <td
+    style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+style="vertical-align: top;">5<br /> </td> <td style="vertical-align:
+top;">Templates für CEs und Seiten überarbeiten<br /> </td> <td
+style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+style="vertical-align: top;">6<br /> </td> <td style="vertical-align:
+top;">Validität der Templates überprüfen<br /> </td> <td
+style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+style="vertical-align: top;">7<br /> </td> <td style="vertical-align:
+top;">Kompression der Seiten aktivieren<br /> </td> <td
+style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+style="vertical-align: top;">8<br /> </td> <td style="vertical-align:
+top;">Workflow - direktes veröffentlichen oder mit Zwischenstufe<br />
+</td> <td style="vertical-align: top;"> <br /> </td> </tr>
+<tr>
+<td
+style="vertical-align: top;">9<br />
+</td>
+<td style="vertical-align:
+top;">HTML Area Plugin zur Auswahl der Erweiterungen<br />
+</td>
+<td
+style="vertical-align: top;">
+<br />
+</td>
+</tr> </tbody> </table> <br /> <br
+/>]]>
+</data>
+</content>
+</section>
+<section>
+<attributes>
+<name>BT</name>
+<alias>bt</alias>
+<visibleFrom/>
+<visibleTill/>
+<shortcut/>
+<inMenu>on</inMenu>
+</attributes>
+<content>
+<attributes>
+<name>Bugs</name>
+<visibleFrom/>
+<visibleTill/>
+<position>normal</position>
+<ceType/>
+<lastChanged>05.10.04.</lastChanged>
+</attributes>
+<data>
+<![CDATA[<ol>
+<li>Dateneingabe überprüfen damit keine sinnlosen Datumsangabe übernommen werden.<br />
+</li>
+</ol>]]>
+</data>
+</content>
+</section>
+</section>
+<section>
+<attributes>
+<name>Kontakt</name>
+<alias>kontakt</alias>
+<visibleFrom/>
+<visibleTill/>
+<shortcut/>
+<inMenu>on</inMenu>
+<allowExtension>on</allowExtension>
+</attributes>
+<content>
+<attributes>
+<name/>
+<visibleFrom/>
+<visibleTill/>
+<position>normal</position>
+<lastChanged>24.09.04.</lastChanged>
+</attributes>
+<data>
+<![CDATA[
+###Ext:mailform(to=info@schmidtwisser.de)###]]>
+</data>
+</content>
+</section>
+<section>
+<attributes>
+<name>Seite nicht gefunden</name>
+<alias>404</alias>
+<visibleFrom/>
+<visibleTill/>
+<shortcut/>
+</attributes>
+<content>
+<attributes>
+<name>Die gewünschte Seite wurde nicht gefunden</name>
+<alias/>
+<visibleFrom/>
+<visibleTill/>
+<position>normal</position>
+<ceType/>
+<lastChanged>11.11.04.</lastChanged>
+</attributes>
+<data>
+<![CDATA[
+<p>Die von Ihnen angeforderte Seite existiert nicht. Bitte überprüfen Sie
+ihre Einagebe.</p>]]>
+</data>
+</content>
+</section>
+<content>
+<attributes>
+<name>Inhalt</name>
+</attributes>
+<data>asdasdasd
+asdasd
+asdasd
+</data>
+</content>
+</site>

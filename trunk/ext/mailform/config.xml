@@ -1,0 +1,13 @@
+<config>
+    <extName>Mailform</extName>
+    <author>Martin Grund</author>
+    <mail>grundprinzip@gmail.com</mail>
+    <version>0.9.1</version>
+    <dependsOn>
+    </dependsOn>
+    <params>
+        <to>info@grundprinzip.de</to>
+        <subject>Mail von Webseite</subject>
+        <from>mail@grundprinzip.de</from>
+    </params>
+</config>

@@ -1,0 +1,383 @@
+/*=============================================================*/
+/*======================= ANORDNUNG ===========================*/
+/*=============================================================*/
+body{
+    margin: 0px;
+    padding: 5px;
+    background-color:black;
+    }
+
+/*Layout Boxen*/
+.all{
+    width : 974px;
+    min-height : 520px;
+    overflow : hidden;
+    margin: 0px;
+    padding: 5px;
+    background-color:#006699;
+    -moz-border-radius : 10px;
+    }
+
+.left-part{
+    width : 192px;
+    overflow : hidden;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    }
+    
+.right-part{
+    width : 772px;
+    overflow : hidden;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    }
+
+.dove {
+    width : 180px;
+    height : 180px;
+    margin: 5px;
+    padding: 0px;
+    background: url(./taube.gif) center center no-repeat;
+    }
+
+.login-box{
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    width : 180px;
+    margin: 0px 5px 0px 5px;
+    padding: 0px;
+    color : #FFFFFF;
+    font-size:8pt;
+    }
+.login-box a:link,.login-box a:visited,.login-box a:active,.login-box a:hover{font-weight:normal; color:#006699; text-decoration:none;}
+    
+.menu-box{
+    width : 170px;
+    min-height : 300px;
+    margin : 5px;
+    padding : 5px;
+    background-color : #FFFFFF;
+    border : 1px solid #cccccc;
+    }
+
+.strecker-menu{
+    width : 0px;
+    height : 300px;
+    float : right;
+    margin : 0px;
+    padding : 0px;
+    }
+    
+.top-box{
+    width : 760px; 
+    overflow : hidden;
+    margin: 5px;
+    padding: 0px;
+    }
+
+.news-box{
+    width : 585px;
+    margin: 0px;
+    padding: 0px 5px 5px 5px;
+    float : left;
+    background-color:#006699;
+    border : 1px solid #FFFFFF;
+    font-family : "Courier New", monospace;
+    font-size : 11pt;
+    color : #FFFFFF;
+    font-weight : bold;
+    }
+.news-box p{
+    padding : 0px;
+    margin : 0px;
+    }
+.news-box h3{
+    padding : 0px 0px 10px;
+    margin : 0px;
+    font-size : 11pt;
+    }
+.news-box a {
+    color : #FFFFFF;
+    }
+
+.navibox{
+    width : 160px;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
+    float : right;
+    }
+
+.adminbox{
+    width : 760px;
+    margin : 5px;
+    padding : 0px;
+    }
+
+.path{
+    font-family : Verdana,Geneva,Arial,Helvetica;
+    margin: 10px 5px 0px 5px;
+    padding: 0px;
+    color: #cccccc;
+    font-size:8pt;
+    border : 1px solid #cccccc;
+    }
+.path a:link,.path a:visited,.path a:active{
+    font-weight:bold; color:#cccccc; text-decoration:none;}
+.path a:hover {
+    color:#ffffff;}
+
+.white-box{
+    width : 740px;
+    min-height : 414px;
+    margin: 0px 5px 5px 5px;
+    padding: 10px;
+    background : #FFFFFF url(./miplex.gif) right bottom no-repeat;
+    border : 1px solid #cccccc;
+	overflow:hidden;
+    }
+
+.content{
+    margin: 0px;
+    padding: 0px;
+    color : #006699;
+    float:left;
+    }
+
+.strecker-content{
+    width : 0px;
+    height : 369px;
+    float:left;
+    margin : 0px;
+    padding : 0px;
+    }
+    
+/*============================================================*/
+/*======================= AUSSEHEN ===========================*/
+/*============================================================*/
+
+
+/*=================== Inhaltselemente ========================*/
+.content {
+    font-family : Tahoma, sans-serif;
+    font-size: 14px;
+    text-align:justify;
+    float:none;
+    }
+
+.content h1, .content h2, .content h3, .content h4 {
+    font-size: 16px;
+    padding : 0px;
+    margin : 5px 0px 10px 0px;
+    }
+
+.content td{
+    font-size: 14px;
+    }
+
+.content a {
+    font-weight : bold; 
+    color : #666666; 
+    text-decoration:none; 
+    margin : 0px; 
+    padding : 0px;}
+.content a:active, .content a:link, .content a:visited {
+    }
+.content a:hover {
+    color : #cccccc;
+    }
+    
+    
+/*=================== Menü ========================*/
+
+.menu-level1, .menu-level2, .menu-level3 {
+    color : #000000;
+    list-style-type : none;
+    font-family : tahoma, sans-serif;
+    font-size : 10pt;
+    font-weight : bold;
+    margin : 0px; 
+    padding : 0px;}
+.menu-level1 a, .menu-level2 a, .menu-level3 a{
+    font-weight : bold; 
+    color : #006699; 
+    text-decoration:none; 
+    margin : 0px; 
+    padding : 0px;}
+.menu-level1 a:active, .menu-level2 a:active, .menu-level3 a:active,
+.menu-level1 a:link, .menu-level2 a:link, .menu-level3 a:link,
+.menu-level1 a:visited, .menu-level2 a:visited, .menu-level3 a:visited{color:#006699;}
+.menu-level1 a:hover, .menu-level2 a:hover, .menu-level3 a:hover{color:#000000;}
+
+.menu-level1 li {padding: 3px 5px;}
+.menu-level2 li {padding: 1px 20px;}
+.menu-level3 li {padding: 0px 40px;}
+
+
+/* ============ Top Navigation =============*/
+.navielem{
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    font-size : 12px;
+    text-align : right;
+    color : #FFFFFF;
+    margin : 0px;
+    padding : 0px;
+    }
+.navielem a:link, .navielem a:active, .navielem a:visited {color : #FFFFFF; text-decoration:none;}
+.navielem a:hover {color:#999999;}
+
+.navielem .text{
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    border:1px solid #cccccc;
+	background-color:white;
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	height: 18px;}
+.navielem .submit{
+    font-family : Verdana, Arial, Helvetica, sans-serif;
+    border : 1px solid #cccccc; 
+	background-color:#336699;
+	color:#FFFFFF; 
+	padding: 0px; 
+	margin: 0px;
+	font-size: 12px;
+	height: 19px;}
+.navielem form{
+    padding : 0px;
+    margin : 0px;}
+    
+
+
+/*===============================================================*/
+/*======================= AUS NEU.CSS ===========================*/
+/*===============================================================*/
+.sitetitle{
+    font-size : 12pt;
+    font-weight:bold;
+    color : #FFFFFF;
+    text-align : right;
+    margin: 0px;
+    padding: 0px;
+    }
+
+.adminmenu{
+    width:100%;
+    font-size : 12px;
+    color : #FFFFFF;
+    font-family:"Courier New", Courier, mono;
+    background-color : #006699;
+    border: 1px solid #FFFFFF;
+    }
+.adminmenu td{
+    width : 15%;
+    border: 1px solid #ffffff;
+    padding: 1px;
+    margin: 0px;
+    text-align:center;}
+.adminmenu a, .adminmenu a:link,.edit a:visited,.edit a:active,.edit a:hover{font-weight:normal; color:#FFFFFF; text-decoration:none;}
+
+/*Admin:Structure*/
+
+.struct-new, .struct-newU {
+    font-family: "Courier New" , Monospace;
+    font-size: 7pt;
+}
+
+.move-up, .move-down {
+    font-family: "Courier New" , Monospace;
+    font-size: 7pt;
+}
+
+
+a:link.struct-new  { font-weight:bold; color:green; text-decoration: none;}
+a:visited.struct-new  { font-weight:bold; color:green; text-decoration: none;}
+a:hover.struct-new  { font-weight:bold; color:green; text-decoration: none;}
+
+
+a:link.struct-newU  { font-weight:bold; color:red; text-decoration: none;}
+a:visited.struct-newU  { font-weight:bold; color:red; text-decoration: none;}
+a:hover.struct-newU  { font-weight:bold; color:red; text-decoration: none;}
+
+a:link.move-up  { font-weight:bold; color:blue; text-decoration: none;}
+a:visited.move-up  { font-weight:bold; color:blue; text-decoration: none;}
+a:hover.move-up  { font-weight:bold; color:blue; text-decoration: none;}
+
+
+a:link.move-down  { font-weight:bold; color:blue; text-decoration: none;}
+a:visited.move-down  { font-weight:bold; color:blue; text-decoration: none;}
+a:hover.move-down  { font-weight:bold; color:blue; text-decoration: none;}
+
+.structure-table td, .structure-table tr{
+    text-align: left;
+    font-size: 10pt;
+    font-weight: normal;
+    border: 1px solid #cccccc;
+    padding: 5px 5px 5px 5px;
+}
+
+.image {
+    margin: 0px;
+    border: 0px;
+    border-style: none;
+}
+
+/*News Extension*/
+.newshead {
+   font-weight: bold;
+}
+
+/* Blog */
+.blogTitle {
+font-weight: bold;
+font-size: 18px;
+height: 30px;
+link-decoration:none;
+}
+
+.blogTeaser {
+font-style: italic;
+margin-right:20px;
+}
+
+.blogBody {
+margin-right: 20px;
+}
+
+.blogFooter {
+height: 30px;
+font-size: 11px;
+font-style: italic;
+}
+
+.blogCommentHeader {
+font-weight: bold;
+font-style: italic;
+font-size: 14px;
+height: 20px;
+}
+
+.blogComment {
+}
+
+.blogCommentFooter{
+font-style: italic;
+font-size: 12px;
+}
+
+.blogTable tr td {
+vertical-align: top;
+}
+
+.blogMainTitle {
+font-weight:bold;
+font-size:16px;
+height:30px;
+}
+
+p {
+	color : #006699;
+	font-family : Tahoma, sans-serif;
+    font-size: 14px;
+    text-align:justify;
+}

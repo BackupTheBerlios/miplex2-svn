@@ -1,0 +1,13 @@
+TODO Liste:
+
+- Header der Seite dynmaisch machen
+- Seitentitel dynamisch machen
+- Dokumentation
+- beim Löschen der Seiten werden auch sämtlcihe Unterseiten gelöscht
+- Zurückknopf beim bearbeiten von ces
+- Verschieben von Seiten --> testen der Links
+
+
+
+- anchor um alle Textblöcke einfügen -> id ist die nummer des Blocks
+- Konfiguration für die textblöcke der Extensions in Parametern --> extConf

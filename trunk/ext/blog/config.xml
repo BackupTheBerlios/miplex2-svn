@@ -1,0 +1,23 @@
+<config>
+    <extName>BlogExt</extName>
+    <author>Martin Grund</author>
+    <mail>grundprinzip@gmail.com</mail>
+    <version>0.0.1</version>
+    <dependsOn>
+    </dependsOn>
+    <params>
+        <author>Martin</author>
+        <!-- RSS needed settings -->
+        <blogTitle>!golbeW</blogTitle>
+        <link>http://www.grundprinzip.de/blog.html</link>
+        <description>
+            Ein Blog für alle Fälle. Neuigkeiten, Skuriles und Informatives aus dem täglichen Geschehen 
+            der Offline und Online Welt.
+        </description>
+        <generator>Miplex2</generator>
+        <managingEditor>blog@grundprinzip.de</managingEditor>
+        
+        <notifyMail>blog@grundprinzip.de</notifyMail>
+        <categories>TagesZeitung, Skills, Abseits, Hell's Kittchen</categories>
+    </params>
+</config>
