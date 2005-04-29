@@ -1,7 +1,7 @@
 <?php
 
 /**
-* DIese Klasse dient dazu, die Benutzer, die in Miplex arbeiten auf
+* Diese Klasse dient dazu, die Benutzer, die in Miplex arbeiten auf
 * einer gewissen Abstraktionsebene zu verwalten
 * Die Struktur lautet:
 * <userManager>
@@ -63,8 +63,8 @@ class M2UserManager
     /**
     * Der Konstruktor dient dazu die Klasse zu initialisieren und
     * die vorhandenen benutzer zu laden, falls keine Datenbank angelegt
-    * ist, wird automatisch eine neue erstellt. Der einfachheit halber wird
-    * eine referenz auf ein XPath Objekt �bergeben.
+    * ist, wird automatisch eine neue erstellt. Der Einfachheit halber wird
+    * eine Referenz auf ein XPath Objekt übergeben.
     *
     * @param    String  $xmlFile    Der Pfad zur XML Datenbank der Benuzer
     * @param    XPath   $xpath      Eine Referenz auf das XPath Objekt
@@ -104,7 +104,7 @@ class M2UserManager
     
     /**
     * Diese Funktion wird benutzt um eine neue Benutzerdatenbank anzulegen
-    * dabei wird die vorbestimmte XML Struktur �bernommen
+    * dabei wird die vorbestimmte XML Struktur übernommen
     *
     */
     function createNewDatabase()
@@ -130,8 +130,8 @@ class M2UserManager
     }
     
     /**
-    * Diese funktion speichert den aktuellen Zustand der Datenbank in dem
-    * in $this->xmlFileName �bergebenen Pfad ab. Falls gew�nscht wird
+    * Diese Funktion speichert den aktuellen Zustand der Datenbank in dem
+    * in $this->xmlFileName übergebenen Pfad ab. Falls gewünscht wird
     * der Quelltext der XML Datei neu formatiert.
     */
     function saveDatabase()
@@ -159,7 +159,7 @@ class M2UserManager
     }
     
     /**
-    * Diese Funktion l�dt die in der XML Datei vorhandene Struktur in das interne
+    * Diese Funktion lädt die in der XML Datei vorhandene Struktur in das interne
     * XPath Objekt.
     * @todo remove empty databse
     */
@@ -184,7 +184,7 @@ class M2UserManager
     }
     
     /**
-    * Diese Funktion extrahiert aus der XML Struktur die m�glichen Rechte
+    * Diese Funktion extrahiert aus der XML Struktur die möglichen Rechte
     * Die Vorgehensweise orientiert sich an der oben definierten Struktur
     */
     function fetchRights()
@@ -202,7 +202,7 @@ class M2UserManager
                 
                 $sr = $this->xpath->evaluate($right);
                 $this->rights[$this->xpath->getData($sr[0])]=$this->xpath->getAttributes($sr[0], "type");                
-            	
+                
             }
                 
             return true;
@@ -218,7 +218,7 @@ class M2UserManager
         foreach ($group['rights'] as $sr) {
             
             $r[] = $sr['name'];
-        	
+            
         }
         
         return $r;
@@ -228,13 +228,13 @@ class M2UserManager
     {
         $r = array();
         foreach ($this->groups as $sg) {
-        	$r[] = $sg['name'];
+            $r[] = $sg['name'];
         }
         return $r;
     }
     
     /**
-    * Diese Funktion extrahiert aus der XML Struktur die m�glichen Gruppen
+    * Diese Funktion extrahiert aus der XML Struktur die m?glichen Gruppen
     * Die Vorgehensweise orientiert sich an der oben definierten Struktur
     */
     function fetchGroups()
@@ -260,13 +260,13 @@ class M2UserManager
                 if ($groupRights != false)
                 {  
                     foreach ($groupRights as $gr) {
-                    	$rightAttributes = $this->xpath->getAttributes($gr);
-                    	$tmpGroup['rights'][] = $rightAttributes;
+                        $rightAttributes = $this->xpath->getAttributes($gr);
+                        $tmpGroup['rights'][] = $rightAttributes;
                     }
                 }
                 
                 $this->groups[]=$tmpGroup;
-            	
+                
             }
             
             return true;
@@ -286,7 +286,7 @@ class M2UserManager
         {
             //Walk through all Users
             foreach ($evalUsers as $user) {
-            	
+                
                 //fetch all attributes
                 $attributes = $this->xpath->evaluate($user."/*");
                 
@@ -322,7 +322,7 @@ class M2UserManager
         
         //Walk throug all users
         foreach ($this->user as $singleUser) {
-        	
+            
             //check if user is in group
             if ($singleUser['group']==$groupName)
             {
@@ -344,8 +344,8 @@ class M2UserManager
     function getGroup($identifiedBy,$value)
     {
         foreach ($this->groups as $sg) {
-        	if ($sg[$identifiedBy] == $value)
-        	   return $sg;
+            if ($sg[$identifiedBy] == $value)
+               return $sg;
         }
         return false;
     }
@@ -375,15 +375,15 @@ class M2UserManager
             else 
                 return false;
         }
-        return true;
+        return false;
     }
     
     ########################User Functions############################
     
     /**
-    * Diese Funktion f�gt der Datenbank einen Benutzer hinzu. 
-    * �bergeben werden alls ein Array alle relevanten Informationen
-    * Rechte und Gruppenzuge�rigkeit werden separat �bergeben
+    * Diese Funktion f?gt der Datenbank einen Benutzer hinzu. 
+    * ?bergeben werden alls ein Array alle relevanten Informationen
+    * Rechte und Gruppenzuge?rigkeit werden separat ?bergeben
     *
     */
     function addUser($userAttributes, $group)
@@ -396,7 +396,7 @@ class M2UserManager
             foreach ($userAttributes as $attribute => $value) {
                 
                 $node.="<".$attribute.">".$value."</".$attribute.">\n";
-            	
+                
             }
             
         } else {
@@ -473,7 +473,6 @@ class M2UserManager
         }
         
         foreach ($this->user as $user) {
-        	
             if (key_exists($identifiedBy, $user) && $user[$identifiedBy] == $name)
             {
                 return $user;
@@ -538,7 +537,7 @@ class M2UserManager
             {
                 $node.="<right name='$right'/>\n";
             }
-        	
+            
         }
         
         $node.="</group>\n";
@@ -577,7 +576,7 @@ class M2UserManager
             {
                 //walk through
                 foreach ($evalGroups as $gr) {
-                	
+                    
                     //check name and delete if correct
                     $name = $this->xpath->getAttributes($gr, "name");
                     
@@ -602,7 +601,7 @@ class M2UserManager
     {
         $exist = false;
         foreach ($this->groups as $g) {
-        	
+            
             if ($groupName == $g['name'])
                 $exist = true;
         }
@@ -688,7 +687,7 @@ class M2UserManager
             $exist = false;
             $path = "";
             foreach ($existingRights as $right) {
-            	
+                
                 $name = $this->xpath->getData($right);
                 if ($name == $rightToBeDeleted)
                 {
