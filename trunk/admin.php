@@ -1,33 +1,32 @@
 <?php
 
-    function login(){
+    function login()
+    {
         // Diese Globalen Variablen brauche ich
-        global $_SERVER,$_SESSION, $_GET, $session;
-        
+        global $_SERVER,$_SESSION, $_GET, $_POST, $session;
+
         // Anfrage und Überprüfung der Daten
-        if (!isset($_SERVER['PHP_AUTH_USER']) || ($_GET["module"] == "logout" && isset($_SESSION['ScreenName'])))
-        { // Das erstemal auf der Seite oder auf "Logout" gedrückt
-            session_unregister("ScreenName");
-            Header("WWW-Authenticate: Basic realm=\"Miplex CMS Login\"");
-            Header("HTTP/1.0 401 Unauthorized");
-            return false;
-        }
-        else
+        if (($_GET["module"] == "logout") && isset($_SESSION['ScreenName']))
         { 
-            // Überprüfen von Benutzername und Passwort (solange, bis sie stimmen)
-
-            $bool = $session->userDatabase->login($_SERVER['PHP_AUTH_USER'], $_SERVER['PHP_AUTH_PW']);           
-            if (!$bool)
-                return false;
-            
-            // Setzen des ScreenNames
-            $ScreenName = $_SERVER['PHP_AUTH_USER'];
-            
-            if (!session_is_registered("ScreenName"))
-                session_register("ScreenName");
-
-            return true;
+            unset ($_SESSION['ScreenName']);
         }
+
+    // Überprüfen von Benutzername und Passwort (solange, bis sie stimmen)
+        while (!isset($_SESSION['ScreenName']))
+        {
+            if ($session->userDatabase->login($_POST['username'], $_POST['password']))
+            {
+            // Setzen des ScreenNames - damit ist man eingeloggt
+                $_SESSION['ScreenName'] = $_POST['username'];
+            }
+            else
+            {
+                // Login-Formular ausgeben
+                include_once ('tpl/admin/login.html');
+                die ();
+            }
+        }
+        return true;
     }
 
     
@@ -69,9 +68,9 @@
     }
 
     if ($clear_cache)
-    	$session->smarty->clear_all_cache();
-    	
-    $session->smarty->assign("config", $session->config);	
+        $session->smarty->clear_all_cache();
+        
+    $session->smarty->assign("config", $session->config);   
     $session->smarty->display("admin.tpl");
     
     
