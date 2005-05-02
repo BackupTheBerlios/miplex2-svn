@@ -187,6 +187,16 @@ h1{
     padding-top: 10px;
 }
 
+.ceSingleTop, .ceSingleAttr{
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-right: 10px;
+}
+
+.ceSingleAttr{
+    border-right: 1px dotted #006699;
+}
+
 #ceTop form{
     float:right;
     padding: 0px;
