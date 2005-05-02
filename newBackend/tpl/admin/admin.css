@@ -1,263 +1,347 @@
-/***************Basis Klassen***************/
-
-body
-{
-    font-family: Verdana;
-    font-size: 11px;
+body{
+    font-family: Tahoma, Verdana, Arial, sans-serif;
 }
 
-table
-{
-    border-collapse:collapse;
+img{
+    border: none;
 }
 
-p
-{
-    font-size: 11px;
+fieldset{
+    padding-left: 8px;
+    border: 1px solid lightgray;
+    -moz-border-radius: 5px;
 }
 
-.logo
-{
-    background-color: #006699;
-    background-image: url(headlogo.gif);
-    background-repeat:no-repeat;
-    height: 70px;
-    border: 3px solid #006699;
+legend{
+    color: brown;
+    background: white;
 }
 
-.adminMain
-{
-    border-collapse:collapse;
+
+#all{
+       background: #006699;
+       overflow: hidden;
 }
 
-.adminMenu
-{
-    border: 3px solid #006699;
-    background-color: #006699;
+h1{
+    background: url('taube.png') no-repeat #006699;
+    color: white;
+    padding-left: 80px;
+    padding-top: 20px;
+    height: 50px;
+    vertical-align: bottom;
+    margin: 0px;
 }
 
-.tab {
-    font-size:11px;
-    float:left;
-    background-image: url(tab.png);
-    width:100px;
-    height:32px;
-    background-repeat:no-repeat;
-    color: #fff;
+#menu{
+    width: 100%;
+    height: 32px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    font-size: 0.8em;
+    background: #006699;
+    border-bottom: 2px solid white;
 }
 
-.right{
+#menu li{
+    margin: 0px;
+    padding: 0px 2px;
+    float: left;
+    background: #006699;
+}
+
+#menu li.right{
     float: right;
 }
 
-.tab a
-{
-    color: #fff;
+#menu li a{
+    width: 120px;
+    height: 20px;
+    display: block;
+    text-align: center;
+    background: url('tab.gif');
+    color: white;
+    font-weight: bold;
     text-decoration: none;
-    padding:10px;
-    display:block;
+    padding-top: 12px;
 }
 
-.tab a:hover, .tab a:active
-{
-    color: #000;
-    background-image: url(tabh.png);
+#menu li a:hover{
+    background-position: 0px 32px;
+    color: white;
+}
+
+#menu li .red{
+    background: url('tab_red.gif');
+}
+
+#menu li .green{
+    background: url('tab_green.gif');
+}
+
+.clearer{
+    clear: both;
+}
+
+#allcontent{
+    border: 5px solid #006699;
+    padding: 5px;
+    background: white;
+    overflow: hidden;
+}
+
+#allcontent h2{
+    margin: 0px;
+    font-size: 1.2em;
+    color: #006699;
+    border-bottom: 1px dotted #006699;
+}
+
+#pagelist{
+    overflow: hidden;
+    width: 15%;
+    float: left;
+    font-size: 0.9em;
+    padding: 5px 0px 5px 25px;
+    margin: 0px;
+    color: #006699;
+    border: 1px dotted #006699;
+}
+
+#pagelist ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+#pagelist ul li{
+    margin-left: 1.2em;
+}
+
+#pagelist .type0{
+    list-style-image:url('grafiken/pagelist0.gif');
+}
+#pagelist .type1{
+    list-style-image:url('grafiken/pagelist1.gif');
+}
+#pagelist .type2{
+    list-style-image:url('grafiken/pagelist2.gif');
+}
+#pagelist .type3{
+    list-style-image:url('grafiken/pagelist3.gif');
+}
+#pagelist .type4{
+    list-style-image:url('grafiken/pagelist4.gif');
+}
+#pagelist .type5{
+    list-style-image:url('grafiken/pagelist5.gif');
+}
+#pagelist .type6{
+    list-style-image:url('grafiken/pagelist6.gif');
+}
+#pagelist .type7{
+    list-style-image:url('grafiken/pagelist7.gif');
 }
 
 
-.adminContent
-{
-    border: 3px solid #006699;
-    height:400px;   
+#pagelist a{
+    color: #006699;
+    text-decoration: none;
 }
 
-/***************�berschriften Klassen***************/
-
-h1 
-{
-    font-size: 15px;
+#pagelist a:hover{
+    color: black;
+    text-decoration: underline;
 }
 
-h2 
-{
-    font-size: 14px;
+#content{
+    overflow: hidden;
+    width: 81%;
+    float: right;
 }
 
-/***************Page Klassen***************/
-
-.pageMainMenu
-{
-    
-    font-size: 11px;
-    border-right: 3px solid #006699;
-    width: 150px;
-    background-color: #EEE;
-    overflow:auto;
-    height:410px;
+#content fieldset{
+    font-size: 0.8em;
 }
 
-.pageMainMenu ul
-{
-    padding:0px;
-    margin-left:10px;
+#sectionTop ul, #ceTop ul, .ceSingleTop ul{
+    list-style: none;
+    float: right;
+    margin: 0px;
+    padding: 0px;
 }
 
-.pageMainMenu li
-{
-    margin-bottom:5px;
-    margin-top: 5px;
+#sectionTop h2, #ceTop h3, .ceSingleTop h4{
+    float: left;
+    padding: 0px;
+    margin: 0px;
 }
 
-/***************Admin CE Klassen***************/
-.ceMain
-{
-    border:1px solid black; margin-bottom:20px; width:600px; background:#CCC;
-    font-size:11px;
+#ceTop{
+    border-top: 1px dotted #006699;
+    padding-top: 10px;
 }
 
-.ceHeadLink
-{
-    padding:3px;
-    background-color: #006699;
+.ceSingleTop{
+    border-top: 1px dotted #006699;
+    padding-top: 10px;
 }
 
-.ceHeadLink a
-{
-    color: #fff;
+#ceTop form{
+    float:right;
+    padding: 0px;
+    margin: 0px;
+    margin-right: 20px;
+}
+#ceTop form p{
+    display: inline;
 }
 
-.ceHead
-{
-    border-top: 1px solid black;
-    padding:3px;    
+#sectionTop ul li, #ceTop ul li, .ceSingleTop li{
+    display: inline;
 }
 
-.ceBody
-{
-    border-top:1px solid black; background: #EEE;
-    padding:3px;
-    float:none;
+#sectionTop img, #ceTop img, .ceSingleTop img{
+    background-position: 0px 0px;
+    width: 30px;
+    height: 30px;
 }
 
-/***************Eigene Klassen***************/
-
-.sectionTable 
-{
-    margin-bottom:10px;
-    border-collapse: collapse;
-    border: 1px solid black;
-    width: 600px;
-    font-size: 11px;
+#sectionTop img:hover, #ceTop img:hover, .ceSingleTop img:hover{
+    background-position: 0px 30px;
 }
 
-.sectionTable tr
-{
-    border: 1px solid black;
+#sectionTop .edit{
+    background: url('grafiken/edit.png');
 }
 
-.sectionTable td
-{
-    padding: 4px 10px 4px 10px;
-    border: 1px solid black;
+#sectionTop .del{
+    background: url('grafiken/del.png');
 }
 
-.sectionTable .clear
-{
-    padding: 2px;
-}
-/***************Admin Settings Klassen***************/
-.settingsMain
-{
-    font-size:11px;
+#sectionTop .up{
+    background: url('grafiken/up.png');
 }
 
-.settings, .settings td
-{
-    border-collapse:collapse;
-    font-size: 11px;
-    border: dotted 1px #069;
+#sectionTop .down{
+    background: url('grafiken/down.png');
 }
 
-.settings .caption
-{
-    width: 300px;
+#sectionTop .inner{
+    background: url('grafiken/inner.png');
 }
 
-.settingsMain input
-{
-    font-size:11px;
-    font-weight:bold;
-    border: 0px;
-    background-color: #069;
-    color: #fff;
-    padding: 2px;
+#sectionTop .after{
+    background: url('grafiken/after.png');
 }
 
-/***************Admin Extensions Klassen***************/
-
-.extension ul
-{
-    padding:0px;
-    margin-left:10px;
+#ceTop .new{
+    background: url('grafiken/newce.gif');
 }
 
-.extension li
-{
-    margin-bottom:5px;
-    margin-top: 5px;
+.ceSingleTop .edit{
+    background: url('grafiken/editce.gif');
 }
 
-.extLink
-{
-    font-size:11px;
+.ceSingleTop .del{
+    background: url('grafiken/delce.gif');
 }
 
-/* Blog */
-.blogTitle {
-font-weight: bold;
-font-size: 18px;
-height: 30px;
-link-decoration:none;
+.ceSingleTop .down{
+    background: url('grafiken/downce.gif');
 }
 
-.blogTeaser {
-font-style: italic;
-margin-right:20px;
+.ceSingleTop .up{
+    background: url('grafiken/upce.gif');
 }
 
-.blogBody {
-margin-right: 20px;
+#sectionAttr{
+    overflow: hidden;
 }
 
-.blogFooter {
-height: 30px;
-font-size: 11px;
-font-style: italic;
+
+#sectionAttr .middle{
+    width: 31.5%;
+    float: left;
+    margin: 0 1%;
 }
 
-.blogCommentHeader {
-font-weight: bold;
-font-style: italic;
-font-size: 14px;
-height: 20px;
+#sectionAttr .left, #sectionAttr .right{
+    width: 33%;
+    float: left;
 }
 
-.blogComment {
-margin-top: 10px;
-maring-bottom:5px;
+#sectionAttr .unsichtbar legend, .ceSingleAttr .unsichtbar legend{
+    background: #CC0000;
+    color: white;
+    padding: 0px 2px;
 }
 
-.blogCommentFooter{
-font-size: 12px;
-margin-bottom:10px;
+.ceSingleAttr .content_unsichtbar{
+    color: gray;
 }
 
-.blogTable tr td {
-vertical-align: top;
+.ceSingleAttr .left strong{
+    display: block;
+    float: left;
+    width: 5em;
 }
 
-.blogMainTitle {
-font-weight:bold;
-font-size:16px;
-height:30px;
+.ceSingleAttr .right strong{
+    display: block;
+    float: left;
+    width: 10em;
+}
+
+#sectionAttr .checkbox, .ceSingleAttr .checkbox{
+    width: 13px;
+    height: 13px;
+    background: url('grafiken/checkbox.gif');
+}
+
+#sectionAttr .on, .ceSingleAttr .on{
+    background: url('grafiken/checkboxon.gif');
+}
+
+#sectionAttr .checkbox:hover, .ceSingleAttr .checkbox:hover{
+    background-position: 0px 13px;
+}
+
+.ceSingleAttr div{
+    width: 49%;
+}
+
+.ceSingleAttr .left{
+    float: left;
+}
+
+.ceSingleAttr .right{
+    float: right;
+}
+
+#content h3, #content h4{
+    color: #006699;
+}
+
+#sectionAttr strong{
+    display: block;
+    float: left
+}
+
+#sectionAttr .right strong{
+    width: 12em;
+}
+#sectionAttr .middle strong{
+    width: 6em;
+}
+#sectionAttr .left strong{
+    width: 6em;
+}
+
+#sectionAttr br{
+    clear: both;
+}
+
+#content h4{
+    border-bottom: 1px dotted #006699;
 }
