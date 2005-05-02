@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset='ISO-8859-1'" />
+	<title>Miplex2 &middot; Backend-Login</title>
+
+    <meta name="robots" content="noindex, follow" />
+    <meta name="generator" content="Miplex2" />
+    <style type="text/css" media="all">
+    <!--
+		body{
+			font-family: Tahoma, Verdana, Arial, sans-serif;
+			width: 400px;
+			margin:auto;
+			margin-top: 100px;
+		}
+
+		h1{
+			font-size: 1.2em;
+			border: 0px;
+			padding: 0px;
+		}
+
+		fieldset{
+			text-align: center;
+			margin: 0px;
+			padding-top: 20px;
+			padding-bottom: 20px;
+			border: 1px solid lightgray;
+			-moz-border-radius: 5px;
+		}
+
+		fieldset p{
+			text-align: left;
+		}
+
+
+		label{
+			text-align: right;
+			float: left;
+			display: block;
+			width: 150px;
+			padding-right: 10px;
+			color: #336699;
+		}
+
+		input[type="text"], input[type="password"]{
+			background: #006699;
+			color: white;
+			font-weight: bold;
+		}
+
+		input[type="submit"]{
+			margin-top: 10px;
+			background: #006699;
+			color: white;
+			font-weight: bold;
+			border-top: 2px solid #006699;
+			border-left: 2px solid #006699;
+			border-right: 2px solid black;
+			border-bottom: 2px solid black;
+		}
+
+		input[type="submit"]:hover{
+			border-top: 2px solid black;
+			border-left: 2px solid black;
+			border-right: 2px solid #006699;
+			border-bottom: 2px solid #006699;
+		}
+
+		legend{
+			color: brown;
+			font-weight: bold;
+			font-size: 0.8em;
+			background: white;
+			padding: 1px 5px;
+		}
+
+		fieldset{
+		}
+
+		p{
+			text-align: center;
+		}
+
+		a{
+			color: #006699;
+			text-decoration: none;
+		}
+
+		a:hover{
+			text-decoration: underline;
+		}
+
+		#hinweis{
+			font-size: 0.8em;
+			color: gray;
+		}
+    -->
+    </style>
+</head>
+
+<body>
+	<h1>Sie m&uuml;ssen sich zun&auml;chst einloggen</h1>
+	<form method="post" action="admin.php">
+		<fieldset>
+			<legend>Miplex2 &middot; Backend-Login</legend>
+			<p>
+				<label for="username">Benutzername:</label>
+				<input type="text" name="username" id="username" value="" />
+			</p>
+			<p>
+				<label for="password">Passwort:</label>
+				<input type="password" name="password" id="password" value="" />
+			</p>
+			<input type="submit" name="send" id="send" value="Einloggen" />
+		</fieldset>
+	</form>
+	<p id="hinweis">Bitte achten Sie darauf, dass sowohl beim Benutzername als auch beim Passwort
+	   die Groß- bzw. Kleinschreibung zu beachten ist.</p>
+	<p>
+		<a href="http://www.miplex.de">www.miplex.de</a>
+	</p>
+</body>
+</html>

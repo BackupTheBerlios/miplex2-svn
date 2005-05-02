@@ -1,0 +1,14 @@
+<config>
+    <extName>Sitemap</extName>
+    
+    <author>Gregor Schmidt</author>
+    <mail>Schmidtwisser@GMail.com</mail>
+    <version>0.1</version>
+    
+    <dependsOn>
+    </dependsOn>
+    
+    <params>
+        <hallo>welt</hallo>
+    </params>
+</config>

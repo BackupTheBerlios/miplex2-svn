@@ -1,0 +1,38 @@
+<site>
+    <section name="" alias="Index" shortcut="index/untermenuepunkt"
+             visibleFrom="01.01.2004" visibileTill="01.01.2005"
+             inMenu="yes" allowExtension="yes" allowScript="yes"
+             dateOfCreation="24.08.2004" lastChanged="24.08.2004" lastChangedBy="schmidt"
+             ACLDeny="Admins, Peter" ACLAllow="schmidt">
+        <section name="untermenüpunkt" alias="untermenuepunkt" shortcut=""
+                 visibleFrom="01.01.2004" visibileTill=""
+                 inMenu="yes" allowExtension="yes" allowScript="no"
+                 dateOfCreation="25.08.2004" lastChanged="31.08.2004" lastChangedBy="grund"
+                 ACLDeny="" ACLAllow="">
+            <content name="untermenüpunktinhalt"
+                     visibleFrom="01.01.2004" visibileTill=""
+                     dateOfCreation="25.08.2004" lastChanged="31.08.2004" lastChangedBy="grund"
+                     ACLDeny="" ACLAllow="">
+                <?php echo "Dies wird niemand sehen, weil Skript in diesen Contentelementen nicht erlaubt ist" ?>
+            </content>
+            <content name="untermenüpunktinhalt2"
+                     visibleFrom="01.01.2004" visibileTill="02.01.2004"
+                     dateOfCreation="25.08.2004" lastChanged="31.08.2004" lastChangedBy="grund"
+                     ACLDeny="" ACLAllow="">
+               Das wird niemand sehen, weil das visibleTill abgelaufen ist.
+            </content>
+        </section>
+    </section>
+    <section name="" alias="Index" shortcut="index"
+             visibleFrom="01.01.2004" visibileTill="01.01.2005"
+             inMenu="yes" allowExtension="yes" allowScript="yes"
+             dateOfCreation="24.08.2004" lastChanged="24.08.2004" lastChangedBy="schmidt"
+             ACLDeny="Admins, Peter" ACLAllow="schmidt">
+        <content name="untermenüpunktinhalt2"
+                 visibleFrom="01.01.2004" visibileTill=""
+                 dateOfCreation="25.08.2004" lastChanged="31.08.2004" lastChangedBy="grund"
+                 ACLDeny="" ACLAllow="">
+            Hier steht was, was man lesen kann
+        </content>
+    </section>
+</site>

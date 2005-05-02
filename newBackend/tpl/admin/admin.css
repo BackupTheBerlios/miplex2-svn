@@ -1,0 +1,263 @@
+/***************Basis Klassen***************/
+
+body
+{
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+table
+{
+    border-collapse:collapse;
+}
+
+p
+{
+    font-size: 11px;
+}
+
+.logo
+{
+    background-color: #006699;
+    background-image: url(headlogo.gif);
+    background-repeat:no-repeat;
+    height: 70px;
+    border: 3px solid #006699;
+}
+
+.adminMain
+{
+    border-collapse:collapse;
+}
+
+.adminMenu
+{
+    border: 3px solid #006699;
+    background-color: #006699;
+}
+
+.tab {
+    font-size:11px;
+    float:left;
+    background-image: url(tab.png);
+    width:100px;
+    height:32px;
+    background-repeat:no-repeat;
+    color: #fff;
+}
+
+.right{
+    float: right;
+}
+
+.tab a
+{
+    color: #fff;
+    text-decoration: none;
+    padding:10px;
+    display:block;
+}
+
+.tab a:hover, .tab a:active
+{
+    color: #000;
+    background-image: url(tabh.png);
+}
+
+
+.adminContent
+{
+    border: 3px solid #006699;
+    height:400px;   
+}
+
+/***************�berschriften Klassen***************/
+
+h1 
+{
+    font-size: 15px;
+}
+
+h2 
+{
+    font-size: 14px;
+}
+
+/***************Page Klassen***************/
+
+.pageMainMenu
+{
+    
+    font-size: 11px;
+    border-right: 3px solid #006699;
+    width: 150px;
+    background-color: #EEE;
+    overflow:auto;
+    height:410px;
+}
+
+.pageMainMenu ul
+{
+    padding:0px;
+    margin-left:10px;
+}
+
+.pageMainMenu li
+{
+    margin-bottom:5px;
+    margin-top: 5px;
+}
+
+/***************Admin CE Klassen***************/
+.ceMain
+{
+    border:1px solid black; margin-bottom:20px; width:600px; background:#CCC;
+    font-size:11px;
+}
+
+.ceHeadLink
+{
+    padding:3px;
+    background-color: #006699;
+}
+
+.ceHeadLink a
+{
+    color: #fff;
+}
+
+.ceHead
+{
+    border-top: 1px solid black;
+    padding:3px;    
+}
+
+.ceBody
+{
+    border-top:1px solid black; background: #EEE;
+    padding:3px;
+    float:none;
+}
+
+/***************Eigene Klassen***************/
+
+.sectionTable 
+{
+    margin-bottom:10px;
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 600px;
+    font-size: 11px;
+}
+
+.sectionTable tr
+{
+    border: 1px solid black;
+}
+
+.sectionTable td
+{
+    padding: 4px 10px 4px 10px;
+    border: 1px solid black;
+}
+
+.sectionTable .clear
+{
+    padding: 2px;
+}
+/***************Admin Settings Klassen***************/
+.settingsMain
+{
+    font-size:11px;
+}
+
+.settings, .settings td
+{
+    border-collapse:collapse;
+    font-size: 11px;
+    border: dotted 1px #069;
+}
+
+.settings .caption
+{
+    width: 300px;
+}
+
+.settingsMain input
+{
+    font-size:11px;
+    font-weight:bold;
+    border: 0px;
+    background-color: #069;
+    color: #fff;
+    padding: 2px;
+}
+
+/***************Admin Extensions Klassen***************/
+
+.extension ul
+{
+    padding:0px;
+    margin-left:10px;
+}
+
+.extension li
+{
+    margin-bottom:5px;
+    margin-top: 5px;
+}
+
+.extLink
+{
+    font-size:11px;
+}
+
+/* Blog */
+.blogTitle {
+font-weight: bold;
+font-size: 18px;
+height: 30px;
+link-decoration:none;
+}
+
+.blogTeaser {
+font-style: italic;
+margin-right:20px;
+}
+
+.blogBody {
+margin-right: 20px;
+}
+
+.blogFooter {
+height: 30px;
+font-size: 11px;
+font-style: italic;
+}
+
+.blogCommentHeader {
+font-weight: bold;
+font-style: italic;
+font-size: 14px;
+height: 20px;
+}
+
+.blogComment {
+margin-top: 10px;
+maring-bottom:5px;
+}
+
+.blogCommentFooter{
+font-size: 12px;
+margin-bottom:10px;
+}
+
+.blogTable tr td {
+vertical-align: top;
+}
+
+.blogMainTitle {
+font-weight:bold;
+font-size:16px;
+height:30px;
+}

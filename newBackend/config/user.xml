@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<userManager>
+    <rights>
+    <right type="boolean">read</right>
+    <right type="boolean">create</right>
+    <right type="boolean">edit</right>
+    </rights>
+<groups>
+    
+    <group name="Admins">
+        <right name="read"/>
+        <right name="create"/>
+    </group><group name="User">
+<right name="edit"/>
+</group>
+    
+</groups>
+
+
+
+<user><username>Gregor</username>
+<password>gregor</password>
+<email>gregor@miplex.de</email>
+<group>User</group>
+</user><user><username>Grund</username>
+<password>derkater</password>
+<email>test</email>
+<group>Admins</group>
+</user>
+
+
+</userManager>

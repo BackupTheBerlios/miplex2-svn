@@ -1,0 +1,25 @@
+<config>
+    <extName>Blog</extName>
+    <author>Martin Grund</author>
+    <mail>grund@grundprinzip.de</mail>
+    <version>0.5</version>
+    <dependsOn>
+    </dependsOn>
+    <params>
+        <author>Martin</author>
+        <notifyMail>blog@grundprinzip.de</notifyMail>
+        <blogTitle>!golbeW</blogTitle>
+        <blogURL>http://localhost.localdomain/miplex2/index.php/blog/</blogURL>
+        <description>Ein Blog f�r alle F�lle. Neuigkeiten, Skuriles und Informatives aus dem t�glichen Geschehen </description>
+        <generator>Miplex2</generator>
+        <managingEditor>blog@grundprinzip.de (Martin Grund)</managingEditor>
+        <categories>TagesZeitung, Skills, Abseits, Hell\'s Kittchen</categories>
+        <countDisplay>10</countDisplay>
+        <countSticky>3</countSticky>
+        <durationSticky>10</durationSticky>
+        <useTeaser>0</useTeaser>
+        <entryTpl>entry.tpl</entryTpl>
+        <commentTpl>comment.tpl</commentTpl>
+        <mainTpl>main.tpl</mainTpl>
+    </params>
+</config>

@@ -1,0 +1,1548 @@
+<?xml version="1.0"?>
+<weblog>
+    <entry author="Martin" date="06-21-2004" mail="blog@grundprinzip.de" category="WWW" title="Das lebende Tagebuch">
+        <header>
+            <teaser><![CDATA[Es ist vollbracht. Die neue Erweiterung für Miplex ist fertig und tritt auch gleich ihren
+			 Dienst an.]]></teaser>
+            <body><![CDATA[Nun gibt es endlich ein Weblog für Miplex und es ist nun zum ersten mal im Einsatz auf meiner Webseite.
+			Noch gibt es sicherlich einige kleine Macken und es noch nicht zu 100% ausgereift, aber im großen und ganzen ist
+			alles fertig. Die nächste Neuerung die noch kommt, ist die Möglichkeit auf Kommentare benachrichtigt zu werden. Die größte
+			Beschränkung ist sicherlich, dass noch keine Links automatisch analysiert werden. HTML Code kann auch nicht eingefügt werden
+			Sie werden einfach abgeschnitten. Doch bald wird es auch dafür eine Lösung geben.<p/>
+			Ach ja und falls in irgendwelchen Fehlermeldungen Rechtschreibfehler auftauchen, bitte gebt mit Bescheid.<p/>
+			So und nun viel Spaß.
+			]]></body>
+        </header>
+        <comments>
+
+
+
+        <commententry author="schmidt" date="14-07-04" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Juhu, ich bin der Erste, der dir zu deiner Leistung gratulieren darf. Jetzt kannst Du deine Erfolgserlebnisse ja hier veröffentlichen und musst dir dein Lob nicht mehr bei mir abholen.
+
+Kannst dich ja dann auch bei der Blogzählung eintragen...]]>
+        </commententry>
+
+</comments>
+    </entry>
+    
+<entry category="Skills" title="Blog Features" author="Martin" date="13-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Nun gibt es eine Mailbenachrichtung, wenn ein Kommentar hinterlassen wird.]]>
+        </teaser>
+        <body>
+            <![CDATA[Dazu müsst Ihr nur das entsprechende Häckchen ankreuzen und Ihr kriegt eine Meldung, wenn es einen neuen Kommentar zu dem Eintrag gibt. Ihr müsst nur einmal pro Eintrag diesen Haken ankreuzen, er wird dann immer übernommen.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Google Spam" author="Martin" date="14-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Hat schonmal jemand wirklich probiert sinnvolle <b>kommerzielle</b> Software über Google zu suchen?]]>
+        </teaser>
+        <body>
+            <![CDATA[Das ist fast unmöglich. Spezielle Branchensoftware über Google zu suchen endet in einer Liste von ca. 10.000 gefundenen Einträgen, von denen ca. 70% auf diverse Seiten verweisen, die nichts aussagen und nur kurz die Keywords wiederholen. Ich sage euch, damit kann man Stunden verbringen.<br><br>Also ich bete für ein Spam freis Google.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Thunderbird und Identitäten" author="Martin" date="14-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Viele kennen vieleicht mein Problem. Ich habe ein Mail Konto, aber mehrere Identitäten. Also möchte ich auch meine Mails mit verschiedenen Adressen schicken und das am besten über verschiedene SMTP Server.]]>
+        </teaser>
+        <body>
+            <![CDATA[<p>Hier nun also die Lösung zu dem Problem. Seit Thunderbird 0.7 kann man nun auch mehrere Identitäten für ein Konto einrichten. Doch die möglichkeit einer Identität einen eigenen SMTP Server zuzuordnen besteht eigentlich nicht. Eigentlich, weil sich nicht wirklich gut dokumentiert eine Möglichkeit finden lässt dies manuell zu ändern.</p>
+<p>Dazu legt man sich erst einmal alle Identitäten und SMTP Server an die man benötigt. Nun öffnet man in seinem Profilordner die <emph>prefs.js</emph> und sucht nach der Stelle >>mail.identity.x.smtp (x ist hierbei eine fortlaufende Nummer der Identität).</p>
+<p>Nun sucht man sich weiter unten unter >> mail.smtpserver.smtpx den passenden SMTP Server und trägt ihn oben ein.</p>
+<p>So und nun klappts auch mit den andern SMTPs.</p>]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="RSS Fead" author="Martin" date="14-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Sinnvoll oder nicht, anscheinend ist ein Blog ohne Feed kein echtes.]]>
+        </teaser>
+        <body>
+            <![CDATA[Deshalb habe ich mich hingesetzt und mal schnell eine Klasse geschrieben, die dynamisch ein XML Feed erzeugt nach RSS 2.0 Standard. Weitere Wünsche nehme ich gerne entgegen.<br>
+Den Link zur RSS 2.0 Spezifikation findet ihr unter <a href=\"http://blogs.law.harvard.edu/tech/rss\">http://blogs.law.harvard.edu/tech/rss</a>.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="15-07-04" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="">
+            <![CDATA[Danke für dieses Feature. Das erleichtert den Konsum dieses Blogs enorm.]]>
+        </commententry>
+
+<commententry author="SCHAPPY" date="15-07-04" mail="" www="" notify="">
+            <![CDATA[Sehr gute und innovative Lösung für eine Seite, die sich im Wachstum befindet. Wie wir beide schon festgestellt haben ist das Layout nicht wirklich schöner geworden, die Funktionalität dafür um so mehr. Das macht schon einiges aus. Und da die WebBlog-Manie hier ungebrochen ist - prima gemacht und Bienchen abholen.]]>
+        </commententry></comments>
+</entry><entry category="Tagesanbruch" title="Radio ist schön" author="Martin" date="17-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Ich hätte es nicht für möglich gehalten, dass ich mit Klassik Radio aufwache und mich gut dabei fühle. ]]>
+        </teaser>
+        <body>
+            <![CDATA[Tja und so dudelt es jetzt immer noch ruhig und friedlich vor sich hin. Doch nach dem Frühstück habe ich garantiert wieder Lust auf
+<a href=\'http://www.funny-van-dannen.de\'>Menschenverachtende Untergrundmusik</a>. Und dann gehts wieder richtig ab...]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="17-07-04" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Mein Unterbewusstsein findet in klassischer Musik, glaube ich, keinen Grund, den Rest von mir zu wecken. Es sei denn, es handelt sich vielleicht Beethoven oder antonale 12-Tonmusik.<br />
+
+Da bleibe ich doch lieber bei <a href="http://www.radio-eins.de">Radio Eins</a> und weiß, dass mein Unterbewusstsein mich innerhalb einer halben Stunden wach kriegt.]]>
+        </commententry>
+
+<commententry author="" date="18-07-04" mail="" www="" notify="">
+            <![CDATA[An dieser Stelle möchte ich mich nicht über die Musik äußern, die einem das Aufwecken ermöglicht, viel mehr möchte ich derb darauf hinweisen, dass die Anführungszeichen einerseits noch immer keine stripslashes() erlebt haben und zum anderen der obige Link relativ zum Blog-Verzeichnis gesetzt worden ist und nicht absolut!]]>
+        </commententry><commententry author="Martin" date="19-07-04" mail="" www="" notify="on">
+            <![CDATA[Ich hoffe nun gibts mit <a href='http://www.schmidtwisser.de'>Links</a>
+keine Probleme mehr.]]>
+        </commententry></comments>
+</entry><entry category="Tagesanbruch" title="Sommer" author="Martin" date="17-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Nur für alle, die es noch nicht realisiert haben und heute noch nicht rausgeschaut bzw. draußen waren. Es <b>ist</b> Sommer.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="17-07-04" mail="" www="" notify="">
+            <![CDATA[Dann solltest Du Dich auch nach draußen begeben, sei es dem Lernen weg oder der Sonne wegen, aber keinesfalls den Tag damit verbringen hier \"Zeugs\" zu posten :)]]>
+        </commententry>
+
+<commententry author="SCHAPPY" date="17-07-04" mail="" www="" notify="">
+            <![CDATA[In diesem Zusammenhang fällt mir auf, stripslashes() ist schon eine brilliante PHP-Funktion :)]]>
+        </commententry></comments>
+</entry><entry category="Abseits" title="Umfrage" author="Martin" date="17-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[<div align='center'><img src='http://www.grundprinzip.de/images/messer.jpg' /></div>
+Da sage doch mal einer Umfragen lohnen sich nicht. Immerhin haben wir ein Messer bekommen. Das andere tolle Haushaltsgerät wollten wir dann aber doch nicht.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry>
+<entry category="Abseits" title="Sonnabend" author="Martin" date="18-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[
+		<div align='center'>
+		<img src='http://www.grundprinzip.de/images/bergwerk1.jpg' />
+		<img src='http://www.grundprinzip.de/images/bergwerk2.jpg' />
+		</div>
+		Also wenn Ihr mal wieder ein Kneipe sucht, in der man auch tanzen kann.]]>
+        </teaser>
+        <body>
+            <![CDATA[Dann seid Ihr im <a href='http://www.bergwerk-berlin.de'>Bergwerk</a> richtig. Rockige Musik, preiswertes Bier und nicht zu groß und abgehoben. Einfach nur Spaß haben.
+		Dien Tanzfläche ist nicht allzu groß aber genau richtig um mal wieder richtig abzugehen. Eine Warnung an die geliebten Websurfer und -schnüffler
+		vorweg. Die Webseite des Ladens ist nicht wirklich der Hammer, aber die Adresse steht ganz groß drauf.
+		]]>
+        </body>
+    </header>
+    <comments/>
+</entry>
+<entry category="Abseits" title="Farbenfroh" author="Martin" date="22-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[
+		<div align='center'><img src='http://www.grundprinzip.de/images/flur.jpg' /></div>
+		Ich sage euch: "Streicht euren Flur und die Welt wird gut!"]]>
+        </teaser>
+        <body>
+            <![CDATA[Die Interpretation dieser Aussage überlasse ich euch, aber ich finde, da kann man einiges machen.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="IE und Firmen" author="Martin" date="24-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Habe ich doch gerade <a href='http://www.webwork-magazin.net/news/artikel/2338'>gelesen</a>, dass sich Firmen nur schwer vom IE trennen können.]]>
+        </teaser>
+        <body>
+            <![CDATA[Und ich kann dazu nur sagen das stimmt. Habe ich doch gerade erst einen neuen Rechner auf Arbeit installiert und nebenbei den neuen Firefox. Nun die entsprechenden Mitarbeiter informiert und... Komme ich zwei Tage später wieder auf Arbeit und finde einen Link zum IE auf dem Desktop. Die Antwort auf die Frage warum war doch: Und der funktioniert wirklich genauso? Und wieder war mir klar, dass eine Umstellung viel Zeit kostet. Dabei ging die Umstellung auf <a href='http://www.moregroupware.org'>Moregroupware</a> super schnell und problemlos.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="Anonymous" date="25-07-04" mail="" www="" notify="">
+            <![CDATA[Obviously the hyperlink for moregroupware is not set correct; it does not link absolutely rather relatively.]]>
+        </commententry>
+
+<commententry author="Martin" date="25-07-04" mail="" www="" notify="on">
+            <![CDATA[Der Link ist nun gefixt - The Link is fixed now.]]>
+        </commententry></comments>
+</entry><entry category="WWW" title="Googenglish" author="Martin" date="25-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Nachdem ich zum Lesen meiner Newsfeeds nun auch zu <a href='http://www.bloglines.com'>Bloglines</a> gewechselt bin, kam ich in den Genuss die Google Übersetzung einer Seite mal auszuprobieren.]]>
+        </teaser>
+        <body>
+            <![CDATA[Das Resultat riß mich nicht wirklich vom Hocker, aber eine Wendung war dann doch zu lustig: <br><cite>... PICTURE: "Lothar Matthaeus is a candidate." - "it could become also a foreigner." - Winnie shepherd comes also infrage." - "for Lothar the job comes still too early."</cite><br><br>Ist doch zu gut oder?
+Und wer es noch nicht mitbekommen hat, es geht um Fussball.<br><br>Der originale (deutsche) Eintrag ist zu finden unter <a href='http://www.wendtswelt.de/meinung/details/62_0_1_0_C/'>Wendtswelt</a>.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="TagesZeitung" title="September Hitze" author="Martin" date="28-07-2004">
+    <header>
+        <teaser>
+            <![CDATA[Nun ist endlich soweit, der neue Film von Regisseur <a href='http://www.michaelmoore.com/'>Michael Moore</a> kommt in die deutschen Kinos und endlich ist statt dem himmelhoch-jauchzenden Einheitsgetöse der Kritiker auch ernste Stimmen zu hören.]]>
+        </teaser>
+        <body>
+            <![CDATA[In meiner lokale Zeitung ist heute eine sehr interessante <a href='http://www.berlinonline.de/berliner-zeitung/feuilleton/362015.html'>Kritik</a> über diesen Film (<a href='http://imdb.com/title/tt0361596/'>Fahrenheit 9/11</a>) abgedruckt worden, der ich eigentlich nur in jedem Punkt zustimmen kann. Wer probiert hat das letzte Buch (<a href='http://www.amazon.de/exec/obidos/ASIN/3492046142/qid=1091000549/ref=sr_8_xs_ap_i1_xgl/302-2661606-8612826'>Dude, where is my country?</a>) von Mr. Moore zu lesen, wird sich nur bestätigt fühlen. Die Polemik und das Getöse seiner Worte sind wirklich unglaublich und haben mich dazu gezwungen mit dem Lesen des Buches aufzuhören. Und trotzdem muss ich dem Redakteur der Filmkritik zustimmen, wenn er sagt: [...] Aufklärung funktioniert auch anders - aber so funktioniert sie auch.<br><br>
+Wirklich interessant ist dann auch der letzte Abschnitt des Artikels:<br>
+[...]Michael Moore unterschätzt seine Gegner. Das spricht gegen seinen Film, aber für die humane Vernunft seines Autors. Dennoch könnte Michael Moore mit seiner Anti-Bush-Propaganda Erfolg haben. Das spräche gegen die Ästhetik des Publikums, aber für die humane Vernunft der Wähler.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="André" date="01-08-04" mail="" www="http://www.wendtswelt.de" notify="">
+            <![CDATA[Interessante Sache, dass du aufgehört hast, "Dude..." zu lesen. Mir ging es mit "Downsize this" so, als er in einem Kapitel anfing, die Schulden für Deutschlands Sünden eintreiben zu wollen. Trotzdem werde ich mir F 9/11 ansehen.]]>
+        </commententry>
+
+<commententry author="herby" date="18-08-04" mail="admin@freaksystems.com" www="www.freaksystems.com" notify="">
+            <![CDATA[Wo Mr. moore recht hat hat er recht, so was sollte mal jemand ueber DE schreiben....]]>
+        </commententry></comments>
+</entry><entry category="WWW" title="PHP5" author="Martin" date="02-08-2004">
+    <header>
+        <teaser>
+            <![CDATA[So nun hab ich auch mal was neues zu berichten aus der weiten Welt des www.]]>
+        </teaser>
+        <body>
+            <![CDATA[Auf einem VServer, wo ich Beta-Tester bin, habe ich PHP5 installiert bekommen und es war total easy. Naja jedenfalls nachdem ich alle nötigen Pakete installiert habe, die mir noch gefehlt habe. Die tolle phpinfo() findet sich unter <a href='http://84.244.0.178/defaultSetup/phpinfo.php'> phpinfo</a>, falls es irgendjemanden interessiert. So und nun mach ich erstmal Pause.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="03-08-04" mail="" www="" notify="">
+            <![CDATA[Mag ungern mäkeln, aber der Link funktioniert nicht, das Problem ist diesmal aber weniger die URL :(]]>
+        </commententry>
+
+<commententry author="Martin" date="03-08-04" mail="" www="" notify="">
+            <![CDATA[Der Server, auf dem PHP5 läuft ist noch im Beta Test und auch für mich seit zwei Tagen nicht erreichbar.]]>
+        </commententry></comments>
+</entry><entry category="Abseits" title="Magnolia" author="Martin" date="02-08-2004">
+    <header>
+        <teaser>
+            <![CDATA[Ein Film, meine Meinung.]]>
+        </teaser>
+        <body>
+            <![CDATA[Endlich mal wieder ein wirklich toller Film im deutschen Fernsehen.
+Die Zusammenstellung der Hauptpersponen, die Kamera, die Schauplätzer und vor allem die Mixtur dieser ganzen Eigenschaften. Leider habe ich es erst zu spät gemerkt und von dem Film das erste Drittel verpasst. Aber ich kann nur sagen: einfach toll! Mehr Infos findet Ihr unter:
+<a href='http://imdb.com/title/tt0175880/'>imdb.com</a>. Nun denn noch eine gute Nacht.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="02-08-04" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Okay, dann kannst Du mir bestimmt auch sagen, was diese Kröten zum Schluss sollten, oder? Ich war ja auch recht begeistert, aber der Schluss hat mich verstört. Hätte man das Ganze nicht anders auflösen können/müssen?]]>
+        </commententry>
+
+<commententry author="martin" date="02-08-04" mail="" www="" notify="">
+            <![CDATA[Ich glaub ich bin nicht so bibelfest, aber war das nicht eine der 7 Plagen die über die Welt hereinbrechen sollten?]]>
+        </commententry></comments>
+</entry><entry category="Abseits" title="Auf Messers Schneide" author="Martin" date="02-08-2004">
+    <header>
+        <teaser>
+            <![CDATA[Die Woche fängt ja echt gut and. Der Tag ist noch nicht allzu lang und schon geht alles schief.]]>
+        </teaser>
+        <body>
+            <![CDATA[Als erstes kann ich keinen Müll wegbringen, weil mein Müllhausschlüssel nicht mehr passt. Ein Anruf beim Hauswart später erfahre ich, dass das Schloß kaputt ist und die Tür aber offen. Also nix wie los nochmal zum Müllhaus. Und dann denke ich, jetzt einen schönen Kaffee auf meiner Terasse und ... Naja, ein Telefonat kam dazwischen und ich geh wider raus und setze die Tasse an. Auf einmal ein merkwürdiger Klumpen darin. Ich denke so, naja garantiert wieder Milch, die zusammengeklumpt ist. Doch glücklicherweise schaue ich mir den klumpen an. Und es ist eine Wespe. Also nix wie Kaffee aus dem Mund auf die Terasse und geflucht wie ein, ach was weiß ich. Und so denk ich mir. Nochmal richtig Glück gehabt. Und nun geht der Tag weiter.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="03-08-04" mail="" www="" notify="">
+            <![CDATA[Klingt ein wenig so, wie meine letzte Woche aufgehört hat :) Aber ich habe mir rechtzeitig die Finger gewaschen, denn so viel ging bei mir dann doch nicht mehr schief :)]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Abseits" title="Ohne Olympia" author="Martin" date="31-08-2004">
+    <header>
+        <teaser>
+            <![CDATA[Tatsächlich die Welt dreht sich weiter auch ohne das ständige Wetteifern in Athen.]]>
+        </teaser>
+        <body>
+            <![CDATA[2 Wochen lang haben es diese olympischen Spiele es geschafft sogar mich als Nicht-Sportler zu faszinieren. Und ich denke damit hat es der Breitensport jenseits von Bundesliga und Formel 1 wieder ein Stückchen mehr ins Rampenlicht geschafft. Doch wie lange sich die Leute an den Jubel der Damen-Hockeymannschafft erinnern bleibt wohl trotzdem fraglich. Für mich jedenfalls hat das auch noch eine positive Nebenwirkung. Ich habe mich endlich wieder dazu durchgerungen Sport zu machen und auf diesem Wege sage ich:
+Sport frei!]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Olympia für Anfänger" title="Aller Anfang ist Schmerz" author="Martin" date="31-08-2004">
+    <header>
+        <teaser>
+            <![CDATA[So an dieser Stelle bitte ich doch all die  , die nichts von Selbstmitleid halten und denen schon der Gedanke an Sport zuwieder ist, an dieser Stelle diesen Eintrag nicht weiter zu lesen.]]>
+        </teaser>
+        <body>
+            <![CDATA[Wie ich schon in <a href='http://grundprinzip.de/blog/single/17.html'>"Ohne Olympia"</a> geschrieben habe, habe ich mich dazu entschlossen, tatsächlich wieder Sport zu treiben.<br><br>
+Und heute war es dann soweit. Ich war das erste mal beim Training und nach knapp 2 Stunden Training, weiß ich weider wo in meinem Körper überall Muskeln sitzen, die schmerzen können. Für alle die es noch nicht wissen, der Sport, den ich hoffentlich ab nun betreibe nennt sich Handball.<br><br>
+So weit so gut, aber ich weiß nun aller Anfang ist Schmerz und ich werde mich da schon durchbeißen, hoffe ich. An dieser Stelle werde ich ab und zu mal etwas über meine sportlichen Ambitionen darniederschreiben, für alle die, die es interessiert.]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="31-08-04" mail="" www="" notify="">
+            <![CDATA[Respekt, das klingt ja nach ziemlich viel Elan. Aber wenn es Dich interessieren sollte, ich kenne einen Handball-Trainer; soll ich Dich Multi-Talent vermitteln?!]]>
+        </commententry>
+
+<commententry author="SCHAPPY" date="31-08-04" mail="" www="" notify="">
+            <![CDATA[Respekt, das klingt ja nach ziemlich viel Elan. Aber wenn es Dich interessieren sollte, ich kenne einen Handball-Trainer; soll ich Dich Multi-Talent vermitteln?!]]>
+        </commententry></comments>
+</entry><entry category="Olympia für Anfänger" title="Lauf Forest, Lauf ..." author="Martin" date="02-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Hier der nächste Teil meiner Geschichte mit dem neuen Sport. Man mag es kaum glauben, aber es gibt eklatante Unterschiede zwischen meinem alten Sport - <a href='http://de.wikipedia.org/wiki/American_Football'>American Footaball</a> und meinem neuen Sport <a href='http://de.wikipedia.org/wiki/Handball'>Handball</a>.]]>
+        </teaser>
+        <body>
+            <![CDATA[Was mir heute am meisten aufgefallen ist, ist der Umgang mit dem Ball - mal ganz abgesehen von der Form. Ich habe beim Football gelernt, wenn ich als Defense End den Ball bekommen, dann sollte ich doch probieren, sobald wie möglich den Boden zu suchen. Und wenn ich jemanden sehe, der denn Ball hat, dann diesen so schnell wie möglich zu Boden bringen. Beim Handball sollte man doch irgendwie schon stehen bleiben, wenn man den Ball kriegt. Leider habe ich das irgendwie so nicht hingekriegt. Beim Fangen vom Ball ist das ein ganz anderer Bewegungsablaub. So das nächste mal gibt es dann wieder mehr in der Rubrik "Olympia für Anfänger".<br><br>
+P.S.: Bei der Erwährmung mittels Fussball habe ich wenigstens mit dem untersten Körpterteil 3 Tore geschossen.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Tutorial als Hilfe" author="Martin" date="02-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Wer schon immer mal eine schicke Referenz und Tutorialsammlung als Hilfedatei (CHM) gesucht hat, wird vielleicht 
+<a href='http://www.zvon.org/Output/chm/chm_list.html'>hier</a> fündig.
+<br/><br/>
+Ich benutze davon das XPath Tutorial und das ist wirklich gut. Kurzer Auszug aus dem Inhalt: CSS Referenz/Tutorial, XPath, XSL, XML, XHTML. Achtung die Datei ist doch 12 MB groß.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="TagesZeitung" title="Zirkus und Politik" author="Martin" date="09-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Leider bietet meine <a href='http://www.berliner-zeitung.de'>Lokalzeitung</a> keinen Link mehr auf diesen wunderbaren Artikel an, 
+	der in der heutigen Ausgabe zu finden war. Dieser Artikel beschreibt nahezu perfekt die aktuelle innenpolitische Lage in Deutschland.
+	Doch wenigstens hier gibt es noch eine kleine Stellungnahme zu dem Artikel. 
+	]]>
+        </teaser>
+        <body>
+            <![CDATA[
+<p>Deswege hier nur einige Zitate aus dem Artikel. Der Artikel bezieht sich übrigens auf die Reden im Bundestag gestern bezüglich des Haushalts
+ - speziell dem Kanzleretat, der nach Aussage des Artikels auf Seite 3 - "Reden im tiefen Tal" - Anlass für den jährlichen Schlagabtausch zwischen Regierung und Oposition ist.</p>
+<p>Anfangen möchte ich hierbei mit:</p>
+
+<blockquote>...Die Reihenfolge der Redner ist dabei immer dieselbe: Der CSU-Mann Michael Glos, ein ziemlich grobschlächtiger Rethoriker, 
+spielt eine halbe Stunde lang den Warmmacher.</blockquote>
+
+<p>Nun folgen also der Kanzler und kurz darauf die Oppositionsführerin Frau Merkel.</p>
+<p>Doch jetzt zu den eigentlich wichtigen Zitaten aus dem Meinungsartikel zu den Reden:</p>
+
+<blockquote>Die Kunst sich um Kopf und Kragen zu reden, versteht in der Bundespolitik derzeit [...] niemand so gut wie Angela Merkel.</blockquote>
+
+<blockquote>
+Die Wirkung der Rede Angela Merkels zerplatzte in dem Augenblick, da sie von der rot-grünen Koalition eine "Politk aus einem Guss" verlangte.
+</blockquote>
+
+<blockquote>
+Wäre die Bundespolitk ein Zirkus, dann hätte das Parlament gestern die CDU-Vorsitzende als Zauberin zwar mit Zylinder erlebt, aber ohne Kaninchen.
+</blockquote>
+
+<blockquote>
+Weil sich Schröder aus eigenem Antrieb nicht bewegt, [...], weil Schröder nicht gestaltet, sondern stets nur die Gestalt annimmt, zu der die Umstände ihn zwingen, weil er kein Treiber ist, sonderen stets ein Getriebener, handeln seine Reden [...] nur am Rande von der Zukunft, fast immer sind sie Rückblick.
+</blockquote>
+
+<p>Besser hätte ich auch nicht beschreiben können, wie mir die derzeitige Situation vorkommt. 
+Es ist schon schlimm, wenn Parlamentsdebatten nur noch dazu benutzt werden, 
+sich gegenseitig zu denunzieren und nur noch Polemiker und ausgebuffte Rhetoriker zu Wort kommen, 
+die zwar den Punkt treffen, aber weder in der Lage sind die Situation zu klären, weil ihnen dafür wieder die Worte oder 
+Wissen (??) fehlen, noch eine Lösung anbieten.</p>
+
+<p>Die Taktik, die Bürger dieses Landes aufzuwiegeln funktioniert bei 
+mir jedenfalls nicht mehr und mehr und mehr fühle ich mich angewiedert von der 
+Ideenlosigkeit. Das Resultat? Jeder wird für sich seinen Weg suchen, in seinem Teller, 
+dessen Rand er am liebsten gar nicht sehen möchte.</p>]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Böser Elko" author="Martin" date="12-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[<p>Man mag es nicht glauben, aber mich hat es nun auch erwischt. Ein böser Elko zerstörte unsere schöne Stereoanlage. Aber, zum Glück kennt man ja einen herzensguten Menschen, der uns einen neuen  da wieder reinlötet.</p>
+
+<img src='http://www.grundprinzip.de/images/elko.jpg' alt='Böser Elko' title='Böser Elko' />
+<p>Und hier ist er der Übeltäter.</p>]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="02-10-04" mail="" www="" notify="">
+            <![CDATA[Genau, und daher melde ich mich hiermit persönlich zurück in Berlin :) Bei Gelegenheit sollten wir das mal ausdiskutieren :)
+
+Viele Grüße
+
+SCHAPPY]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Skills" title="Mozilla Calendar" author="Martin" date="15-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[So nun ist es vollbracht. Ein weiteres OpenSource Projekt hat mich angetan. Auf Grund der Tatsache, dass ich eine kleine flexible Möglichkeit suchte im Büro verschiedenen Rechnern einen gemeinsamen Kalender zu verschaffen, ja ja ich weiß Exchange und so, bin ich beim Mozilla Calendar gelandet.]]>
+        </teaser>
+        <body>
+            <![CDATA[Doch nochmal ganz kurz zurück zu den Groupware Lösungen. Da <a href='http://www.open-xchange.org'> Open-Xchange</a> nun GPL ist, habe ich das installiert und auch zum 
+Laufen gebracht. Es gibt auch tatsächlich frei verfügbare Outlook Konnektoren für Open-Xchange, jedoch nur in der Suse Variante. Die dafür nötigen Interfaces sind in der GPL 
+Variante von Open-Xchange zwar noch vorhanden, aber deaktiviert. Die Möglichkeit, die frei verfügbareb Konnektoren anzuschließen, gibt es nur in der kommerziellen SuSE Version. 
+Aber vielleicht wird sich nochmal jemand diesem Problem annehmen und es lösen. Auf der Roadmap taucht es jedenfalls nicht auf. Auch ein Ausflug ins selber kompilieren 
+von <a href='http://www.billworkgroup.org/billworkgroup/home'>Exchange4Linux</a> brachte keinen Erfolg, sondern nur einen zweimaligen Serverabsturz.<br><br>
+
+So bin ich nun beim Mozilla Calendar gelandet und oh Wunder, dieser kann sich einen anderen Kalender per DAV Zugriff von einem Webserver holen. 
+Ok, dachte ich mir und habe das mal installiert und tatsächlich es ging. Die Sache hatte nur einen Hacken, die Termine werden nur dann synchronisiert, 
+wenn Änderungen vorgenommen werden. Schaut man also in den Kalender nur so ohne zu ändern, dann passiert nix.<br></br>
+
+Also Mensch wie ich bin, dacht ich mir, schau mer uns das mal an. Und siehe da, nach einigem Suchen fand ich eine Jar Datei, 
+die die vollständigen Sourcen enthielt. Diese also entpackt und dann nach einigem Suchen auch tatsächlich eine passende Stelle gefunden um den 
+Code einzufügen, der automatisch nach X Minuten synchronisiert. Nachdem ich mich mit Mozilla XUL und so weiter noch ein wenig  rumgeschlagen habe,
+ kann man diese Option nun auch tatsächlich in den Einstellungen ein- und ausschalten.<br><br> 
+
+Ist doch echt toll oder?<br><br>
+
+Wer möchte, kann sich die JAR Datei <a href='http://grundprinzip.de/calendar.tar.gz'> hier</a> herunterladen, diese einfach im 
+Profil-Ordner unter Extensions, dann der 128-Bit Schlüssel vom Calendar innerhalb des Chrome Ordners ablegen und die vorhandene calendar.jar ersetzen. 
+Nun müsste es eigentlich funktionieren.<br><br>
+<b>Achtung</b> dies funktioniert nur mit der Pluginversion für Thunderbird (Firefox??) Beim Mozilla muss ein anderes Archiv genommen werden. Auf Wunsch stelle ich das gerne bereit.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Tagesanbruch" title="MOMA marsch marsch I" author="Martin" date="18-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Gerade (6:30) von der MOMA zurückgekehrt, kann ich zur Zeit nur eines sagen, es hat sich auf jeden Fall gelohnt. Und das Schlangestehen war mit gerade mal knapp 4 Stunden auch nicht so schlimm. Hätte ich da bloß nicht gelesen, dass sich das MOMA auch gerade über die Warteschlange vermarktet. Doch nacher mehr.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Schwobifying" author="Martin" date="19-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Desch isch einfach mal unglaublisch. Isch hab dursch Zufall wasch sehr schenes gefunden...]]>
+        </teaser>
+        <body>
+            <![CDATA[Wer seine seite unbedingt mal ins schwäbische übersetzen wollte, der sollte unbedingt mal <a href='http://unimut.fsk.uni-heidelberg.de/unimut/schwob.html#'>hier</a>
+vorbeischauen.
+Hier kann man mal sehen, wie sich Spiegel Online auf schwäbisch ließt.<br><br>
+
+Kleiner Tipp, der nicht sofort klar wird. Durch ersetzen des Parameters schwob_url durch sax_url, wird die gewünschte Seite ins sächsische übersetzt, aber Achtung, dies ist noch ein Prototyp.<br><br>
+So und nun viel Spaß.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="CDDB" author="Martin" date="20-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Wer auf der Such nach einem kleinen Programm ist um seine CDs zu katalogisieren und an einem Ort zu indizieren, der wird <a href='http://grundprinzip.de/projekte/cddb.html'>hier</a> fündig. CDDB ist ein in PHP5 geschriebenes Programm, dass als Machbarkeitsstudie für SQLite und als Hilfe für einen Freund dienen sollte. Viel Spaß damit.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="AbGEZockt" author="Martin" date="22-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Ich denk ich kann nicht richtig lesen oder so, da ließt man bei <a href='http://www.heise.de'>Heise</a> doch tatsächich, dass angeblich GEZ Gebühren nun auch auf <a href='http://www.heise.de/newsticker/meldung/51330'>PCs</a> erfolgen sollen. Ich glaub mich laust der Affe. Die Gebühr wird allerdings nur für Haushalte erhoben, die noch keinen Fernseher angemeldet haben.<br />
+
+Für mich sieht das nur noch nach Abzocke aus und nicht mehr nach sinnvoller Verwendung der Gebühren der Zahler. Zumal der primäre Sinn eines Computers ja auch nicht im Fernsehempfang bzw. Radioempfang liegt. Da erscheint es doch schon fast kleinlich, dass die Meldung, dass die Gebühren ab nächstes Jar April auf 17,01 Euro steigen. Da soll der Gesamtvorstand des <a href='http://www.faz.net/s/RubE2C6E0BCC2F04DD787CDC274993E94C1/Doc~E88C316C61ACD4C2EAAE87097BADA446E~ATpl~Ecommon~Scontent.html'>Deutschen Journalistenverbandes</a> mal dem normalen Studenten erklären woher jeden Monat das Geld kommt um fernzusehen. Ich glaube fast, da hat jemand ein Verhältnisproblem. Bei X-tausend Euro Montatseinkommen fallen diese läppischen 20 Euro gar nicht auf. Aber ich merk schon wieder, dass regt mich zu sehr auf.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="22-09-04" mail="gp@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Ich seh' es ja ein und finde das Verfahren auch ungerecht. Aber was wäre das für ein zusätzlicher Verwaltungsaufwand, wenn man das Ganze in Abhängigkeit des Einkommens gestalten würde.
+
+Außerdem ist es garnicht so falsch von einem Haushalt, in dem es zwar einen PC, aber keinen Fernseher oder keine Radio gibt, anzunehmen, dass dieser durchaus für den Fernseh und Radioempfang genutzt wird. Warum sollen die um die Gebühren rumkommen?]]>
+        </commententry>
+
+<commententry author="SCHAPPY" date="24-09-04" mail="" www="" notify="">
+            <![CDATA[Kleine Anmerkung meinerseits: Dies Geschichte mit der Abgabe auf multimediale  Gerätschaften ist schon einige Jahre alt. Es wurde bislang jedoch darauf verzichtet, um zum einen den "Internet-Boom" nicht im Keim zu ersticken und zum anderen weil die Unterhaltungsindustrie respektive Computerindustrie Einbußen befürchtet hat. Daher wurde der Starttermin dieser Abgabe auf eine Gleitzeit verhandelt, dieser ist Zeitraum ist (wenn ich mich recht entsinne) bis Ende 2007. Also nichts neues und auch mal wieder keine rechtliche Handhabe; man müsste dem Nutzer explizit nachweisen, dass er Radio- oder Fernsehprogramme aus dem dtsch. Raum über das Internet streamt. Alle anderen Abgaben sind (noch) unzulässig (soweit ich weiß).]]>
+        </commententry><commententry author="Grund" date="24-09-04" mail="" www="" notify="">
+            <![CDATA[Damit hast du Recht, die Idee ist nicht neu, aber soweit ich mich nun informieren konnte, soll die Abgabe unabhängig davon kommen, ob man tatsächlich Radio- oder Fernsehprogramme über das Internet empfängt. Nur die Möglichkeit alleine reicht. An dieser Stelle weise ich auf die Abgabeordnung berüglich Brennern und Scannern hin. ]]>
+        </commententry></comments>
+</entry><entry category="Abseits" title="Fliegende Server" author="Martin" date="22-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Da denkt man doch, dass ein Rechenzentrum eines Flugkontrollzentrums mit Windows Servern für die Funktverbindungen doch eigentlich sicher funktionieren sollte, zumal wenn diese mit Dell Servern ausgestattet sind...]]>
+        </teaser>
+        <body>
+            <![CDATA[Doch anscheinend, so ein Bericht von Heise, fahren diese Server alle 49,7 Tage automatisch herunter. Zum vermeiden von Pufferüberläufen o.ä.
+<br /><br />
+Ein Schelm wer böses dabei denkt.<br /><br >/
+Doch leider versäumte es aber ein Mitarbeiter, die Server wie normalerweise nach 30 Tage neu zu starten und so kam es zu dem Abschalten der Server. Oh je. Wenn man schon keine Server hat, die länger als 50 Tage laufen, was eigentlich so ziehmlich jeder PC schafft, der sollte doch seine Mitarbeiter ordentlich ausbilden. Immerhin gibt es nun einen Alarm, wenn die Server nicht wie geplant nach 30 Tagen neu gestartet werden.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Zu LAUT" author="Martin" date="29-09-2004">
+    <header>
+        <teaser>
+            <![CDATA[Diesen <a href='http://www.theinquirer.net/?article=18736'>Artikel</a>
+ des <a href='http://www.theinquirer.net'>Inquirer</a> werde ich demnächst mal meinen lieben Mitmenschen in der U-Bahn vorhalten, wenn Sie mal wieder allen Mitfahrern erzählen wollen, dass sie sich ein neues Haus gekauft haben...]]>
+        </teaser>
+        <body>
+            <![CDATA[Doch auf der anderen Seite bin ich dankbar, dass es bei noch nicht soweit ist, dass man für zu lautes Telefonieren verhaftet wird und sogar in Handschellen abgeführt wird.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Roma" author="Martin" date="08-10-2004">
+    <header>
+        <teaser>
+            <![CDATA[So nun tue ich es meinen Blogger-Kollegen gleich und melde mich mit einem Beitrag, der moeglichst weit entfernt von meinem urspruenglichen Wohnort ist und zwar aus dem schoenen Rom...]]>
+        </teaser>
+        <body>
+            <![CDATA[Rom ist soweit ganz toll, tagsueber im Schatten ca. 26 Grad und nachts so knapp 20. Doch der Weg dorthin war schwierig.<br><br>
+
+Am Anfang stand der Flug von Berlin Schoenefeld nach Rom. Doch sollte der Flug zwar eigentlich um 12:20 Uhr starten heisst das nicht, dass er das auch tat. 5 Stunden und einen 5 € Gutschein von unserer Fluggesellschaft spaeter starteten wir tatsaechlich richtung Rom.<br><br>
+
+Hier angekommen, freuten wir uns auf unser Hotel, doch dort angekommen teilte man uns mit, dass man nur ein Zimmer reserviert habe und kein anderes mehr frei sei. Diskusionen spaeter hatten wir im Nachbarhotel ein Zimmer und konnten beruhigt in die Nacht gehen. Heute haben wir dann endlich Rom erkundet und mussten feststellen, dass Rom zwar sehr schoen ist, aber auch laut, laut, schmutzig und laut ist. Es vergehen keine Sekunden ohne, dass der Verkehr brummt und irgendjemand hupt. Hier koennte man sich schonmal ins ruhige Berlin zurueckwuenschen. Ansonsten ist es jedoch wirklich schoen.<br><br>
+
+Die Stadt hat aber noch einen Haken fuer arme Studenten wie mich. Sie ist teuer und dass nicht zu knapp. Heute abend hat eine kleine Spelunken den Vogel abgeschossen: Ein 0,4 l Bier fuer 9 in Worten neun €. Spitze oder??<br><br>
+
+Mehr davon gibt es, wenn ich wieder da bin. Vielleicht sind bei den Foteos ein oder zwei Schicke dabei, die ich dann online stelle.<br>
+
+Ciao<br>
+Martin ]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Köstlich" title="Neu und wunderbar..." author="Martin" date="14-10-2004">
+    <header>
+        <teaser>
+            <![CDATA[Nur eine kleine Einführung zu dieser Kategorie. Hier werde ich ab und zu kleinere von mir selbst kreeirte Kochrezepte vorstellen. Sicherlich sind diese nicht einmalig, aber von mir vollkommen ohne Kochbuch und nach meiner Fantasie zubereitet. Also viel Spaß.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Köstlich" title="Lachs mit Spinat in Blätterteig" author="Martin" date="14-10-2004">
+    <header>
+        <teaser>
+            <![CDATA[Hier nun ein kleines Rezept für die Fischer unter euch. Schmeckt echt lecker und ist auch schnell zubereitet und einfach nachzuvollziehen.]]>
+        </teaser>
+        <body>
+            <![CDATA[Zubereitungszeit: 20 Minuten<br>
+Für 2-3 Personen<br><br>
+
+Zutaten:<br>
+<ul>
+<li>2 Packungen Blätterteig (12 Blätter)</li>
+<li>4 Stück Lachsfilet</li>
+<li>1 Zwiebel</li>
+<li>2 Packungen (450g) Spinat, tiefgefroren</li>
+<li>1 Ei </li>
+</ul>
+
+<p>Fangen wir also an. Als erstes die Zwiebel schälen und klein hacken und in einem Topf mit Olivenöl anschwitzen. Nun den Spinat hinzugeben und aufkochen lassen. Mit Salz und Pfeffer oder was immer Ihr noch zum würzen von Spinat benötig würzen und aufkochen lassen.</p>
+
+<p>In der Zwischenzeit den Fisch von beiden Seiten gut anbraten und leicht würzen</p>
+
+<p>Sind Fisch und Spinat fertig zubereitet den Blätterteig auspacken und die Scheiben ein wenig größer ausrollen als sie sind. Nun zuerst den Fisch auf eine Scheibe legen und nun mit dem Spinat garnieren. Nun ein weiteres Blatt oben auf legen und die Ränder umknicken und fest andrücken. Keine Sorge wenn das ein bissl matscht, dass muss so.</p>
+
+<p>Nun das Eigelb trennen und die Oberseiten der Paketchen mit dem Eigelb bestreichen. Den Ofen in der Zwischenzeit auf ca. 200 Grad vorwärmen.</p>
+
+<p>Auf einem Blech die Pakete anordnen und ca. 10 bis 15 Minuten backen lassen.  Sind die Pasteten goldbraun gebacken aus dem Ofen nehmen und mit dem restlichen Spinat auf einem Teller anrichten.</p>
+
+<p>Guten Appetit.</p>
+
+<p>p.s.: Falls Blätterteig übrig bleibt einfach mit Spinat füllen ;-)</p>]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="Martin" date="14-10-04" mail="" www="" notify="">
+            <![CDATA[Kleiner Nachtrag:<br>
+vielleicht die Pasteten auf ein Gitter stellen mit einem Blech darunter, falls es tropft. So werden Sie von allen Seiten schön knusprig.]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Skills" title="GDI Laserdrucker unter Linux" author="Martin" date="23-10-2004">
+    <header>
+        <teaser>
+            <![CDATA[Endlich ist es geschafft! Es gibt wieder einen Grund mehr keine Windows zu benutzern: Und zwar gelang es mir heute endlich meinen schicken GDI Laserdrucker von Epson des Typs 5900L unter meinem SUSE zum Laufen zu bringen...]]>
+        </teaser>
+        <body>
+            <![CDATA[Auch wenn die Jungs von Suse immer noch der Meinung sind, dieser Drucker will nicht unter Linux habe ich doch durch Stöbern auf <a href='http://linuxprinting.org/'>linuxprinting.org</a>
+einen Treiber für meinen Drucker gefunden. Nach dem typischen Linuxdreisatz (configure, make, make install) und einer Installation von foomatic lief nun auch mein kleiner süßer Drucker problemlos unter Linux.<br><br>
+Was das nun heißt?<br><br>
+Ganz einfach, dass funktioniert bei mir schon alles unter Linux:
+<ul>
+<li>ACPI</li>
+<li>WLAN /LAN</li>
+<li>2 GDI Drucker</li>
+<li>Mail (Thunderbird/Evolution)</li>
+</ul>
+Was noch fehlt?
+<ul>
+<li>Eine Oberfläche für den WLAN Treiber</li>
+<li>VPN Installation</li>
+</ul>
+
+Ansonsten bin ich jetzt glücklich. Und damit verabschiede ich mich glücklich von meinem Linux Rechner.]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="TagesZeitung" title="Der Bart muss ab..." author="Martin" date="09-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[Es ist einfach toll, endlich mal ein Link, der dem Namen dieser Katergorie gerecht wird. Heute war zum Thema Einheit in der <a href='http://www.taz.de'>TAZ</a>, die heute ausschließlich von Redakteueren mit Ost-Biografie gestaltet wurde, ein sehr interessanter <a href='http://www.taz.de/pt/2004/11/09/a0140.nf/text'>Artikel</a> von Wolfgang Thierse. Ich kann nur sagen: Sehr lesenswert. Des weiteren kann ich mich der allgemeinen Meinung nur anschließen: Es ist gut das es so gekommen ist. An der Umsetzung arbeiten wir noch.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Gentoo on the Road" author="Martin" date="16-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[Man mag es nicht für möglich halten oder auch für verrückt. Doch nach nur zwei Tagen ist mein neues Linux am laufen...]]>
+        </teaser>
+        <body>
+            <![CDATA[Dies ist jedoch nicht nur irgendeine Distribution, die per plug-and-install 3 GB Daten auf die Festplatte schaufelt, sondern man muss sich alles selber kompilieren. Dies soll dann nicht nur ein schnelleres System, sondern auch mehr Verständnis für die Linux Architektur mitsichbringen. Dem guten Installhandbuch und dem fabelhaften Paketsystem sei dank, es läuft nun. Und das diese Minimalinstallation 2 Abende gekostet hat, brauch man ja niemanden erzählen. Und wer kann schon von sich behaupten, sein System von Grund auf selber kompiliert zu haben? Ja,ja ich weiß alles Geek-Stuff.<br>
+<br>
+Für alle die sich weiter interessieren hier der <a href='http://www.gentoo.org'>Link</a>. ]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="TagesZeitung" title="Abrechnung" author="Martin" date="16-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[Es ist der Fall eingetreten, den schon viele vor dem Ender der Wahl in den USA vermutet haben. Colin Powell tritt zurück. Ob er nun das Opferlamm ist müssen andere Leute entscheiden, doch ich kann mich meiner Lokalzeitung anschließen: Damit verliert die US-Regierung ihr letztes gemäßigtes Gesicht.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Gentoo part II" author="Martin" date="18-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[So und nun damit Ihr mir auch glaubt ein Bildschirmfoto aufgenommen in GNOME 2.8 :
+
+<div align='center'><a href='http://www.grundprinzip.de/images/Bildschirmfoto.png'><img src='http://www.grundprinzip.de/images/Bildschirmfoto-thumb.png' /></a></div>
+
+An dieser Stelle nochmal vielen Dank an Olaf und seine unendliche Geduld mit meinem Speedstep...]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Schlafen" author="Martin" date="19-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[So und nun gibts bei mir und meinem Gentoo auch Suspend to Disk. Den Entwicklern sei Dank, es hat alles wunderbar funktioniert. Schnell den Kernel gepatcht, kompiliert und siehe da fast alles funktioniert. Ein bißchen Feintuning muss man ja immer machen damit alle Dienste wieder funktionieren und so weiter.<br /><br />
+
+Aber hier nun der Link für alle die es interessiert: <a href='http://softwaresuspend.berlios.de/'>SoftwareSuspend2</a>.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="RSS &amp;&amp; Linux == ??" author="Martin" date="20-11-2004">
+    <header>
+        <teaser>
+            <![CDATA[So. Nu aber, dachte ich mir. Wenn es unter Windoof schon gute RSS Reader gibt, dann wird die Auswahl unter Linux schon besser sein. Aber falsch geadacht. Die hälfte der Programme die ich den letzen Tagen ausprobiert habe ist entweder abgestürzt bzw. kompilierten nicht. Die andere hälfte wollte nicht mit mir als Standard-User  arbeiten sondern nur mit root. Das Evolution 2 ist nicht besser geworden seit 1.4 und ein Grund den Desktop zu wechseln damit auch. Doch immerhin gibts ja noch den Thunderbird und damit habe ich wieder meinen alt bekannen News und Mail Reader. Schade nur, dass der Sunbird Calendar nocht nicht so ausgereift ist... Wenigstens ist das Mozilla Gespann wieder komplett.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="SommerWinter" author="Martin" date="08-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Mit verquollenenen Augen betrat ich die Straße. Auf zum nächsten Plus. Doch irgendwas war anders. Und siehe da, jetzt weiß ich es. Wir haben heute den 8. Januar und das Wetter entspricht eher dem eines schönen März bzw. Aprilmorgens. Sind das die Folgen der globalen Erwärmung?<br /><br />Aber egal ich genieße den Tag trotzdem. Ein schöner Tag, die Welt ...]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="08-01-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Jaaa, er lebt noch, er lebt noch, er lebt noch ... :-)]]>
+        </commententry>
+
+<commententry author="grund" date="08-01-05" mail="grund@grundprinzip.de" www="www.grundprinzip.de" notify="">
+            <![CDATA[Muss ich das jetz als Kommentarspam auffassen. Captchas sind nähmlich noch nicht geplant für diese Blogsoftware ;-)]]>
+        </commententry></comments>
+</entry><entry category="WWW" title="Blog Ahoi" author="Martin" date="19-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[So ich muss hier mal was loswerden. So langsam glaube ich, dass diese Blogwelle ziehmlich anstrengend ist. Ich habe so ca. 10-15 Blogs im Abo per RSS (und das ist sicherlich noch wenig im Vergleich). Mal ganz davon abgesehen, was so bei <a href="http://www.sat1.de/tvmagazine/planetopia/themen/30863/">Planetopia</a> berichtet wurde, frage ich mich doch wer hat eigentlich noch Zeit soviel zu lesen?<br /> <br /> Ich bin ja schon froh, wenn ich in unregelmäßigen Abständen dazu kommen. Und ich weiß auch, dass dann gleich wieder die Frage kommt, warum hast du dann ein Blog? Und meine Antwort ist: War ja nur ne Frage.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Support" author="Martin" date="21-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Heute kann ich doch gleich zwei Meldungen über interessante Support Telefonate niederschreiben. Das erste Telefonat hatte ich mit dem technischen Support von <a href='http://www.gericom.de'>Gericom</a>. Ich brauchte für einen Flachbildschirm Treiber. Dort half man mir auch richtig gut weiter. Treiber gabs zwar keine, dafür aber ein paar Tipps, den Monitor besser einzustellen. Zum Schluss kam dann sogar noch die Frage, ob ich denn wissen wolle, warum ich diese Einstellungen gerade vorgenommen habe. Wahnsinn sage ich euch. Da fühlt man sich gut aufgehoben.<br /><br />Die zweite Meldung ist, das mein <a href='http://www.server4you.de'>VServer </a>heute nacht irgendwann sein Licht ausgeblasen hat. Und leider brauchte es erst einen Anruf beim Support (1,86 €/min), damit dies festgestellt wird. Dieser Fehler trat allerdings erst auf, nachdem heute nacht auch ein Kernelpatch eingespielt wurde. Da frage ich mich doch ernsthaft, ob es so schwer ist ein Skript zu schreiben, was alle VServer Systeme anpingt um zu schauen ob die auch da sind...<br/><br/>
+Na gut aber jetzt gehts wieder.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="23-01-05" mail="" www="" notify="">
+            <![CDATA[Die Gericom-Telephonnummer solltest Du versteigern, ich habe es noch nie geschafft bei den Österreichern einen Ansprechpartner zu bekommen. Nachdem die Hotline nach fünf Minuten meist meinte: "Keiner da! Wollen Sie uns auf den AB sprechen?" und man versprach innerhalb von max. 24h zurückzurufen, habe ich mich stets nach zwei Tagen dazu durchgerungen ein weiteres Mal eine Mail, ein Fax und einen Anruf zu tätigen. Interessanterweise antwortet man bei Gericom sofort, wenn man ein Fax respektive eine Mail schickt die folgende Stichwörter enthalten:
+(1) Verbraucherschutz
+(2) Rechtsanwalt
+(3) sofort
+(4) Ihre Kosten
+(5) Geschäftsfüher
+(6) Pro7, Sat.1, RTL, ...
+]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Abseits" title="Support II" author="Martin" date="21-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Nun hat der Support mein schönes Trouble-Ticket geschlossen und in der Antwort steht doch tatsächlich, das die einen Portscan gemacht haben und mir die Liste meiner offenen Ports zusenden. Na das nenn ich mal Service.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="21-01-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Da frag ich mich doch, welche Ports du so offen hattest (ich hoffe ja, dass diese Zeitform angebracht ist) und warum du nicht aus Neugierde mal selbst einen Scan gemacht hast.]]>
+        </commententry>
+
+<commententry author="SCHAPPY" date="22-01-05" mail="" www="" notify="">
+            <![CDATA[Lustig,
+
+und ich hatte in jener Nacht versucht Dein e Seite aufzurufen, war schon fast der Meinung Du hättest vergessen die Rechnung zu zahlen :) Im Haus C hast Du nicht zufälligerweise in den letzten beiden Tagen nicht etwas an den Rechner gearbeitet, oder? Da läuft nämlich kaum noch einer, vielleicht solltest Du mal einfach Hände waschen gehen :)]]>
+        </commententry></comments>
+</entry><entry category="Skills" title="Hello World für Profis" author="Martin" date="21-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Java ist schon eine tolle Programmiersprache. Doch wer schon immer davon geträumt hat richtig abzurocken, für den habe ich einen kleinen Linktipp:
+Die Java <a href='http://jakarta.apache.org/bcel/manual.html'>
+Byte Code Engineering Library</a>. Der Link zeigt auf das Manual und relativ weit unten findet sich dann die harte Variante des Hello World Programms. Dieses kleine süße schnucklige Programm wird zur laufzeit erzeugt und in eine Class Datei geschrieben, die dann wiederum von einem Classloader aufgerufen werden kann. Schick oder?]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="23-01-05" mail="" www="" notify="">
+            <![CDATA[Klingt nach Wurm :) Dummerweise ist .class nicht automatisch mit java filename assoziiert, sonst hätten wir bald einen neue File-Extension, die aus Mail-Anhängen herausgefiltert werden müssen...]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Abseits" title="Warum auch immer..." author="Martin" date="25-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[... an einem Badunterschrankwagen vier Rollen dran sein müssen. Warum auch immer diese vier Rollen bei jeder Bewegung des Teils abfallen müssen. Warum auch immer bei der anschließenden Befestigung der abgefallenen Rolle eine andere abfallen muss. Warum auch immer man nach fünf Minuten einen neuen Badunterschrankwagen haben will.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Geschafft" author="Martin" date="25-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Endlich habe ich meine beiden Paper für Model Driven Architecture und Fachenglisch fertig. Nun müssen die nur noch korrigiert werden. Ich fühl mich gut.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="25-01-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Off Topic und weil ich gerade in Meckerlaune bin (siehe WendtsWelt): Könnstest du in deinen Feeds die drei Punkte am Ende nur dann anzeigen, wenn es auch wirklich noch weitergeht im Text. Oder willst du, dass ich deine Seite persönlich besuche?
+
+Danke sehr]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Skills" title="Krampf mit ++" author="Martin" date="26-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Da ich häufig zwischen verschiedenen WLAN Profilen wechsle (Uni, zu Hause, Freunde) habe ich mir vorgenommen ein kleines Tool für Linux zu programmieren, das mir eben diese Arbeit abnimmt. Die Freunde der Bash werden nun schreien, das kann ja "iwconfig" schon. Und hier kann ich antworten: "Aber keine Profile".
+<br />
+<br />
+Immerhin benutze ich die Bibliothek, die mir die wireless tools zur Verfügung stellen. Mittlerweile kann mein kleines Programm schon Konfigurationen aus einer Datei einlesen und die SSID einstellen. 
+<br />
+<br />
+Und wo ist nun der Krampf? Also: Die Biblithek ist in C geschrieben also viele char[]* und unsigned char[] Sachen. Und ich schreib in c++ und hab echte strings zur Verfügung. Mittlerweile bin ich nur noch am umkonvertieren, damit hier und da was passt. Dazu kommt noch die ewige Hudelei mit Pointern * und Adressen &amp;. Deswegen der Krampf.
+<br />
+<br />
+Mein vorläufiges Fazit: Warum verhält sich C++ nicht so angenehm wie Java. Damit kann man wenigstens programmieren ohne sich alle drei Zeilen die Haxen zu brechen.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="MixedTape" author="Martin" date="26-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Auch wenn der <a href="http://www.mercedes-benz.com/mixedtape">Link</a> nicht von mir ist (habe ich in einem anderen Blog aufgeschnappt), kann ich den nur empfehlen. Mercedes Benz stellt wieder ein Auto Mixed Tape zur Verfügung. Nährere Infos später...
+]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Epos" author="Martin" date="28-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Gestern haben wir seit langen mal wieder ein Kino von innen gesehen. Eigentlich wollten wir uns ja <a href="http://www.berlinonline.de/tip/kalender/.bin/index.php/kino/artikel/19937.html?SID=0117e2c80a2c32f19a31e5155299d486">"Mathilde - Eine große Liebe"</a> anschauen, doch leider lief dieser Film im Kino unseres Vertrauens nicht. So entschieden wir uns dan für den Epos <a href="http://www.berlinonline.de/tip/kalender/.bin/index.php/kino/veranstaltung/251771.htm">"Aviator"</a> und haben es nicht bereut.<br /><br />
+
+170 Minuten lang berauschendes Kino. Vielleicht kein Film, über den man sich nacher noch den Kopf zerbricht, aber auf jeden sehenswert. Die Bilder sind beeindruckend und die Feste rauschend. Muss eine schöne Zeit gewesen sein. Also von meiner Seite kann ich den Film nur empfehlen.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Nachschlag++" author="Martin" date="28-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Nachdem ich mich ja so rumgeqäult habe um unter Linux eine ordentliche C/C++ IDE zu finden, bin ich nun bei <a href="http://www.anjuta.org">Anjuta</a> gelandet. Und ich kann dazu nur sagen, bis jetzt bin ich zu 100 % zufrieden. Zumal die IDE für GNOME optimiert ist, worüber ich mich besonders freue.<br /><br />
+
+Ein schönes Feature ist auch die automatische Erzeugung von Configure und Make Files. Das nimmt mir doch eine Menge ab. So weit ich gelesen habe, wird  Anfang Februar die Version 2.0 veröffentlicht. Ich freu mich drauf. <br /> <br />
+
+p.s.: Bitt die Finger vom Eclipse CDT lassen, dass hat eine Performance, die mich an Zeiten mit 4MB Hauptspeicher erinnert.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Wochenende...." author="Martin" date="28-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Als ich heute morgen im Radio die allwöchentliche Begrüung ins Wochenende hörte habe ich mich auf einen schönen Freitagabend gefreut. Endlich mal wieder mit den Kollegen schwofen gehen. Doch wieder einmal kurzfristig die Absage...äh..hmm...<br /><br />
+
+Und was stellt man dabei fest. Man sollte sich für einen Freitag abend nie nur eine Sache vornehmen.<br />
+
+Naja habe ich doch endlich mal wieder Zeit mich um <a href='http://developer.berlios.de/projects/miplex2/'>Miplex2</a> (der Nachfolger von dem jetztigen CMS und Blog-Engine hier) zu kümmern und mich an ein neues Layout zu machen. Ob das hübscher wird als das jetzige, kann ich bei meinen Layoutfähigkeiten leider noch nicht abschätzen ;-)]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Vorschau" author="Martin" date="29-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Da ich ja gestern abend an mein Heim gebunden war, habe ich mich wie schon angekündigt um Miplex2 und mein neues Layout gekümmert. Hier ein erster Screenshot des neuen Layouts.
+
+<a href='http://www.grundprinzip.de/images/nBildschirmfoto.png'><img src='/images/nBildschirmfotot.png' /></a>
+
+Ich denke, wenn alles gut geht, kann ich nächste Woche schon auf das neue System wechseln.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Eine Tagung..." author="Martin" date="30-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[...nachdem das Wochenende ja wie schon mehrmals beschrieben angefangen hat, waren wir heute wieder in 
+<a href='http://www.berlinonline.de/essen-und-trinken/_bin/details.php/gastronomie/?id=4312'>der</a> <a href='http://www.die-tagung.de/'>Tagung</a>. Einfach ein schönes Gefühl. Wenn wir eine Stammkneipe haben, dann diese. <br /><br />
+
+Und falls meine lieben Mitleser mal wieder  in Berlin sind, dann geht dorthin. Ist zwar ein hoher Anteil an Stammpublikum, aber trotzdem immer wieder schön. Denn wo sonst kann man bis morgens halb sechs sitzen und schwatzen.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Bloglines Bug?" author="Martin" date="30-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Irgendwie habe ich es geschafft unter Bloglines folgenden Bildschirm zu provozieren. Mein Vorgehen war dabei wie folgt. Einen Feed auswählen -> Subscribers -> im seleben Frame auf "My Feeds" klicken -> beliebig oft wiederholen.
+<div align="center">
+<a href="http://www.grundprinzip.de/images/Bildschirmfoto-1.png"><img src="/images/Bildschirmfoto-1t.png" /></a>
+</div>
+Und falls noch jemand fragt, nein ich nutze eigentlich nicht Bloglines. Mein Hauptfeedreeder ist der <a href="http://www.mozilla.org/products/thunderbird/">Donnervogel</a>.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Wintertraum" author="Martin" date="30-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ich weiß nicht wann ich es zuletzt getan habe. Aber ich habe es genossen. Heute haben wir den schönen Winternachmittag hier in Berlin genutzt um einen Schneemann zu bauen. Das Meisterwerk ist im Erholungspark Wuhlheide zu beobachten. Dort finden sich dann auch noch weitere Exemplare dieser Gattung. Also, wer noch Schnee hat, sollte die Zeit nutzen um wieder einmal Kind zu sein. Einfach nur schön...]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Pflichterfüllung" author="Martin" date="30-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[An dieser Stelle eines jeden Bloggers Pflicht. Katzencontent:
+<div align="center">
+<a href="http://www.grundprinzip.de/images/kc.jpg"><img src="http://www.grundprinzip.de/images/kct.jpg" /></a></div>
+]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="31-01-05" mail="" www="" notify="">
+            <![CDATA[Hatten wir etwa heute ein kleines Mittelungsdefizit? :)]]>
+        </commententry>
+
+<commententry author="Martin" date="31-01-05" mail="grund@grundprinzip.de" www="" notify="">
+            <![CDATA[Eigentlich nicht. Gregor ist ja wieder da. Aber trotzdem muss man ja den Miezen mal die weite Welt zeigen. Oder andersrum?]]>
+        </commententry></comments>
+</entry><entry category="Skills" title="PHP für Fortgeschrittene" author="Martin" date="31-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[Für eine Uni-Seminar habe ich einen Portscanner in PHP programmiert. Als wär das nicht krude genug, habe ich heute das Skript so erweitert, dass dabei auch mehrere Threads benutzt werden können. Funktionieren tut das Ganze mit der <a href='http://www.php.net'>PHP</a> Process Control Extension unter <a href='http://www.gentoo.org'>Linux</a> bzw. <a href='http://www.cygwin.com'>Cygwin</a> unter Windows.
+<br /><br />
+Hier das Skript zum <a href='http://www.grundprinzip.de/download/pscan.class.tar.gz'>Download</a>.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="04-02-05" mail="" www="" notify="">
+            <![CDATA[Das ist kein Seminar, gell :) Aber wie bereits erwähnt, man kann sich immer hinreichend weh tun.]]>
+        </commententry>
+
+<commententry author="SCHAPPY" date="04-02-05" mail="" www="" notify="">
+            <![CDATA[Das ist kein Seminar, gell :) Aber wie bereits erwähnt, man kann sich immer hinreichend weh tun.]]>
+        </commententry></comments>
+</entry><entry category="Abseits" title="I hate XML" author="Martin" date="31-01-2005">
+    <header>
+        <teaser>
+            <![CDATA[.... ;-)]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="TagesZeitung" title="Studienverschuldung" author="Martin" date="01-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[An dieser Stelle möchte ich mich als Student auch nochmal zu dem Thema
+Studiengebühren melden. Sicherlich bieten Studiengebühren den Vorteil,
+dass Universitäten und Fachhochschulen mehr finanzielle Mittel zur
+Verfügung gestellt werden können. Doch auf der anderen Seite bedeuten Sie
+eine enorme Belastung für die Studenten.<br />
+Im Gegensatz zu den gängigen Vorurteilen, langweilen sich Studenten nicht nur
+den ganzen Tag und trinken Latte Macchiato. Ich für meine Person gehe im
+Schnitt 3 mal die Woche arbeiten um meinen Unterhalt zu finanzieren.
+Sicherlich geht es mir nicht schlecht, aber im Luxus schwelgen kann ich auch nicht und
+ob ich mir monatlich zusätzlich 150 € für Studiengebühren bei Seite legen
+kann denke ich nicht.<br />
+Doch warum ich das alles schreibe liegt an einem <a href='http://www.berlinonline.de/berliner-zeitung/politik/417674.html'>Artikel</a> in meiner
+<a href='http://www.berliner-zeitung.de'>Lokalzeitung</a>. Hier wird von Finanzierungsnmaßnahmen der <a href='http://kfw.de/DE/Inhalt.jsp'>Kreditanstalt für
+Wiederaufbau</a> Studenten geschrieben. Interessant ist der Abschnitt:
+<blockquote>So müssten Studenten in einem solchen Fall mit einer Rückzahlungssumme zwischen 65 000 und 90 000 Euro rechnen. 
+Im Extremfall könnten es bis zu 126 000 Euro für ein zehnsemestriges Studium werden. 
+Bei einer Rückzahlungsrate von 350 Euro im Monat müssten Studenten dann 
+27 Jahre lang nach dem Examen zahlen.</blockquote>
+Und nun stellen wir uns alle mal vor, was man für 90.000€ so alles kaufen kann
+von 4-5 Stadtautos bis zu einer Eigentumsohnung. Vielleicht wird bei diesen
+Summen manchen Menschen klar, warum Studiengebühren nicht wirklich sinnvoll sind.
+Vielleicht kann mir jemand aufzeigen, wovon ich leben soll, wenn ich mein gesamtes Jahreseinkommen an
+die Universität abführe?
+<br />
+<br />
+So lange mir niemand eine Möglichkeit aufzeigen kann, so dass weiterhin jeder Abiturient
+studieren kann und dass bei vertretbarer finanzieller Belastung (z.B. Studienkredite) ein
+Studium abgeschlossen werden kann und nicht nur die Söhne und Töchter wohlhabender
+Eltern studieren können, werde ich gegen Studiengebühren sein.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="Andre" date="02-02-05" mail="spam@wendtswelt.de" www="http://www.wendtswelt.de" notify="on">
+            <![CDATA[Aha. Und nun stellen wir uns alle mal vor, wir würden uns tatsächlich nur 150 EUR und nicht - wie im Artikel erwähnt - 650 EUR pro Monat pumpen. Dann werden nämlich plötzlich aus den 27 Jahren schätzungsweise sechs für die Rückzahlung. Und sechs Jahre lang 350 EUR monatlich für ein besseres Studium, das wär doch schon was, oder?
+
+Abgesehen davon zahlt man etwa mit der doppelten Rate ein Einfamilienhaus, also in etwa die fünf- bis sechsfache Summe, in derselben Zeit ab. Die Kreditkonditionen sind einfach schlecht...]]>
+        </commententry>
+
+<commententry author="Martin" date="02-02-05" mail="grund@grundprinzip.de" www="" notify="">
+            <![CDATA[In dem Artikel wurde ja von der KfW gesagt, dass sich die Studenten mit dem Kredit voll auf das Studium konzentrieren soll, also reichen 150 € nicht für den Lebensunterhalt oder?]]>
+        </commententry><commententry author="Andre" date="02-02-05" mail="spam@wendtswelt.de" www="http://www.wendtswelt.de" notify="on">
+            <![CDATA[Sicherlich. Wer 5 Jahre lang nichts verdient, muss eben länger (also 27 Jahre) zahlen. Nur für fleißige Leute wie dich wären es wahrscheinlich nur sechs....]]>
+        </commententry><commententry author="SCHAPPY" date="04-02-05" mail="" www="" notify="">
+            <![CDATA[Na toll, das Blog hat meinen Beitrag gefressen!!!]]>
+        </commententry><commententry author="SCHAPPY" date="04-02-05" mail="" www="" notify="">
+            <![CDATA[Zweiter Versuch:
+(3) "...jeder Abiturient studieren": Traurig genug, dass es so sein muss, wozu sonnt sich Deutschland im Schein des mehrstrahligen Schulsystems? Aber heute muss schließlich bereits ein Call-Center-Agent ein abgeschlossenes Studium der Kommunikationswissenschaften aufweisen, um für 3,50 EUR zu telephonieren.
+
+(2) "...Studenten [langweilen sich] nicht nur den ganzen Tag...": Mag auf Dich und andere StudentenInnen zutreffen. Aber irgendwo muss das Klischee schließlich herkommen. Wieso sonst, wären sich viele Studierende von klassisch "deutschen Studiengängen" so vehement gegen die Umstellung ihrer Studiengänge in internationale BA/MA-Studiengänge mit Credit-Point-System? Denn dann hätte die "Wiederholen-wir-solange-bis-wir-den-Schein-bekommen"-Mentalität
+ein Ende.
+
+(1) "...Studiengebühren den Vorteil, dass Universitäten und Fachhochschulen mehr finanzielle Mittel zur Verfügung gestellt [bekommen könnten]": Mag sein, aber eine Umfrage unter Universitätsleitungen hat kürzlich wohl erst ergeben, dass nicht die finanziellen Mittel als Hauptursache angesehen werden. Viel mehr ist es der Mangel an qualifizierten Lehrkräften, die ins Ausland abwandern und das daraus resultierende eingeschränkte Lehrangebot. Mehr Geld != Sitzplätze für alle. In der Realität ist es doch eher so, dass der Großteil der finanziellen Mittel intra-universitär "verklagt" wird, das würde sich vermutlich bei größerem Budget auch nicht ändern. ]]>
+        </commententry><commententry author="SCHAPPY" date="04-02-05" mail="" www="" notify="">
+            <![CDATA[Nachtrag: Hätten zu meiner Schulzeit genügend finanzielle Mittel zur Verfügung gestanden, so hätte ich auch eine deutliche bessere Deutschausbildung genießen können :) Ich entschuldige mich an dieser Stelle für das schlechte Deutsch und bitte um Nachsicht, es war schließlich früh am morgen.]]>
+        </commententry></comments>
+</entry><entry category="Skills" title="MiplexRSS" author="Martin" date="06-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[An dieser Stelle wollte ich nur mitteilen, dass ich mir mal wieder ein neues Projekt gesucht habe. Diesmal geht es darum einen FeedReeder (GPL) in Java zu implementieren. Folgende Features sind schon enthalten:
+<ul>
+<li>Auslesen von Feeds (RSS2)</li>
+<li>Generisches Parser Interface zum verarbeiten von verschiedensten Feeds</li>
+<li>Datenbankbasiert mit SQLite</li>
+</ul>
+
+Folgende Features sollen noch kommen:
+<ul>
+<li>Import/Export von OPML</li>
+<li>Lokales Speichern der Feeds</li>
+<li>...</li>
+</ul>
+
+<br />
+Hier ein erster Screenshot:
+<div align='center'>
+<a href='http://www.grundprinzip.de/images/miplexrss.png'>
+<img src='http://www.grundprinzip.de/images/miplexrsst.gif' />
+</a>
+</div>
+Auf Wunsch stelle ich gerne eine erste Alphaversion zur Verfügung. Einfach eine Mail schicken.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Morgens 10 vor 8 in Berlin" author="Martin" date="07-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ein junge Dame bestellt vor mir bei einem Le Crobag einen Milchkaffee. Nun bin ich an der Reihe und bestelle einen großen Kaffee. Hektisch reicht mir die Bedienung den Kaffee. Leider war die junge Dame vor mir nicht in der Lage ihren Milchkaffee einfach mitzunehmen und unterwegs umzurühren...
+<br />
+<br />
+Da hat man es schonmal eilig und dann sowas.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="07-02-05" mail="" www="" notify="">
+            <![CDATA[...und dabei will man doch vermeintlich nur eine einfache Klausur schreiben. Sowas hält immer auf. Aber ich muss sagen, heute morgen habe ich auch gedacht: "Bloß nichts falsch machen". Das hätte auch schiefgehen können, denn schließlich lies der Wetterbericht minus acht Grad verlauten, schon mal ein Problem für die Damen und Herren von der DBAG. Aber großes Lob. Der Regio war (wie dieser Jahr glaube ich täglich) auf die Minute am Zielbahnhof. Respekt an dieser Stelle. Danke Herr Mehdorn! Es funktioniert offenbar doch.]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Offline" title="Morgens halb neun in der S-Bahn" author="Martin" date="07-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ein leises "zisch" geht durch die S-Bahn. Eigentlich nichts ungewöhnlich. Doch dann schaue ich doch nach rechts und was sehe ich? Ein Herr mittleren Alters öffnet genüsslich seine Bierflasche.
+<br /><br />
+Als wenn ich mir eins wünschen darf, dann das Biertrinken in der Öffentlichkeit vor 12 Uhr mittags verboten ist. Wie weite ist es schon mit unserer Gesellschaft gekommen, dass man schon morgens ein Bier braucht um den Rest des Tages zu ertragen?]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="07-02-05" mail="" www="" notify="">
+            <![CDATA[Ich verweise an dieser Stelle auf: http://www.grundprinzip.de/blog/single/53.html  (hier wird nicht geplenkt!). Stell Dir vor, das Rauchen wurde schon in der Bahn und sogar auf den Bahnhöfen verboten, jetzt auch noch das Trinken? Was soll man da als arbeitsloser Analphabetiker noch während der Bahnfahrt tun, damit es einem nicht so lang vorkommt? Etwa motz veräußern?]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Skills" title="MiplexRSS 2" author="Martin" date="08-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So heute mal ein kleines Update:<br />
+Mein schöner Feedreader kann nun auch OPML Dateien importieren. Diese werden wie gewünscht in die Ordnerstruktur eingepflegt. Damit man die Feeds auch besser wiedererkennt, wird zusätzlich zu den Feeds das Favicon geladen und in der Baumstruktur dargestellt. Anbei wieder ein Screenshot:<br />
+<div align='center'>
+<a href='http://grundprinzip.de/images/mrss.gif'>
+<img 
+src='http://grundprinzip.de/images/mrsst.gif' />
+</a></div>
+Die nächsten Schritte sind jetzt unterstüzung für andere Feedarten (RSS 0.91, 1 und ATOM) und Bugfixing.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Lokalpatriotismus" author="Martin" date="09-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Gestern abend war es endlich soweit. Unter dem 
+Deckmantel eines Unicef Benefizkonzertes
+spielten in der Berliner Columbiahalle die Teenagers
+aus Britz, <a href='http://laut.de/wortlaut/artists/c/clueso/biographie/index.htm'>die</a>
+Erfurter Band <a href='http://www.clueso.de/'>Clueso</a> und <a href='http://laut.de/wortlaut/artists/b/beatsteaks/biographie/index.htm'>die</a>
+<a href='http://www.beatsteaks.org/frames.php?la=de'>Beatsteaks</a>.
+Um es abzukürzen: Ein geiler Konzertabend. Die Beatsteaks rockten
+die Halle und spielten einen wunderbaren Mix aus ihren 
+bisherigen Veröffentlichungen.
+<br /><br />
+Wer die Beatsteaks noch nicht kennt, sollte sie sich
+auf jeden Fall anhören. Die Musik ist eine tolle Mischung
+aus Punk, Rock und Ska (eher weniger). Ein tolles Konzert.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Apple Raid" author="Martin" date="09-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Was man schon immer haben wollte: Ein <a href='http://www.wrightthisway.com/Articles/000154.html'>RAID</a> aus 4 I-Pod Shuffle.
+Mit insgesamter Kapazität von 4 GB. Naja Preis-Leistung ist vielleicht
+nicht so toll und die Performance ist so lala. Aber eine 
+gute Idee
+<br /><br />
+[via <a href='http://www.instant-thinking.de/space/start/2005-02-08/1#RAID_Shuffle'>InstantThinking</a>]]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="10-02-05" mail="" www="" notify="">
+            <![CDATA[Ist der Shuffle nicht eh die Erfindung des Jahrtausends?
+"Was hörst Du gerade?" - "Naja, kommt drauf an :)."
+Der Artikel erinnert mich irgendwie an die Geschichte mit dem "Was ist ein Blade". Nur, dass die Obstkünstler nur ohne Löten ausgekommen sind...]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Offline" title="Keine Hoffnung" author="Martin" date="09-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Heute beim Arzt:
+<blockquote>
+Maria: ...Gibt es irgendeinen Geheimtipp gegen kalte Füsse?<br />
+Arzt: Nein. Das ist ein typisches Leiden einer jeden Frau. Das einzigel mir bekannte Mittel
+ist so komisch es auch klingen mag Körperwärme. Das einzige Mittel des Mannes gegen Frauen
+mit kalten Füßen ist ein langer Pyjama oder 1 Stunde später ins Bett gehen als die Frau.
+</blockquote>
+Was sagt uns das? Für uns Männer gibt es keine Hoffung jemals ohne die obligatorische
+Frage "Schatz, kann ich meine Füße bei dir wärmen?" einschlafen zu könnnen.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="10-02-05" mail="" www="" notify="">
+            <![CDATA[(a) Wollsocken, definitiv eine weitere Lösung!
+(b) Erinnert mich gerade irgendwie an meine biologische Schulbildung (so komisch es klingen mag), da wurde mir einst klar gemacht, dass man "besoffen" schneller erfriert, weil sich die Kapillärchen weiten. Dadurch fließt mehr erhitztes Blut aus dem Körperkern zu den Extrimitäten hin, die deutlich kälter sind als der Kern (dürfte Maria kennen). Wie auch immer, soll nicht heißen, trinkt mehr Alkohol, aber es könnte einen Selbstversuch wert sein. Oder um auf http://www.grundprinzip.de/blog/single/62.html zu verweisen; der beschriebene Kerl hatte auch keine kalten Füße, selbst wenn er die ganze Nacht auf der Straße gepennt haben sollte.
+(c) Fußgymnastik. Jaja, "...ich bin doch keine sechzig Jahre alt, dass ich Fußgymnastik machen müsste...", mag es jetzt heißen. Dennoch, es kann helfen. Meine Wenigkeit zum Beispiel steht eher weniger auf Socken oder Schuhe auf Dauer. Wenn den ganzen Tag die Füßlein darin stecken, kann das gar nicht gut sein, das wussten schon die Ur-Menschen. Daher laufe ich liebend gern barfüßig umher, wann immer es geht. Hat zwar auch kalte Füße zur Folge, v.a. auf kalten Fliesen oder im Garten, aber hat auch den netten Nebeneffekt, dass die Fußsohlen deutlich sensibler werden...]]>
+        </commententry>
+
+<commententry author="Martin" date="10-02-05" mail="" www="" notify="">
+            <![CDATA[Da gibts nur ein Problem mit den Wollsocken. Diese drücken nähmlich die Adern zusammen und so fließt wieder weniger Blut durch. Ich glaube auch, die einzige Möglichkeit wäre Gymnastik. Ist nur die Frage ob mein holdes Weib gerne Versuchskaninchen spielt.]]>
+        </commententry><commententry author="SCHAPPY" date="10-02-05" mail="" www="" notify="">
+            <![CDATA[Ich bin ganz dreist: "Ausprobieren". Ich habe mal gelesen, dass ein jeder (normaler) Mennsch in der Lage sein sollte, einen Bleistift, Kugelschreiber o.ä. mit dem Zehen zu jonglieren. Soll heißen, Stift zwischen zwei Zehen und dann ohne Hilfe von Händen (oder anderen Personen) den Stift einmal drehen und dann zwischen zwei benachbarte Zehen wieder einfügen. Ist schwierig vorzustellen (nach dieser Erklärung). Sei Fuß horizontal => Zehen ebenso horizontal ausgerichtet. Stift sei orthogonal zur Fußausrichtung durch zwei benachbarte Zehen fixiert. Man benutze nun die Zehen beliebig, so dass Stift ohne zu Boden zu fallen, wieder zwischen zwei Zehen sich befindet, jedoch nicht mehr denselben beiden (min ein Zeh muss anders als bei der Ausgangssituation sein, wenn es zwei sind, RESPEKT). Stift ist in aller Regel dann um 180° bzgl. der Fußebene rotiert.
+
+Wie auch immer, ich bekomme es nicht hin und bin seitdem recht deprimiert.]]>
+        </commententry></comments>
+</entry><entry category="Offline" title="Morgen..." author="Martin" date="10-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Nachdem sich die Transaktion der letzten drei Tage darauf beschränkt hat im Isolationlevel Serializable für meine Klausur zu lernen, bin ich froh morgen den Log-Buffer leeren zu können und endlich wieder die Datenbank frei zu machen um sinnvolles abspeichern zu können. Sollte jemand was dagegen haben kann er von mir aus mein entsprechendes Skript "choppen" und ein Rollback aufrufen. Mir egal.<br />
+Morgen ist Freitag, Endetag, Semesterferien.<br /><br />
+Und wer wissen will vovon ich Rede:
+<a href='http://www.hpi.uni-potsdam.de/deu/veranstaltungen/show.de.html?print=no&amp;id=205'>hier</a>
+eine kurze Beschreibung. Wen es nicht interessiert: ignorieren.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="10-02-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Wieso Semesterferien, da kommt noch 
+http://www.hpi.uni-potsdam.de/deu/veranstaltungen/show.de.html?print=no&amp;id=213
+und
+http://www.hpi.uni-potsdam.de/deu/veranstaltungen/show.de.html?print=no&amp;id=206
+
+und deshalb: Kein Mitleid...]]>
+        </commententry>
+
+<commententry author="schmidt" date="10-02-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="">
+            <![CDATA[Macht Spaß dein Layout kaputt zu machen, aber ich wußte einfach nicht, wieviel HTML man hier benutzen darf und ne Vorschau funktion gibt es auch nicht. Tsst.]]>
+        </commententry><commententry author="SCHAPPY" date="10-02-05" mail="" www="" notify="">
+            <![CDATA[Danke schmidt, ich wollte ihn gerade auch zur Sau machen; bei mir steht zu http://www.hpi.uni-potsdam.de/deu/veranstaltungen/show.de.html?print=no&id=213 auch noch http://www.tele-task.de/en/details.php?series=65  an; letzteres erwartet meines Wissens nach [M] auch noch.]]>
+        </commententry></comments>
+</entry><entry category="Abseits" title="[M]" author="Martin" date="10-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ist schon mal jemandem aufgefallen, dass zu viele der letzten Beiträge mit einem "M" beginnen. <br /><br />
+Worüber ich mir so Gedanken mache...]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="10-02-05" mail="" www="" notify="">
+            <![CDATA[Studienverschuldung, ganz ohne _M_ :)]]>
+        </commententry>
+
+</comments>
+</entry><entry category="WWW" title="Blog-Content" author="Martin" date="11-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Nachdem nun mittlerweile festgestellt wurde, dass Katzen zu einem Blog gehören wie die Mütze auf den Kopf (prinzipiell kan jeder eine haben) <a href='http://www.industrial-technology-and-witchcraft.de/index.php/ITW/13650/'>hier</a> nun die ersten Vorschläge die Monothonie zu unterbrechen. Damit aber keine falschen Vorstellungen entstehen: Katzen können sich dagegen <a href='http://www.industrial-technology-and-witchcraft.de/index.php/ITW/13654/'>wehren</a>. Jedenfalls meine Meinung.<br /><br />
+
+[via <a href='http://www.industrial-technology-and-witchcraft.de'>ITW</a>]]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Benutze Browser" author="Martin" date="11-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Stop. Kurzes stöbern in meinen Logfiles. Klick auf unbekannte Browser. Moment. Was ist das?<br /><br />
+XBoX_64_(NVidea_GForce_3_Architecture)
+<br /><br />
+Finde ich gut, aber ist das dann eigentlich auch ein Microsoft Browser?]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="Peter" date="13-02-05" mail="" www="" notify="">
+            <![CDATA[Eher ein Linux (Gentoo) Browser :).
+]]>
+        </commententry>
+
+</comments>
+</entry><entry category="WWW" title="Mindestabnahme" author="Martin" date="11-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Gibt es eigentlich eine Mindestmenge an Fotos, die ein mobiles Blitzgerät innerhalb
+eines Einsatzes erreichen muss? Da sich die guten Opel Astras ja geradezu
+stapeln hier mal ein Bild in Action. Leider habe ich kein Bild schießen können,
+das den Täter in voller Aktion zeigt.
+<br /><br />
+Für alle die mal in Berlin unterwegs sind: An der Wuhlheide, da stehn sie immer. Vermehrt
+in roten oder goldenen Opel Astra Kombis.
+<a href='http://www.grundprinzip.de/images/blitz.jpg'><img src='http://www.grundprinzip.de/images/blitzt.jpg' /></a>
+Höchstwahrscheinlich hat wohl jemand sein soll nicht erfüllt und muss nun den Freitag Abend vor
+unserer Terasse verbringen.:-)<br /><br />
+p.s.: Oder doch lieber Katzenfotos?]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="Martin" date="11-02-05" mail="" www="" notify="">
+            <![CDATA[Ja, ich weiß. Das ist ein VW Passat. Bevor es jemand bemerkt.]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Offline" title="Fleischtheke" author="Martin" date="11-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Nach dem schon der <a href='http://www.shopblogger.de/blog/'>Shopblogger</a> feststellte, dass <a href='http://www.shopblogger.de/blog/archives/178-Fleischtheke.html'>Fleischtheken</a> einfach so
+verschwinden können (ok, nach 4,5 Jahren). Habe ich nun bei uns im Plus
+ein ähnliches Phänomen entdeckt.<br /><br />Auch unsere Fleischtheke
+wird nun verschwinden. Zwar diente der Platz die letzten Monate und Jahre eher
+für die Aufbewarung und Anrichtung von Weihnachtsmännern zu Ostern, doch
+anscheinend ist eindeutig ein Trend festzustellen.
+<div align='center'><a href='http://www.grundprinzip.de/images/theke.jpg'><img src='http://www.grundprinzip.de/images/theket.jpg' /></a></div>]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Es wird Zeit..." author="Martin" date="11-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[... das ich endlich auf die Miplex2 Blog-Engine umstelle. Es geht mir nähmlich tierisch auf den Geist, dass ich mich ständig mit diesen doofen XML Tags verhaue. <br /><br />
+Grr...]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Fette Mischung" author="Martin" date="12-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Es muss Anfang 2004 gewesen sein, als ein DJ namens Danger Mouse eine Mischung zwischen
+dem White Album der Beatles und dem Black Album von Jay-Z produzierte - <a href='http://www.cnn.com/2004/TECH/internet/02/25/music.greyalbum.ap/'>das</a> <a href='http://www.laut.de/vorlaut/news/2004/02/19/07802/'>Grey</a> <a href='http://www.illegal-art.org/audio/grey.html'>Album</a>. Leider habe
+ich davon irgendwie nichts mitbekommen, doch als ich heute die Wiederholung von <a href='http://www.arte-tv.com/de/kunst-musik/tracks/104524.html'>Tracks</a>
+auf <a href='http://www.arte-tv.com'>Arte</a> sah, wurde gerade ein <a href='http://www.arte-tv.com/de/kunst-musik/tracks/Diese-Woche/20050203/781386.html'>Video</a> aus dem Album gespielt. Eine absolut tolle Mischung
+der beiden Musikstile. Wer sich die Mühe macht findet das Album sicherlich im Netz über
+BitTorrent.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Das ist nicht meine Musik" author="Martin" date="12-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ok, ich gebs ja zu, ich hab kurz beim Bundesvision Songcontest reingeschaut und gerade dann die Berliner (also meine) Vertetung gesehen. Das ein gewisser "Sido" - ich sag nur: "Mein Block, Meine Villa, Mein Geld..." - Berlin vertreten soll, war mir ja schon bekannt. Ich hatte mich damit abgefunden deshalb als Berliner generell für verblödet gehalten zu werden und generell mit dem Vorurteil konfrontiert zu werden, dass wir Berliner nicht wissen was Musik überhaupt ist. <br />Gut, wie gesagt, soweit so gut. Als ich aber dann sah, dass die Berliner Band "<a href='http://www.brainlesswankers.de/'>Brainless Wankers</a>" Sido bei seinem Ausfall furchtbarster, verblödetster und überhaupt schlechtester Musik begleiteten verstand ich die Welt nicht mehr. Sollte man als Punk Band nicht Hip-Hop blöd finden? Und sich in jedem zweiten Song darüber lustig machen? Da fragt man sich doch wie weit es mit dem Kommerz gekommen ist, dass man sich dafür schon mit Sido zusammen auf die Bühne stellt! Schade, mag ich ihre Musik doch eigentlich sehr.<br /><br />
+
+Ach ja, wer die Brainless Wankers nicht kennt: Auf dem Berlin Sampler "<a href='http://www.laut.de/lautstark/cd-reviews/v/v_a/berlin_macht_schule_3/'>Berlin macht Schule v3</a>" haben sie einen Song beigesteuert, wie z.B. auch die Beatsteaks. So und der Link auf den Sampler ist nur dafür da um die Songliste zu sehen. Der nebenstehende Text ist so ca. das blödeste was ich je gelesen habe. Sorry.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Schon besser..." author="Martin" date="12-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[...also andere Musik. Sehr gefallen hat mir übrigens die Performance von <a href='http://www.fettesbrot.de/'>Fettes Brot</a>. Die neue Singel - <a href='http://www.lass-die-finger-von-emanuela.de/'>Emanuela </a>- ist echt super. Und wer den Beat braucht um abzugehen findet hier weitere Infos. Lautsprecher an!!<br /><br />
+So und nur für dich Gregor: am 15. April sind die Boys aus dem Norden hier in Berlin und spielen im Huxley's - da geh ma doch hi oder?]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Offline" title="Lass die Finger von ...." author="Martin" date="12-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So das wird nun mein letzter Kommentar zum Bundesvision Songcontest. Auch wenn ich erst nicht so begeistert von der gesamten Geschichte war. Respekt Herr Raab, Sie haben es geschafft. Das Juli gewonnen haben - ok. Ich hätt mir Fettes Brot gewünscht. Aber ich bin immer noch erschüttert, wie furchtbar Berlin repräsentiert wurde. Der Radiosender Berlins, wo alle Moderatoren zusammen einen IQ haben, der kurz vor der Jahresdurchschnittstemperatur Berlins liegt, soll also Berlin repräsentieren? Oh mein Gott. Doch Schluss damit.<br />
+Das "Geile Zeit" Sieger wurde hatte einen enormen Vorteil, welcher Regisseur  kann schon von sich behaupten, eine Sendung mit folgendem Satz schließen zu können:<br /><br />
+"Ja ich weiss, es war 'ne geile Zeit... doch es ist vorbei."<br />Perfekt!]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="13-02-05" mail="" www="" notify="">
+            <![CDATA[(1) Nett, dass Juli gewonnen haben.
+(2) Habe nur die Übermittlung der Ergebnisse gesehen.
+(3) Dass Kiss Berlin repräsentieren würde, stand schon lange fest, seit dem Auftritt von Sido halt.
+(4) Nicht das Moderatorenteam für Berlin (ok, das auch) waren schrecklich, eher die Tatsache, dass jedes Bundesland eine ordentlich Location zu bieten hatte, selbst wenn es nur eine Dorfkneipe, wie in Sachsen war; Berlin wurde in einem Studio moderiert, das nenne ich respektabel.
+(5) Ben, du warst sturz besoffen, alter Sabber-Sack!
+(6) powered by $$$-RAAB-TV - oder wie man auch scheiße Gold macht. Er hat mal wieder gezeigt, dass er locker vom Hocker mehrere Wochen ein Thema hochpushen kann und dann tausende von Leuten auch mitmachen, wie immer eine Gelddruckmaschine.
+(7) Fr. Frier hätte einen Spiegel für das Outfit nutzen sollen.
+(8) es gibt keine weiteren Bemerkungen.]]>
+        </commententry>
+
+<commententry author="peter" date="13-02-05" mail="" www="" notify="">
+            <![CDATA[Die Bezeichnung "Songcontest" finde ich, wie auch bei dem europäischen Gegenüber, FALSCH.
+]]>
+        </commententry></comments>
+</entry><entry category="WWW" title="Referer Spam" author="Martin" date="14-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So, ich glaub, jetzt hab ich es im Griff. Die Referrerspammer sehen jetzt nur noch schöne 403 Fehlerseiten von meinem Indianer. <br />Gelöst habe ich das ganze mittels .htaccess und der Apache Rewrite Engine. Einige Tipps lassen sich <a href='http://www.spywareinfo.com/articles/referer_spam/'>hier</a> finden. So und wer will, kann meine Blacklist <a href='http://grundprinzip.de/download/black.txt'>hier</a> finden.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="WWW" title="Nummer Eins" author="Martin" date="14-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ha. Erstmals habe ich es geschafft bei Google mit meinem Blog auf Platz 1 zu landen. Einfach mal freundlich "sido brainless wankers" eingeben. Und ja ich weiß: die Halbwertzeit dieser Position ist relativ gering.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Skills" title="Möbelstück" author="Martin" date="14-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So, dies ist nun der erste Blogeintrag von meinem (unserem) neuem Möbelstück aus. Diese famose Möbelstück ist ein selbstgezimmerter Wohnzimmertisch mit eingebautenm PC. Als Basis dafür diente eine alte Tischplatte und zwei alte Regalteile. Innen drin befindet sich ein auf den Rücken gestellter 17" Monitor und die Eingeweide eines alten AMD K6-2 400Mhz. Verbunden mit dem Internet mittels WLAN kann das gute Stück nun unsere Stereoanlage mit MP3s füttern. Da das Gerät noch nicht ganz fertig ist, gibts auch noch keine Fotos. Die folgen aber bald. Wer aber trotzdem eine leise Vorstellung von der Geschichte haben will, schaut einfach mal in die aktuelle C't. Von da habe ich die Anregung nähmlich.<br /><br />Und hatte ich schonmal gesagt, dass ich froh bin eine höhere Auflösung als 800x600 Pixel zu haben?]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="15-02-05" mail="" www="" notify="">
+            <![CDATA[Wer nämlich mit 'h' schreibt ist...
+Die Idee gefällt mir, nur weiß ich nicht wohin mit dem Zeugs :)]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Skills" title="Fotos!!!" author="Martin" date="15-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So wie versprochen hier die Fotos zu meinem (unserem) neuen Tisch.
+<div align='center'><img src='http://www.grundprinzip.de/images/7.jpg' /></div>
+Mehr davon gibts unter <a href='http://grundprinzip.de/projekte/moebel.html'>http://grundprinzip.de/projekte/moebel.html</a>.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="schmidt" date="15-02-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="on">
+            <![CDATA[Nur mal so ne Frage:
+Hast Du das Loch mit Absicht zu groß ausgeschnitten, oder war das ein Versehen?
+
+Und wie willst du die Seiten verkleiden?
+
+Und wo hast du den An- und Aus-Schalter hungebaut?
+
+Und wo willst Du das ganze überhaupt hinstellen?
+
+Aber ansonsten sieht das nach solider Handwerksarbeit aus. Respekt.
+
+Ich habe natürlich auch gleich überlegt, ob ich das hinkriege/haben will. Aber mir ist doch auf gefallen, dass mir ein reiner mp3-Spieler eigentlich nicht ausreicht. Aber ich überlege noch.
+
+Viel Erfolg und Spaß dabei weiterhin.]]>
+        </commententry>
+
+<commententry author="Martin" date="15-02-05" mail="" www="" notify="">
+            <![CDATA[1) Ja das Loch ist mit Absicht so groß, damit es zentriert in der Tischplatte ist.<br /><br />
+2) Die Seitenverkleidung kommt noch. Hier suche ich noch Inspiration.<br /><br />
+3) Der ist geschickt in einem Loch in einer Seitenlatte versteckt<br /><br />
+4) Ins Wohnzimmer als Couchtisch. Oben kommt noch eine Glasplatte drauf und schick iss. Der WAF ist somit ganz akzeptabel.<br /><br />
+Und wenn der Rechner potenter ist, kann man ja auch mehr mit machen.]]>
+        </commententry><commententry author="schmidt" date="15-02-05" mail="grundprinzip@schmidtwisser.de" www="http://www.schmidtwisser.de" notify="">
+            <![CDATA[Das mit der Glasplatte ist aber gefährlich, wie du weißt. ;-)]]>
+        </commententry><commententry author="Martin" date="15-02-05" mail="" www="" notify="">
+            <![CDATA[a) Hoffnung 
+b) Plexiglas]]>
+        </commententry></comments>
+</entry><entry category="Offline" title="Es ist früh..." author="Martin" date="15-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[...verdammt früh. Um 5:03 machte mich ein schabendes Geräusch wach. Ratsch, Ratsch, Ratsch. Ich machte die Augen auf und ahnte schreckliches: es hat geschneit. Warum das so schlimm ist? Naja, zu besagter Zeit waren zwei junge Herren der Meinung direkt vor unserem Fenster mit Schneeschaufeln auf dem Betonsockel des Hauseingangs Schnee beseitigen zu müssen. Da unser Fenster angeklappt war, kann man sich den Lärm ja vorstellen. Ich war gerade drauf und dran raus zu gehen und den Jungs meine Meinung zu sagen, als eine Stimme aus dem Off (Maria) zu mir vordrang und sagt, dass ich doch lieber wieder ins Bett kommen soll. Das tat ich dann auch. Aber immer noch stellt sich mir die Frage, warum in aller Welt man um 5 Uhr morgens einen Hauseingang vom Schnee befreien muss. Und wenn man das schon macht, dann kann man doch auch einen Besen nehmen, der wesentlich leiser ist als eine häßliche harte und laute Schneeschaufel. Punkt.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Schickes Teil" author="Martin" date="16-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So nun habe ich auch meinen Mobilfunkvertrag verlängert und bin damit
+weitere 24 Monate Sklave von Vodafone. Im Gegensatz zu einem <a href='http://www.schmidtwisser.de/cms/blog/all/2005/02/unerwnscht.html'>Mitstreiter</a>
+hatte ich keine Probleme bei der Auswahl meines neuen Taschenqäukers, was wohl
+daran liegen mag, dass ich im Schnitt mehr mobil telefoniere.
+Das neue ist ein schickes Siemens S65. Was mich von diesem schicken Teil
+überzeugte war sein angenehmes Design und das große Display - nein
+ich bin nicht blind - und die 1.3 Megapixel Kamera. Ob die was taugt wird man
+sehen. Anbei jedenfalls mal ein Foto von Berlin aus meinem
+Bürofenster raus.<br /><br />
+Ach ja und wer sich wundert: Ja das ist neben der Deutschen Welle, sprich
+dem theoretischen Arbeitsplatz von Herrn Klein.<br /><br />
+So und nu geh ich spielen...
+]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Da war doch was..." author="Martin" date="16-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[<img src='http://www.grundprinzip.de/images/berlin.jpg' />]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments>
+
+        <commententry author="SCHAPPY" date="16-02-05" mail="" www="" notify="">
+            <![CDATA[It's bad, isn't it?]]>
+        </commententry>
+
+</comments>
+</entry><entry category="Skills" title="Weitere Fortschritte" author="Martin" date="17-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[So heute habe ich dann noch ein Wenig Farbe (Mahagonibraun) und eine
+Plexiglasplatte gekauft.
+
+<div align="center"><img src='http://www.grundprinzip.de/images/8.jpg' /></div>
+
+Die nächsten Stunde brachte ich damit zu, die
+Tischplatte abzuschleifen. Nachdem ich nun nicht mehr unterscheiden konnte,
+ob es wirklich so neblig ist oder nur meine Brille dreckig, habe ich angefangen
+zu streichen. Und ich muss sagen es sieht richtig gut aus. 
+
+<div align="center"><img src='http://www.grundprinzip.de/images/9.jpg' /></div>
+
+Zum Abschluss dann noch
+die Plexiglasplatte zugeschnitten (1 Stunde) und ich bin glücklich.
+<br /><br />
+
+Was mir nun noch fehlt is eindeutig eine Idee für die Seitenteile. Also wer eine
+hat einfach ganz laut schreien.]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments/>
+</entry><entry category="Abseits" title="Aua" author="Martin" date="17-02-2005">
+    <header>
+        <teaser>
+            <![CDATA[Ich glaub ich hab heute zuviel am Lack geschnüffelt. Auf jeden Fall habe ich nun Kopfschmerzen. Aua...]]>
+        </teaser>
+        <body>
+            <![CDATA[]]>
+        </body>
+    </header>
+    <comments />
+</entry></weblog>

@@ -1,0 +1,41 @@
+was passiert, wenn der Benutzer auf die seite kommt:
+
+- Session wird angelegt
+- Die Strukturdaten der Seite werden ausgelesen und in das Strukturobjekt gefüllt
+- die aktuelle Seite wird an die Ausgabe weitergeleitet
+- die Seite wird verarbeitet und ausgegeben
+
+
+Sessionobjekt:
+
+
+Strukturobjekt:
+- die 
+
+
+
+Ablauf:
+- SessionManagerObjekt wird erstellt
+        - nun werden die daten aus der XML Datei ausgelesen (MiplexDatabase)
+        - die Daten werden durch den ContentObjectManager transormiert und als Sammlung von ContentObjekten
+            zurückgegeben
+        - diese Daten werden in das Session Objekt verarbeitet und zum Index zurückgegeben
+
+
+Session Klasse:
+    Variablen:
+        - SessionStartTime  : Wann wurde die Session angelegt
+        - Structure         : Die Seitenstruktur als Array
+                            structure[name][attributes]
+                              section---^
+
+                            structure[name][cObj][] --> ist optional ob die mitgeladen werden
+                            structure[name][subsec_name] --> dann so weiter
+        - currentPageObj[]
+        
+        
+PageObjekt:
+- Klassenvariablen sind die _unbedingt_ anzugebenden Attribute --> können auch leer sein
+- Klassnvariablen dynamisch in Array gespeichert -> überladen der __get und __set Methoden
+- Array of Content Objekten
+- Pointer auf parent und auf child Nodes
