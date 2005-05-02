@@ -1,10 +1,14 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-    <title>Miplex2 - Administrationsmen� {$title}</title>
+    <title>Miplex2 &middot; Backend</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="generator" content="Miplex2" />
+
     <link rel="stylesheet" type="text/css" media="screen" href="tpl/admin/admin.css" />
 
-    {if $hta==1}
+{if $hta==1}
     <script type="text/javascript">
         _editor_lang = "de";
         _editor_url = "lib/htmlarea";
@@ -48,33 +52,27 @@
             };
 
     </script>
-    {/literal}
-    {/if}
-
+	{/literal}
+{/if}
 </head>
-<body {if $hta == 1}onload="init()"{/if}>
-<table width="100%" class="adminMain">
 
-    <tr>
-        <td class="logo"></td>
-    </tr>
-    <tr>
-        <td class="adminmenu">
-        <div class="tab"><a href='?module=start'>Start</a></div>
-        <div class="tab"><a href='?module=page'>Seite</a></div>
-        <div class="tab"><a href='?module=ext'>Extension</a></div>
-        <div class="tab"><a href='?module=settings'>Einstellungen</a></div>
-        <div class="tab right"><a href='?module=logout'>Logout</a></div>
-        <div class="tab right"><a href='{$config->baseName}'>Zur Seite</a></div>
-        </td>
-    </tr>
-    <tr valign="top">
+<body{if $hta == 1} onload="init()"{/if}>
+	<div id="all">
+		<h1>Miplex2 &middot; Backend</h1>
+		<ul id="menu">
+			<li><a href="?module=start" title="Willkommensseite und allgemeine Hinweise">Start</a></li>
+			<li><a href="?module=page" title="Bearbeiten der einzelnen Seiteninhalte">Seiten</a></li>
+			<li><a href="?module=ext" title="Verwaltung der Erweiterungen, Eingabe von deren Inhalten">Erweiterungen</a></li>
+			<li><a href="?module=settings" title="Allgemeine Einstellungen zum CMS und der Benutzerverwaltung">Einstellungen</a></li>
+			<li class="right"><a href="?module=logout" title="Sie sind fertig mit Ihren &Auml;nderungen" class="red">Logout</a></li>
+			<li class="right"><a href="{$config->baseName}" title="Zum Frontend - Ihrer Internetpr&auml;senz" class="green">Zum Frontend</a></li>
+		</ul>
+		<div id="allcontent">
+        	{include file=$content_tpl}
 
-        {*Content Spalte*}
-        <td class="adminContent">
-        {include file=$content_tpl}
-        </td>
-    </tr>
-</table>
+        	<br style="clear: both;" />
+		</div>
+
+	</div>
 </body>
 </html>
