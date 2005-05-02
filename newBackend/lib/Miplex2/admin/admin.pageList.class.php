@@ -5,8 +5,8 @@ class pageList
     var $collapse = 1;
     var $start = 1;
     var $depth = -1;
-    var $wrapAll = "<ul>|</ul>";
-    var $wrapItem = "<li>|</li>";
+    var $wrapAll = '<ul>|</ul>';
+    var $wrapItem = "<li class=\"|\">|</li>";
     
     var $site = null;
     var $currentPage = null;
@@ -18,7 +18,7 @@ class pageList
     
     function makeLink(&$po)
     {
-        $tmp = "<a href='".$this->config->docroot."admin.php?module=".$this->module."&path=".$po->path."' title='alias:".$po->attributes['alias']."'>";
+        $tmp = "<a href='".$this->config->docroot."admin.php?module=".$this->module."&amp;path=".$po->path."' title='alias:".$po->attributes['alias']."'>";
         $tmp.= $po->attributes['name']."</a>";
         
         return $tmp;
@@ -55,6 +55,36 @@ class pageList
         //Is $depth correct and $start too
         if (($this->depth == -1 || $depth <= $this->depth) && $this->start <= $depth )
         {
+            $class=0;
+            
+            if ($po->attributes['draft'] == "on")
+                $class+=4;
+                
+         /* Berechne Zeitstempel um zu ermitteln, ob die Seite im Frontend angezeigt wird */
+            $visibleFromArray = explode(".", $po->attributes['visibleFrom']);
+            $visibleFromTimeStamp = mktime (0,0,0,$visibleFromArray[1], $visibleFromArray[0], $visibleFromArray[2]);
+            if ($visibleFromTimeStamp == -1)
+                $visibleFromTimeStamp = time() - 2000;
+
+            $visibleTillArray = explode(".", $po->attributes['visibleTill']);
+            $visibleTillTimeStamp = mktime (0,0,0,$visibleTillArray[1], $visibleTillArray[0], $visibleTillArray[2]);
+            if ($visibleTillTimeStamp == -1)
+                $visibleTillTimeStamp = time() + 2000;
+                
+           
+            if ($visibleFromTimeStamp > time() && $class != 4)
+                $class+=4;
+            
+            if ($visibleTillTimeStamp < time() && $class != 4)
+                $class+=4;
+            
+            
+                
+            if (strlen($po->attributes['shortcut']) > 1)
+                $class+=2;
+                
+            if ($po->attributes['inMenu'] != "on" )
+                $class+=1;
             
             if ($po->hasChildPage == 1)
             {
@@ -70,22 +100,22 @@ class pageList
                    {
                        //Increase depth
                         $d2 = $depth + 1;
-                        $output = $item[0].$this->makeLink($po)."\n".$wraps[0]."\n";
+                        $output = $item[0]."type".$class.$item[1].$this->makeLink($po)."\n".$wraps[0]."\n";
                         //Get Subsections
                         foreach ($po->subs as $po2) {
-                        	
+                            
                             $output.=$this->getEntries($po2,$d2);
                             
                         }
                         
-                        $output.=$wraps[1]."\n".$item[1];
+                        $output.=$wraps[1]."\n".$item[2];
                         //Return formated output
                         return $output;
                        
                    } else {
                        
                        //Item is not in list return only name
-                       return $item[0].$this->makeLink($po).$item[1];   
+                       return $item[0]."type".$class.$item[1].$this->makeLink($po).$item[2];
                    }
                    
                     
@@ -94,21 +124,21 @@ class pageList
                     
                     //Increase depth
                     $d2 = $depth + 1;
-                    $output = $item[0].$this->makeLink($po).$wraps[0];
+                    $output = $item[0]."type".$class.$item[1].$this->makeLink($po).$wraps[0];
                     //Get Subsections
                     foreach ($po->subs as $po2) {
-                    	
+                        
                         $output.=$this->getEntries($po2,$d2);
                         
                     }
                     
-                    $output.=$wraps[1].$item[1];
+                    $output.=$wraps[1].$item[2];
                     return $output;
                 }
                 
             } else {
              
-                return $item[0].$this->makeLink($po).$item[1]."\n";   
+                return $item[0]."type".$class.$item[1].$this->makeLink($po).$item[2]."\n";
                 
             }
           
@@ -129,7 +159,7 @@ class pageList
                         $output = "";
                         $d2 = $depth + 1;
                         foreach ($po->subs as $po2) {
-                        	$output.=$this->getEntries($po2, $d2);
+                            $output.=$this->getEntries($po2, $d2);
                         }
                         
                         return $output;
@@ -142,7 +172,7 @@ class pageList
                     $output = "";
                     $d2 = $depth + 1;
                     foreach ($po->subs as $po2) {
-                    	$output.=$this->getEntries($po2, $d2);
+                        $output.=$this->getEntries($po2, $d2);
                     }
                     
                     return $output;
@@ -165,15 +195,15 @@ class pageList
         $this->desiredPath = $this->currentPage->path;
         
         $wraps = explode("|", $this->wrapAll);
-        $output = $wraps[0]."\n";
+        $output = "<ul id=\"pagelist\">\n";
         
         foreach ($this->site as $po) {
-        	
+            
             $output.=$this->getEntries($po, 1);
             
         }
         
-        $output.=$wraps[1]."\n";
+        $output.= "</ul>\n";
         return $output;
         
     }

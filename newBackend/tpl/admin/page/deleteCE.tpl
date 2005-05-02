@@ -1,6 +1,6 @@
 Wollen Sie dieses Inhaltselement wirklich löschen?
 
-<form action="?module=page&part=ce&action=save&path={$path}" method="POST">
+<form action="?module=page&amp;part=ce&amp;action=save&amp;path={$path}" method="POST">
     <input type="submit" name="saveCE" value="Ja" />
     <input type="submit" name="cancelCE" value="Nein" />
     <input type="hidden" name="type" value="delete" />

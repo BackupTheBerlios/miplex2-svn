@@ -241,7 +241,7 @@ class Session
     {
         $matchedPO = -1;
         foreach ($pageObjects as $key => $po) {
-        	
+            
             if ($po->attributes['alias']== $alias)
                 $matchedPO = $key;
         }
@@ -256,7 +256,7 @@ class Session
         $this->mdb->reset();
         $this->site = $this->mdb->getSiteStructure();
         
-        $this->setConfig($this->config->configDir."config.ser");
+        $this->setConfig("config/config.ser");
         
         return $bool;
     }
