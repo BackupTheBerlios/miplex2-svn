@@ -311,32 +311,6 @@ style="vertical-align: top;">
 </section>
 <section>
 <attributes>
-<name>404 Seite nicht gefunden</name>
-<alias>404</alias>
-<desc/>
-<visibleFrom/>
-<visibleTill/>
-<shortcut/>
-</attributes>
-<content>
-<attributes>
-<name>Die gewünschte Seite wurde nicht gefunden</name>
-<alias/>
-<visibleFrom/>
-<visibleTill/>
-<position>normal</position>
-<ceType/>
-<lastChanged>01.05.05.</lastChanged>
-</attributes>
-<data>
-<![CDATA[
-<p>Die von Ihnen angeforderte Seite existiert nicht. Bitte überprüfen Sie
-ihre Eingabe.</p>]]>
-</data>
-</content>
-</section>
-<section>
-<attributes>
 <name>Blog</name>
 <alias>blog</alias>
 <desc/>
@@ -358,6 +332,32 @@ ihre Eingabe.</p>]]>
 </attributes>
 <data>
 <![CDATA[###Ext:blog(asd=a)### ]]>
+</data>
+</content>
+</section>
+<section>
+<attributes>
+<name>404 Seite nicht gefunden</name>
+<alias>404</alias>
+<desc/>
+<visibleFrom/>
+<visibleTill/>
+<shortcut/>
+</attributes>
+<content>
+<attributes>
+<name>Die gewünschte Seite wurde nicht gefunden</name>
+<alias/>
+<visibleFrom/>
+<visibleTill/>
+<position>normal</position>
+<ceType/>
+<lastChanged>01.05.05.</lastChanged>
+</attributes>
+<data>
+<![CDATA[
+<p>Die von Ihnen angeforderte Seite existiert nicht. Bitte überprüfen Sie
+ihre Eingabe.</p>]]>
 </data>
 </content>
 </section>

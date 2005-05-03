@@ -1,12 +1,15 @@
+{assign var=i18nsection value=$i18n->getSection("login")}
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset='ISO-8859-1'" />
-	<title>Miplex2 &middot; Backend-Login</title>
+	<title>{$i18n->get("login.title")}</title>
 
     <meta name="robots" content="noindex, follow" />
     <meta name="generator" content="Miplex2" />
     <style type="text/css" media="all">
+{literal}
     <!--
 		body{
 			font-family: Tahoma, Verdana, Arial, sans-serif;
@@ -45,27 +48,26 @@
 		}
 
 		input[type="text"], input[type="password"]{
-			background: #006699;
-			color: white;
-			font-weight: bold;
+			border: none;
+			border-bottom: 1px dotted #006699;
+			color: #006699;
+			padding-left: 1em;
 		}
 
 		input[type="submit"]{
 			margin-top: 10px;
-			background: #006699;
-			color: white;
 			font-weight: bold;
-			border-top: 2px solid #006699;
-			border-left: 2px solid #006699;
-			border-right: 2px solid black;
-			border-bottom: 2px solid black;
+			width: 120px;
+			height: 30px;
+			padding-bottom: 2px;
+			background-image: url('tpl/admin/grafiken/submit120.gif');
+			background-color: white;
+			border: none;
 		}
 
 		input[type="submit"]:hover{
-			border-top: 2px solid black;
-			border-left: 2px solid black;
-			border-right: 2px solid #006699;
-			border-bottom: 2px solid #006699;
+			padding-bottom: 0px;
+			background-position: 0px 30px;
 		}
 
 		legend{
@@ -92,32 +94,40 @@
 			text-decoration: underline;
 		}
 
+		#error{
+			font-size: 0.8em;
+			color: red;
+			font-weight: bold;
+			text-align: center;
+		}
+
 		#hinweis{
 			font-size: 0.8em;
 			color: gray;
 		}
     -->
+{/literal}
     </style>
 </head>
 
 <body>
-	<h1>Sie m&uuml;ssen sich zun&auml;chst einloggen</h1>
+	<h1>{$i18n->get("login.welcome")}</h1>
 	<form method="post" action="admin.php">
 		<fieldset>
-			<legend>Miplex2 &middot; Backend-Login</legend>
+			<legend>{$i18n->get("login.title")}</legend>
 			<p>
-				<label for="username">Benutzername:</label>
+				<label for="username">{$i18n->get("login.username")}:</label>
 				<input type="text" name="username" id="username" value="" />
 			</p>
 			<p>
-				<label for="password">Passwort:</label>
+				<label for="password">{$i18n->get("login.password")}:</label>
 				<input type="password" name="password" id="password" value="" />
 			</p>
-			<input type="submit" name="send" id="send" value="Einloggen" />
+			<input type="submit" name="send" id="send" value="{$i18n->get("login.login")}" />
+			{if $error eq true}<p id="error">{$i18n->get("login.error")}</p>{/if}
 		</fieldset>
 	</form>
-	<p id="hinweis">Bitte achten Sie darauf, dass sowohl beim Benutzername als auch beim Passwort
-	   die Groß- bzw. Kleinschreibung zu beachten ist.</p>
+	<p id="hinweis">{$i18n->get("login.attention")}</p>
 	<p>
 		<a href="http://www.miplex.de">www.miplex.de</a>
 	</p>

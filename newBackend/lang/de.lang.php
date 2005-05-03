@@ -1,3 +1,31 @@
+#Language Variables for Login Dialog
+login.welcome=Sie m&uuml;ssen sich zun&auml;chst einloggen
+login.username=Benutzername
+login.password=Passwort
+login.title=Miplex2 &middot; Backend-Login
+login.attention=Bitte achten Sie darauf, dass sowohl beim Benutzername als auch beim Passwort die Groﬂ- bzw. Kleinschreibung zu beachten ist.
+login.error=Fehlerhafter Login. Bitte versuchen Sie es erneut.
+login.login=Einloggen
+
+#Language Variables for Adminmenu
+admin.title=Miplex2 &middot; Backend
+admin.start=Start
+admin.startTitle=Willkommensseite und allgemeine Hinweise
+admin.page=Seiten
+admin.pageTitle=Bearbeiten der einzelnen Seiteninhalte
+admin.extension=Erweiterungen
+admin.extensionTitle=Verwaltung der Erweiterungen, Eingabe von deren Inhalten
+admin.settings=Einstellungen
+admin.settingsTitle=Allgemeine Einstellungen zum CMS und der Benutzerverwaltung
+admin.logout=Logout
+admin.logoutTitle=Sie sind fertig mit Ihren &Auml;nderungen
+admin.frontend=Zum Frontend
+admin.frontendTitle=Zum Frontend &ndash; Ihrer Internetpr&auml;senz
+
+#Language Variables for the Welcome Site in Adminmenu
+start.welcome=Herzlich Willkommen
+
+
 #Language Variables for Section in Adminmenu
 section.name=Name
 section.alias=Alias

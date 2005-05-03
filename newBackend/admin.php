@@ -22,7 +22,9 @@
             else
             {
                 // Login-Formular ausgeben
-                include_once ('tpl/admin/login.html');
+                $session->smarty->assign("error", isset($_POST['username']));
+                $session->smarty->assign("i18n", $session->i18n);
+                $session->smarty->display('admin/login.tpl');
                 die ();
             }
         }
@@ -70,8 +72,8 @@
     if ($clear_cache)
         $session->smarty->clear_all_cache();
         
+    $session->smarty->assign("i18n", $session->i18n);
     $session->smarty->assign("config", $session->config);   
     $session->smarty->display("admin.tpl");
-    
-    
+       
 ?>
