@@ -39,8 +39,17 @@
 		{/if}
 
 		<div class="left">
+			<fieldset>
+				<legend>{$i18n->get('ce.general')}</legend>
+				<strong>{$i18n->get('ce.alias')}:</strong> {$ce.attributes.alias}<br />
+				<strong>{$i18n->get('ce.position')}:</strong> {$ce.attributes.position}<br />
+				<strong>{$i18n->get('ce.lastChanged')}:</strong> {$ce.attributes.lastChanged}<br />
+			</fieldset>
+		</div>
+
+		<div class="right">
 			<fieldset class="{$sichtbar}">
-				<legend>Sichtbarkeit</legend>
+				<legend>{$i18n->get('ce.visibility')}</legend>
 				<strong>{$i18n->get('ce.visibleFrom')}:</strong>
 					{if $ce.attributes.visibleFrom eq ""}
 						<em>{$i18n->get('ce.visibleFromUnknown')}</em>
@@ -66,15 +75,6 @@
 						{/if}
 					{/if}<br />
 				<strong>{$i18n->get('ce.draft')}:</strong> <img src="tpl/admin/grafiken/trans.gif" alt="{$ce.attributes.draft}" class="checkbox {$ce.attributes.draft}" /><br />
-			</fieldset>
-		</div>
-
-		<div class="right">
-			<fieldset>
-				<legend>Diverses</legend>
-				<strong>{$i18n->get('ce.alias')}:</strong> {$ce.attributes.alias}<br />
-				<strong>{$i18n->get('ce.position')}:</strong> {$ce.attributes.position}<br />
-				<strong>{$i18n->get('ce.lastChanged')}:</strong> {$ce.attributes.lastChanged}<br />
 			</fieldset>
 		</div>
 		<br style="clear:both;" />

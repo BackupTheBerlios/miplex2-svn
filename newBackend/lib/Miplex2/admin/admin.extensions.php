@@ -7,11 +7,11 @@ $extManager = new ExtensionManager($session->config);
 //get all Extension
 $exts = $extManager->getAllAvailableExtensions();
 
-$menu = "<ul class='extension'>";
+$menu = "<ul id=\"extension\">";
 
 foreach ($exts as $ext) {
-	
-    $menu.="<li><a href='?module=ext&id=".$ext['basename']."' title='".$ext['basename']."' class='extLink'>".$ext['extName']."</a></li>";
+    
+    $menu.="<li><a href='?module=ext&amp;id=".$ext['basename']."' title='".$ext['basename']."' class='extLink'>".$ext['extName']."</a></li>";
     
 }
 
@@ -24,11 +24,20 @@ if (!empty($_GET['id']))
 {
     $obj = &$extManager->loadExtension($_GET['id']);
     $obj->baseSmarty = &$session->smarty;
-    $session->smarty->assign("content", $obj->getBackend());
+
+    $content = $obj->getBackend();
+    
+    if (!$content)
+        $session->smarty->assign("mode", "NoBackend");
+    else
+    {
+        $session->smarty->assign("content", $content);
+        $session->smarty->assign("mode", "Backend");
+    }
     
 } else 
 {
-    $session->smarty->assign("content", "Please Select");
+    $session->smarty->assign("mode", "NoChoice");
 }
 
 //

@@ -1,15 +1,12 @@
-<h1>{$i18n->get("settings")}</h1>
-<table width="100%" class="settingsMain">
+{*Baumansicht der Erweiterungen*}
+	<ul id="settings">
+		<li><a href="?module=settings&amp;part=settings">{$i18n->get("settings.basesettings.name")}</a></li>
+		<li><a href="?module=settings&amp;part=user">{$i18n->get("settings.user.name")}</a></li>
+	</ul>
 
-    <tr>
-        <td width="200px">
-            <ul>
-                <li><a href="?module=settings&part=settings">{$i18n->get("settings.basesettings.name")}</a></li>
-                <li><a href="?module=settings&part=user">{$i18n->get("settings.user.name")}</a></li>
-            </ul>
-        </td>
-        <td>
+{*Contentbereich*}
+	<div id="content">
         {include file=$content}
-        </td>
-    </tr>
-</table>
+	</div>
+
+<br style="clear: both;"/>

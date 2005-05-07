@@ -98,7 +98,7 @@ h1{
     border-bottom: 1px dotted #006699;
 }
 
-#pagelist{
+#pagelist, #extension, #settings{
     overflow: hidden;
     width: 15%;
     float: left;
@@ -109,7 +109,7 @@ h1{
     border: 1px dotted #006699;
 }
 
-#pagelist ul{
+#pagelist ul, #extension ul, #settings ul{
     padding: 0px;
     margin: 0px;
 }
@@ -118,38 +118,46 @@ h1{
     margin-left: 1.2em;
 }
 
+#extension li{
+    list-style-image: url('grafiken/erweiterung.gif');
+}
+
+#settings li{
+    list-style-image: url('grafiken/settings.gif');
+}
+
+
 #pagelist .type0{
-    list-style-image:url('grafiken/pagelist0.gif');
+    list-style-image: url('grafiken/pagelist0.gif');
 }
 #pagelist .type1{
-    list-style-image:url('grafiken/pagelist1.gif');
+    list-style-image: url('grafiken/pagelist1.gif');
 }
 #pagelist .type2{
-    list-style-image:url('grafiken/pagelist2.gif');
+    list-style-image: url('grafiken/pagelist2.gif');
 }
 #pagelist .type3{
-    list-style-image:url('grafiken/pagelist3.gif');
+    list-style-image: url('grafiken/pagelist3.gif');
 }
 #pagelist .type4{
-    list-style-image:url('grafiken/pagelist4.gif');
+    list-style-image: url('grafiken/pagelist4.gif');
 }
 #pagelist .type5{
-    list-style-image:url('grafiken/pagelist5.gif');
+    list-style-image: url('grafiken/pagelist5.gif');
 }
 #pagelist .type6{
-    list-style-image:url('grafiken/pagelist6.gif');
+    list-style-image: url('grafiken/pagelist6.gif');
 }
 #pagelist .type7{
-    list-style-image:url('grafiken/pagelist7.gif');
+    list-style-image: url('grafiken/pagelist7.gif');
 }
 
-
-#pagelist a{
+#pagelist a, #extension a, #settings a{
     color: #006699;
     text-decoration: none;
 }
 
-#pagelist a:hover{
+#pagelist a:hover, #extension a:hover, #settings a:hover{
     color: black;
     text-decoration: underline;
 }
@@ -291,16 +299,20 @@ h1{
     color: gray;
 }
 
-.ceSingleAttr .left strong{
-    display: block;
-    float: left;
-    width: 5em;
-}
-
-.ceSingleAttr .right strong{
+.ceSingleAttr .left strong, .ceSingleAttr .left label{
     display: block;
     float: left;
     width: 10em;
+}
+
+.ceSingleAttr .exception label{
+    width: 5em;
+}
+
+.ceSingleAttr .right strong, .ceSingleAttr .right label{
+    display: block;
+    float: left;
+    width: 5em;
 }
 
 #sectionAttr .checkbox, .ceSingleAttr .checkbox{
@@ -333,18 +345,39 @@ h1{
     color: #006699;
 }
 
-#sectionAttr strong{
+#sectionAttr strong, #sectionAttr label, .general label{
     display: block;
     float: left
 }
 
-#sectionAttr .right strong{
+.general label{
+    width: 7em;
+}
+
+input.text{
+    border: none;
+    border-bottom: 1px dotted #006699;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+textarea{
+    border: 1px dotted #006699;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 2px;
+    padding-bottom: 2px;    
+}
+
+#sectionAttr .right strong, #sectionAttr .right label{
     width: 12em;
 }
-#sectionAttr .middle strong{
+#sectionAttr .middle strong, #sectionAttr .middle label{
     width: 6em;
 }
-#sectionAttr .left strong{
+#sectionAttr .left strong, #sectionAttr .left label{
     width: 6em;
 }
 
@@ -352,6 +385,51 @@ h1{
     clear: both;
 }
 
+.hinweis{
+    color: gray;
+    font-size: 0.9em;
+}
+
 #content h4{
     border-bottom: 1px dotted #006699;
+}
+
+p#ok, p#cancel{
+    width: 49%;
+    float: right;
+    padding-top: 20px;
+    text-align: left;
+}
+
+p#ok{
+    clear: both;
+    float: left;
+    text-align: right;
+}
+
+#ok input, #cancel input{
+    width: 120px;
+    height: 30px;
+    border: none;
+    padding-bottom: 3px;
+    font-weight: bold;
+}
+
+#ok input:hover, #cancel input:hover{
+    background-position: 0px 30px;
+    padding-bottom: 0px;
+}
+
+#ok .ok{
+    background: url("grafiken/submit120.gif") green;
+    color: white;
+}
+
+#cancel .cancel{
+    background: url("grafiken/abort120.gif") red;
+    color: white;
+}
+
+label.required{
+    font-weight: bold;
 }

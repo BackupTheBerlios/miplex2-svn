@@ -2,7 +2,7 @@
 
 /**
 * Diese Klasse dient als abstrakte Oberklasse dazu, eine 
-* art Interface f�r die Entwicklung bereitzustellen. Innerhalb
+* art Interface für die Entwicklung bereitzustellen. Innerhalb
 * der jeweiligen Erweiterung wird mit dieser Klasse gearbeitet.
 *
 */
@@ -40,7 +40,7 @@ class Extension
     }
     
     /**
-    * Platzhalter f�r die Hauptmethode, die vom Frontend aufgerugen wird
+    * Platzhalter f?r die Hauptmethode, die vom Frontend aufgerugen wird
     * @return String
     *
     *
@@ -51,20 +51,20 @@ class Extension
     }
     
     /**
-    * Platzhalter f�r die Methode, die im Backend aufgerufen wird
+    * Platzhalter f?r die Methode, die im Backend aufgerufen wird
     * um die Erweiterung im Backend zu konfigurieren.
     *
     */
     function getBackend()
     {
-        return "Got no Backend Module";
+        return false;
     }
     
     
     
     /**
-    * Liefert die Url zur�ck, die gerade aktuell ist. Dies ist nur f�r
-    * das Backend interessant, falls sich die Konfiguration �ber mehrere
+    * Liefert die Url zur?ck, die gerade aktuell ist. Dies ist nur f?r
+    * das Backend interessant, falls sich die Konfiguration ?ber mehrere
     * Ebenen erstreckt.
     *
     */
@@ -79,7 +79,7 @@ class Extension
     
     /**
     * Diese Funktion, soll es dem Programmierer erleichtern die Konfigurationsdatei der
-    * Erweiterung zu speichern. �bergeben wird dabei ein Array der Konfiguration.
+    * Erweiterung zu speichern. ?bergeben wird dabei ein Array der Konfiguration.
     * Dies wird dann als XML Datei abgespeichert und auf FP geschrieben.
     * @param Array $config Die Konfiguration der Erweiterung
     *
@@ -101,7 +101,7 @@ class Extension
     
     /**
     * Diese Methode bereitet das Konfigurationsarray auf das Schreiben als
-    * XML String vor, indem es das Array ausliest und als XML String zur�ckgibt.
+    * XML String vor, indem es das Array ausliest und als XML String zur?ckgibt.
     * @param Array $config Die Konfiguraion der Erweiterung
     * @return String XML String der Erweiterung
     */

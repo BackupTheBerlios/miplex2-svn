@@ -26,17 +26,15 @@
             function init()
             {
                 var config = new HTMLArea.Config();
-                config.width="585px;";
+                config.width="580px;";
                 config.statusBar = false;
                 config.toolbar = [
-
-                ["formatblock", "space", "separator",
-                	"bold", "justifyleft", "justifycenter", "justifyright", "separator",
-                	"insertorderedlist", "insertunorderedlist", "outdent", "indent", "separator",
-                	"createlink", "miplexlink", "insertimage", "insertfile", "inserttable", "separator",
-                	"undo", "redo", "separator",
-                	"htmlmode", "popupeditor"],
-            	["strikethrough","quote"]
+					["formatblock", "space", "separator",
+						"bold", "justifyleft", "justifycenter", "justifyright", "separator",
+						"insertorderedlist", "insertunorderedlist", "outdent", "indent", "separator",
+						"createlink", "miplexlink", "insertimage", "insertfile", "inserttable", "separator",
+						"undo", "redo", "separator",
+						"htmlmode", "popupeditor"]
                 ];
 
                 var editor = new HTMLArea("htmlarea", config);

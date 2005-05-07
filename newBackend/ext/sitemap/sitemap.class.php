@@ -68,13 +68,7 @@ class sitemap extends Extension
         $out = $this->smarty->fetch('../ext/sitemap/sitemap.tpl');
         
         return $out;
-    }
-
-    function getBackend()
-    {
-        return "Keine Einstellungen möglich.";
-    }
-    
+    }    
 }
 
 ?>

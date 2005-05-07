@@ -37,6 +37,7 @@ section.allowExtension=Erweiterungen erlauben
 section.shortcut=Shortcut
 section.draft=Entwurf
 section.desc=Beschreibung
+section.general=Allgemeines
 section.visibility=Sichtbarkeit
 section.menuProperties=Men&uuml;-Eigenschaften
 section.dynamics=Dynamik
@@ -52,6 +53,18 @@ section.visibleFromUnknown=Urknall
 section.visibleTillUnknown=Der J&uuml;ngste Tag
 section.shortcutUnknown=nicht definiert
 section.invisble=Diese Seite wird nicht im Frontend angezeigt.
+
+section.oneStar=Die mit * markierten Felder sind Pflichtangaben. Sie m&uuml;ssen in jedem Fall ausgef&uuml;llt werden.
+section.twoStars=Felder, die mit ** markiert wurden enthalten Datumsangeben im Format "TT.MM.JJJJ".
+section.save=Speichern
+section.abort=Abbrechen
+section.newPageAfter=Hinzuf&uuml;gen einer neuen Seite nach
+section.editPage=Bearbeiten der Seite
+section.deletePage=Wollen Sie diese Seite wirklich l&ouml;schen?
+section.deletePageHinweis=Das L&ouml;schen dieser Seite kann nicht r&uuml;ckg&auml;ngig gemacht werden.<br />Es wird nicht nur die Seite sondern auch alle enthaltenen Inhaltelemente gel&ouml;scht.<br /><br /><strong>Sind Sie sicher, dass Sie diese Seite l&ouml;schen m&ouml;chten?</strong>
+section.yes=Ja
+section.no=Nein
+
 
 #Language Variables for CE in Adminmenu
 #Allgemeine
@@ -74,7 +87,21 @@ ce.newTitle=Neues Inhaltselement f&uuml;r diese Seite anlegen
     ce.draft=Entwurf
     ce.position=Position
     ce.alias=Alias
-    ce.lastChanged=Zuletzt ge‰ndert
+    ce.lastChanged=Zuletzt ge&auml;ndert
+    ce.visibility=Sichtbarkeit
+    ce.general=Allgemeines
+#Delete
+ce.deleteCe=Wollen Sie dieses Inhaltselement wirklich l&ouml;schen?
+ce.yes=Ja
+ce.no=Nein
+ce.ok=Speichern
+ce.cancel=Abbrechen
+ce.deleteHinweis=Das L&ouml;schen dieses Inhaltselements kann nicht r&uuml;ckg&auml;ngig gemacht werden.<br />Wenn sie das Element nur f&uuml;r Besuchern verbergen m&ouml;chten, dann markieren Sie es einfach als "Entwurf".<br /><br /><strong>Sind Sie sicher, dass Sie dieses Inhaltselement l&ouml;schen m&ouml;chten?</strong>
+ce.oneStar=Die mit * markierten Felder sind Pflichtangaben. Sie m&uuml;ssen in jedem Fall ausgef&uuml;llt werden.
+ce.twoStars=Felder, die mit ** markiert wurden enthalten Datumsangeben im Format "TT.MM.JJJJ".
+ce.edit=Dieses Inhaltselement bearbeiten
+ce.new=Neues Inhaltselement anlegen
+
     
 
 #Settings:
@@ -118,7 +145,7 @@ settings.user.save=Speichern
 settings.user.cancel=Abbrechen
 settings.user.email=Email
 settings.group.add=Benutzergruppe anlegen
-settings.group.delete=Benutzergruppe l√∂schen
+settings.group.delete=Benutzergruppe l&ouml;schen
 settings.group.list=Benutzergruppen anzeigen
 settings.group.name=Gruppenname
 settings.right.rights=Rechte
@@ -135,4 +162,8 @@ settings=Miplex2 Einstellungen
 
 
 #Erweiterungen
-extensions.name = Verwaltung der Erweiterungen
+extensions.name=Verwaltung der Erweiterungen
+extensions.noBackend=F&uuml;r diese Erweiterung wurde kein Backend definiert.
+extensions.noBackendText=Es sind keine allgemeinen Einstellungen m&ouml;glich. Entweder werden nur lokale Einstellungen beim Einbinden der Erweiterung &uuml;bergeben, oder die Erweiterung ist nicht konfigurierbar.
+extensions.noChoice=Verwaltung der Erweiterungen
+extensions.noChoiceText=Bitte w&auml;hlen Sie eine der installierten Erweiterungen aus der Liste aus, um die Einstellungen zu bearbeiten oder Inhalte zu pflegen.
