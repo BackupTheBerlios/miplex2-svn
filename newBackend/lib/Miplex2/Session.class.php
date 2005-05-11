@@ -114,7 +114,7 @@ class Session
             $this->smarty->compile_dir = "tpl/template_c";
             $this->smarty->cache_dir = "tpl/cache";
             $this->smarty->config_dir = "tpl/config";
-            //$this->smarty->debugging = true;
+//            $this->smarty->debugging = true;
             $this->smarty->plugins_dir = array("lib/smarty/libs/plugins", "lib/Miplex2/smartyPlugins");
         }
     }

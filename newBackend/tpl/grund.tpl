@@ -2,7 +2,7 @@
 <html>
 
     <head>
-       <link rel="stylesheet" href="/miplex2/tpl/default.css" type="text/css" />
+       <link rel="stylesheet" href="{$config->docroot}tpl/default.css" type="text/css" />
        <title>Miplex 2 - {$pageObject->getTitle()}</title>
        {$header}
     </head>
@@ -22,13 +22,13 @@
         <div class="right-part">
             <div class="top-box">
                 <div class="news-box">
-                
+
                 </div>
                 <div class="navibox">
                     <div class="navielem">
                         <form action="#" method="post">
                             <input type="text" class="text" name="search" size="12" />
-                            <input type="hidden" name="function" value="search" /> 
+                            <input type="hidden" name="function" value="search" />
                             <input type="submit" class="submit" value="suche" />
                         </form><br /></div>
                     <div class="navielem"></div>
@@ -36,10 +36,10 @@
                 </div>
             </div>
             <div class="adminbox">
-                
+
             </div>
             <div class="path">
-                
+
             </div>
             <div class="white-box">
                 <div class="strecker-content"><br /></div>

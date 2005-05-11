@@ -58,10 +58,10 @@
 	<div id="all">
 		<h1>{$i18n->get("admin.title")}</h1>
 		<ul id="menu">
-			<li><a href="?module=start" title="{$i18n->get("admin.startTitle")}">{$i18n->get("admin.start")}</a></li>
-			<li><a href="?module=page" title="{$i18n->get("admin.pageTitle")}">{$i18n->get("admin.page")}</a></li>
-			<li><a href="?module=ext" title="{$i18n->get("admin.extensionTitle")}">{$i18n->get("admin.extension")}</a></li>
-			<li><a href="?module=settings" title="{$i18n->get("admin.settingsTitle")}">{$i18n->get("admin.settings")}</a></li>
+			<li><a href="?module=start" title="{$i18n->get("admin.startTitle")}" {$startIsActive}>{$i18n->get("admin.start")}</a></li>
+			<li><a href="?module=page" title="{$i18n->get("admin.pageTitle")}" {$pageIsActive}>{$i18n->get("admin.page")}</a></li>
+			<li><a href="?module=ext" title="{$i18n->get("admin.extensionTitle")}" {$extIsActive}>{$i18n->get("admin.extension")}</a></li>
+			<li><a href="?module=settings" title="{$i18n->get("admin.settingsTitle")}" {$settingsIsActive}>{$i18n->get("admin.settings")}</a></li>
 			<li class="right"><a href="?module=logout" title="{$i18n->get("admin.logoutTitle")}" class="red">{$i18n->get("admin.logout")}</a></li>
 			<li class="right"><a href="{$config->baseName}" title="{$i18n->get("admin.frontendTitle")}" class="green">{$i18n->get("admin.frontend")}</a></li>
 		</ul>

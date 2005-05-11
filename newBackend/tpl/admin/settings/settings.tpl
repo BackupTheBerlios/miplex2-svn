@@ -1,57 +1,85 @@
-{assign var=i18nsettings value=$i18n->getSection("settings.basesettings")}
-<h2>{$i18nsettings->get('name')}</h2>
+{assign var=i18ns value=$i18n->getSection("settings.basesettings")}
+{assign var="path" value="admin.php?module=settings&amp;part=settings"}
 
-<form action="" method="POST">
+<h2>{$i18ns->get('name')}</h2>
 
-    <h3>{$i18nsettings->get('system')}</h3>
-    <table class="settings">
-    <tr><td class="caption">{$i18nsettings->get('docroot')}: </td><td><input type="text" name="data[docroot]" value="{$config->docroot}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('server')}: </td><td> <input type="text" name="data[server]" value="{$config->server}" /></td></tr>
-    </table>
-    
-    <h3>{$i18nsettings->get('management')}</h3>
-    <table class="settings">
-    <tr><td class="caption">{$i18nsettings->get('contentfilename')}: </td><td> <input type="text" name="data[contentFileName]" value="{$config->contentFileName}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('basename')}: </td><td> <input type="text" name="data[baseName]" value="{$config->baseName}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('usehtmlarea')}: </td><td> <input type="text" name="data[useHtmlArea]" value="{$config->useHtmlArea}" /></td></tr>
-    </table>
-    
-    <h3>{$i18nsettings->get('thememgmt')}</h3>
-    
-    <table class="settings">
-    <tr><td class="caption">{$i18nsettings->get('theme')}: </td><td> <input type="text" name="data[theme]" value="{$config->theme}" /></td></tr>
-    </table>
-    
-    <h3>{$i18nsettings->get('meta')}</h3>
-    
-    <table class="settings">
-    <tr><td class="caption">{$i18nsettings->get('keywords')}: </td><td> <input type="text" name="data[keywords]" value="{$config->keywords}" size="40" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('description')}: </td><td> <input type="text" name="data[description]" value="{$config->description}" size="40" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('title')}: </td><td> <input type="text" name="data[title]" value="{$config->title}" size="40" /></td></tr>
-    </table>
-    
-    <h3>{$i18nsettings->get('content')}</h3>
-    
-    <table class="settings">
-    <tr><td class="caption">{$i18nsettings->get('position')}: </td><td> <input type="text" name="data[position]" value="{$config->position}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('defaultposition')}: </td><td> <input type="text" name="data[defaultPosition]" value="{$config->defaultPosition}" /></td></tr>
-    </table>
-    
-    <h3>Erweitere Einstellungen</h3>
-    <table class="settings">
-    <tr><td class="caption">{$i18nsettings->get('serverroot')}: </td><td> <input type="text" name="data[fileSystemRoot]" value="{$config->fileSystemRoot}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('extdir')}: </td><td> <input type="text" name="data[extDir]" value="{$config->extDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('libdir')}: </td><td> <input type="text" name="data[libDir]" value="{$config->libDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('htmlareadir')}:</td><td> <input type="text" name="data[htmlAreaDir]" value="{$config->htmlAreaDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('smartydir')}:</td><td>  <input type="text" name="data[smartyDir]" value="{$config->smartyDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('xpathdir')}: </td><td> <input type="text" name="data[xpathDir]" value="{$config->xpathDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('miplexdir')}: </td><td> <input type="text" name="data[miplexDir]" value="{$config->miplexDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('tpldir')}: </td><td> <input type="text" name="data[tplDir]" value="{$config->tplDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('imagefolder')}: </td><td> <input type="text" name="data[imageFolder]" value="{$config->imageFolder}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('configdir')}: </td><td> <input type="text" name="data[configDir]" value="{$config->configDir}" /></td></tr>
-    <tr><td class="caption">{$i18nsettings->get('contentdir')}: </td><td> <input type="text" name="data[contentDir]" value="{$config->contentDir}" /></td></tr>
-    </table>
-    
-    <br />
-    <input type="submit" name="save" value="Abspeichern" />
+<form action="{$path}" method="post" id="settingsForm">
+
+	<div class="left">
+		<fieldset>
+			<legend>{$i18ns->get("contentGroup")}</legend>
+			<p>
+				<label for="data_contentFileName">{$i18ns->get('contentfilename')}*<sup>1</sup>:</label>
+					<input class="text" type="text" name="data[contentFileName]" id="data_contentFileName" value="{$config->contentFileName}" />
+			</p>
+
+			<p>
+				<label for="data_useHtmlArea">{$i18ns->get('usehtmlarea')}:</label>
+					<input type="checkbox" name="data[useHtmlArea]" id="data_useHtmlArea" {if $config->useHtmlArea}checked="checked"{/if} />
+			</p>
+		</fieldset>
+	</div>
+
+	<div class="right">
+		<fieldset>
+			<legend>{$i18ns->get("designGroup")}</legend>
+			<p>
+				<label for="data_theme">{$i18ns->get('theme')}*<sup>2</sup>:</label>
+					<input class="text" type="text" name="data[theme]" id="data_theme" value="{$config->theme}" />
+			</p>
+
+			<p>
+				<label for="data_position">{$i18ns->get('position')}**:</label>
+					<input class="text" type="text" name="data[position]" id="data_position" value="{$config->position}" />
+			</p>
+
+			<p>
+				<label for="data_defaultPosition">{$i18ns->get('defaultposition')}**:</label>
+					<input class="text" type="text" name="data[defaultPosition]" id="data_defaultPosition" value="{$config->defaultPosition}" />
+			</p>
+		</fieldset>
+	</div>
+
+	<fieldset style="clear: both;">
+		<legend>{$i18ns->get("metaGroup")}</legend>
+		<p>
+			<label for="data_keywords">{$i18ns->get('keywords')}:</label>
+				<input size="70" maxlength="255" class="text" type="text" name="data[keywords]" id="data_keywords" value="{$config->keywords}" />
+		</p>
+
+		<p>
+			<label for="data_description">{$i18ns->get('description')}:</label>
+				<input size="70" maxlength="255" class="text" type="text" name="data[description]" id="data_description" value="{$config->description}" />
+		</p>
+
+		<p>
+			<label for="data_title">{$i18ns->get('title')}:</label>
+				<input size="70" maxlength="255" class="text" type="text" name="data[title]" id="data_title" value="{$config->title}" />
+		</p>
+	</fieldset>
+
+
+	<p id="ok">
+	    <input type="submit" class="ok" name="save" value="{$i18ns->get("save")}" />
+	</p>
+	<p id="cancel">
+		<input type="submit" class="cancel" name='cancel' value="{$i18ns->get("abort")}" />
+	</p>
+
+	<p style="display:none;">
+		<input type="hidden" name="data[docroot]" value="{$config->docroot}" />
+		<input type="hidden" name="data[server]" value="{$config->server}" />
+		<input type="hidden" name="data[baseName]" value="{$config->baseName}" />
+		<input type="hidden" name="data[fileSystemRoot]" value="{$config->fileSystemRoot}" />
+		<input type="hidden" name="data[extDir]" value="{$config->extDir}" />
+		<input type="hidden" name="data[libDir]" value="{$config->libDir}" />
+		<input type="hidden" name="data[htmlAreaDir]" value="{$config->htmlAreaDir}" />
+		<input type="hidden" name="data[smartyDir]" value="{$config->smartyDir}" />
+		<input type="hidden" name="data[xpathDir]" value="{$config->xpathDir}" />
+		<input type="hidden" name="data[miplexDir]" value="{$config->miplexDir}" />
+		<input type="hidden" name="data[tplDir]" value="{$config->tplDir}" />
+		<input type="hidden" name="data[imageFolder]" value="{$config->imageFolder}" />
+		<input type="hidden" name="data[configDir]" value="{$config->configDir}" />
+		<input type="hidden" name="data[contentDir]" value="{$config->contentDir}" />
+	</p>
 </form>

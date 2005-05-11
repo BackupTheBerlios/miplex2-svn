@@ -45,25 +45,27 @@
     bitte den <a href="/" title="Zur Hauptseite">Vordereingang</a>.</p>
     ');
 
+
+
     switch ($_GET['module'])
     {
         case 'page':
-//            require_once($session->config->miplexDir."admin/admin.page.php");
+            $session->smarty->assign("pageIsActive", "class=\"active\"");
             require_once("lib/Miplex2/admin/admin.page.php");
             break;
         
         case 'ext':
-//            require_once($session->config->miplexDir."admin/admin.extensions.php");
+            $session->smarty->assign("extIsActive", "class=\"active\"");
             require_once("lib/Miplex2/admin/admin.extensions.php");
             break; 
         
         case 'settings':
-//            require_once($session->config->miplexDir."admin/admin.settings.php");
+            $session->smarty->assign("settingsIsActive", "class=\"active\"");
             require_once("lib/Miplex2/admin/admin.settings.php");
             break;
             
         default:
-//            require_once($session->config->miplexDir."admin/admin.start.php");
+            $session->smarty->assign("startIsActive", "class=\"active\"");
             require_once("lib/Miplex2/admin/admin.start.php");
             break;
             

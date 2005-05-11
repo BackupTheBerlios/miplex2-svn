@@ -105,35 +105,32 @@ ce.new=Neues Inhaltselement anlegen
     
 
 #Settings:
-settings.basesettings.name=Grundeinstellungen
-settings.basesettings.system=Systemeinstellungen
-settings.basesettings.management=Verwaltung
-settings.basesettings.thememgmt=Templateverwaltung
-settings.basesettings.meta=Meta Angaben
-settings.basesettings.docroot=Docroot
-settings.basesettings.serverroot=Serververzeichnis
-settings.basesettings.imagefolder=Bilder Verzeichnis
-settings.basesettings.theme=Template
-settings.basesettings.keywords=Schl&uuml;sselw&ouml;rter
-settings.basesettings.description=Seitenbeschreibung
-settings.basesettings.title=Seitentitel
-settings.basesettings.extdir=Verzeichnis der Erweiterungen
-settings.basesettings.libdir=Verzeichnis der Bibliotheken (allgemein)
-settings.basesettings.htmlareadir=Verzeichnis von HTML Area
-settings.basesettings.smartydir=Verzeichnis von Smarty
-settings.basesettings.xpathdir=Verzeichnis von XPath
-settings.basesettings.configdir=Verzeichnis der Konfigurationsdateien
-settings.basesettings.miplexdir=Verzeichnis der Miplex2 Klassen
-settings.basesettings.tpldir=Verzeichnis der Templates
-settings.basesettings.contentfilename=Dateiname der Inhaltsdatei
-settings.basesettings.contentdir=Verzeichnis der Inhaltsdatei
-settings.basesettings.basename=Name der Indexdatei
-settings.basesettings.content=Verwaltung des Inhalts
-settings.basesettings.position=Position der CEs
+settings.noChoice=Einstellungen f&uuml;r Miplex
+settings.noChoiceText=Bitte w&auml;hlen Sie eine Klasse von Einstellungen aus, die sie bearbeiten möchten. In <em>Allgemein</em> finden Sie Einstellungen, die die Installation von Miplex betreffen. Unter <em>Benutzer</em> k&ouml;nnen Sie neue Redakteure anlegen oder bearbeiten.
+
+settings.basesettings.name=Allgemein
+settings.basesettings.contentGroup=Inhaltseingabe
+settings.basesettings.contentfilename=Inhaltsdatei
+settings.basesettings.usehtmlarea=Erweiterten Editor benutzen
+settings.basesettings.metaGroup=Meta-Angaben
+settings.basesettings.keywords=Stichwörter
+settings.basesettings.description=Beschreibungstext
+settings.basesettings.title=&Uuml;berschrift
+settings.basesettings.designGroup=Design-Einstellungen
+settings.basesettings.theme=Designvorlage
+settings.basesettings.position=Inhaltspositionen
 settings.basesettings.defaultposition=Standardposition
+settings.basesettings.save=Speichern
+settings.basesettings.abort=Abbrechen
+#settings.basesettings.=
+#settings.basesettings.=
+#settings.basesettings.=
+#settings.basesettings.=
+#settings.basesettings.=
+
 
 #Benutzer
-settings.user.name=Benutzerverwaltung
+settings.user.name=Benutzer
 settings.user.list=Benutzer anzeigen
 settings.user.add=Benutzer anlegen
 settings.user.edit=Benutzer bearbeiten

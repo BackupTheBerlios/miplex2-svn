@@ -60,7 +60,7 @@ h1{
     height: 20px;
     display: block;
     text-align: center;
-    background: url('tab.gif');
+    background: url('tab.gif') #006699;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -69,7 +69,11 @@ h1{
 
 #menu li a:hover{
     background-position: 0px 32px;
-    color: white;
+}
+
+
+#menu li a.active{
+    background-position: 0px 32px;
 }
 
 #menu li .red{
@@ -432,4 +436,22 @@ p#ok{
 
 label.required{
     font-weight: bold;
+}
+
+#settingsForm div{
+    width: 49%;
+}
+
+#settingsForm label{
+    display: block;
+    float: left;
+    width: 9.5em;
+}
+
+#settingsForm .left{
+    float: left;
+}
+
+#settingsForm .right{
+    float: right;
 }
