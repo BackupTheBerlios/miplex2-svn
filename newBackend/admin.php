@@ -38,6 +38,7 @@
     $session = new Session("config/config.ser", "backend");
     $session->loadUserDatabase();
     
+    $session->smarty->assign("miplexVersion", file_get_contents("VERSION"));
     
     if (!login()) die('
     <h1>Zugriff verweigert</h1>

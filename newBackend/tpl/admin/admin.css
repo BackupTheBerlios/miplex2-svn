@@ -60,7 +60,7 @@ h1{
     height: 20px;
     display: block;
     text-align: center;
-    background: url('tab.gif') #006699;
+    background: url('tab.gif') #006699 0px 32px;
     color: white;
     font-weight: bold;
     text-decoration: none;
@@ -68,24 +68,46 @@ h1{
 }
 
 #menu li a:hover{
-    background-position: 0px 32px;
+    background-position: 0px 0px;
 }
 
 
 #menu li a.active{
-    background-position: 0px 32px;
+    background-position: 0px 0px;
 }
 
 #menu li .red{
-    background: url('tab_red.gif');
+    background-image: url('tab_red.gif');
 }
 
 #menu li .green{
-    background: url('tab_green.gif');
+    background-image: url('tab_green.gif');
 }
 
 .clearer{
     clear: both;
+}
+
+#footer{
+    border-bottom: 5px solid #006699;
+}
+
+#footer p{
+    color: white;
+    margin: 0px;
+    padding: 0px;
+    background: #006699;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+#footer a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover{
+    border-bottom: 1px dotted white;
 }
 
 #allcontent{
@@ -93,6 +115,7 @@ h1{
     padding: 5px;
     background: white;
     overflow: hidden;
+    min-height: 300px;
 }
 
 #allcontent h2{

@@ -105,6 +105,25 @@
 			font-size: 0.8em;
 			color: gray;
 		}
+
+		#footer{
+			color: #006699;
+			margin: 0px;
+			padding: 0px;
+			background: white;
+			text-align: center;
+			font-size: 0.7em;
+		}
+
+		#footer a{
+			color: #006699;
+			text-decoration: none;
+		}
+
+		#footer a:hover{
+			border-bottom: 1px dotted #006699;
+		}
+
     -->
 {/literal}
     </style>
@@ -128,8 +147,8 @@
 		</fieldset>
 	</form>
 	<p id="hinweis">{$i18n->get("login.attention")}</p>
-	<p>
-		<a href="http://www.miplex.de">www.miplex.de</a>
+	<p id="footer">
+		{$miplexVersion} &middot; <a href="http://www.miplex.de" title="www.miplex.de">www.miplex.de</a> &middot; <a href="http://www.grundprinzip.de" title="www.grundprinzip.de">Martin Grund</a> &amp; <a href="http://www.schmidtwisser.de" title="www.schmidtwisser.de">Gregor Schmidt</a>
 	</p>
 </body>
 </html>

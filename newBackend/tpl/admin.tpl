@@ -66,9 +66,13 @@
 			<li class="right"><a href="{$config->baseName}" title="{$i18n->get("admin.frontendTitle")}" class="green">{$i18n->get("admin.frontend")}</a></li>
 		</ul>
 		<div id="allcontent">
+
         	{include file=$content_tpl}
 
         	<br style="clear: both;" />
+		</div>
+		<div id="footer">
+			<p>{$miplexVersion} &middot; <a href="http://www.miplex.de" title="www.miplex.de">www.miplex.de</a> &middot; <a href="http://www.grundprinzip.de" title="www.grundprinzip.de">Martin Grund</a> &amp; <a href="http://www.schmidtwisser.de" title="www.schmidtwisser.de">Gregor Schmidt</a></p>
 		</div>
 
 	</div>

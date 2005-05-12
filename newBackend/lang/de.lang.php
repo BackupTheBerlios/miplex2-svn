@@ -2,13 +2,13 @@
 login.welcome=Sie m&uuml;ssen sich zun&auml;chst einloggen
 login.username=Benutzername
 login.password=Passwort
-login.title=Miplex2 &middot; Backend-Login
+login.title=Miplex &middot; Backend-Login
 login.attention=Bitte achten Sie darauf, dass sowohl beim Benutzername als auch beim Passwort die Groﬂ- bzw. Kleinschreibung zu beachten ist.
 login.error=Fehlerhafter Login. Bitte versuchen Sie es erneut.
 login.login=Einloggen
 
 #Language Variables for Adminmenu
-admin.title=Miplex2 &middot; Backend
+admin.title=Miplex &middot; Backend
 admin.start=Start
 admin.startTitle=Willkommensseite und allgemeine Hinweise
 admin.page=Seiten

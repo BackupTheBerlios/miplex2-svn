@@ -1,5 +1,7 @@
 <?php
 
+// header("HTTP/1.0 401 Unauthorized"); echo "Geh doch nach Hause.";  die();
+
 require("lib/Miplex2/MiplexConfig.class.php");
 
 $config = new MiplexConfig();

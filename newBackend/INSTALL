@@ -1,0 +1,34 @@
+GERMAN - DEUTSCH - ALLEMAND
+
+Kopieren Sie alle in dem Release enthaltenen Dateien und Verzeichnisse ein Ver-
+zeichnis, dass mit Hilfe des Webservers erreichbar ist.
+
+A c h t e n   S i e   a u f   d i e   V e r z e i c h n i s r e c h t e ! !
+
+Alle Verzeichnisse und Datei müssen für den Webserver lesbar sein. In aller 
+Regel ist dies bereits der Fall. Im Folgenden finden Sie eine Aufstellung ueber 
+die Verzeichnisse, die für eine korrekte Funktion fuer den Webserver auch 
+schreibbar sein muessen. Auch alle Dateien innerhalb dieser Verzeichnisse 
+muessen schreibbar sein.
+
+- config          Enthaelt Einstellungen für Miplex
+- content         Enthaelt die Inhalte der Internetseite
+- files           Enthaelt zusätzliche Dateien, die zur Internetseite gehoeren
+- img             Enthaelt Bilder, die in die Internetseite integriert werden
+- img/.thumbs     Enthaelt Vorschaubilder für die o.g Bilder
+- tpl/cache       Enthaelt zwischengespeicherte Kopien der generierten Seiten
+- tpl/template_c  Enthaelt Zwischenergebnisse der Seitengenerierung
+
+Entfernen Sie die zwei "//" am Anfang der zweiten Zeile in der Datei 
+"install.php". 
+
+Rufen Sie mit ihren Webbrowser die Datei install.php aus und folgen Sie den 
+Anweisungen. Es wird Ihnen an dieser Stelle weiter assistiert.
+
+Nach dem erfolgreichen Abschließen der Installation, kommentieren Sie bitte 
+wieder die o.g. Zeile in dier Datei install.php aus, damit kein Dritter
+Kontrolle über ihre Miplex-Installation übernehmen kann.
+
+ENGLISH - ENGLISCH - ANGLAIS
+
+FRENCH - FRANZOESISCH - FRANCAIS
