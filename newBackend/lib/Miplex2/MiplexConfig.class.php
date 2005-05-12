@@ -6,51 +6,43 @@
 */
 class MiplexConfig
 {
-    //Serverbeschreibung
-    var $docroot = "";
-    var $fileSystemRoot = "";
-    var $server = "";
+// Determined
+        var $docroot;
+        var $server;
+        var $fileSystemRoot;
     
-    //Templateauswahl
-    var $theme = "";
-    
-    //ImageFolder
-    var $imageFolder = "";
-    
-    //Metatags
-    var $keywords = "";
-    var $description = "";
-    var $title = "";
-    
-    //Directories used in Miplex
-    var $extDir = "";
-    var $libDir = "";
-    var $htmlAreaDir = "";
-    var $smartyDir = "";
-    var $xpathDir = "";
-    var $configDir = "";
-    var $miplexDir = "";
+// Asked
+    // Content
+        var $baseName;
+        var $contentFileName;
+        var $useHtmlArea;
 
-    var $tplDir = "";   
-    
-    //Content
-    var $contentFileName = "";
-    var $contentDir= "";
-    var $position = "normal";
-    var $defaultPosition = "normal";
-    
-    var $baseName="index.php";
-    var $useHtmlArea = 1;
-    
-    
+    //Templateauswahl
+        var $theme;
+        var $position;
+        var $defaultPosition;
+
+    //Metatags
+        var $keywords;
+        var $description;
+        var $title;
+
+// Set
+    //Deprecated Elements
+        var $extDir;
+        var $libDir;
+        var $htmlAreaDir;
+        var $smartyDir;
+        var $xpathDir;
+        var $miplexDir;
+        var $tplDir;   
+        var $imageFolder;
+        var $configDir;
+        var $contentDir;
+
     
     function MiplexConfig()
     {
     }
-    
-    
-    
 }
-
-
 ?>

@@ -5,11 +5,22 @@
 
 <form action="{$path}" method="post" id="settingsForm">
 
+{* Switch between old and new configuration to fill form with new values *}
+{if isset($newConf)}
+	{assign var="oldConf" value=$config}
+	{assign var="config" value=$newConf}
+{/if}
+
 	<div class="left">
 		<fieldset>
 			<legend>{$i18ns->get("contentGroup")}</legend>
 			<p>
-				<label for="data_contentFileName">{$i18ns->get('contentfilename')}*<sup>1</sup>:</label>
+				<label for="data_baseName">{$i18ns->get('basename')}*<sup>1</sup>:</label>
+					<input class="text" type="text" name="data[baseName]" id="data_baseName" value="{$config->baseName}" />
+			</p>
+
+			<p>
+				<label for="data_contentFileName">{$i18ns->get('contentfilename')}*<sup>2</sup>:</label>
 					<input class="text" type="text" name="data[contentFileName]" id="data_contentFileName" value="{$config->contentFileName}" />
 			</p>
 
@@ -24,7 +35,7 @@
 		<fieldset>
 			<legend>{$i18ns->get("designGroup")}</legend>
 			<p>
-				<label for="data_theme">{$i18ns->get('theme')}*<sup>2</sup>:</label>
+				<label for="data_theme">{$i18ns->get('theme')}*<sup>3</sup>:</label>
 					<input class="text" type="text" name="data[theme]" id="data_theme" value="{$config->theme}" />
 			</p>
 
@@ -58,6 +69,10 @@
 		</p>
 	</fieldset>
 
+{* Switch back *}
+{if isset($oldConf)}
+	{assign var="config" value=$oldConf}
+{/if}
 
 	<p id="ok">
 	    <input type="submit" class="ok" name="save" value="{$i18ns->get("save")}" />
@@ -66,20 +81,7 @@
 		<input type="submit" class="cancel" name='cancel' value="{$i18ns->get("abort")}" />
 	</p>
 
-	<p style="display:none;">
-		<input type="hidden" name="data[docroot]" value="{$config->docroot}" />
-		<input type="hidden" name="data[server]" value="{$config->server}" />
-		<input type="hidden" name="data[baseName]" value="{$config->baseName}" />
-		<input type="hidden" name="data[fileSystemRoot]" value="{$config->fileSystemRoot}" />
-		<input type="hidden" name="data[extDir]" value="{$config->extDir}" />
-		<input type="hidden" name="data[libDir]" value="{$config->libDir}" />
-		<input type="hidden" name="data[htmlAreaDir]" value="{$config->htmlAreaDir}" />
-		<input type="hidden" name="data[smartyDir]" value="{$config->smartyDir}" />
-		<input type="hidden" name="data[xpathDir]" value="{$config->xpathDir}" />
-		<input type="hidden" name="data[miplexDir]" value="{$config->miplexDir}" />
-		<input type="hidden" name="data[tplDir]" value="{$config->tplDir}" />
-		<input type="hidden" name="data[imageFolder]" value="{$config->imageFolder}" />
-		<input type="hidden" name="data[configDir]" value="{$config->configDir}" />
-		<input type="hidden" name="data[contentDir]" value="{$config->contentDir}" />
-	</p>
+	{if $error neq ""}
+		<p class="hinweis">{$i18ns->get($error)}</p>
+	{/if}
 </form>

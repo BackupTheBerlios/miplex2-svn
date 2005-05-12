@@ -106,14 +106,15 @@ ce.new=Neues Inhaltselement anlegen
 
 #Settings:
 settings.noChoice=Einstellungen f&uuml;r Miplex
-settings.noChoiceText=Bitte w&auml;hlen Sie eine Klasse von Einstellungen aus, die sie bearbeiten möchten. In <em>Allgemein</em> finden Sie Einstellungen, die die Installation von Miplex betreffen. Unter <em>Benutzer</em> k&ouml;nnen Sie neue Redakteure anlegen oder bearbeiten.
+settings.noChoiceText=Bitte w&auml;hlen Sie eine Klasse von Einstellungen aus, die sie bearbeiten m&ouml;chten. In <em>Allgemein</em> finden Sie Einstellungen, die die Installation von Miplex betreffen. Unter <em>Benutzer</em> k&ouml;nnen Sie neue Redakteure anlegen oder bearbeiten.
 
 settings.basesettings.name=Allgemein
 settings.basesettings.contentGroup=Inhaltseingabe
+settings.basesettings.basename=Frontend-Datei
 settings.basesettings.contentfilename=Inhaltsdatei
 settings.basesettings.usehtmlarea=Erweiterten Editor benutzen
 settings.basesettings.metaGroup=Meta-Angaben
-settings.basesettings.keywords=Stichwörter
+settings.basesettings.keywords=Stichw&ouml;rter
 settings.basesettings.description=Beschreibungstext
 settings.basesettings.title=&Uuml;berschrift
 settings.basesettings.designGroup=Design-Einstellungen
@@ -122,12 +123,13 @@ settings.basesettings.position=Inhaltspositionen
 settings.basesettings.defaultposition=Standardposition
 settings.basesettings.save=Speichern
 settings.basesettings.abort=Abbrechen
-#settings.basesettings.=
-#settings.basesettings.=
-#settings.basesettings.=
-#settings.basesettings.=
-#settings.basesettings.=
-
+settings.basesettings.baseNameNotFound=Die angegebene Frontend-Datei konnte nicht gefunden werden.
+settings.basesettings.contentFileNotWriteable=Die angegebene Inhaltsdatei ist nicht schreibbar. Bitte &uuml;berpr&uuml;fen Sie die Zugriffsrechte oder w&auml;hlen Sie eine andere Datei aus.
+settings.basesettings.contentFileNotFound=Die angegeben Inhaltsdatei konnte nicht im Verzeichnis &qout;content&qout; gefunden werden.
+settings.basesettings.themeNotFound=Die angegebene Designvorlage konnte nicht im Verzeichnis &qout;tpl&qout; gefunden werden.
+settings.basesettings.defaultPositionNotPartOfPosition=Die angegebene Standardposition ist nicht Teil der List der Inhaltsposition. Bitte w&auml;hlen Sie eine Position aus, die in der Liste enthalten ist.
+settings.basesettings.positionEmpty=Sie haben keinerlei Positionen angeben. Es muss jedoch mindest eine Position angegeben werden, die als Standard dienen kann.
+settings.basesettings.configNotWritable=Die Konfiguration konnte nicht gesichert werden, weil die Datei <code>config/config.ser</code> nicht &uml;berschrieben werden konnte. Bitte &uuml;berpr&uuml;fen Sie die Zugriffsrechte.
 
 #Benutzer
 settings.user.name=Benutzer

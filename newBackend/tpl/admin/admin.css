@@ -13,7 +13,7 @@ fieldset{
 }
 
 legend{
-    color: brown;
+    color: Maroon;
     background: white;
 }
 
@@ -104,6 +104,7 @@ h1{
 #footer a{
     color: white;
     text-decoration: none;
+    border-bottom: 1px dotted #006699;
 }
 
 #footer a:hover{
@@ -469,6 +470,10 @@ label.required{
     display: block;
     float: left;
     width: 9.5em;
+}
+
+#settingsForm div p{
+    clear: left;
 }
 
 #settingsForm .left{
