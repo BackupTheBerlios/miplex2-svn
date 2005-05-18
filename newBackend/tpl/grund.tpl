@@ -3,7 +3,7 @@
 
     <head>
        <link rel="stylesheet" href="{$config->docroot}tpl/default.css" type="text/css" />
-       <title>Miplex 2 - {$pageObject->getTitle()}</title>
+       <title>{$config->title} - {$pageObject->getTitle()}</title>
        {$header}
     </head>
 

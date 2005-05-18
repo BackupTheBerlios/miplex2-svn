@@ -117,13 +117,14 @@ class ExtensionManager
     */
     function getParams()
     {
+        $params = array();
         $eval = $this->xpath->evaluate("/config/params/*");
         
         foreach ($eval as $item) {
             $params[$this->xpath->nodeName($item)] = $this->xpath->getData($item);
         }
         
-        return $params;        
+        return $params;
     }
     
     /**

@@ -38,7 +38,7 @@ class Session
         
         $this->type = $type;
         
-        require_once($session->config->miplexDir."M2Translator.class.php");
+        require_once($this->config->miplexDir."M2Translator.class.php");
         $this->i18n = new M2Translator("de");
     }
    
@@ -191,7 +191,7 @@ class Session
             $id = $this->getArrayId($site, $alias);
             $error = ($id == -1);
 
-            if (!is_array($site[$id]->subs))
+            if (!isset($site[$id]->subs) || !is_array($site[$id]->subs))
                 break;
 
             if (!empty($tmpUri) && !$error && is_array($site[$id]->subs))
@@ -201,7 +201,7 @@ class Session
             }
         }
 
-        $this->act = $site[$id];
+        $this->act = isset($site[$id]) ? $site[$id] : "";
         
         // Handle Shortcuts and Params if ($this->type == "frontend")
         if ($this->type == "frontend")

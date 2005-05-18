@@ -57,18 +57,20 @@ class pageList
         {
             $class=0;
             
-            if ($po->attributes['draft'] == "on")
+            if (isset($po->attributes['draft']) && $po->attributes['draft'] == "on")
                 $class+=4;
                 
          /* Berechne Zeitstempel um zu ermitteln, ob die Seite im Frontend angezeigt wird */
             $visibleFromArray = explode(".", $po->attributes['visibleFrom']);
-            $visibleFromTimeStamp = mktime (0,0,0,$visibleFromArray[1], $visibleFromArray[0], $visibleFromArray[2]);
-            if ($visibleFromTimeStamp == -1)
+            if (sizeof ($visibleFromArray) == 3)
+                $visibleFromTimeStamp = mktime (0,0,0,$visibleFromArray[1], $visibleFromArray[0], $visibleFromArray[2]);
+            if (!isset($visibleFromTimeStamp) || $visibleFromTimeStamp == -1)
                 $visibleFromTimeStamp = time() - 2000;
 
             $visibleTillArray = explode(".", $po->attributes['visibleTill']);
-            $visibleTillTimeStamp = mktime (0,0,0,$visibleTillArray[1], $visibleTillArray[0], $visibleTillArray[2]);
-            if ($visibleTillTimeStamp == -1)
+            if (sizeof ($visibleTillArray) == 3)
+                $visibleTillTimeStamp = mktime (0,0,0,$visibleTillArray[1], $visibleTillArray[0], $visibleTillArray[2]);
+            if (!isset($visibleTillTimeStamp) || $visibleTillTimeStamp == -1)
                 $visibleTillTimeStamp = time() + 2000;
                 
            
@@ -83,7 +85,7 @@ class pageList
             if (strlen($po->attributes['shortcut']) > 1)
                 $class+=2;
                 
-            if ($po->attributes['inMenu'] != "on" )
+            if (!isset($po->attributes['inMenu']) || $po->attributes['inMenu'] != "on" )
                 $class+=1;
             
             if ($po->hasChildPage == 1)

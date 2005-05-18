@@ -65,6 +65,10 @@ section.deletePageHinweis=Das L&ouml;schen dieser Seite kann nicht r&uuml;ckg&au
 section.yes=Ja
 section.no=Nein
 
+#Error Messages
+section.nameEmpty=Sie m&uuml;ssen in jedem Fall einen Namen angeben.
+section.visibleFromDoesNotMatch=Der angegebene Start enspricht nicht dem erwarteten Format (TT.MM.JJJJ)
+section.visibleTillDoesNotMatch=Das angegebene Ende enspricht nicht dem erwarteten Format (TT.MM.JJJJ)
 
 #Language Variables for CE in Adminmenu
 #Allgemeine
@@ -108,30 +112,49 @@ ce.new=Neues Inhaltselement anlegen
 settings.noChoice=Einstellungen f&uuml;r Miplex
 settings.noChoiceText=Bitte w&auml;hlen Sie eine Klasse von Einstellungen aus, die sie bearbeiten m&ouml;chten. In <em>Allgemein</em> finden Sie Einstellungen, die die Installation von Miplex betreffen. Unter <em>Benutzer</em> k&ouml;nnen Sie neue Redakteure anlegen oder bearbeiten.
 
+# General settings form captions
 settings.basesettings.name=Allgemein
+
 settings.basesettings.contentGroup=Inhaltseingabe
 settings.basesettings.basename=Frontend-Datei
+settings.basesettings.basenameTitle=Diese Datei heißt standardm&auml;&szlig;ig 'cms'. Sie können Sie jedoch frei umbennen.
 settings.basesettings.contentfilename=Inhaltsdatei
+settings.basesettings.contentfilenameTitle=In dieser Datei werden alle Inhalte ihrer Internetpr&auml;senz gespeichert. Standard: 'content.xml'
 settings.basesettings.usehtmlarea=Erweiterten Editor benutzen
+settings.basesettings.usehtmlareaTitle=Möchten Sie den Word-ähnlichen Editor verwenden oder den HTML-Text eingeben?
+
+settings.basesettings.designGroup=Design-Einstellungen
+settings.basesettings.theme=Designvorlage
+settings.basesettings.themeTitle=Diese Datei enthält die Design-Informationen.
+settings.basesettings.position=Inhaltspositionen
+settings.basesettings.positionTitle=Welche Positionen sollen Inhaltselementen zugeordnet werden k&ouml;nnen
+settings.basesettings.defaultposition=Standardposition
+settings.basesettings.defaultpositionTitle=Diese Positon wird beim Anlegen neuer Elemente als Standardwert vorgeschlagen.
+
 settings.basesettings.metaGroup=Meta-Angaben
+settings.basesettings.metaGroupTitle=Diese Daten werden mit jeder Seite gespeichert und von Suchmaschinen gelesen.
 settings.basesettings.keywords=Stichw&ouml;rter
 settings.basesettings.description=Beschreibungstext
 settings.basesettings.title=&Uuml;berschrift
-settings.basesettings.designGroup=Design-Einstellungen
-settings.basesettings.theme=Designvorlage
-settings.basesettings.position=Inhaltspositionen
-settings.basesettings.defaultposition=Standardposition
+settings.basesettings.titleTitle=Dieser Text landet in der Titelleiste der meisten Browser
+
 settings.basesettings.save=Speichern
 settings.basesettings.abort=Abbrechen
-settings.basesettings.baseNameNotFound=Die angegebene Frontend-Datei konnte nicht gefunden werden.
-settings.basesettings.contentFileNotWriteable=Die angegebene Inhaltsdatei ist nicht schreibbar. Bitte &uuml;berpr&uuml;fen Sie die Zugriffsrechte oder w&auml;hlen Sie eine andere Datei aus.
-settings.basesettings.contentFileNotFound=Die angegeben Inhaltsdatei konnte nicht im Verzeichnis &qout;content&qout; gefunden werden.
-settings.basesettings.themeNotFound=Die angegebene Designvorlage konnte nicht im Verzeichnis &qout;tpl&qout; gefunden werden.
-settings.basesettings.defaultPositionNotPartOfPosition=Die angegebene Standardposition ist nicht Teil der List der Inhaltsposition. Bitte w&auml;hlen Sie eine Position aus, die in der Liste enthalten ist.
-settings.basesettings.positionEmpty=Sie haben keinerlei Positionen angeben. Es muss jedoch mindest eine Position angegeben werden, die als Standard dienen kann.
-settings.basesettings.configNotWritable=Die Konfiguration konnte nicht gesichert werden, weil die Datei <code>config/config.ser</code> nicht &uml;berschrieben werden konnte. Bitte &uuml;berpr&uuml;fen Sie die Zugriffsrechte.
 
-#Benutzer
+# Errors
+settings.basesettings.baseNameNotFound=Die angegebene Frontend-Datei konnte nicht gefunden werden.
+settings.basesettings.contentFileNotWriteable=Die angegebene Inhaltsdatei ist nicht schreibbar.<br /> Bitte &uuml;berpr&uuml;fen Sie die Zugriffsrechte oder w&auml;hlen Sie eine andere Datei aus.
+settings.basesettings.contentFileNotFound=Die angegeben Inhaltsdatei konnte nicht im Verzeichnis <code>content</code> gefunden werden.
+settings.basesettings.themeNotFound=Die angegebene Designvorlage konnte nicht im Verzeichnis <code>tpl</code> gefunden werden.
+settings.basesettings.defaultPositionNotPartOfPosition=Die angegebene Standardposition ist nicht Teil der List der Inhaltsposition.<br /> Bitte w&auml;hlen Sie eine Position aus, die in der Liste enthalten ist.
+settings.basesettings.positionEmpty=Sie haben keinerlei Positionen angeben. Es muss jedoch mindest eine Position angegeben werden, die als Standard dienen kann.
+settings.basesettings.configNotWritable=Die Konfiguration konnte nicht gesichert werden, weil die Datei <code>config/config.ser</code> nicht &uml;berschrieben werden konnte.<br /> Bitte &uuml;berpr&uuml;fen Sie die Zugriffsrechte.
+
+# Hints
+settings.basesettings.onestar=Bitte geben Sie die Namen der entsprechenden Dateien ein. Diese werden in den folgenden Verzeichnissen gesucht:
+settings.basesettings.twostars=Geben Sie die Inhaltspositionen als Komma-getrennte Liste ein. Die Standardposition muss ein Teil dieser Liste sein.
+
+# Benutzer
 settings.user.name=Benutzer
 settings.user.list=Benutzer anzeigen
 settings.user.add=Benutzer anlegen

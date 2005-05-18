@@ -418,6 +418,17 @@ textarea{
     font-size: 0.9em;
 }
 
+.hinweis code{
+    color: black;
+}
+
+.error{
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
 #content h4{
     border-bottom: 1px dotted #006699;
 }
@@ -469,7 +480,7 @@ label.required{
 #settingsForm label{
     display: block;
     float: left;
-    width: 9.5em;
+    width: 11em;
 }
 
 #settingsForm div p{

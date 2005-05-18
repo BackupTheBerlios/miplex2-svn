@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="tpl/admin/admin.css" />
 
-{if $hta==1}
+{if $hta eq "on"}
     <script type="text/javascript">
         _editor_lang = "de";
         _editor_url = "lib/htmlarea";
@@ -54,7 +54,7 @@
 {/if}
 </head>
 
-<body{if $hta == 1} onload="init()"{/if}>
+<body{if $hta eq "on"} onload="init()"{/if}>
 	<div id="all">
 		<h1>{$i18n->get("admin.title")}</h1>
 		<ul id="menu">

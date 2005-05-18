@@ -15,21 +15,21 @@
    
     
     //check what action is to be done
-    $part = $_GET['part'];
-    $action = $_GET['action'];
-    $value = $_GET['value'];
-    $tmpUri = explode("/", $_GET['path']);
-    $filter = empty($_GET['filter'])?"all":$_GET['filter'];
+    $part = Nz(&$_GET['part']);
+    $action = Nz(&$_GET['action']);
+    $value = Nz(&$_GET['value']);
+    $tmpUri = explode("/", Nz(&$_GET['path']));
+    $filter = Nz(&$_GET['filter'], "all");
     
     $page = $session->getRequestedPage($tmpUri);
-    $path = $_GET['path'];
+    $path = Nz(&$_GET['path']);
     
     $session->smarty->assign("filter", $filter);
     $session->smarty->assign("path", $path);
     
     $position = explode(",", $session->config->position);
     foreach ($position as $key => $val) {
-    	$position[$key] = trim($val);
+        $position[$key] = trim($val);
     }
     
     $position["all"]="all";
@@ -40,19 +40,19 @@
     switch ($part) {
         
         //There are some page actions
-    	case 'page':
-    		  require_once($session->config->miplexDir."admin/admin.page.section.php");
-    		break;
-    		
+        case 'page':
+              require_once($session->config->miplexDir."admin/admin.page.section.php");
+            break;
+            
         //Action concernign content elements
         case 'ce':
                 require_once($session->config->miplexDir."admin/admin.page.ce.php");        
             break;
     
         //No Action defined just display content    
-    	default:
-    	
-        	//Get content for right part
+        default:
+        
+            //Get content for right part
             if (empty($_GET['path']))
             {
                 $session->smarty->assign("content", "admin/page/start.tpl");
@@ -64,8 +64,8 @@
                 $session->smarty->assign("content", "admin/page/pageMain.tpl");
                 
             }
-    	
-    		break;
+        
+            break;
     }
     
     

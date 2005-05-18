@@ -1,12 +1,35 @@
 <?php
 
+    function getErrorHandler($errno, $errmsg, $filename, $linenum) {
+        if ($errno & error_reporting())
+        {
+            $error = "Zeit: " .date("Y-m-d H:i:s"). "\n";
+            $error .= "Meldung: " .$errmsg. "\n";
+            $error .= "Datei: " .$filename. "\n";
+            $error .= "Zeile: " .$linenum;
+            print_r(array("error@schmidtwisser.de", "Fehler auf wbg-dahmeland.de", $error, "From: Entwickler"));
+         }
+    } 
+
+    error_reporting (E_ALL);
+//    set_error_handler("getErrorHandler");
+
+    function Nz($arg0, $arg1 = "")
+    {
+        return isset($arg0) ? $arg0 : $arg1;
+    }
+
+
+    // Setting this var to TRUE will trigger clearing the Smarty Cache
+    $clear_cache = false;
+
     function login()
     {
         // Diese Globalen Variablen brauche ich
-        global $_SERVER,$_SESSION, $_GET, $_POST, $session;
+        global $ScreenName, $session;
 
         // Anfrage und Überprüfung der Daten
-        if (($_GET["module"] == "logout") && isset($_SESSION['ScreenName']))
+        if (isset($_GET["module"]) && ($_GET["module"] == "logout") && isset($_SESSION['ScreenName']))
         { 
             unset ($_SESSION['ScreenName']);
         }
@@ -14,9 +37,11 @@
     // Überprüfen von Benutzername und Passwort (solange, bis sie stimmen)
         while (!isset($_SESSION['ScreenName']))
         {
-            if ($session->userDatabase->login($_POST['username'], $_POST['password']))
+            if (isset($_POST['username']) && isset($_POST['password']) 
+             && $session->userDatabase->login($_POST['username'], $_POST['password']))
             {
             // Setzen des ScreenNames - damit ist man eingeloggt
+                $ScreenName = $_POST['username'];
                 $_SESSION['ScreenName'] = $_POST['username'];
             }
             else
@@ -40,14 +65,11 @@
     
     $session->smarty->assign("miplexVersion", file_get_contents("VERSION"));
     
-    if (!login()) die('
-    <h1>Zugriff verweigert</h1>
-    <p>Bitte loggen Sie sich erst ein. Wenn Sie hier nur irrtümlich sind, dann benutzen Sie
-    bitte den <a href="/" title="Zur Hauptseite">Vordereingang</a>.</p>
-    ');
+    // Only registered users may pass this line
+    login();
+    // Restricted Area !!!
 
-
-
+    if (!isset ($_GET['module'])) $_GET['module'] = 'start';
     switch ($_GET['module'])
     {
         case 'page':
@@ -77,6 +99,6 @@
         
     $session->smarty->assign("i18n", $session->i18n);
     $session->smarty->assign("config", $session->config);   
-    $session->smarty->display("admin.tpl");
+    $session->smarty->display("admin/admin.tpl");
        
 ?>

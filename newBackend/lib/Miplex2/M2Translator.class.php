@@ -48,13 +48,13 @@
             $entries = explode("\n", $this->content);
             
             foreach ($entries as $line) {
-            	
+                
                 //Right part is translation, left part is section category
                 $vals = explode("=", $line);
                 //Ignore comments
                 $tmp = trim($line);
-                if ($tmp{0} != "#" && !empty($line))
-                    $this->translations[trim($vals[0])] = trim($vals[1]);
+                if (ord($tmp) != ord('#') && !empty($line))
+                    $this->translations[trim(array_shift($vals))] = implode("=", $vals);
             }
             
         }

@@ -6,7 +6,7 @@
     }
 
 
-    if ($_POST['save'])
+    if (isset($_POST['save']))
     {
         $newConf = new MiplexConfig();
         
@@ -93,13 +93,13 @@
         
 
     // Accept anyway - what shall I check ??
-        $newConf->useHtmlArea = $_POST['data']['useHtmlArea'];
+        $newConf->useHtmlArea = isset($_POST['data']['useHtmlArea']) ? "on" : "";
         $newConf->keywords = clean($_POST['data']['keywords']);
         $newConf->description = clean($_POST['data']['description']);
         $newConf->title = clean($_POST['data']['title']);
 
 
-        if (strlen($session->smarty->_tpl_vars['error']) > 0)
+        if (isset($session->smarty->_tpl_vars['error']) && strlen($session->smarty->_tpl_vars['error']) > 0)
         {
         // Error occured
             // Put new conf into Template - so the user doesn't need to change everything twice
@@ -134,6 +134,11 @@
     { // We are here for the first time or user decided to abort
         $session->smarty->assign("config", $session->config);
     }
+
+    $docroot = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], "admin.php"));
+    $session->smarty->assign("sup1", $docroot);
+    $session->smarty->assign("sup2", $docroot."content");
+    $session->smarty->assign("sup3", $docroot."tpl");
     
     $session->smarty->assign("content", "admin/settings/settings.tpl");
 ?>

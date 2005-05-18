@@ -14,17 +14,17 @@
 	<div class="left">
 		<fieldset>
 			<legend>{$i18ns->get("contentGroup")}</legend>
-			<p>
-				<label for="data_baseName">{$i18ns->get('basename')}*<sup>1</sup>:</label>
+			<p title="{$i18ns->get("basenameTitle")}">
+				<label class="required" for="data_baseName">{$i18ns->get('basename')}*<sup>1</sup>:</label>
 					<input class="text" type="text" name="data[baseName]" id="data_baseName" value="{$config->baseName}" />
 			</p>
 
-			<p>
-				<label for="data_contentFileName">{$i18ns->get('contentfilename')}*<sup>2</sup>:</label>
+			<p title="{$i18ns->get("contentfilenameTitle")}">
+				<label class="required" for="data_contentFileName">{$i18ns->get('contentfilename')}*<sup>2</sup>:</label>
 					<input class="text" type="text" name="data[contentFileName]" id="data_contentFileName" value="{$config->contentFileName}" />
 			</p>
 
-			<p>
+			<p title="{$i18ns->get("usehtmlareaTitle")}">
 				<label for="data_useHtmlArea">{$i18ns->get('usehtmlarea')}:</label>
 					<input type="checkbox" name="data[useHtmlArea]" id="data_useHtmlArea" {if $config->useHtmlArea}checked="checked"{/if} />
 			</p>
@@ -34,36 +34,36 @@
 	<div class="right">
 		<fieldset>
 			<legend>{$i18ns->get("designGroup")}</legend>
-			<p>
-				<label for="data_theme">{$i18ns->get('theme')}*<sup>3</sup>:</label>
+			<p title="{$i18ns->get("themeTitle")}">
+				<label class="required" for="data_theme">{$i18ns->get('theme')}*<sup>3</sup>:</label>
 					<input class="text" type="text" name="data[theme]" id="data_theme" value="{$config->theme}" />
 			</p>
 
-			<p>
-				<label for="data_position">{$i18ns->get('position')}**:</label>
+			<p title="{$i18ns->get("positionTitle")}">
+				<label class="required" for="data_position">{$i18ns->get('position')}**:</label>
 					<input class="text" type="text" name="data[position]" id="data_position" value="{$config->position}" />
 			</p>
 
-			<p>
-				<label for="data_defaultPosition">{$i18ns->get('defaultposition')}**:</label>
+			<p title="{$i18ns->get("defaultpositionTitle")}">
+				<label class="required" for="data_defaultPosition">{$i18ns->get('defaultposition')}**:</label>
 					<input class="text" type="text" name="data[defaultPosition]" id="data_defaultPosition" value="{$config->defaultPosition}" />
 			</p>
 		</fieldset>
 	</div>
 
-	<fieldset style="clear: both;">
+	<fieldset style="clear: both;" title="{$i18ns->get("metaGroupTitle")}">
 		<legend>{$i18ns->get("metaGroup")}</legend>
-		<p>
+		<p title="{$i18ns->get("keywordsTitle")}">
 			<label for="data_keywords">{$i18ns->get('keywords')}:</label>
 				<input size="70" maxlength="255" class="text" type="text" name="data[keywords]" id="data_keywords" value="{$config->keywords}" />
 		</p>
 
-		<p>
+		<p title="{$i18ns->get("descriptionTitle")}">
 			<label for="data_description">{$i18ns->get('description')}:</label>
 				<input size="70" maxlength="255" class="text" type="text" name="data[description]" id="data_description" value="{$config->description}" />
 		</p>
 
-		<p>
+		<p title="{$i18ns->get("titleTitle")}">
 			<label for="data_title">{$i18ns->get('title')}:</label>
 				<input size="70" maxlength="255" class="text" type="text" name="data[title]" id="data_title" value="{$config->title}" />
 		</p>
@@ -74,14 +74,24 @@
 	{assign var="config" value=$oldConf}
 {/if}
 
+	{if $error neq ""}
+		<p class="error">{$i18ns->get($error)}</p>
+	{/if}
+
 	<p id="ok">
 	    <input type="submit" class="ok" name="save" value="{$i18ns->get("save")}" />
 	</p>
 	<p id="cancel">
 		<input type="submit" class="cancel" name='cancel' value="{$i18ns->get("abort")}" />
 	</p>
+	<br class="clearer" />
 
-	{if $error neq ""}
-		<p class="hinweis">{$i18ns->get($error)}</p>
-	{/if}
+	<p class="hinweis">
+		* {$i18ns->get("onestar")}<br />
+		<sup>1</sup>: <code>{$sup1}</code> - <sup>2</sup>: <code>{$sup2}</code> - <sup>3</sup>: <code>{$sup3}</code>
+	</p>
+
+	<p class="hinweis">
+		** {$i18ns->get("twostars")}
+	</p>
 </form>

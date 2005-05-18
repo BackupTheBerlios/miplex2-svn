@@ -39,10 +39,11 @@ class BeautifyXML
         
         //Clear all Spaces, Newlines and Tabs and so on...
         $tmpString = explode("\n", $input);
+        $tmpString2 = "";
         
         foreach ($tmpString as $line) {
-        	
-            if ($line{strlen($line)-1} == ">")
+            
+            if (isset($line{strlen($line)-1}) && $line{strlen($line)-1} == ">")
                 $tmpString2.= trim($line);
             else 
                 $tmpString2.= ltrim($line)."\n";
@@ -60,17 +61,17 @@ class BeautifyXML
         $depth = 0;
         $output = "";
         foreach ($tagArray as $item) {
-        	
+            
             
             switch ($this->evalTagType($item)) {
-            	
+                
                 case "OPEN":
                 
                     $output.=$this->indent($depth*$this->indent).$item."\n";
                     $depth++;
-            		
-            		break;
-            		
+                    
+                    break;
+                    
                 case "CLOSE":
                 
                     $depth--;
@@ -155,11 +156,11 @@ class BeautifyXML
             //open Tag
             return "OPEN";
             
-        } elseif ($matches[1][0] == "/" && count($matches[2])== 1)
+        } elseif (isset($matches[1][0]) && $matches[1][0] == "/" && count($matches[2])== 1)
         {
             return "CLOSE";
             
-        } elseif ($matches[3][0] == "/" && count($matches[2])== 1)
+        } elseif (isset($matches[3][0]) && $matches[3][0] == "/" && count($matches[2])== 1)
         {
             return "EMPTY";
             
