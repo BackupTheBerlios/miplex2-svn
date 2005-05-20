@@ -1,11 +1,12 @@
 <config>
     <extName>Suche</extName>
     <author>Gregor Schmidt</author>
-    <mail>Schmidtwisser@GMail.com</mail>
-    <version>0.1</version>
+    <mail>schmidtwisser@gmail.com</mail>
+    <version>0.9</version>
     <dependsOn>
     </dependsOn>
     <params>
-        <searchedCes>links,normal,rechts</searchedCes>
+        <searchedCes>normal</searchedCes>
+        <searchurl>suchen</searchurl>
     </params>
 </config>

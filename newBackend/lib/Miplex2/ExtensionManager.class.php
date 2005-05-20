@@ -35,15 +35,27 @@ class ExtensionManager
     function getAllAvailableExtensions()
     {
         
-        //Walk throug extDir and fetch all Extensions
-//        $extDir = opendir($this->config->extDir);
+        //Walk through extDir and fetch all Extensions
+        if (!is_readable("ext")) return array();
+        
         $extDir = opendir("ext/");
-                
-        while (false !== ($file = readdir ($extDir))) 
+        $dirs = array();
+        while (false !== ($file = readdir($extDir))) 
         {
-//            $extConfigFile = $this->config->extDir.$file."/config.xml";
-            $extConfigFile = "ext/".$file."/config.xml";
-            if ($file != "." && $file != ".." && is_file($extConfigFile) && is_readable($extConfigFile))
+            if ($file != "." && $file != ".." && is_dir("ext/".$file))
+                array_push($dirs, $file);
+        }
+        closedir($extDir);
+
+        // Sort the Extensions by basename
+        sort($dirs);
+        reset($dirs);
+        
+        // Read their parametres
+        foreach($dirs as $dir)
+        {
+            $extConfigFile = "ext/".$dir."/config.xml";
+            if (is_file($extConfigFile) && is_readable($extConfigFile))
             {
                 //now we've got an extension with a config file
                 //lets try to parse it
@@ -56,7 +68,7 @@ class ExtensionManager
                 $ext['dependsOn'] = $this->getValue("dependsOn");
                 $ext['extName'] = $this->getValue("extName");
                 $ext['params'] = $this->getParams();
-                $ext['basename'] = $file;
+                $ext['basename'] = $dir;
                 
                 $this->extensions[$ext['basename']] = $ext;
             }

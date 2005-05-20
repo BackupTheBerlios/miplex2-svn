@@ -82,7 +82,7 @@
 	    <input type="submit" class="ok" name="save" value="{$i18ns->get("save")}" />
 	</p>
 	<p id="cancel">
-		<input type="submit" class="cancel" name='cancel' value="{$i18ns->get("abort")}" />
+		<input type="reset" class="cancel" name='cancel' value="{$i18ns->get("abort")}" />
 	</p>
 	<br class="clearer" />
 

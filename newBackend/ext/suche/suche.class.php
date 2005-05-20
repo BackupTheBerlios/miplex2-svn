@@ -159,7 +159,7 @@ class suche extends Extension
     {
         global $session;
         // currentUrl
-        $this->smarty->assign("currentUrl", $session->currentPage->config->docroot.$session->currentPage->config->baseName."/".$session->currentPage->path.".html");
+        $this->smarty->assign("currentUrl", $this->config->docroot.$this->config->baseName."/".$this->extConfig['params']['searchurl'].".html");
 
         // alteBegriffe
         $this->smarty->assign("alteBegriffe", $_GET['s']);
@@ -171,7 +171,7 @@ class suche extends Extension
     {
         global $session;
     // Behandle das abschicken des Formulars
-    	
+        
         if ($params['formular'])
             return $this->formular();
         else
@@ -180,40 +180,49 @@ class suche extends Extension
 
     function getBackend()
     {
-        if (!$_POST['save'])
+        if (isset($_POST['save']) && isset($_POST['searchedCes']) && is_array($_POST['searchedCes']))
         {
-            $erste = "";
-        } 
-        else 
-        {
-            $this->extConfig['params']['searchedCes'] = implode(" ", $_POST['searchedCes']);
-            $this->saveConfiguration($this->extConfig);
-            global $clear_cache; $clear_cache = true;
-            
-            $erste = $this->smarty->fetch("suche/admin/saved.tpl");
+            if (isset ($_POST['searchurl']) && strlen($_POST['searchurl']) > 0)
+            {
+                $this->extConfig['params']['searchurl'] = $_POST['searchurl'];
+
+                $this->extConfig['params']['searchedCes'] = implode(" ", $_POST['searchedCes']);
+                print_r ($this->saveConfiguration($this->extConfig));
+                global $clear_cache; $clear_cache = true;
+
+                $this->smarty->assign("allesOk", true);
+
+            }
+            else
+            {
+                $this->smarty->assign("error", "noSearchURL");
+            }
+        
         }
 
         
         // Daten für Formular aufbereiten
-    	$positions = explode(", ", $this->config->position);
-    	
-    	$ces =array();
-    	foreach ($positions as $position) {
-    		$ce['value'] = $position;
-    		$ce['name'] = $position;
-    		if (strpos($this->extConfig['params']['searchedCes'], $position) === false)
-    			$ce['selected'] = false;
-    		else 
-    			$ce['selected'] = true;
-    		
-    		array_push($ces, $ce);
-    	}
-    	
+        $positions = explode(", ", $this->config->position);
+        
+        $ces = array();
+        foreach ($positions as $position) {
+            $ce['value'] = $position;
+            $ce['name'] = $position;
+            if (strpos($this->extConfig['params']['searchedCes'], $position) === false)
+                $ce['selected'] = false;
+            else 
+                $ce['selected'] = true;
+            
+            array_push($ces, $ce);
+        }
+        
         $this->smarty->assign("url", $this->getCurrentURL());
         $this->smarty->assign("Ces", $ces);
+        $this->smarty->assign("searchurl", $this->extConfig['params']['searchurl']);
         $this->smarty->assign("AnzahlCes", sizeof($ces) + 1);        
-    	
-        return $erste.$this->smarty->fetch("suche/admin/backend.tpl");
+        $this->smarty->assign("extMeta", $this->extConfig);
+        
+        return $this->smarty->fetch("suche/admin/backend.tpl");
     }
 }
 ?>

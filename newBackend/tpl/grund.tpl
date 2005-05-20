@@ -21,25 +21,12 @@
         </div>
         <div class="right-part">
             <div class="top-box">
-                <div class="news-box">
-
-                </div>
                 <div class="navibox">
                     <div class="navielem">
-                        <form action="#" method="post">
-                            <input type="text" class="text" name="search" size="12" />
-                            <input type="hidden" name="function" value="search" />
-                            <input type="submit" class="submit" value="suche" />
-                        </form><br /></div>
-                    <div class="navielem"></div>
-                    <div class="navielem"></div>
+                    	{loadExtension config=$config name=suche params="formular=anzeigen"}
+						<br />
+					</div>
                 </div>
-            </div>
-            <div class="adminbox">
-
-            </div>
-            <div class="path">
-
             </div>
             <div class="white-box">
                 <div class="strecker-content"><br /></div>

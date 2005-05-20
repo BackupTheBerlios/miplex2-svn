@@ -53,7 +53,7 @@ body{
     
 .menu-box{
     width : 170px;
-    min-height : 300px;
+    min-height : 257px;
     margin : 5px;
     padding : 5px;
     background-color : #FFFFFF;
@@ -62,7 +62,7 @@ body{
 
 .strecker-menu{
     width : 0px;
-    height : 300px;
+    height : 236px;
     float : right;
     margin : 0px;
     padding : 0px;
@@ -133,7 +133,7 @@ body{
     padding: 10px;
     background : #FFFFFF url(./miplex.gif) right bottom no-repeat;
     border : 1px solid #cccccc;
-	overflow:hidden;
+    overflow:hidden;
     }
 
 .content{
@@ -228,20 +228,20 @@ body{
 .navielem .text{
     font-family : Verdana, Arial, Helvetica, sans-serif;
     border:1px solid #cccccc;
-	background-color:white;
-	padding: 0px;
-	margin: 0px;
-	font-size: 12px;
-	height: 18px;}
+    background-color:white;
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    height: 18px;}
 .navielem .submit{
     font-family : Verdana, Arial, Helvetica, sans-serif;
     border : 1px solid #cccccc; 
-	background-color:#336699;
-	color:#FFFFFF; 
-	padding: 0px; 
-	margin: 0px;
-	font-size: 12px;
-	height: 19px;}
+    background-color:#336699;
+    color:#FFFFFF; 
+    padding: 0px; 
+    margin: 0px;
+    font-size: 12px;
+    height: 19px;}
 .navielem form{
     padding : 0px;
     margin : 0px;}
@@ -375,8 +375,8 @@ height:30px;
 }
 
 p {
-	color : #006699;
-	font-family : Tahoma, sans-serif;
+    color : #006699;
+    font-family : Tahoma, sans-serif;
     font-size: 14px;
     text-align:justify;
 }
