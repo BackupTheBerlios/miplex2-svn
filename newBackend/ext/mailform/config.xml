@@ -1,0 +1,13 @@
+<config>
+    <extName>Kontaktformular</extName>
+    <author>Martin Grund</author>
+    <mail>grundprinzip@gmail.com</mail>
+    <version>0.9.1</version>
+    <dependsOn>
+    </dependsOn>
+    <params>
+        <to>Service@wbg-dahmeland.de</to>
+        <subject>&quot;Serviceanfrage &uuml;ber Website&quot;</subject>
+        <from>Website@wbg-dahmeland.de</from>
+    </params>
+</config>

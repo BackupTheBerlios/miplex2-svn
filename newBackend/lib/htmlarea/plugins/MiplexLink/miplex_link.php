@@ -14,10 +14,11 @@
         var preview_window = null;
 
         function Init() {
-            window.resizeTo(750, 570);
+            window.resizeTo(750, 700);
             __dlg_init();
-            window.resizeTo(750, 570);
+            window.resizeTo(750, 700);
             onIntern();
+			document.body.style.overflow='';
         };
         
         function onCancel() {
@@ -134,55 +135,34 @@
     </head>
     <body onload="Init();">
     <form action='' method='post' name='form1' id ='form1' >
-    <table width='100%'>
-        <tr>
-            <td>
-                <p class='title'>Interner Link:</p>
-            </td>
-            <td>
-                <p class='title'>Externer Link</p>
-            </td>
-        </tr>
-        <tr>
-        <td style="border: 1px solid gray;">
-            <table>
-                <tr>
-                    <td class='ce'>
-                        <div class='list'>
-                            <h5>Menüpunkt</h5>
-                            <?php echo getAll(); ?>
-                        </div>
-                    </td>
-                    <td valign="top">
-                        <table>
-                            <tr>
-                                <td class='ce'>
-                                    <h5>Textfeld</h5>
-                                    <?php echo getCe(); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <p>Ziel: <input type='text' name='iTo' size='40'> Titel:<input type='text' name='iTitle' size='40'></p>
+        <table>
+            <tr>
+                <td class='ce'>
+                    <div class='list'>
+                        <h5>Menüpunkt</h5>
+                        <?php echo getAll(); ?>
+                    </div>
+                </td>
+                <td valign="top">
+                    <table>
+                        <tr>
+                            <td class='ce'>
+                                <h5>Textfeld</h5>
+                                <?php echo getCe(); ?>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Ziel: <input type='text' name='iTo' size='40'> Titel:<input type='text' name='iTitle' size='40'></p>
 
-                                    <p><button type="button" name="ok" onclick="return onOKi();">Ok</button>
-                                       <button type="button" name="cancel" onclick="return onCancel();">Cancel</button></p>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
-        </td>
-        <td style="border: 1px solid gray; vertical-align:top;">
-            <p>Adresse:</p>
-                <input type='text' name='to' size='40' /><br />
-            <p>Titel:</p>
-                <input type='text' name='title' size='40' /><br />
-            <br />
-            <button type="button" name="ok" onclick="return onOK();">Ok</button>
-            <button type="button" name="cancel" onclick="return onCancel();">Cancel</button>
-        </td>
-        </form>
+                                <p><button type="button" name="ok" onclick="return onOKi();">Ok</button>
+                                   <button type="button" name="cancel" onclick="return onCancel();">Abbrechen</button></p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
     </body>
 </html>

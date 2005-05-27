@@ -76,7 +76,7 @@ class MiplexDatabase
         $rootSections = $this->xPathHandle->evaluate("site/section");
         
         foreach ($rootSections as $section) {
-        	$site[] = $this->getSectionRecursive($section, "");
+            $site[] = $this->getSectionRecursive($section, "");
         }
         
         $this->site = $site;
@@ -105,7 +105,7 @@ class MiplexDatabase
             //Get all Section from next level and get subsection
             $nextLevel = $this->xPathHandle->evaluate("section",$context);
             foreach ($nextLevel as $level) {
-            	
+                
                 $thisPage->subs[]= $this->getSectionRecursive($level, $thisPage->path."/");
                 
             }
@@ -154,33 +154,33 @@ class MiplexDatabase
                 
                 //if storeContentInStructure is set to 1 we should also fetch the content of this page
                 foreach ($contentContext as $cVal) {
-                	
+                    
                     $page->content[] = array("data" => null, "context" => $cVal, "attributes" => null);
                 }
                 
                 //Fetch Content
-            	if ($this->storeContentInStructure == 1)
-            	{
-            	    foreach ($page->content as $key => $cObj) {
-            	        
-            	        //Set Content , strip CDATA
-            	        $page->content[$key]['data']= $this->getContentAtPosition($cObj['context']);
-            	        
-            	        //Fetch Content Attributes
-            	        $cAttrContext = $xPath->evaluate("attributes/*", $cObj['context']);
-            	        if ($cAttrContext != null)
-            	        {
-                	        foreach ($cAttrContext as $cAttr) {
-                	        	$page->content[$key]['attributes'][$xPath->nodeName($cAttr)] = $xPath->getData($cAttr);
-                	        }
-            	        }
-            	    	
-            	    }
-            	}
-            	
-            	//Check if this page contains other sections
-            	$childSections = $xPath->evaluate("section",$context);
-            	$page->hasChildPage = empty($childSections) ? 0 : 1;
+                if ($this->storeContentInStructure == 1)
+                {
+                    foreach ($page->content as $key => $cObj) {
+                        
+                        //Set Content , strip CDATA
+                        $page->content[$key]['data']= $this->getContentAtPosition($cObj['context']);
+                        
+                        //Fetch Content Attributes
+                        $cAttrContext = $xPath->evaluate("attributes/*", $cObj['context']);
+                        if ($cAttrContext != null)
+                        {
+                            foreach ($cAttrContext as $cAttr) {
+                                $page->content[$key]['attributes'][$xPath->nodeName($cAttr)] = $xPath->getData($cAttr);
+                            }
+                        }
+                        
+                    }
+                }
+                
+                //Check if this page contains other sections
+                $childSections = $xPath->evaluate("section",$context);
+                $page->hasChildPage = empty($childSections) ? 0 : 1;
                 
                 
                 return $page;
@@ -419,12 +419,12 @@ class MiplexDatabase
         foreach ($attributesToDelete as $attr) {
             
             $delete = $this->xPathHandle->removeChild($context."/attributes[1]/".$attr."[1]");
-            	
+                
         }
         
         //Replace other Attributes
         foreach ($attributes as $key => $attr) {
-        	
+            
             $node = "<$key>$attr</$key>";
             $replace = $this->xPathHandle->appendChild($context."/attributes[1]", $node);
             
@@ -466,12 +466,12 @@ class MiplexDatabase
         foreach ($attributesToDelete as $attr) {
             
             $delete = $this->xPathHandle->removeChild($context."/attributes[1]/".$attr."[1]");
-            	
+                
         }
         
         //Replace other Attributes
         foreach ($attributes as $key => $attr) {
-        	
+            
             $node = "<$key>$attr</$key>";
             $replace = $this->xPathHandle->appendChild($context."/attributes[1]", $node);
             
@@ -567,8 +567,8 @@ class MiplexDatabase
                 
                 $tmp = $this->getSection($se);
                 //If correct found set new context
-            	if ($tmp->attributes['alias']==$alias)
-            	   $returnContext = $se;
+                if ($tmp->attributes['alias']==$alias)
+                   $returnContext = $se;
             }
             
         }
@@ -608,7 +608,7 @@ class MiplexDatabase
         
         $node = "<content><attributes>";
         foreach ($attributes as $key => $val) {
-        	$node.="<$key>$val</$key>";
+            $node.="<$key>$val</$key>";
         }
         $node.="</attributes><data>".$this->cdataSection($content)."</data></content>";
         
@@ -625,7 +625,7 @@ class MiplexDatabase
         $node = "<section>";
         $node.="<attributes>";
         foreach ($attributes as $key => $val) {
-            $node.="<$key>$val</$key>";        	
+            $node.="<$key>$val</$key>";         
         }
         
         $node.="</attributes></section>";

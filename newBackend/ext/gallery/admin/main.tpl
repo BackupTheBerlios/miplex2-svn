@@ -1,6 +1,6 @@
-<h1>Bildergalerie</h1>
+<h2>Bildergalerie</h2>
 
-<a href="{$url}&amp;mode=allg">Allgemein</a> - 
+<a href="{$url}&amp;mode=allg">Allgemein</a> -
 <a href="{$url}&amp;mode=bilder">Bilder</a> -
 <a href="{$url}&amp;mode=neu">Neue Bilder</a>
 <hr />

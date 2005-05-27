@@ -13,8 +13,8 @@
 // Determine default parameters as far as we are able to do alone
         $newConf->docroot = substr($_SERVER['SCRIPT_NAME'], 0, strpos($_SERVER['SCRIPT_NAME'], "admin.php"));
         $newConf->server = "http://".$_SERVER['SERVER_NAME'];
-        $newConf->fileSystemRoot = $_SERVER['DOCUMENT_ROOT'];
-
+        $newConf->fileSystemRoot = $_SERVER['DOCUMENT_ROOT']."/";
+        
 // Deprecated parameters - someone might need that .. although she/he shouldn't
         $newConf->extDir        = "ext/";
         $newConf->libDir        = "lib/";

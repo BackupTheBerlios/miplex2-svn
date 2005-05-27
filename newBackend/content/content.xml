@@ -20,211 +20,223 @@
                 <visibleFrom/>
                 <visibleTill/>
                 <ceType/>
-                <lastChanged>16.05.05.</lastChanged>
+                <lastChanged>26.05.05.</lastChanged>
             </attributes>
             <data>
                 <![CDATA[
-                <p>Die <a href="miplex2/index.php/miplex2/install.html#notes">Tage</a> in
-                denen selbst für einfache Webseiten, die dynamisch verwaltet werden
-                sollen, ständig eine Datenbank im Hintergrund laufen musste, und die
-                Systeme benutzen, die doch kein normaler Kunde bedienen kann, sind
-                vorbei.</p> <p>Miplex ist der neue Standard für kleines und einfaches
-                Management Ihrer Seiteninhalte.</p> <p>Und damit Sie auch jeder findet,
-                sind die URLs sicher für jede Suchmaschine und werden nicht etwa
-                abgeschnitten und keiner findet Sie mehr .</p> <p>Des weiteren gibt es für
-                versierte Nutzer die Mglichkeit einfach Erweiterungen in php zu schreiben
-                und einzubinden.</p> <p>Aufgrund der langsamen XML Anbingung, wurde nun
-                eine neue XML Klasse eingesetzt, PHP XPath. Damit hat die XML
-                Abfragesprache XPath auch in Miplex Einzug gehalten.<br /> </p> <p>Dafür
-            dient nun auch Miplex2.</p>]]>
-        </data>
-    </content>
-</section>
-<section>
-    <attributes>
-        <name>Miplex2</name>
-        <alias>miplex2</alias>
-        <desc/>
-        <visibleFrom/>
-        <visibleTill/>
-        <shortcut>miplex2/features</shortcut>
-        <inMenu>on</inMenu>
-        <allowExtension>on</allowExtension>
-        <allowScript>on</allowScript>
-    </attributes>
+                <p>Die <a title="Installation von PHP"
+                href="/index.php/miplex2/install.html#php">Tage</a> in denen selbst für
+                einfache Webseiten, die dynamisch verwaltet werden sollen, ständig eine
+                Datenbank im Hintergrund laufen musste, und die Systeme benutzen, die doch
+                kein normaler Kunde bedienen kann, sind vorbei.</p> <p>Miplex ist der neue
+            Standard für kleines und einfaches Management Ihrer Seiteninhalte.</p>
+            <p>Und damit Sie auch jeder findet, sind die URLs sicher für jede
+                Suchmaschine und werden nicht etwa abgeschnitten und keiner findet Sie
+                mehr .</p> <p>Des weiteren gibt es für versierte Nutzer die Mglichkeit
+                einfach Erweiterungen in php zu schreiben und einzubinden.</p> <p>Aufgrund
+                der langsamen XML Anbingung, wurde nun eine neue XML Klasse eingesetzt, PHP
+                XPath. Damit hat die XML Abfragesprache XPath auch in Miplex Einzug
+                gehalten.<br /> </p> <p>Dafür dient nun auch Miplex2.</p>]]>
+            </data>
+        </content>
+    </section>
     <section>
         <attributes>
-            <name>Features</name>
-            <alias>features</alias>
+            <name>Hallo Sebastian</name>
             <desc/>
             <visibleFrom/>
             <visibleTill/>
+            <alias>hallosebastian</alias>
             <shortcut/>
+            <inMenu>on</inMenu>
+        </attributes>
+    </section>
+    <section>
+        <attributes>
+            <name>Miplex2</name>
+            <alias>miplex2</alias>
+            <desc/>
+            <visibleFrom/>
+            <visibleTill/>
+            <shortcut>miplex2/features</shortcut>
             <inMenu>on</inMenu>
             <allowExtension>on</allowExtension>
             <allowScript>on</allowScript>
         </attributes>
-        <content>
+        <section>
             <attributes>
                 <name>Features</name>
-                <alias/>
+                <alias>features</alias>
+                <desc/>
                 <visibleFrom/>
                 <visibleTill/>
-                <position>normal</position>
-                <ceType/>
-                <lastChanged>01.05.05.</lastChanged>
+                <shortcut/>
+                <inMenu>on</inMenu>
+                <allowExtension>on</allowExtension>
+                <allowScript>on</allowScript>
             </attributes>
-            <data>
-                <![CDATA[<ul>
-                    <li>Templates </li>
-                    <li>Erweiterungen für Frontend und Backend
-                    </li>
-                    <li>Neue Struktur der XML Datei </li>
-                    <li>getrenntes Backend <br
-                        />
-                    </li>
-                    <li>Neue Attribute für einzelene Seiten möglich </li>
-                    <li>Mehrere
-                        Inhaltselemente pro Seite möglich<br />
-                    </li>
-                </ul>]]>
-            </data>
-        </content>
-        <content>
+            <content>
+                <attributes>
+                    <name>Features</name>
+                    <alias/>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>01.05.05.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[<ul>
+                        <li>Templates </li>
+                        <li>Erweiterungen für Frontend und Backend
+                        </li>
+                        <li>Neue Struktur der XML Datei </li>
+                        <li>getrenntes Backend <br
+                            />
+                        </li>
+                        <li>Neue Attribute für einzelene Seiten möglich </li>
+                        <li>Mehrere
+                            Inhaltselemente pro Seite möglich<br />
+                        </li>
+                    </ul>]]>
+                </data>
+            </content>
+            <content>
+                <attributes>
+                    <name>Text</name>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <lastChanged>23.09.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[Dies ist Text.
+                    ]]>
+                </data>
+            </content>
+            <content>
+                <attributes>
+                    <name>Draft</name>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <lastChanged>23.09.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[
+                    Draft Text]]>
+                </data>
+            </content>
+        </section>
+        <section>
             <attributes>
-                <name>Text</name>
+                <name>Installation</name>
+                <alias>install</alias>
                 <visibleFrom/>
                 <visibleTill/>
-                <position>normal</position>
-                <lastChanged>23.09.04.</lastChanged>
+                <shortcut/>
+                <inMenu>on</inMenu>
+                <allowScript>on</allowScript>
             </attributes>
-            <data>
-                <![CDATA[Dies ist Text.
-                ]]>
-            </data>
-        </content>
-        <content>
-            <attributes>
-                <name>Draft</name>
-                <visibleFrom/>
-                <visibleTill/>
-                <lastChanged>23.09.04.</lastChanged>
-            </attributes>
-            <data>
-                <![CDATA[
-                Draft Text]]>
-            </data>
-        </content>
+            <content>
+                <attributes>
+                    <name>Install Notes</name>
+                    <alias>notes</alias>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>01.05.05.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[Damit alles gut geht brauch Ihr: PHP, Apache. Und natürlich Miplex2 ]]>
+                </data>
+            </content>
+            <content>
+                <attributes>
+                    <name>Further...</name>
+                    <alias/>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>01.05.05.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[So wenn das geschehen ist, einfach auf Los drücken und die Post geht ab.<br
+                    />sd<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
+                    />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />]]>
+                </data>
+            </content>
+            <content>
+                <attributes>
+                    <name>PHP</name>
+                    <alias>php</alias>
+                    <position>normal</position>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <ceType/>
+                    <lastChanged>26.05.05.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[
+                    Und damit alles gut wird, hier der Text....]]>
+                </data>
+            </content>
+        </section>
     </section>
     <section>
         <attributes>
-            <name>Installation</name>
-            <alias>install</alias>
+            <name>Tracker</name>
+            <alias>trakcs</alias>
             <visibleFrom/>
             <visibleTill/>
             <shortcut/>
             <inMenu>on</inMenu>
-            <allowScript>on</allowScript>
         </attributes>
-        <content>
+        <section>
             <attributes>
-                <name>Install Notes</name>
-                <alias>notes</alias>
+                <name>FT</name>
+                <alias>ft</alias>
                 <visibleFrom/>
                 <visibleTill/>
-                <position>normal</position>
-                <ceType/>
-                <lastChanged>01.05.05.</lastChanged>
+                <shortcut/>
+                <inMenu>on</inMenu>
             </attributes>
-            <data>
-                <![CDATA[Damit alles gut geht brauch Ihr: PHP, Apache. Und natürlich Miplex2 ]]>
-            </data>
-        </content>
-        <content>
-            <attributes>
-                <name>Further...</name>
-                <alias/>
-                <visibleFrom/>
-                <visibleTill/>
-                <position>normal</position>
-                <ceType/>
-                <lastChanged>01.05.05.</lastChanged>
-            </attributes>
-            <data>
-                <![CDATA[So wenn das geschehen ist, einfach auf Los drücken und die Post geht ab.<br
-                />sd<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
-                />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
-                />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
-                />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br
-                />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />d<br />]]>
-            </data>
-        </content>
-        <content>
-            <attributes>
-                <name>PHP</name>
-                <visibleFrom/>
-                <visibleTill/>
-                <position>normal</position>
-                <ceType/>
-                <lastChanged>04.10.04.</lastChanged>
-            </attributes>
-            <data>
-                <![CDATA[Und damit alles gut wird, hier der Tex....
-                ]]>
-            </data>
-        </content>
-    </section>
-</section>
-<section>
-    <attributes>
-        <name>Tracker</name>
-        <alias>trakcs</alias>
-        <visibleFrom/>
-        <visibleTill/>
-        <shortcut/>
-        <inMenu>on</inMenu>
-    </attributes>
-    <section>
-        <attributes>
-            <name>FT</name>
-            <alias>ft</alias>
-            <visibleFrom/>
-            <visibleTill/>
-            <shortcut/>
-            <inMenu>on</inMenu>
-        </attributes>
-        <content>
-            <attributes>
-                <name>Features</name>
-                <alias/>
-                <visibleFrom/>
-                <visibleTill/>
-                <position>normal</position>
-                <ceType/>
-                <lastChanged>13.10.04.</lastChanged>
-            </attributes>
-            <data>
-                <![CDATA[
-                <table rules="none" frame="void" border="1" align="texttop"
-                style="border-style: none; width: 100%; background-image: none; float:
-                none; text-align: left; vertical-align: top;"> <tbody> <tr> <td
-                style="border-style: none; width: 50px; background-image: none;
-                text-align: left; vertical-align: top;"> <span style="font-weight:
-                bold;">ID</span> <br /> </td> <td> <span style="font-weight:
-                bold;">Beschreibung</span> <br /> </td> <td style="border-style: none;
-                width: 50px; background-image: none; text-align: left; vertical-align:
-                top;"> <span style="font-weight: bold;">Ok</span> <br /> </td> </tr> <tr>
-                <td>1<br /> </td> <td>Benutzerverwaltung<br /> </td> <td> <br /> </td>
-                </tr> <tr> <td style="vertical-align: top;">2<br /> </td> <td
-                style="vertical-align: top;">Extensionmenï¿½ im Contentelement --&gt;
-                Speicherung als spezielles Attribut im CE --&gt;diese werden dann in das
-            PO ï¿½bernommen<br /> </td> <td style="vertical-align: top;"> <br /> <br />
-            </td> </tr> <tr> <td style="vertical-align: top;">3<br /> </td> <td
-        style="vertical-align: top;">Installationstool<br /> </td> <td
-        style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
-    style="vertical-align: top;">4<br /> </td> <td style="vertical-align:
-top;">CE: Save und Save-and-Exit Button<br /> </td> <td
-style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+            <content>
+                <attributes>
+                    <name>Features</name>
+                    <alias/>
+                    <visibleFrom/>
+                    <visibleTill/>
+                    <position>normal</position>
+                    <ceType/>
+                    <lastChanged>13.10.04.</lastChanged>
+                </attributes>
+                <data>
+                    <![CDATA[
+                    <table rules="none" frame="void" border="1" align="texttop"
+                    style="border-style: none; width: 100%; background-image: none; float:
+                    none; text-align: left; vertical-align: top;"> <tbody> <tr> <td
+                    style="border-style: none; width: 50px; background-image: none;
+                    text-align: left; vertical-align: top;"> <span style="font-weight:
+                    bold;">ID</span> <br /> </td> <td> <span style="font-weight:
+                    bold;">Beschreibung</span> <br /> </td> <td style="border-style: none;
+                    width: 50px; background-image: none; text-align: left; vertical-align:
+                    top;"> <span style="font-weight: bold;">Ok</span> <br /> </td> </tr> <tr>
+                    <td>1<br /> </td> <td>Benutzerverwaltung<br /> </td> <td> <br /> </td>
+                    </tr> <tr> <td style="vertical-align: top;">2<br /> </td> <td
+                    style="vertical-align: top;">Extensionmenï¿½ im Contentelement --&gt;
+                    Speicherung als spezielles Attribut im CE --&gt;diese werden dann in das
+                PO ï¿½bernommen<br /> </td> <td style="vertical-align: top;"> <br /> <br />
+                </td> </tr> <tr> <td style="vertical-align: top;">3<br /> </td> <td
+            style="vertical-align: top;">Installationstool<br /> </td> <td
+            style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
+        style="vertical-align: top;">4<br /> </td> <td style="vertical-align:
+    top;">CE: Save und Save-and-Exit Button<br /> </td> <td
+    style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
 style="vertical-align: top;">5<br /> </td> <td style="vertical-align:
 top;">Templates fï¿½r CEs und Seiten ï¿½berarbeiten<br /> </td> <td
 style="vertical-align: top;"> <br /> </td> </tr> <tr> <td
@@ -279,6 +291,38 @@ style="vertical-align: top;">
 </data>
 </content>
 </section>
+<content>
+<attributes>
+<name>27.05.2005</name>
+<alias/>
+<position>normal</position>
+<visibleFrom/>
+<visibleTill/>
+<ceType/>
+<lastChanged>26.05.05.</lastChanged>
+</attributes>
+<data>
+<![CDATA[sss
+]]>
+</data>
+</content>
+<content>
+<attributes>
+<name>25.05.2005</name>
+<alias>25-05-2005</alias>
+<position>normal</position>
+<visibleFrom/>
+<visibleTill/>
+<ceType/>
+<lastChanged>26.05.05.</lastChanged>
+</attributes>
+<data>
+<![CDATA[<span style="font-weight: bold;">Start der Website<br />
+</span>Heute kommt der Weihnaclijnsdl<span style="font-weight: bold;">
+<br />
+</span>]]>
+</data>
+</content>
 </section>
 <section>
 <attributes>

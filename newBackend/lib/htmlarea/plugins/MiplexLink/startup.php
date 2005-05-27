@@ -9,7 +9,12 @@ function getAll()
     require_once("../../../../lib/Miplex2/MiplexConfig.class.php");
     $oConfig = unserialize($config);
     
-    ini_set("include_path", ini_get("include_path").":".$oConfig->fileSystemRoot."lib/Miplex2/:".$oConfig->fileSystemRoot."lib/XPath/");
+    if (strpos($_SERVER['SERVER_SOFTWARE'], "Win32") === false)
+        $t = ":";
+    else
+        $t = ";";
+
+    ini_set("include_path", ini_get("include_path").$t.$oConfig->fileSystemRoot."lib/Miplex2/".$t.$oConfig->fileSystemRoot."lib/XPath/");
     require("MiplexDatabase.class.php");
     
     $oConfig->contentDir = "../../../../".$oConfig->contentDir;
@@ -98,7 +103,12 @@ function getCe()
     require_once("../../../../lib/Miplex2/MiplexConfig.class.php");
     $oConfig = unserialize($config);
 
-    ini_set("include_path", ini_get("include_path").":".$oConfig->fileSystemRoot."lib/Miplex2/:".$oConfig->fileSystemRoot."lib/XPath/");
+    if (strpos($_SERVER['SERVER_SOFTWARE'], "Win32") === false)
+        $t = ":";
+    else
+        $t = ";";
+
+    ini_set("include_path", ini_get("include_path").$t.$oConfig->fileSystemRoot."lib/Miplex2/".$t.$oConfig->fileSystemRoot."lib/XPath/");
     //require("MiplexDatabase.class.php");
 
     $oConfig->contentDir = "../../../../".$oConfig->contentDir;

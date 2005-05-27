@@ -1,37 +1,63 @@
-<h1>Bildergalerie</h1>
+<h3>Bildergalerie</h3>
 
-<form action='{$url}' method="POST">
-	<div style="float:left; width: 450px;">
-		<div style="width:300px; float:left;">Bilderordner*: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[folder]" value="{$extConfig.folder}" /></div>
-		<br style="clear:both; margin: 5px;" />
-		
-		<div style="width:300px; float:left;">Maximale Bildbreite*/***: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[maxwidth]" value="{$extConfig.maxwidth}"/></div>
-		<br style="clear:both; margin: 5px;" />
-		
-		<div style="width:300px; float:left;">Maximale Bildhöhe*/***: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[maxheight]" value="{$extConfig.maxheight}"/></div>
-		<br style="clear:both; margin: 5px;" />
+<form action='{$url}' method="post">
+	<fieldset style="float: left; width: 45%;">
+		<legend>Bilder</legend>
+		<p>
+			<label style="float: left; display: block; width: 10em;">Bilderordner*:</label>
+				<input type="text" size="20" name="data[folder]" value="{$extConfig.folder}" />
+		</p>
 
-		<div style="width:300px; float:left;">Vorschaubilderordner**: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[thumbfolder]" value="{$extConfig.thumbfolder}"/></div>
-		<br style="clear:both; margin: 5px;" />
-		
-		<div style="width:300px; float:left;">Vorschaubildbreite***: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[thumbwidth]" value="{$extConfig.thumbwidth}"/></div>
-		<br style="clear:both; margin: 5px;" />
-		
-		<div style="width:300px; float:left;">Vorschaubildhöhe***: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[thumbheight]" value="{$extConfig.thumbheight}"/></div>
-		<br style="clear:both; margin: 5px;" />
-		
-		<div style="width:300px; float:left;">Anzahl der Vorschaubilder je Übersichtsseite: </div>
-		<div style="float:left;"><input type="text" size="20" name="data[thumbcount]" value="{$extConfig.thumbcount}"/></div>
-		<br style="clear:both; margin: 5px;" />
-		
-		<div style="float:right;"><input type="submit" name="save" value="speichern" /></div>
-	</div>
+		<p>
+			<label style="float: left; display: block; width: 10em;">Maximale Bildbreite*/***:</label>
+				<input type="text" size="20" name="data[maxwidth]" value="{$extConfig.maxwidth}" />
+		</p>
+
+		<p>
+			<label style="float: left; display: block; width: 10em;">Maximale Bildhöhe*/***:</label>
+				<input type="text" size="20" name="data[maxheight]" value="{$extConfig.maxheight}" />
+		</p>
+	</fieldset>
+
+	<fieldset style="float: right; width: 45%;">
+		<legend>Vorschau</legend>
+		<p>
+			<label style="float: left; display: block; width: 14em;">Vorschaubilderordner**:</label>
+				<input type="text" size="20" name="data[thumbfolder]" value="{$extConfig.thumbfolder}" />
+		</p>
+
+		<p>
+			<label style="float: left; display: block; width: 14em;">Vorschaubildbreite***:</label>
+				<input type="text" size="20" name="data[thumbwidth]" value="{$extConfig.thumbwidth}" />
+		</p>
+
+		<p>
+			<label style="float: left; display: block; width: 14em;">Vorschaubildhöhe***:</label>
+				<input type="text" size="20" name="data[thumbheight]" value="{$extConfig.thumbheight}" />
+		</p>
+
+		<p>
+			<label style="float: left; display: block; width: 14em;">Anzahl der Vorschaubilder je Übersichtsseite:</label>
+				<input type="text" size="20" name="data[thumbcount]" value="{$extConfig.thumbcount}" />
+		</p>
+	</fieldset>
+
+	{if $allesOk}
+		<p class="hinweis" style="text-align: center;">Ihre Eingaben wurden gespeichert.</p>
+	{/if}
+
+	{if $error neq ""}
+		<p class="error">Sie haben keinen gültigen <em>Pfad zur Ergebnisseite</em> angegeben.</p>
+	{/if}
+
+	<p id="ok">
+		<input type="submit" class="ok" name="save" value="Speichern" />
+	</p>
+	<p id="cancel">
+		<input type="reset" class="cancel" name='cancel' value="Zurücksetzen" />
+	</p>
+
+	<br class="clearer" />
 </form>
 
 <br style="clear:both; margin: 15px;" />

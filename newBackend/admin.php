@@ -11,7 +11,7 @@
          }
     } 
 
-    error_reporting (E_ALL);
+//    error_reporting (E_ALL);
 //    set_error_handler("getErrorHandler");
 
     function Nz($arg0, $arg1 = "")
